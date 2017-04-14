@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :livestory, LiveStory.Web.Endpoint,
-  http: [port: 4000],
+  http: [port: 8080],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -55,4 +55,5 @@ config :livestory, LiveStory.Repo,
   password: "postgres",
   database: "livestory_dev",
   hostname: "localhost",
+  template: "template0",
   pool_size: 10

@@ -7,14 +7,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello LiveStory!</title>
+    <title>LiveStory!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
+  
+  <style>
+    body {
+      font-family: 'Raleway';
+    }
+  </style>
 
   <body>
     <div class="container">
      
-
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 

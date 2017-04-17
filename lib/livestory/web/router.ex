@@ -16,8 +16,11 @@ defmodule LiveStory.Web.Router do
   scope "/", LiveStory.Web do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", PostController, :index
+    resources "/posts", PostController
   end
+  
+  # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/
 
   # Other scopes may use custom stacks.
   # scope "/api", LiveStory.Web do

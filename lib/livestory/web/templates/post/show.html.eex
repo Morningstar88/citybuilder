@@ -1,0 +1,17 @@
+<!--<h2>Show Post</h2>-->
+
+<ul>
+
+  <h1>
+     <%= @post.title %>
+  </h1>
+
+  <h4 class="indented-post-body">
+     <%= @post.body %>
+     <span><%= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>
+  </h4>
+
+</ul>
+
+<span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-info"%></span>
+<span><%= link "Main Page", to: post_path(@conn, :index), class: "btn btn-success " %></span>

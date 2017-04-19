@@ -50,8 +50,24 @@ body {
 
 /* Form Control*/
 
+.form-control-title {
+     height: 60px !important;
+    font-size: 48px !important;
+    font-family: garamond !important;
+     line-height: 2px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
+    border-radius: 20px;
+    
+}
+
 .form-control-body {
-    height: 300% !important;
+    height: 300px !important;
+    font-size: 35px !important;
+    font-family: garamond !important;
+     line-height: 2px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
 }
 
 

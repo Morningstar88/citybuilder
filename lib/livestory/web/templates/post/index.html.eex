@@ -1,5 +1,5 @@
 <div id="btn-huge-div">
-<span><%= link "WRITE", to: post_path(@conn, :new), class: "btn btn-success btn-span" %></span>
+<span><%= link "WRITE!", to: post_path(@conn, :new), class: "btn btn-success btn-span" %></span>
 </div>
 <h1 class="latest-stories-main-title"> Ψ </h1>
 

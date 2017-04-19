@@ -73,7 +73,7 @@ body {
 .btn-span {
     width: 70%;
     height: 20%;
-    border: 2px inset rgba(24,24,24,0.7) !important;
+    border: 1px inset rgba(24,24,24,0.7) !important;
     background-color: white !important; /*url(http://web.guggenheim.org/exhibitions/picasso/content/images/picasso_x.2009.1438_m.jpg) 20% 20% !important*\;
     font-size: 29px !important;
    
@@ -110,7 +110,7 @@ body {
 .btn-light-red {
     /* DELETE BUTTON */
  /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(2,2,2,1) !important;
      border-radius: 5px;
      background-color: rgba(20,10,10,0.9) !important;
 }

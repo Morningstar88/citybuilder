@@ -9,9 +9,10 @@
   		  
 	   <h4 class="display-post-body">
        <%= @post.body %>		     
-      <span><%= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>		      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
-    </h4>		   
-  		  
+   	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
+    </h4>	
+    <br>
+     <span><%= link "Fork this", to: post_path(@conn, :fork, @post), class: "btn btn-default"%></span>			  
   </ul>		  
  <br><br><br>
  

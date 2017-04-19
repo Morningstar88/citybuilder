@@ -8,10 +8,13 @@ body {
 }
 
 .latest-stories-main-title {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-align: center;
-    font-size: 280%;
+    font-size: 500%;
     font-family: garamond;
+    font-weight: 400;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
 }
 
 .post-title{
@@ -22,8 +25,45 @@ body {
     font-family: garamond !important;
 }
 
-.indented-post-body {
+/* Display Posts For Users */
+
+.display-post-title {
+    font-family: garamond !important;
+    font-size: 55px;
+    letter-spacing: 2px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+}
+
+.display-post-body {
+    padding-top: 20px;
+    font-family: garamond !important;
     padding-left: 10px;
+    line-height: 2px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
+    font-size: 35px;
+}
+
+/* End Display Posts */
+
+/* Form Control*/
+
+.form-control-body {
+    height: 300% !important;
+}
+
+
+/* End Form Control */
+
+.edit-title {
+    font-family: garamond !important;
+}
+
+.fork-count {
+    font-family: garamond !important;
+    display: inline;
+    font-size: 18px;
 }
 
 #btn-huge-div {
@@ -31,12 +71,16 @@ body {
 }
 
 .btn-span {
-    width: 100%;
+    width: 70%;
     height: 20%;
-    background: url(https://www.moma.org/d/assets/W1siZiIsIjIwMTUvMTAvMjEvNWZ6cDZmMzFsNl9qYWNrc29ucG9sbG9jay5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/jacksonpollock.jpg?sha=802baec91667ec13) 20% 20% !important;
-    font-size: 25px !important;
-    border: 1px inset rgba(240,240,240,0.4) !important;
-    text-shadow: 2px 2px 2px rgba(20,20,20,0.6);
+     border: 2px inset rgba(24,24,24,0.7) !important;
+    background: white !important; /*url(http://web.guggenheim.org/exhibitions/picasso/content/images/picasso_x.2009.1438_m.jpg) 20% 20% !important*\;
+    font-size: 29px !important;
+   
+    text-shadow: 1px 1px 2px rgba(20,20,20,0.8);
+    /*margin-left: 5% !important;*/
+    color: rgba(20,20,20,0.8) !important;
+    border-radius: 15px 2px 17px 2px !important;
 }
 
 .btn-light-green {
@@ -47,17 +91,21 @@ body {
     height: 20% !important;
     font-family: 'Raleway';
      border-radius: 5px;
+     color: rgba(255,255,255,0.8)!important;
 }
 
 .btn-light-blue{
     /*background: rgba(20,40,150,0.7) !important;*/
-    background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;
+    /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
     border-radius: 5px;
+    color: rgba(10,10,10,0.9);
+    font-size: 20px;
     
 }
 
 .btn-light-red {
- background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;
+ /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
     border: 1px solid rgba(255,255,255,0.5);
      border-radius: 5px;
+     background-color: rgba(80,20,10,0.9) !important;
 }

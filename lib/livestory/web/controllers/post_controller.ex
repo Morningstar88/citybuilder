@@ -5,10 +5,6 @@ defmodule LiveStory.Web.PostController do
 
   def index(conn, _params) do
     posts = Stories.list_posts() #Original code
-   # post_preview = String.split(posts,"")
-   # Strip 
-   #
-   #
     render(conn, "index.html", posts: posts)
   end
   
@@ -32,7 +28,7 @@ defmodule LiveStory.Web.PostController do
     case Stories.create_post(post_params) do
       {:ok, post} ->
         conn
-        |> put_flash(:info, "Post created successfully.")
+        |> put_flash(:info, "Post created! ヽ(´▽`)/")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
@@ -44,6 +40,7 @@ defmodule LiveStory.Web.PostController do
     IO.inspect post
     forked_post = Stories.create_forked_post(post)
     changeset = Stories.change_post(forked_post)
+    changeset = Stories.change_post(post)
     render(conn, "edit.html", post: post, changeset: changeset)
 end
  
@@ -80,7 +77,7 @@ end
     case Stories.update_post(post, post_params) do
       {:ok, post} ->
         conn
-        |> put_flash(:info, "Post updated successfully.")
+        |> put_flash(:info, "Post created/updated.")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", post: post, changeset: changeset)

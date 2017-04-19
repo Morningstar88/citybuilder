@@ -56,6 +56,12 @@ exports.config = {
       "js/app.js": ["js/app"]
     }
   },
+  
+// 
+// autoRequire: {
+// "js\app.js": ["assets/js/app"]
+// }
+//
 
   npm: {
     enabled: true

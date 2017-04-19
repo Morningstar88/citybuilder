@@ -39,7 +39,7 @@ body {
     text-shadow: 2px 2px 2px rgba(20,20,20,0.6);
 }
 
-.btn-light-green {
+.btn-show {
     /*more like light yellow now */
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px inset rgba(255,255,255,0.1) !important;
@@ -49,14 +49,14 @@ body {
      border-radius: 5px;
 }
 
-.btn-light-blue{
+.btn-edit{
     /*background: rgba(20,40,150,0.7) !important;*/
     background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;
     border-radius: 5px;
     
 }
 
-.btn-light-red {
+.btn-delete {
  background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;
     border: 1px solid rgba(255,255,255,0.5);
      border-radius: 5px;

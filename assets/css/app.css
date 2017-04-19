@@ -85,13 +85,14 @@ body {
 }
 
 .btn-light-green {
-    /*more like light yellow now */
+    /*ORANGE*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px inset rgba(255,255,255,0.1) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     font-family: garamond;
      border-radius: 5px;
+     color: rgba(255,255,255,1) !important;
      background-color: rgba(230,69,0,0.7)!important;
      
     
@@ -102,15 +103,17 @@ body {
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
     border-radius: 5px;
-    color: rgba(10,10,10,0.9);
+    background-color: rgba(255,255,255,0.9) !important;
     font-size: 20px;
+    color: rgba(20,20,20,0.8);
     
 }
 
 .btn-light-red {
     /* DELETE BUTTON */
  /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
-    border: 1px solid rgba(2,2,2,1) !important;
+    border: 1px solid rgba(2,2,2,0.2) !important;
      border-radius: 5px;
-     background-color: rgba(20,10,10,0.9) !important;
+     background-color: rgba(255,255,255,0.9) !important;
+     color: rgba(20,20,20,1) !important;
 }

@@ -17,7 +17,8 @@ defmodule LiveStory.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PostController, :index
-    resources "/posts", PostController
+    resources "/posts", PostController 
+    get "/posts/fork/:id", PostController , :fork
   end
   
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/

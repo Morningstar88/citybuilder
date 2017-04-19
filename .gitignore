@@ -25,3 +25,8 @@ npm-debug.log
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+.idea/
+.mix_tasks
+lib/livestory/stories/stories_forked_posts.ex
+livestory.iml
+priv/repo/migrations/20170418232740_create_stories_forked_posts.exs

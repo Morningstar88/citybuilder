@@ -19,7 +19,7 @@
         <span><%= link "EDIT", to: post_path(@conn, :edit, post), class: "btn btn-primary btn-md btn-light-blue" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "DELETE", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-md btn-light-red" %></span>
-         <span><%= link "FORK THIS POST", to: post_path(@conn, :show, post), class: "btn btn-default btn-md" %> </span>
+         <span><%= link "FORK THIS POST", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md" %> </span>
       <!--<td><%#= post.para2 %></td>-->
       <!--<td><%#= post.para3 %></td>-->
 

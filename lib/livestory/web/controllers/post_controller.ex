@@ -41,9 +41,11 @@ defmodule LiveStory.Web.PostController do
  
  def fork(conn, %{"id" => id}) do
     post = Stories.get_post!(id)
-    changeset = Stories.change_post(post)
+    IO.inspect post
+    forked_post = Stories.create_forked_post(post)
+    changeset = Stories.change_post(forked_post)
     render(conn, "edit.html", post: post, changeset: changeset)
-  end
+end
  
  
  

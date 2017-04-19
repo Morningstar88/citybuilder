@@ -1,6 +1,6 @@
-<h2 class="edit-title display-post-title">Edit Your Version</h2>
+<h2 class="edit-title display-post-title">Write Your Version</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>
 
-<span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-info" %></span>
+<span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default" %></span>

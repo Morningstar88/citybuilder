@@ -11,6 +11,7 @@ body {
     letter-spacing: 3px;
     text-align: center;
     font-size: 500%;
+    color: rgba(20,20,20,0.4);
     font-family: garamond;
     font-weight: 400;
     color: rgba(10,10,10,0.8);
@@ -73,7 +74,7 @@ body {
 .btn-span {
     width: 70%;
     height: 20%;
-    border: 1px inset rgba(24,24,24,0.7) !important;
+    border: 1px inset rgba(24,24,24,0.4) !important;
     background-color: white !important; /*url(http://web.guggenheim.org/exhibitions/picasso/content/images/picasso_x.2009.1438_m.jpg) 20% 20% !important*\;
     font-size: 29px !important;
    

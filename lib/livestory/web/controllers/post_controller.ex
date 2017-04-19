@@ -77,7 +77,7 @@ end
     case Stories.update_post(post, post_params) do
       {:ok, post} ->
         conn
-        |> put_flash(:info, "Post created/updated.")
+        |> put_flash(:info, "Post created/updated. Ψ ")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "edit.html", post: post, changeset: changeset)

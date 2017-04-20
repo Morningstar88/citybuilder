@@ -46,6 +46,12 @@ body {
     font-size: 35px;
 }
 
+.unicode-lg {
+    color: rgba(20,20,20,0.9) !important;
+    font-size: 23px !important;
+ 
+}
+
 /* End Display Posts */
 
 /* Form Control*/
@@ -68,6 +74,11 @@ body {
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
+    border: 1px solid rgba(255,255,255,0.6) !important;
+}
+
+.form-control-body:focus {
+   border: 1px solid rgba(20,20,20,0.2) !important;
 }
 
 
@@ -102,15 +113,16 @@ body {
 }
 
 .btn-light-green {
-    /*ORANGE*/
+    /*PURPLE READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px inset rgba(255,255,255,0.1) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
+    width: 80px !important;
     font-family: garamond;
      border-radius: 5px;
      color: rgba(255,255,255,1) !important;
-     background-color: rgba(230,69,0,0.7)!important;
+     background-color: rgba(142,70,142,0.9)!important;
      
     
 }

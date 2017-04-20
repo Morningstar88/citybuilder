@@ -2,9 +2,11 @@ defmodule LiveStory.Auths.User do
   use Ecto.Schema
 
   schema "auths_users" do
-    field :email, :string
+    field :username, :string
     field :name, :string
-    field :password, :string
+    field :encrypted_password, :string
+
+    field :password, :string, virtual: true
 
     timestamps()
   end

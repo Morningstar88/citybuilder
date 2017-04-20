@@ -2,18 +2,20 @@
   		  
  <br>
   <ul>		 
-  		  
+    <span><%= link "Ψ", to: post_path(@conn, :fork, @post), class: "btn btn-default long-fork-button"%></span>
+ 	    <div class="display-post-title-wrapper">
  	   <h1 class="display-post-title">
        <%= @post.title %>		      
     </h1>		   
-  		  
+    </div>
+  	<div class="display-post-body-wrapper">
 	   <h4 class="display-post-body">
        <%= @post.body %>		     
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </h4>	
+    </div>
     <br>
-     <span><%= link "Fork this", to: post_path(@conn, :fork, @post), class: "btn btn-default"%></span>			  
-  </ul>		  
+   </ul>		  
  <br><br><br>
  
  <span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default " %></span>

@@ -1,6 +1,6 @@
-<h2>New Post</h2>
+<h2 class="edit-title display-post-title">New Post</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :create) %>
 
-<span><%= link "Back", to: post_path(@conn, :index) %></span>
+<span><%= link "Back", to: post_path(@conn, :index), class: "btn btn-default" %></span>

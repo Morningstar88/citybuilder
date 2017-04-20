@@ -2,11 +2,12 @@ defmodule LiveStory.Stories do
   @moduledoc """
   The boundary for the Stories system.
   """
-
   import Ecto.{Query, Changeset}, warn: false
   alias LiveStory.Repo
+  alias Ecto.Multi
 
   alias LiveStory.Stories.Post
+  alias LiveStory.Stories.ForkedPost
 
   @doc """
   Returns the list of posts.
@@ -102,9 +103,33 @@ defmodule LiveStory.Stories do
     post_changeset(post, %{})
   end
 
+
+  def create_forked_post(%Post{title: title, body: body, id: id} = original_post) do
+    {:ok, new_post} = create_post(%{title: title, body: body})
+    forked_post_params = %{
+      original_post_id: id,
+      forked_post_id: new_post.id
+    }
+
+    %ForkedPost{}
+    |> fork_post_changeset(forked_post_params)
+    |> Repo.insert() 
+    |> case do
+      {:ok, forked_post} -> new_post
+      {:error, error} -> error
+    end
+  end
+
   defp post_changeset(%Post{} = post, attrs) do
     post
     |> cast(attrs, [:title, :body]) #Need to change this to Para1, Para2 at some point.
     |> validate_required([:title, :body]) #Need to change this to Para1, Para2 at some point.
+  end
+
+  defp fork_post_changeset(%ForkedPost{} = forked_posts, attrs) do
+    IO.inspect attrs
+    forked_posts
+    |> cast(attrs, [:original_post_id, :forked_post_id])
+    |> validate_required([:original_post_id, :forked_post_id])
   end
 end

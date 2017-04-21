@@ -9,12 +9,23 @@ defmodule LiveStory.Web.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :browser_auth do  
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
+  end  
+
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   scope "/", LiveStory.Web do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :browser_auth] # Use the default browser stack
+
+    get "/users/signin", UserController, :signin
+    resources "/users", UserController
+
+    post "/signin", SessionController, :create
+    delete "/signout", SessionController, :logout
 
     get "/", PostController, :index
     resources "/posts", PostController 

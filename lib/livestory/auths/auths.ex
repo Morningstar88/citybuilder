@@ -104,7 +104,18 @@ defmodule LiveStory.Auths do
 
   defp user_changeset(%User{} = user, attrs) do
     user
-    |> cast(attrs, [:name, :email, :password])
-    |> validate_required([:name, :email, :password])
+    |> cast(attrs, [:username, :name, :password])
+    |> validate_required([:username, :name, :password])
+    |> unique_constraint(:username, message: "Username already taken")
+    |> generate_encrypted_password
+  end
+
+  defp generate_encrypted_password(current_changeset) do
+    case current_changeset do
+      %Ecto.Changeset{valid?: true, changes: %{password: password}} ->
+        put_change(current_changeset, :encrypted_password, Comeonin.Bcrypt.hashpwsalt(password))
+      _ ->
+        current_changeset
+    end
   end
 end

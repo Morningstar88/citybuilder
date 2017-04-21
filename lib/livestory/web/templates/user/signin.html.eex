@@ -1,0 +1,3 @@
+<h3>User Login</h3>
+
+<%= render LiveStory.Web.SessionView , "form.html", conn: @conn %>

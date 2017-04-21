@@ -2,7 +2,7 @@
   		  
  <br>
   <ul>		 
-    <span><%= link "Ψ", to: post_path(@conn, :fork, @post), class: "btn btn-default long-fork-button"%></span>
+    <span><%= link "Ψ", to: post_path(@conn, :fork, @post), class: "btn btn-default btn-long-fork"%></span>
  	    <div class="display-post-title-wrapper">
  	   <h1 class="display-post-title">
        <%= @post.title %>		      
@@ -18,5 +18,6 @@
    </ul>		  
  <br><br><br>
  
+  <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default"%></span>
  <span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default " %></span>
- <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default"%></span>
+ <br><br><br>

@@ -1,6 +1,9 @@
-<h2 class="edit-title display-post-title">New Post</h2>
+<h1 class="edit-title display-post-title-edit"><span class="first-letter">.</span><span class="second-letter">.</span><span class="third-letter">.</span><span class="fourth-letter">?</span></h1>
 
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :create) %>
 
 <span><%= link "Back", to: post_path(@conn, :index), class: "btn btn-default" %></span>
+<br><br><br>
+
+<p class="edit-title display-post-title">"I enjoy the freedom of the blank page"</p>

@@ -1,7 +1,8 @@
-<div id="btn-huge-div">
-<span><%= link "WRITE!", to: post_path(@conn, :new), class: "btn btn-success btn-span" %></span>
+<br><br>
+<div class="center-wrap">
+<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
+<div class="mask"></div>
 </div>
-<h1 class="latest-stories-main-title">  </h1>
 
 <table class="table">
   <thead>
@@ -15,15 +16,16 @@
   <tbody>
 <%= for post <- @posts do %>
     <tr>
-      <h2 class="display-post-title"><%= post.title %></h2>
-      <h4 class="display-post-body"><%= post.body %></h4>
+      <h2 class="display-post-title-index"><%= post.title %></h2>
+      <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link "Ω", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-light-green unicode-lg" %></span>
-        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-light-blue unicode-lg" %></span>
+       <span><%= link " Ϟ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
+        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
-        <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-light-red unicode-lg" %></span>
+        <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
          <span class="fork-count display-post-body">23 Ψ</span>
+         <br><br><br>
       <!--<td><%#= post.para2 %></td>-->
       <!--<td><%#= post.para3 %></td>-->
 

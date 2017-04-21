@@ -1,10 +1,32 @@
 @import url('http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700');
 
-body {
+/* '' */
+
+html, body {
     font-family: 'Raleway', sans-serif !important;
     font-size: 33px;
     color: rgba(20,20,20,0.8);
+    padding: 0px;
+    margin: 0px;
+}
+
+/*header {*/
+/*        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/aster-flower-purple-65924.jpeg") no-repeat center; */
+        /* Change back address of image */
+/*        background-size: 100% 100% !important;*/
+/*        height: 300px; */
+            /* Change height back to 630px */
+/*        }*/
+/*        html, body {*/
+/*            padding:0px !important;*/
+/*            margin:0px !important;*/
+/*        }*/
+
+.img-header {
+    width: 300%;
+    height: 400px;
+    margin-left: 0%;
 }
 
 .latest-stories-main-title {
@@ -37,22 +59,147 @@ body {
 /*   background-color: rbga(120,56,120,0.3) !important;*/
 /*}*/
 
+/* HEADER GHOST BUTTON */
+
+/* ORIGINAL CODEPEN http://codepen.io/Teeke/pen/JNXmKj */
+
+.center-wrap {
+	position: relative;
+	top: calc(50% - 100px);
+	left: calc(50% - 125px);
+	width: 250px;
+	height: 200px;
+} 
+
+.button {
+	position: relative;
+	display: block;
+	background: none center center no-repeat;
+	background-size: cover;
+	border: 1px solid #2e2e2e;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	padding: 20px 15px;
+	text-align: center;
+	max-width: 270px;
+	min-width: 200px;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
+	transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
+    color: rgba(20,20,20,.8);
+    text-decoration: none;
+}
+
+/*.button a {*/
+/*	color: #111 !important;*/
+/*	font-family: 'Century Gothic';*/
+/*	text-decoration: none;*/
+/*}*/
+
+.button .mask {
+	background: #fff;
+	background: rgba(255,255,255,0.5);
+}
+
+.button .mask {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 100px;
+	-webkit-transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+	transform: translate3d(-120%,-50px,0) rotate3d(0,0,1,45deg);
+	-webkit-transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+	transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+}
+
+.button .shift {
+	-webkit-transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+	transition: all 1.1s cubic-bezier(0.19,1,.22,1);
+}
+
+.button:hover {
+	border-color: #fff;
+	 text-decoration: none;
+	/* box-shadow: 0 0 5px rgba(255,245,245,0.8); */
+	/* background-image: url('http://cuinine.com/img/codepen/savvy.jpg'); */
+}
+
+/*.button:hover a {*/
+/*	color: #fff;*/
+/*	text-decoration: none !important;*/
+/*}*/
+
+.button:hover .mask {
+	background: #fff;
+	-webkit-transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+	transform: translate3d(120%,-100px,0) rotate3d(0,0,1,90deg);
+}
+
+.button:hover .shift {
+	padding-left: 5px;
+}
+
+.first-letter {
+    color: rgba(255,0,13,0.8);
+       text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
+}
+
+.second-letter {
+    color: rgba(190,34,190,0.8);
+       text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
+}
+
+.third-letter {
+    color: rgba(20,20,230,0.6);
+       text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
+}
+
+.fourth-letter {
+    color: rgba(220,22,220,0.3);
+    text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
+}
+
+/*Background gradients https://www.w3schools.com/css/css3_gradients.asp */
+
 /* Display Posts For Users */
+
+.display-post-title-index {
+    font-family: garamond !important;
+    font-size: 57px;
+    letter-spacing: 7px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    text-align: "center" !important;
+   
+}
+
+.display-post-title-edit {
+    font-family: garamond !important;
+    font-size: 88px;
+    letter-spacing: 9px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    text-align: "center" !important;
+   
+}
 
 .display-post-title {
     font-family: garamond !important;
     font-size: 48px;
-    letter-spacing: 2px;
+    letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    text-align: "center" !important;
    
 }
 
 .display-post-body {
+    height: auto;
     padding-top: 20px;
     font-family: garamond !important;
     padding-left: 10px;
-    line-height: 2px;
+    line-height: 40px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
     font-size: 35px;
@@ -60,8 +207,9 @@ body {
 }
 
 .display-post-title-wrapper {
-    box-shadow: -8px 0px 5px -5px rgba(0,0,0,.2), 8px 0px 5px -5px rgba(0,0,0,.2) !important;
-    width: 500px;
+    /*box-shadow: -8px 0px 5px -5px rgba(0,0,0,.2), 8px 0px 5px -5px rgba(0,0,0,.2) !important;*/
+    width: 700px;
+    height: auto;
     position: relative;
     padding-left: 9%;
    
@@ -75,9 +223,9 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 */
 
 .display-post-body-wrapper {
-      box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;
+      /*box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;*/
       height: 600px;
-      width: 500px;
+      width: auto;
       padding: 5px;
       position: relative;
       margin-top: -1%;
@@ -133,54 +281,66 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 }
 
 #btn-huge-div {
-    margin-left: 0%;
+  margin-left: 34%;
+  font-family: 'century gothic' !important;
+  text-align: 'center' !important;
 }
 
 .btn-span {
     width: 70%;
     height: 30%;
     border: 1px solid rgba(24,24,24,0.2) !important;
-    background-color: rgba(142,70,142,0.7)!important;
-    box-shadow: 1px 1px 1px red !important;
+    background-color: rgba(80,0,80,0.9)!important;
+    box-shadow: 1px 1px 1px rgba(30,30,30,.8) !important;
     text-transform: small-caps !important;
-    color: rgba(255,255,255,0.8) !important;
+    color: rgba(255,255,255,1) !important;
     border-radius: 15px 4px 15px 4px !important;
 }
 
 
-.btn-light-green {
+.btn-read-post {
     /*PURPLE READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px inset rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(60,0,60,0.3) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
     font-family: garamond;
-     border-radius: 5px;
-     color: rgba(255,255,255,1) !important;
-     background-color: rgba(142,70,142,0.9)!important;
+     border-radius: 2px;
+     color: rgba(55,2,55,1) !important;
+     background-color: rgba(134,2,134,0.1)!important;
+     box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
      
     
 }
 
+.btn-long-fork {
+    height: 40px;
+    width: 600px;
+    font-size: 94px;
+    border-radius: 4px;
+}
 
-.btn-light-blue{
+
+.btn-edit-post {
     /*EDIT*/ 
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgba(255,255,255,0.9) !important;
     font-size: 20px;
     color: rgba(20,20,20,0.8);
+    box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
     
 }
 
 
-.btn-light-red {
+.btn-delete-post {
     /* DELETE BUTTON */
  /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
     border: 1px solid rgba(2,2,2,0.2) !important;
      border-radius: 5px;
      background-color: rgba(255,255,255,0.9) !important;
      color: rgba(20,20,20,1) !important;
+     box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
 }

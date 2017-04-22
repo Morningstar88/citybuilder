@@ -13,6 +13,12 @@
 <p id="test-me"></p>
 <br><br>
 <div class="center-wrap">
+<%= if @user do %>
+<span>Hello <%= @user.username %>!</span>
+<span><%= link "Logout", to: session_path(@conn, :logout), method: :delete %></span>
+<% else %>
+  <span><%= link "Login", to: user_path(@conn, :signin) %></span>
+<% end %>
 <span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
 <div class="mask"></div>
 <span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>

@@ -4,8 +4,9 @@ defmodule LiveStory.Web.PostController do
   alias LiveStory.Stories
 
   def index(conn, _params) do
+    user = Guardian.Plug.current_resource(conn)
     posts = Stories.list_posts() #Original code
-    render(conn, "index.html", posts: posts)
+    render(conn, "index.html", posts: posts, user: user)
   end
   
   #Udia Web Controllers

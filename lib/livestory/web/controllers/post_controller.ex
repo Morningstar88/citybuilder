@@ -26,7 +26,8 @@ defmodule LiveStory.Web.PostController do
   end
 
   def create(conn, %{"post" => post_params}) do
-    case Stories.create_post(post_params) do
+    user = Guardian.Plug.current_resource(conn)
+    case Stories.create_post(post_params, user) do
       {:ok, post} ->
         conn
         |> put_flash(:info, "Post created! ヽ(´▽`)/")

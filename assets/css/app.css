@@ -171,7 +171,7 @@ html, body {
     font-size: 38px;
     letter-spacing: 6px;
     color: rgba(10,10,10,0.8);
-    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.7);
     text-align: "center" !important;
     font-variant: small-caps;
    
@@ -206,7 +206,8 @@ html, body {
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
-    text-align: "center" !important;
+    text-align: center !important;
+    white-space: pre;
    
 }
 
@@ -217,6 +218,8 @@ html, body {
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
     z-index: 2;
+    text-align: 'center' !important;
+    white-space: pre-wrap !important;
    
    
 }
@@ -263,6 +266,41 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-size: 24px;
 }
 
+.edit-letter-1 {
+    color: rgba(0,0,80,0.8);
+    text-shadow: rgba(100,100,100,0.4);
+}
+
+.edit-letter-2 {
+     color: rgba(0,0,100,0.8);
+      text-shadow: rgba(100,100,100,0.4);
+ 
+}
+
+.edit-letter-3 {
+     color: rgba(0,10,120,0.8);
+      text-shadow: rgba(100,100,100,0.4);
+  
+}
+
+.edit-letter-4 {
+     color: rgba(0,0,140,0.8);
+      text-shadow: rgba(100,100,100,0.4);
+   
+}
+
+.edit-letter-5 {
+     color: rgba(0,30,150,0.8);
+      text-shadow: rgba(100,100,100,0.4);
+   
+}
+
+.edit-letter-6 {
+     color: rgba(0,40,165,0.8);
+      text-shadow: rgba(100,100,100,0.4);
+ 
+}
+
 /* End Display Posts */
 
 /* Form Control*/
@@ -288,8 +326,13 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border: 1px solid rgba(255,255,255,0.6) !important;
 }
 
-.form-control-body:focus {
+/*.form-control-body:focus {*/
        /*border: 1px solid rgba(20,20,20,0.2) !important;*/
+/*}*/
+
+.control-label{
+    /*Takes away the 'title' and 'body' tags above text boxes */
+    display: none;
 }
 
 

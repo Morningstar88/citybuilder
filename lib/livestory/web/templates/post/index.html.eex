@@ -1,7 +1,24 @@
+<!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
+
+
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans| Satisfy|Comfortaa:700|Reenie Beanie|Cinzel|Cutive Mono|VT323|Special Elite|Oxygen|OverlockFontdiner SwankyReenie Beanie|Montserrat|EB Garamond|Crimson Text|Cardo|Radley|Cantarell' rel='stylesheet'
+  type='text/css'>
+  
+  <style>
+    body {
+      font-family: 'Josefin Sans' !important;
+    }
+    </style>
+
+<p id="test-me"></p>
 <br><br>
 <div class="center-wrap">
 <span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
 <div class="mask"></div>
+<span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>
+<span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>
+<span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>
+<span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>
 </div>
 
 <table class="table">
@@ -37,4 +54,27 @@
 <% end %>
   </tbody>
 </table>
+
+<script>
+  
+  // document.getElementById("multi-colored-letter-1").innerHTML ="W";
+  // document.getElementById("multi-colored-letter-2").innerHTML ="H";
+  //   document.getElementById("multi-colored-letter-3").innerHTML ="A";
+  //   document.getElementById("multi-colored-letter-4").innerHTML ="T";
+  // document.getElementById("multi-colored-letter-5").innerHTML ="'";
+  //   document.getElementById("multi-colored-letter-6").innerHTML ="S";
+  //   document.getElementById("multi-colored-letter-7").innerHTML ="";
+  // document.getElementById("multi-colored-letter-8").innerHTML ="H";
+  //   document.getElementById("multi-colored-letter-9").innerHTML ="A";
+  //   document.getElementById("multi-colored-letter-10").innerHTML ="P";
+  // document.getElementById("multi-colored-letter-11").innerHTML ="P";
+  //   document.getElementById("multi-colored-letter-12").innerHTML ="E";
+  //   document.getElementById("multi-colored-letter-13").innerHTML ="N";
+  // document.getElementById("multi-colored-letter-14").innerHTML ="I";
+  //   document.getElementById("multi-colored-letter-15").innerHTML ="N";
+  //   document.getElementById("multi-colored-letter-16").innerHTML ="G";
+  //     document.getElementById("multi-colored-letter-16").innerHTML ="?";
+  
+  
+</script>
 

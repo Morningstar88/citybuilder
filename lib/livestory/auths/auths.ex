@@ -54,6 +54,9 @@ defmodule LiveStory.Auths do
     |> user_changeset(attrs)
     |> Repo.insert()
   end
+  
+  
+  #http://stackoverflow.com/questions/30157913/doctrine-column-id-does-not-exist-on-postgresql
 
   @doc """
   Updates a user.

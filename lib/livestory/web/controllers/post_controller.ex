@@ -39,8 +39,9 @@ defmodule LiveStory.Web.PostController do
  
  def fork(conn, %{"id" => id}) do
     post = Stories.get_post!(id)
+    user = Guardian.Plug.current_resource(conn)
     IO.inspect post
-    forked_post = Stories.create_forked_post(post)
+    forked_post = Stories.create_forked_post(post, user)
     changeset = Stories.change_post(forked_post)
     changeset = Stories.change_post(post)
     render(conn, "edit.html", post: post, changeset: changeset)

@@ -14,10 +14,11 @@
 <br><br>
 <div class="center-wrap">
 <%= if @user do %>
-<span>Hello <%= @user.username %>!</span>
+<span>Hello <%= @user.name %>!</span>
 <span><%= link "Logout", to: session_path(@conn, :logout), method: :delete %></span>
 <% else %>
   <span><%= link "Login", to: user_path(@conn, :signin) %></span>
+  <span><%= link "Signup", to: user_path(@conn, :new) %></span>
 <% end %>
 <span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
 <div class="mask"></div>
@@ -32,6 +33,7 @@
 <%= for post <- @posts do %>
     <tr>
       <h2 class="display-post-title-index"><%= post.title %></h2>
+      <p>Created by: <%= post.user.name %></p>
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
        <span><%= link " Ϟ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>

@@ -19,7 +19,9 @@ defmodule LiveStory.Stories do
 
   """
   def list_posts do
-    Repo.all(Post)
+    from(p in Post,
+      preload: :user
+    ) |> Repo.all
   end
 
   @doc """
@@ -52,7 +54,7 @@ defmodule LiveStory.Stories do
   """
   def create_post(attrs \\ %{}, user) do
     %Post{}
-    |> post_changeset(Map.merge(attrs, user_id: user.id))
+    |> post_changeset(Map.merge(attrs, %{"user_id" => user.id}))
     |> Repo.insert()
   end
 
@@ -104,8 +106,8 @@ defmodule LiveStory.Stories do
   end
 
 
-  def create_forked_post(%Post{title: title, body: body, id: id} = original_post) do
-    {:ok, new_post} = create_post(%{title: title, body: body})
+  def create_forked_post(%Post{title: title, body: body, id: id} = original_post, user) do
+    {:ok, new_post} = create_post(%{"title" => title, "body" => body}, user)
     forked_post_params = %{
       original_post_id: id,
       forked_post_id: new_post.id

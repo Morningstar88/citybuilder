@@ -1,38 +1,78 @@
-<div id="btn-huge-div">
-<span><%= link "WRITE!", to: post_path(@conn, :new), class: "btn btn-success btn-span" %></span>
+<!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
+
+
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans| Satisfy|Comfortaa:700|Reenie Beanie|Cinzel|Cutive Mono|VT323|Special Elite|Oxygen|OverlockFontdiner SwankyReenie Beanie|Montserrat|EB Garamond|Crimson Text|Cardo|Radley|Cantarell' rel='stylesheet'
+  type='text/css'>
+  
+  <style>
+    body {
+      font-family: 'Josefin Sans' !important;
+    }
+    </style>
+
+<p id="test-me"></p>
+<br><br>
+<div class="center-wrap">
+<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
+<div class="mask"></div>
+<span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>
+<span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>
+<span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>
+<span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>
 </div>
-<h1 class="latest-stories-main-title">  </h1>
 
 <table class="table">
-  <thead>
-    <tr>
-      <!--<th>Title</th>-->
-      <!--<th>Body</th>-->
-
-      <th></th>
-    </tr>
-  </thead>
   <tbody>
 <%= for post <- @posts do %>
     <tr>
-      <h2 class="display-post-title"><%= post.title %></h2>
-      <h4 class="display-post-body"><%= post.body %></h4>
+      <h2 class="display-post-title-index"><%= post.title %></h2>
+      <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link "Ω", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-light-green unicode-lg" %></span>
-        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-light-blue unicode-lg" %></span>
+       <span><%= link " Ϟ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
+        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
-        <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-light-red unicode-lg" %></span>
+        <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
          <span class="fork-count display-post-body">23 Ψ</span>
-      <!--<td><%#= post.para2 %></td>-->
-      <!--<td><%#= post.para3 %></td>-->
-
-      <!--<td class="text-right">-->
-       
-       
-      <!--</td>-->
-    </tr>
+         <br><br><br>
+      </tr>
 <% end %>
   </tbody>
 </table>
+<table class="our-picks-table">
+  <tbody>
+    <%= for post <- @posts do %>
+    <tr>
+      <h2 class="display-post-title-index our-picks-box"><%= post.title %></h2>
+      <p class="display-post-body"><%= post.body %></p>
+      <br><br>
+      <span class="fork-count display-post-body">23 Ψ</span>
+    </tr>
+    <% end %>
+  </tbody>
+  
+</table>
+
+<script>
+  
+  // document.getElementById("multi-colored-letter-1").innerHTML ="W";
+  // document.getElementById("multi-colored-letter-2").innerHTML ="H";
+  //   document.getElementById("multi-colored-letter-3").innerHTML ="A";
+  //   document.getElementById("multi-colored-letter-4").innerHTML ="T";
+  // document.getElementById("multi-colored-letter-5").innerHTML ="'";
+  //   document.getElementById("multi-colored-letter-6").innerHTML ="S";
+  //   document.getElementById("multi-colored-letter-7").innerHTML ="";
+  // document.getElementById("multi-colored-letter-8").innerHTML ="H";
+  //   document.getElementById("multi-colored-letter-9").innerHTML ="A";
+  //   document.getElementById("multi-colored-letter-10").innerHTML ="P";
+  // document.getElementById("multi-colored-letter-11").innerHTML ="P";
+  //   document.getElementById("multi-colored-letter-12").innerHTML ="E";
+  //   document.getElementById("multi-colored-letter-13").innerHTML ="N";
+  // document.getElementById("multi-colored-letter-14").innerHTML ="I";
+  //   document.getElementById("multi-colored-letter-15").innerHTML ="N";
+  //   document.getElementById("multi-colored-letter-16").innerHTML ="G";
+  //     document.getElementById("multi-colored-letter-16").innerHTML ="?";
+  
+  
+</script>
 

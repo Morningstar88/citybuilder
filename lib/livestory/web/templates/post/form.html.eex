@@ -4,14 +4,15 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
+  
+  <!--https://www.sitepoint.com/everything-need-know-html-pre-element/-->
 
   <div class="form-group">
     <%= label f, :title, class: "control-label" %>
     <%= text_input f, :title, class: "form-control form-control-title" %>
     <%= error_tag f, :title %>
   </div>
-  
-  <div class="form-group">
+   <div class="form-group">
     <%= label f, :body, class: "control-label" %>
     <%= textarea f, :body, class: "form-control form-control-body" %>
     <%= error_tag f, :body %>

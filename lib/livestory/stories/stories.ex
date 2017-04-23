@@ -19,7 +19,9 @@ defmodule LiveStory.Stories do
 
   """
   def list_posts do
-    Repo.all(Post)
+    from(p in Post,
+      preload: :user
+    ) |> Repo.all
   end
 
   @doc """
@@ -50,9 +52,9 @@ defmodule LiveStory.Stories do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_post(attrs \\ %{}) do
+  def create_post(attrs \\ %{}, user) do
     %Post{}
-    |> post_changeset(attrs)
+    |> post_changeset(Map.merge(attrs, %{"user_id" => user.id}))
     |> Repo.insert()
   end
 
@@ -104,8 +106,8 @@ defmodule LiveStory.Stories do
   end
 
 
-  def create_forked_post(%Post{title: title, body: body, id: id} = original_post) do
-    {:ok, new_post} = create_post(%{title: title, body: body})
+  def create_forked_post(%Post{title: title, body: body, id: id} = original_post, user) do
+    {:ok, new_post} = create_post(%{"title" => title, "body" => body}, user)
     forked_post_params = %{
       original_post_id: id,
       forked_post_id: new_post.id
@@ -113,7 +115,7 @@ defmodule LiveStory.Stories do
 
     %ForkedPost{}
     |> fork_post_changeset(forked_post_params)
-    |> Repo.insert() 
+    |> Repo.insert()
     |> case do
       {:ok, forked_post} -> new_post
       {:error, error} -> error
@@ -122,8 +124,8 @@ defmodule LiveStory.Stories do
 
   defp post_changeset(%Post{} = post, attrs) do
     post
-    |> cast(attrs, [:title, :body]) #Need to change this to Para1, Para2 at some point.
-    |> validate_required([:title, :body]) #Need to change this to Para1, Para2 at some point.
+    |> cast(attrs, [:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
+    |> validate_required([:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
   end
 
   defp fork_post_changeset(%ForkedPost{} = forked_posts, attrs) do

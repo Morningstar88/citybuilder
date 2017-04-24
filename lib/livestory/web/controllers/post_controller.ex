@@ -34,7 +34,7 @@ defmodule LiveStory.Web.PostController do
     case Stories.create_post(post_params, conn.assigns.user) do
       {:ok, post} ->
         conn
-        |> put_flash(:info, "Post created! ヽ(´▽`)/")
+        # |> put_flash(:info, "Post created! ヽ(´▽`)/")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)
@@ -101,7 +101,7 @@ defmodule LiveStory.Web.PostController do
   defp check_same_user(conn, _opts) do
     if conn.assigns.user.id != conn.assigns.post.user_id do
       conn
-      |> put_flash(:error, "This post belongs to other user.")
+      |> put_flash(:error, "This post belongs to another user! You can fork someone else's post, but not edit it.")
       |> redirect(to: post_path(conn, :index))
     else
       conn

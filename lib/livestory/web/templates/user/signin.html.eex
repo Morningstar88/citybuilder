@@ -1,3 +1,5 @@
-<h3>User Login</h3>
+<h3>Welcome! Please Login</h3>
 
 <%= render LiveStory.Web.SessionView , "form.html", conn: @conn %>
+
+<h3>Or Signup for a New Account</h3>

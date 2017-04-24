@@ -2,19 +2,22 @@ defmodule LiveStory.Web.PostController do
   use LiveStory.Web, :controller
 
   alias LiveStory.Stories
+  alias LiveStory.Web.ErrorHandler
+
+  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index]
 
   def index(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
     posts = Stories.list_posts() #Original code
     render(conn, "index.html", posts: posts, user: user)
   end
-  
+
   #Udia Web Controllers
   #https://github.com/udia-software/udia/tree/master/lib/udia/web/controllers
-  
+
   #Order posts by newest first:
   #http://stackoverflow.com/questions/42843358/phoenix-application-posts-show-newest-first
-  
+
 #   def index(conn, _params) do
 #     posts = Repo.all(from Post, order_by: [desc: :inserted_at])
 #     render(conn, "index.html", posts: posts)
@@ -36,7 +39,7 @@ defmodule LiveStory.Web.PostController do
         render(conn, "new.html", changeset: changeset)
     end
   end
- 
+
  def fork(conn, %{"id" => id}) do
     post = Stories.get_post!(id)
     user = Guardian.Plug.current_resource(conn)
@@ -61,8 +64,7 @@ end
   #       render(conn, "new.html", changeset: changeset)
   #   end
   # # end
-      
-      
+
   def show(conn, %{"id" => id}) do
     post = Stories.get_post!(id)
     render(conn, "show.html", post: post)

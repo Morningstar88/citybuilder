@@ -54,8 +54,7 @@ defmodule LiveStory.Auths do
     |> user_changeset(attrs)
     |> Repo.insert()
   end
-  
-  
+
   #http://stackoverflow.com/questions/30157913/doctrine-column-id-does-not-exist-on-postgresql
 
   @doc """
@@ -109,6 +108,7 @@ defmodule LiveStory.Auths do
     user
     |> cast(attrs, [:username, :name, :password])
     |> validate_required([:username, :name, :password])
+    |> validate_length(:password, min: 6)
     |> unique_constraint(:username, message: "Username already taken")
     |> generate_encrypted_password
   end

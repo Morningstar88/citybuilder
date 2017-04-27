@@ -4,7 +4,7 @@ defmodule LiveStory.Web.PostController do
   alias LiveStory.Stories
   alias LiveStory.Web.ErrorHandler
 
-  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index]
+  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
   plug :set_post when action in [:fork, :show, :edit, :update, :delete]
   plug :check_same_user when action in [:edit, :update, :delete]

@@ -7,6 +7,7 @@ defmodule LiveStory.Auths.User do
     field :encrypted_password, :string
 
     field :password, :string, virtual: true
+    field :password_confirmation, :string, virtual: true
 
     timestamps()
   end

@@ -1,4 +1,4 @@
-<h2 class="edit-title display-post-title"><span class="edit-letter-1">ಠ</span><span class="edit-letter-2">_</span><span class="edit-letter-3">ರೃ</span><span class="edit-letter-4">.</span><span class="edit-letter-5">.</span><span class="edit-letter-6">.</span><span class="edit-letter-6">?</span></h2>
+<h2 class="edit-title display-post-title"><span class="edit-letter-1">ಠ</span><span class="edit-letter-2">_</span><span class="edit-letter-3">ರೃ</span><span class="edit-letter-4">.</span><span class="edit-letter-5">.</span><span class="edit-letter-6">.</span><span class="edit-letter-6">𝜳?</span></h2>
 <br><br>
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>

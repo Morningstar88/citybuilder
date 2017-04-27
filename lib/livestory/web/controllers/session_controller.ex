@@ -28,7 +28,7 @@ defmodule LiveStory.Web.SessionController do
   def logout(conn, _params) do
     conn
     |> Guardian.Plug.sign_out
-    |> put_flash(:info, "Logged out. cu later")
+    |> put_flash(:info, "Logged out. cu later!")
     |> redirect(to: "/")
   end
 end 

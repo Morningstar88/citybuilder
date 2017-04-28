@@ -131,6 +131,7 @@ defmodule LiveStory.Stories do
 
   def upvote(user_id, post_id) do
     upvote_changeset(%Upvotes{}, %{"user_id" => user_id, "post_id" => post_id})
+    |> Repo.insert()
   end
 
   defp post_changeset(%Post{} = post, attrs) do
@@ -140,7 +141,6 @@ defmodule LiveStory.Stories do
   end
 
   defp fork_post_changeset(%ForkedPost{} = forked_posts, attrs) do
-    IO.inspect attrs
     forked_posts
     |> cast(attrs, [:original_post_id, :forked_post_id])
     |> validate_required([:original_post_id, :forked_post_id])

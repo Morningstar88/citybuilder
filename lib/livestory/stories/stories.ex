@@ -20,6 +20,7 @@ defmodule LiveStory.Stories do
   """
   def list_posts do
     from(p in Post,
+      where: p.published == true,
       preload: :user
     ) |> Repo.all
   end
@@ -38,7 +39,13 @@ defmodule LiveStory.Stories do
       ** (Ecto.NoResultsError)
 
   """
-  def get_post!(id), do: Repo.get!(Post, id)
+  def get_post!(id) do
+    from(p in Post,
+      where: p.id == ^id,
+      preload: :original_post
+    )
+    |> Repo.one!
+  end
 
   @doc """
   Creates a post.
@@ -73,7 +80,22 @@ defmodule LiveStory.Stories do
   def update_post(%Post{} = post, attrs) do
     post
     |> post_changeset(attrs)
-    |> Repo.update()
+    |> check_original_post(post)
+    |> Repo.update
+  end
+
+  defp check_original_post(changeset, post) do
+    {_, post_body} = fetch_field(changeset, :body)
+    if get_change(changeset, :published) && not_changed?(post.original_post, post_body) do
+      changeset
+      |> add_error(:body, "Same as original post")
+    else
+      changeset
+    end
+  end
+
+  defp not_changed?(original_post, post_body) do
+    String.equivalent?(original_post.body, post_body)
   end
 
   @doc """
@@ -105,9 +127,8 @@ defmodule LiveStory.Stories do
     post_changeset(post, %{})
   end
 
-
-  def create_forked_post(%Post{title: title, body: body, id: id} = original_post, user) do
-    {:ok, new_post} = create_post(%{"title" => title, "body" => body}, user)
+  def create_forked_post(%Post{title: title, body: body, id: id}, user) do
+    {:ok, new_post} = create_post(%{"title" => title, "body" => body, "published" => false}, user)
     forked_post_params = %{
       original_post_id: id,
       forked_post_id: new_post.id
@@ -117,14 +138,14 @@ defmodule LiveStory.Stories do
     |> fork_post_changeset(forked_post_params)
     |> Repo.insert()
     |> case do
-      {:ok, forked_post} -> new_post
+      {:ok, _forked_post} -> new_post
       {:error, error} -> error
     end
   end
 
   defp post_changeset(%Post{} = post, attrs) do
     post
-    |> cast(attrs, [:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
+    |> cast(attrs, [:title, :body, :user_id, :published]) #Need to change this to Para1, Para2 at some point.
     |> validate_required([:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
   end
 

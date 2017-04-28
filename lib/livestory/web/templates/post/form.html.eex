@@ -4,7 +4,7 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-  
+
   <!--https://www.sitepoint.com/everything-need-know-html-pre-element/-->
 
   <div class="form-group">
@@ -17,13 +17,18 @@
     <%= textarea f, :body, class: "form-control form-control-body" %>
     <%= error_tag f, :body %>
   </div>
+  <div class="form-group">
+    <%= checkbox(f, :published) %>
+    <b>Published</b>
+    <%= error_tag f, :published %>
+  </div>
 
   <!--<div class="form-group">-->
   <!--  <%#= label f, :para1, class: "control-label" %>-->
   <!--  <%#= textarea f, :para1, class: "form-control" %>-->
   <!--  <%#= error_tag f, :para1 %>-->
   <!--</div>-->
-  
+
   <!--<div class="form-group">-->
   <!--  <%#= label f, :para2, class: "control-label" %>-->
   <!--  <%#= textarea f, :para2, class: "form-control" %>-->

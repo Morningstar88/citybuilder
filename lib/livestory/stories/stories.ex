@@ -8,6 +8,7 @@ defmodule LiveStory.Stories do
 
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.ForkedPost
+  alias LiveStory.Stories.Upvotes
 
   @doc """
   Returns the list of posts.
@@ -22,6 +23,12 @@ defmodule LiveStory.Stories do
     from(p in Post,
       preload: :user
     ) |> Repo.all
+  end
+
+  def list_upvotes(post_id) do
+    from( up in Upvotes,
+    where: up.post_id == ^post_id)
+    |> Repo.all
   end
 
   @doc """
@@ -122,6 +129,10 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def upvote(user_id, post_id) do
+    upvote_changeset(%Upvotes{}, %{"user_id" => user_id, "post_id" => post_id})
+  end
+
   defp post_changeset(%Post{} = post, attrs) do
     post
     |> cast(attrs, [:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
@@ -133,5 +144,12 @@ defmodule LiveStory.Stories do
     forked_posts
     |> cast(attrs, [:original_post_id, :forked_post_id])
     |> validate_required([:original_post_id, :forked_post_id])
+  end
+
+  defp upvote_changeset(%Upvotes{} = upvote, attrs) do
+    upvote
+    |> cast(attrs, [:post_id, :user_id])
+    |> validate_required([:post_id, :user_id])
+    |> unique_constraint(:user_id, name: :stories_upvotes_post_id_user_id_index)
   end
 end

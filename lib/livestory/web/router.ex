@@ -30,6 +30,8 @@ defmodule LiveStory.Web.Router do
     get "/", PostController, :index
     resources "/posts", PostController 
     get "/posts/fork/:id", PostController , :fork
+
+    resources UpvoteController
   end
   
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/

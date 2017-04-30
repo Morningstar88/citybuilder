@@ -50,11 +50,19 @@ html, body {
     font-family: garamond !important;
 }
 
-.long-fork-button {
-    /* at top of SHOW */
-    height: 40px;
-    width: 380px;
-    font-size: 28px;
+
+.show-page-fork-btn {
+      position: absolute;
+    height: 500px;
+    width: 220px;
+    font-size: 94px;
+    border-radius: 2px !important;
+    border: 1px rgba(20,20,20,0.7) !important;
+    font-family: '' !important;
+    margin-left: 730px !important;
+    margin-top: 200px !important;
+}
+    
 }
 
 /*.long-fork-button:hover {*/
@@ -398,7 +406,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-family: garamond !important;
     margin-left: 730px !important;
     margin-top: 200px !important;
-    background: url(http://static.pexels.com/photos/69898/pexels-photo-69898.jpeg) !important;
+    /*background: url(http://static.pexels.com/photos/69898/pexels-photo-69898.jpeg) !important;*/
    
    /* COLORFUL: https://static.pexels.com/photos/21845/landscape-clouds-trees-sunrise-21845.jpg*/
     box-shadow: rgba(100,100,100,0.7);

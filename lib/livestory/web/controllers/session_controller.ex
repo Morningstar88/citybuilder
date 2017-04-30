@@ -9,7 +9,7 @@ defmodule LiveStory.Web.SessionController do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)
-        |> put_flash(:info, "Welcome! Account created. Returning to main page.")
+        # |> put_flash(:info, "Welcome! Account created. Returning to main page.")
         |> redirect(to: "/")
 
       {:error, _err} ->

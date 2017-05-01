@@ -15,8 +15,8 @@
       margin-top: 15%;
     }
     </style>
-
-<p id="test-me"></p>
+    
+   <p id="test-me"></p>
 <br><br>
 <div class="center-wrap">
 <%= if @user do %>
@@ -91,4 +91,6 @@
   
   
 </script>
+<br><br><br>
+ <a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>
 

@@ -3,7 +3,7 @@ defmodule LiveStory.Auths.User do
 
   schema "auths_users" do
     field :username, :string
-    field :name, :string
+    # field :name, :string
     field :encrypted_password, :string
 
     field :password, :string, virtual: true

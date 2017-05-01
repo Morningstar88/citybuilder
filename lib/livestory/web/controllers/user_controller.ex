@@ -17,7 +17,7 @@ defmodule LiveStory.Web.UserController do
     case Auths.create_user(user_params) do
       {:ok, user} ->
         conn
-        |> put_flash(:info, " created successfully.")
+        |> put_flash(:info, "Welcome! Happy writing :)")
         |> redirect(to: "/users/signin")
       {:error, %Ecto.Changeset{} = changeset} ->
         render(conn, "new.html", changeset: changeset)

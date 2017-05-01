@@ -106,8 +106,8 @@ defmodule LiveStory.Auths do
 
   defp user_changeset(%User{} = user, attrs) do
     user
-    |> cast(attrs, [:username, :name, :password, :password_confirmation])
-    |> validate_required([:username, :name, :password, :password_confirmation])
+    |> cast(attrs, [:username, :password, :password_confirmation]) #Remove name
+    |> validate_required([:username, :password, :password_confirmation]) #Remove name
     |> validate_length(:password, min: 6)
     |> validate_confirmation(:password)
     |> unique_constraint(:username, message: "Username already taken")

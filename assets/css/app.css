@@ -1,10 +1,10 @@
-@import url('http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
 html, body {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Josefin Sans', sans-serif !important;
     font-size: 33px;
     color: rgba(20,20,20,0.8);
     padding: 0px;
@@ -24,11 +24,33 @@ html, body {
 /*        }*/
 
 .header-img {
+   position: absolute;
+   z-index: -1;
+   margin-top: -18%;
+}
+
+.hello-user {
+    position: relative;
+    margin-left: -4%;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(200,20,0.7);
+    padding-bottom: 5px;
+    border-radius: 0px 0px 15px 0px;
+}
+
+a.logout-button {
     position: absolute;
-    width: 110%;
-    height: 500px;
-    margin-left: -24%;
-     clip: rect(0, 1400px, 200px, 0);
+    margin-top: -100%;
+    margin-left: 190%;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(255,153,51,0.7) !important;
+    text-shadow: 2px 2px 2px rgba(220,220,220,0.2), 1px 1px 1px rgba(230,230,230,0.2);
+}
+
+.logout-button:hover {
+    text-decoration: none;
+    color: rgba(255,123,0,0.9);
 }
 
 .latest-stories-main-title {
@@ -50,12 +72,29 @@ html, body {
     font-family: garamond !important;
 }
 
-.long-fork-button {
-    /* at top of SHOW */
-    height: 40px;
-    width: 380px;
-    font-size: 28px;
-}
+
+.show-page-fork-btn {
+    position: absolute;
+    height: 95px;
+    width: 120px;
+    font-size: 54px !important;
+    border-radius: 2px !important;
+    border: 1px solid rgba(20,20,20,0.5) !important;
+    box-shadow: 2px 2px 2px rbga(30,30,30,0.5);
+    font-family: 'Century Gothic' !important;
+    text-transform: small-caps !important;
+    margin-left: 730px !important;
+    margin-top: 200px !important;
+    background-color: rgba(30,140,40,0.7);
+    whitespace: pre-wrap !important;
+     color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    display: table-cell !important;
+    vertical-align: middle !important;
+    line-height: -40px !important;
+ }
+    
+
 
 /*.long-fork-button:hover {*/
 /*   background-color: rbga(120,56,120,0.3) !important;*/
@@ -142,23 +181,23 @@ html, body {
 	padding-left: 5px;
 }
 
-.first-letter {
-    color: rgba(255,0,13,0.8);
+.first-letter-new {
+    color: rgba(20,20,20,0.8);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.second-letter {
-    color: rgba(190,34,190,0.8);
+.second-letter-new {
+    color: rgba(240,90,15,0.5);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.third-letter {
-    color: rgba(20,20,230,0.6);
+.third-letter-new {
+    color: rgba(255,100,15,0.6);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.fourth-letter {
-    color: rgba(22,100,100,0.7);
+.fourth-letter-new {
+    color: rgba(255,100,10,0.7);
     text-shadow: 2px 2px 2px rgba(100,120,100,0.5);
 }
 
@@ -167,7 +206,8 @@ html, body {
 /* INDEX.HTML.EEX Display Posts For Users */
 
 .display-post-title-index {
-    font-family: 'Century Gothic' !important;
+    /*MAIN INDEX PAGE*/
+    font-family: 'Josefin Sans' !important;
     font-size: 38px;
     letter-spacing: 6px;
     color: rgba(10,10,10,0.8);
@@ -181,7 +221,7 @@ html, body {
     height: auto;
     font-size: 21px;
     padding-top: 10px;
-    font-family: 'Century Gothic' !important;
+    font-family: 'Josefin Sans' !important;
     font-weight: 500;
     padding-left: 2px;
     line-height: 40px;
@@ -201,7 +241,7 @@ html, body {
 
 
 .display-post-title-edit {
-    font-family: 'Century Gothic' !important;
+    font-family: 'Josefin Sans' !important;
     font-size: 88px;
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
@@ -212,7 +252,7 @@ html, body {
 }
 
 .display-post-title {
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
     font-size: 40px;
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
@@ -234,8 +274,11 @@ html, body {
     padding-left: 9%;
      text-align: 'right' !important;
      z-index: 2;
-   
-    
+ }
+ 
+.green-post-title {
+    color: rgba(20,120,20,0.9);
+    font-weight: 600;
 }
 
 /* http://stackoverflow.com/questions/2360386/prevent-box-shadow-from-showing-on-a-specific-side
@@ -267,38 +310,49 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 }
 
 .edit-letter-1 {
-    color: rgba(0,0,80,0.8);
-    text-shadow: rgba(100,100,100,0.4);
+    color: rgba(0,20,20,0.1);
+    text-shadow: rgba(00,100,100,0.9);
 }
 
 .edit-letter-2 {
-     color: rgba(0,0,100,0.8);
-      text-shadow: rgba(100,100,100,0.4);
+     color: rgba(0,25,20,0.1);
+      text-shadow: rgba(00,100,100,0.9);
  
 }
 
 .edit-letter-3 {
-     color: rgba(0,10,120,0.8);
-      text-shadow: rgba(100,100,100,0.4);
+     color: rgba(0,30,20,0.1);
+      text-shadow: rgba(00,100,100,0.9);
   
 }
 
 .edit-letter-4 {
-     color: rgba(0,0,140,0.8);
-      text-shadow: rgba(100,100,100,0.4);
+     color: rgba(0,35,20,0.1);
+      text-shadow: rgba(00,100,100,0.9);
    
 }
 
 .edit-letter-5 {
-     color: rgba(0,30,150,0.8);
-      text-shadow: rgba(100,100,100,0.4);
+     color: rgba(0,35,20,0.1);
+      text-shadow: rgba(00,100,100,0.9);
    
 }
 
 .edit-letter-6 {
-     color: rgba(0,40,165,0.8);
-      text-shadow: rgba(100,100,100,0.4);
+     color: rgba(0,40,20,0.1);
+      text-shadow: rgba(00,100,100,0.9);
  
+}
+
+.teal-username {
+    rgba(0,80,80,0.9)
+}
+
+.block-btn {
+    width: 100%;
+    height: 30%;
+    font-size: 34px;
+    font-variant: small-caps;
 }
 
 /* End Display Posts */
@@ -308,7 +362,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-title {
      height: 60px !important;
     font-size: 34px !important;
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
@@ -319,7 +373,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-body {
     height: 300px !important;
     font-size: 23px !important;
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
@@ -366,14 +420,14 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .btn-read-post {
     /*PURPLE READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(60,0,60,0.5) !important;
+    border: 1px solid rgba(140,20,0,0.5) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
     font-family: garamond;
      border-radius: 20px;
-     color: rgba(55,2,55,1) !important;
-     background-color: rgba(134,2,134,0.01)!important;
+     color: rgba(155,20,55,1) !important;
+     background-color: rgba(134,40,13,0.01)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
   
 }
@@ -398,7 +452,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-family: garamond !important;
     margin-left: 730px !important;
     margin-top: 200px !important;
-    background: url(http://static.pexels.com/photos/69898/pexels-photo-69898.jpeg) !important;
+    /*background: url(http://static.pexels.com/photos/69898/pexels-photo-69898.jpeg) !important;*/
    
    /* COLORFUL: https://static.pexels.com/photos/21845/landscape-clouds-trees-sunrise-21845.jpg*/
     box-shadow: rgba(100,100,100,0.7);
@@ -429,3 +483,150 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
      color: rgba(20,20,20,1) !important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
 }
+
+/* GHOST BUTTON CODE */
+
+
+/*a {*/
+/*  display: block;*/
+/*  width: 220px;*/
+/*  height: 70px;*/
+/*  z-index: 1;*/
+/*}*/
+
+.large-test-button {
+    font-size: 80px;
+    white-space: pre;
+    text-shadow: 2px 2px 2px rgba(255,255,255,0.6), 1px 1px 2px rgba(230,230,255,0.4);
+}
+
+.btn-multi-colour:after {
+  content: '';
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 400% 400%;
+  -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  -moz-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+  -webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+  animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+  text-decoration: none;
+}
+.btn-multi-colour > span {
+  display: block;
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 70s ease-in-out infinite;
+  -webkit-animation: gradient 70s ease-in-out infinite;
+  animation: gradient 70s ease-in-out infinite;
+  text-decoration: none;
+}
+
+/* helpers */
+/*.absolute-centering, body:after, a, a:after {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  bottom: 0;*/
+/*  margin: auto;*/
+/*}*/
+
+/*.text-formatting, a {*/
+/*  text-transform: uppercase;*/
+/*  text-decoration: none;*/
+/*  text-align: center;*/
+/*  letter-spacing: 2px;*/
+/*  line-height: 70px;*/
+/*  font-family: 'Squada One', cursive;*/
+/*  font-size: 28px;*/
+/*}*/
+
+/* motion */
+@-moz-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+@-moz-keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+@-webkit-keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+@keyframes border {
+  0% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  25% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+  }
+  75% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+  }
+}
+
+
+/*END GHOST BUTTON CODE */

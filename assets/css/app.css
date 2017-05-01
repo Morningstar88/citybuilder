@@ -24,11 +24,16 @@ html, body {
 /*        }*/
 
 .header-img {
-    position: absolute;
-    width: 110%;
-    height: 500px;
-    margin-left: -24%;
-     clip: rect(0, 1400px, 200px, 0);
+   position: absolute;
+   z-index: -1;
+   margin-top: -18%;
+}
+
+.hello-user {
+    position: relative;
+    margin-left: 30%;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(200,20,0.7);
 }
 
 .latest-stories-main-title {
@@ -52,12 +57,13 @@ html, body {
 
 
 .show-page-fork-btn {
-      position: absolute;
-    height: 130px;
-    width: 220px;
-    font-size: 34px !important;
-    border-radius: 4px !important;
-    border: 1px solid rgba(20,20,20,0.7) !important;
+    position: absolute;
+    height: 95px;
+    width: 120px;
+    font-size: 54px !important;
+    border-radius: 2px !important;
+    border: 1px solid rgba(20,20,20,0.5) !important;
+    box-shadow: 2px 2px 2px rbga(30,30,30,0.5);
     font-family: 'Century Gothic' !important;
     text-transform: small-caps !important;
     margin-left: 730px !important;
@@ -66,6 +72,9 @@ html, body {
     whitespace: pre-wrap !important;
      color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    display: table-cell !important;
+    vertical-align: middle !important;
+    line-height: -40px !important;
  }
     
 

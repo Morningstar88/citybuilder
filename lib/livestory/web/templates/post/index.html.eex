@@ -4,9 +4,15 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
   type='text/css'>
   
+  <header>
+    
+  <img class="header-img"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/record-white.jpeg"></img>
+  </header>
+  
   <style>
     body {
       font-family: 'Josefin Sans' !important;
+      margin-top: 15%;
     }
     </style>
 
@@ -14,7 +20,7 @@
 <br><br>
 <div class="center-wrap">
 <%= if @user do %>
-<span>Hello <%= @user.username %>!</span>
+<span class="hello-user">Hello <%= @user.username %>!</span>
 <span><%= link "Logout", to: session_path(@conn, :logout), method: :delete %></span>
 <% else %>
   <span><%= link "Login", to: user_path(@conn, :signin) %></span>

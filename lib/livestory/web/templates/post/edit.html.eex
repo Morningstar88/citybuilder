@@ -6,7 +6,7 @@
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>
                         
- <h4> Hey <span class="teal-username"><%= @user.username %> </span><span>This is your own version of <span class="green-post-title"><%= @post.title %></span> Can you improve the editing, style or facts? Your version will be saved separately. The best version gets upvoted.</h4>                       
+ <h4> Hey <span class="teal-username"><%= @user.username %>! </span><span>This is your own version of <span class="green-post-title"><%= @post.title %></span> Can you improve the editing, style or facts? Your version will be saved separately. The best version gets upvoted.</h4>                       
 
 <span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default" %></span>
 

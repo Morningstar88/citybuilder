@@ -1,7 +1,7 @@
 <!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
 
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans| Satisfy|Comfortaa:700|Reenie Beanie|Cinzel|Cutive Mono|VT323|Special Elite|Oxygen|OverlockFontdiner SwankyReenie Beanie|Montserrat|EB Garamond|Crimson Text|Cardo|Radley|Cantarell' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
   type='text/css'>
   
   <style>
@@ -38,7 +38,7 @@
      <br><br>
        <span><%= link " Ϟ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
-        <span><%= link "Upvote", to: post_upvote_path(@conn, :create, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
+        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>

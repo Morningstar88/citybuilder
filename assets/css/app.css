@@ -1,10 +1,10 @@
-@import url('http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
 html, body {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Josefin Sans', sans-serif !important;
     font-size: 33px;
     color: rgba(20,20,20,0.8);
     padding: 0px;
@@ -53,17 +53,22 @@ html, body {
 
 .show-page-fork-btn {
       position: absolute;
-    height: 500px;
+    height: 130px;
     width: 220px;
-    font-size: 94px;
-    border-radius: 2px !important;
-    border: 1px rgba(20,20,20,0.7) !important;
-    font-family: '' !important;
+    font-size: 34px !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(20,20,20,0.7) !important;
+    font-family: 'Century Gothic' !important;
+    text-transform: small-caps !important;
     margin-left: 730px !important;
     margin-top: 200px !important;
-}
+    background-color: rgba(30,140,40,0.7);
+    whitespace: pre-wrap !important;
+     color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+ }
     
-}
+
 
 /*.long-fork-button:hover {*/
 /*   background-color: rbga(120,56,120,0.3) !important;*/
@@ -175,7 +180,8 @@ html, body {
 /* INDEX.HTML.EEX Display Posts For Users */
 
 .display-post-title-index {
-    font-family: 'Century Gothic' !important;
+    /*MAIN INDEX PAGE*/
+    font-family: 'Josefin Sans' !important;
     font-size: 38px;
     letter-spacing: 6px;
     color: rgba(10,10,10,0.8);
@@ -189,7 +195,7 @@ html, body {
     height: auto;
     font-size: 21px;
     padding-top: 10px;
-    font-family: 'Century Gothic' !important;
+    font-family: 'Josefin Sans' !important;
     font-weight: 500;
     padding-left: 2px;
     line-height: 40px;
@@ -209,7 +215,7 @@ html, body {
 
 
 .display-post-title-edit {
-    font-family: 'Century Gothic' !important;
+    font-family: 'Josefin Sans' !important;
     font-size: 88px;
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
@@ -220,7 +226,7 @@ html, body {
 }
 
 .display-post-title {
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
     font-size: 40px;
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
@@ -316,7 +322,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-title {
      height: 60px !important;
     font-size: 34px !important;
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
@@ -327,7 +333,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-body {
     height: 300px !important;
     font-size: 23px !important;
-    font-family: "Century Gothic" !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);

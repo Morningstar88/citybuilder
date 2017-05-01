@@ -1,10 +1,13 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
   type='text/css'>
 
-<h2 class="edit-title display-post-title"><span class="edit-letter-1">ಠ</span><span class="edit-letter-2">_</span><span class="edit-letter-3">ರೃ</span><span class="edit-letter-4">.</span><span class="edit-letter-5">.</span><span class="edit-letter-6">.</span><span class="edit-letter-6">𝜳?</span></h2>
+<h2 class="edit-title display-post-title"><span class="edit-letter-1">                            ಠ</span><span class="edit-letter-2">_</span><span class="edit-letter-3">ರೃ</span></h2>
 <br><br>
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>
- <span>Hey <%= @user.username %>! </span><span>This is your own version of <%= @post.title %>. Can you do better than this? Your version will be saved separately. The best version gets upvoted. Let the games begin.</span>                       
+                        
+ <h4> Hey <span class="teal-username"><%= @user.username %> </span><span>This is your own version of <span class="green-post-title"><%= @post.title %></span> Can you improve the editing, style or facts? Your version will be saved separately. The best version gets upvoted.</h4>                       
 
 <span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default" %></span>
+
+<br><br><br>

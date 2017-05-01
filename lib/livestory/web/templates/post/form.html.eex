@@ -36,6 +36,6 @@
   <!--</div>-->
 
   <div class="form-group">
-    <%= submit "Save Changes", class: "btn btn-default" %>
+    <%= submit "Let the Games Begin", class: "btn btn-default block-btn" %>
   </div>
 <% end %>

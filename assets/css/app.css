@@ -500,7 +500,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-shadow: 2px 2px 2px rgba(255,255,255,0.6), 1px 1px 2px rgba(230,230,255,0.4);
 }
 
-a:after {
+.btn-multi-colour:after {
   content: '';
   background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
   background-size: 400% 400%;
@@ -510,7 +510,7 @@ a:after {
   animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
   text-decoration: none;
 }
-a > span {
+.btn-multi-colour > span {
   display: block;
   background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
   background-size: 400% 400%;

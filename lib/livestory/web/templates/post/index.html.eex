@@ -42,7 +42,7 @@
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link " ♫ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
+       <span><%= link " ♫ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->

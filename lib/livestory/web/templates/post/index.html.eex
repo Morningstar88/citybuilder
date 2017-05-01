@@ -21,7 +21,7 @@
 <div class="center-wrap">
 <%= if @user do %>
 <span class="hello-user">Hello <%= @user.username %>!</span>
-<span><%= link "Logout", to: session_path(@conn, :logout), method: :delete %></span>
+<span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
   <span><%= link "Login", to: user_path(@conn, :signin) %></span>
   <span><%= link "Sign Up", to: user_path(@conn, :new) %></span>
@@ -42,7 +42,7 @@
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link " Ϟ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
+       <span><%= link " ♫ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->

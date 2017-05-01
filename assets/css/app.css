@@ -31,9 +31,25 @@ html, body {
 
 .hello-user {
     position: relative;
-    margin-left: 30%;
+    margin-left: -4%;
     font-size: 24px;
     text-shadow: 2px 2px 2px rgba(200,20,0.7);
+    padding-bottom: 5px;
+    border-radius: 0px 0px 15px 0px;
+}
+
+a.logout-button {
+    position: absolute;
+    margin-top: -100%;
+    margin-left: 190%;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(255,153,51,0.7) !important;
+}
+
+.logout-button:hover {
+    text-decoration: none;
+    color: rgba(255,123,0,0.9);
 }
 
 .latest-stories-main-title {
@@ -164,23 +180,23 @@ html, body {
 	padding-left: 5px;
 }
 
-.first-letter {
-    color: rgba(255,0,13,0.8);
+.first-letter-new {
+    color: rgba(20,20,20,0.8);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.second-letter {
-    color: rgba(190,34,190,0.8);
+.second-letter-new {
+    color: rgba(240,90,15,0.5);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.third-letter {
-    color: rgba(20,20,230,0.6);
+.third-letter-new {
+    color: rgba(255,100,15,0.6);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
 }
 
-.fourth-letter {
-    color: rgba(22,100,100,0.7);
+.fourth-letter-new {
+    color: rgba(255,100,10,0.7);
     text-shadow: 2px 2px 2px rgba(100,120,100,0.5);
 }
 
@@ -403,14 +419,14 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .btn-read-post {
     /*PURPLE READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(60,0,60,0.5) !important;
+    border: 1px solid rgba(140,20,0,0.5) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
     font-family: garamond;
      border-radius: 20px;
-     color: rgba(55,2,55,1) !important;
-     background-color: rgba(134,2,134,0.01)!important;
+     color: rgba(155,20,55,1) !important;
+     background-color: rgba(134,40,13,0.01)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
   
 }

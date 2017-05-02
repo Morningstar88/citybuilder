@@ -1,5 +1,7 @@
 # LiveStory
 
+Please note, runs on Port 8080.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

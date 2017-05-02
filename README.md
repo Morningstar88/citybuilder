@@ -1,6 +1,6 @@
 # LiveStory
 
-## Please note, runs on Port 8080.
+### Please note, runs on Port 8080.
 
 To start your Phoenix server:
 

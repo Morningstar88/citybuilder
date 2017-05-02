@@ -1,16 +1,19 @@
 defmodule LiveStory.StoriesTest do
   use LiveStory.DataCase
 
+  alias LiveStory.Auths
   alias LiveStory.Stories
   alias LiveStory.Stories.Post
 
-  @create_attrs %{body: "some body", title: "some title"}
+  @create_attrs %{"body" => "some body", "title" => "some title"}
   @update_attrs %{body: "some updated body", title: "some updated title"}
   @invalid_attrs %{body: nil, title: nil}
+  @user_attrs %{"username" => "name", "password" => "123456", "password_confirmation" => "123456"}
 
   def fixture(:post, attrs \\ @create_attrs) do
-    {:ok, post} = Stories.create_post(attrs)
-    post
+    {:ok, user} = Auths.create_user(@user_attrs)
+    {:ok, post} = Stories.create_post(attrs, user)
+    post |> Repo.preload(:user)
   end
 
   test "list_posts/1 returns all posts" do
@@ -24,9 +27,12 @@ defmodule LiveStory.StoriesTest do
   end
 
   test "create_post/1 with valid data creates a post" do
-    assert {:ok, %Post{} = post} = Stories.create_post(@create_attrs)
+    {:ok, user} = Auths.create_user(@user_attrs)
+    assert {:ok, %Post{} = post} = Stories.create_post(@create_attrs, user)
     assert post.body == "some body"
     assert post.title == "some title"
+    assert post.path == "#{post.id}"
+    # TODO: test fork
   end
 
   test "create_post/1 with invalid data returns error changeset" do

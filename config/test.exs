@@ -12,6 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :livestory, LiveStory.Repo,
   adapter: Ecto.Adapters.Postgres,
+  types: LiveStory.PostgrexTypes,
   username: "postgres",
   password: "postgres",
   database: "livestory_test",

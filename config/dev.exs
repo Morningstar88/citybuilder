@@ -51,6 +51,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :livestory, LiveStory.Repo,
   adapter: Ecto.Adapters.Postgres,
+  types: LiveStory.PostgrexTypes,
   username: "postgres",
   password: "postgres",
   database: "livestory_dev",

@@ -5,9 +5,9 @@ defmodule LiveStory.Stories.Post do
     field :body, :string
     field :title, :string
     field :published, :boolean, default: true
+    field :path, :string, null: false, read_after_writes: true
     belongs_to :user, LiveStory.Auths.User
-    has_one :original_link, LiveStory.Stories.ForkedPost, foreign_key: :forked_post_id
-    has_one :original_post, through: [:original_link, :original_post]
+    belongs_to :original_post, LiveStory.Stories.Post
 
     timestamps()
   end

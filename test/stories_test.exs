@@ -1,16 +1,19 @@
 defmodule LiveStory.StoriesTest do
   use LiveStory.DataCase
 
+  alias LiveStory.Auths
   alias LiveStory.Stories
   alias LiveStory.Stories.Post
 
-  @create_attrs %{body: "some body", title: "some title"}
+  @create_attrs %{"body" => "some body", "title" => "some title"}
   @update_attrs %{body: "some updated body", title: "some updated title"}
-  @invalid_attrs %{body: nil, title: nil}
+  @invalid_attrs %{"body" => nil, "title" => nil}
+  @user_attrs %{"username" => "name", "password" => "123456", "password_confirmation" => "123456"}
 
   def fixture(:post, attrs \\ @create_attrs) do
-    {:ok, post} = Stories.create_post(attrs)
-    post
+    {:ok, user} = Auths.create_user(@user_attrs)
+    {:ok, post} = Stories.create_post(attrs, user)
+    post |> Repo.preload(:user)
   end
 
   test "list_posts/1 returns all posts" do
@@ -20,17 +23,33 @@ defmodule LiveStory.StoriesTest do
 
   test "get_post! returns the post with given id" do
     post = fixture(:post)
-    assert Stories.get_post!(post.id) == post
+    assert Stories.get_post!(post.id) |> Repo.preload([:user]) ==
+      post |> Repo.preload(:original_post)
   end
 
-  test "create_post/1 with valid data creates a post" do
-    assert {:ok, %Post{} = post} = Stories.create_post(@create_attrs)
+  test "create_post/2 with valid data creates a post" do
+    {:ok, user} = Auths.create_user(@user_attrs)
+    assert {:ok, %Post{} = post} = Stories.create_post(@create_attrs, user)
     assert post.body == "some body"
     assert post.title == "some title"
+    assert post.path == "#{post.id}"
+  end
+
+  test "create_forked_post/2" do
+    post = fixture(:post)
+    {:ok, user} = Auths.create_user(Map.put(@user_attrs, "username", "new"))
+    forked_post = Stories.create_forked_post(%Post{title: post.title, body: post.body, id: post.id}, user)
+    assert forked_post
+    assert forked_post.title == post.title
+    assert forked_post.body == post.body
+    assert forked_post.id != post.id
+    assert forked_post.original_post_id == post.id
+    assert forked_post.path == Enum.join([post.id, forked_post.id], ".")
   end
 
   test "create_post/1 with invalid data returns error changeset" do
-    assert {:error, %Ecto.Changeset{}} = Stories.create_post(@invalid_attrs)
+    {:ok, user} = Auths.create_user(@user_attrs)
+    assert {:error, %Ecto.Changeset{}} = Stories.create_post(@invalid_attrs, user)
   end
 
   test "update_post/2 with valid data updates the post" do
@@ -44,7 +63,8 @@ defmodule LiveStory.StoriesTest do
   test "update_post/2 with invalid data returns error changeset" do
     post = fixture(:post)
     assert {:error, %Ecto.Changeset{}} = Stories.update_post(post, @invalid_attrs)
-    assert post == Stories.get_post!(post.id)
+    assert post |> Repo.preload(:original_post) ==
+      Stories.get_post!(post.id) |> Repo.preload(:user)
   end
 
   test "delete_post/1 deletes the post" do

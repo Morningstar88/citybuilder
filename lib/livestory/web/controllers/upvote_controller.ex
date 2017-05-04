@@ -14,14 +14,10 @@ defmodule LiveStory.Web.UpvoteController do
     case Stories.upvote(post.id, conn.assigns.user.id) do
       {:ok, upvote} ->
         conn
-        |> put_flash(:info, "Upvoted Successfully")
-        |> redirect(to: post_path(conn, :show, post))
-      # show user flash for failed upvote
-      # redirect back to the post to be upvoted page
+        |> render("upvoted.js", upvote: upvote)
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
-        |> put_flash(:info, "Upvote not successful") # maybe upvoted already? tell the user
-        |> redirect(to: post_path(conn, :show, post))
+        |> render("error.js", changeset: changeset)
     end
   end
 

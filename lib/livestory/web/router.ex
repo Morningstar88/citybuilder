@@ -9,10 +9,10 @@ defmodule LiveStory.Web.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :browser_auth do  
+  pipeline :browser_auth do
     plug Guardian.Plug.VerifySession
     plug Guardian.Plug.LoadResource
-  end  
+  end
 
   pipeline :api do
     plug :accepts, ["json"]
@@ -30,13 +30,13 @@ defmodule LiveStory.Web.Router do
     get "/", PostController, :index
 
     resources "/posts", PostController do
-      get "/upvotes", UpvoteController, :create
+      post "/upvotes", UpvoteController, :create
     end
-    
+
     get "/posts/fork/:id", PostController , :fork
-    
+
   end
-  
+
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/
 
   # Other scopes may use custom stacks.

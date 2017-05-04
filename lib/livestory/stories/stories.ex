@@ -145,7 +145,7 @@ defmodule LiveStory.Stories do
     end
   end
 
-  def upvote(user_id, post_id) do
+  def upvote(post_id, user_id) do
     upvote_changeset(%Upvotes{}, %{"user_id" => user_id, "post_id" => post_id})
     |> Repo.insert()
   end
@@ -160,6 +160,8 @@ defmodule LiveStory.Stories do
     upvote
     |> cast(attrs, [:post_id, :user_id])
     |> validate_required([:post_id, :user_id])
+    |> foreign_key_constraint(:post_id)
+    |> foreign_key_constraint(:user_id)
     |> unique_constraint(:user_id, name: :stories_upvotes_post_id_user_id_index)
   end
 end

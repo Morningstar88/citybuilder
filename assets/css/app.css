@@ -40,7 +40,7 @@ html, body {
 
 a.logout-button {
     position: absolute;
-    margin-top: -100%;
+    margin-top: -90%;
     margin-left: 190%;
     font-size: 30px;
     text-decoration: none;
@@ -93,6 +93,18 @@ a.logout-button {
     vertical-align: middle !important;
     line-height: -40px !important;
  }
+ 
+ .login-btn {
+     white-space: pre;
+     font-size: 20px;
+     margin-left: -3%;
+     
+ }
+ 
+ 
+ 
+ .sign-up-btn 
+ { font-size: 18px;}
     
 
 
@@ -112,17 +124,18 @@ a.logout-button {
 	height: 200px;
 } 
 
-.button {
+.whats-happening-button {
 	position: relative;
 	display: block;
 	background: none center center no-repeat;
 	background-size: cover;
 	border: 1px solid #2e2e2e;
+	border-radius: 1px 3px 0px 10px;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	padding: 20px 15px;
+	padding: 25px 18px;
 	text-align: center;
-	max-width: 270px;
+	max-width: 390px;
 	min-width: 200px;
 	cursor: pointer;
 	overflow: hidden;
@@ -130,6 +143,7 @@ a.logout-button {
 	transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
     color: rgba(20,20,20,.8);
     text-decoration: none;
+    font-size: 15px;
 }
 
 /*.button a {*/
@@ -397,7 +411,84 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-family: "Century Gothic" !important;
 }
 
+#multi-colored-letter-1{
+    color: rgba(150,40,150,0.75) !important;
+    text-shadow: rgba();
+    font-size: 48px;
+}
 
+#multi-colored-letter-2{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-3{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-4{
+    /* g */
+    color: rgba(20,130,10,0.7);
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-5{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-6{
+    /* y */
+   color: rgba(180,0,0,0.8);
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-7{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-8{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-9{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-10{
+    /* A */ 
+    color: rgba(20,20,20,0.1);
+    text-shadow: rgba(255,255,255,0.9), rgba(100,100,100,0.7);
+}
+
+#multi-colored-letter-11{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-12{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-13{
+    color: rgba();
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-14{
+    color: rgba(200,100,20,0.8);
+    text-shadow: rgba();
+}
+
+#multi-colored-letter-15 {
+    color: rgba();
+    text-shadow: rgba();
+}
 
 #btn-huge-div {
   margin-left: 34%;
@@ -416,21 +507,38 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 15px 4px 15px 4px !important;
 }
 
+.centered-txt {
+    position: absolute;
+    text-align: center !important;
+    display: table-cell !important;
+   }
+
 
 .btn-read-post {
-    /*PURPLE READ BUTTON*/
+    /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(140,20,0,0.5) !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
-    font-family: garamond;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    font-variant: small-caps;
+    text-shadow: 2px 1px 2px rgba(20,20,80,0.3);
      border-radius: 20px;
-     color: rgba(155,20,55,1) !important;
-     background-color: rgba(134,40,13,0.01)!important;
+     color: rgba(20,20,20,0.8) !important;
+     background-color: rgba(222,200,34,0.9)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
+  }
   
-}
+  .blogs-u-can-fork {
+      position: absolute;
+      margin-top: -10%;
+      margin-left: -22%;
+      font-size: 45px;
+      text-shadow: rgba(150,150,150,0.8);
+      color: rgba(20,20,20,0.87);
+  }
 
 /*#test-me {*/
 /*    color: #222;*/
@@ -468,7 +576,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 2px;
     background-color: rgba(255,255,255,0.9) !important;
     font-size: 20px;
-    color: rgba(20,20,20,0.8);
+    color: rgba(5,60,60,0.8);
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
     
 }

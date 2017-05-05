@@ -16,17 +16,17 @@
     }
     </style>
 
-   <p id="test-me"></p>
+  <span class="blogs-u-can-fork"><span id="multi-colored-letter-1">B</span><span id="multi-colored-letter-2">l</span><span id="multi-colored-letter-3">o</span><span id="multi-colored-letter-4">g</span><span id="multi-colored-letter-5">s </span><span id="multi-colored-letter-6">y</span><span id="multi-colored-letter-7">o</span><span id="multi-colored-letter-8">u</span><span id="multi-colored-letter-9"> c</span><span id="multi-colored-letter-10">a</span><span id="multi-colored-letter-11">n</span><span id="multi-colored-letter-12"> f</span><span id="multi-colored-letter-13">o</span><span id="multi-colored-letter-14">r</span><span id="multi-colored-letter-15">k</span></span>
 <br><br>
 <div class="center-wrap">
 <%= if @user do %>
 <span class="hello-user">Hello <%= @user.username %>!</span>
 <span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
-  <span><%= link "Login", to: user_path(@conn, :signin) %></span>
-  <span><%= link "Sign Up", to: user_path(@conn, :new) %></span>
+  <span><%= link "Login                         ", to: user_path(@conn, :signin), class: "login-btn"%></span>
+  <span><%= link "Sign Up", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
-<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "button" %></span>
+<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
 <div class="mask"></div>
 <span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>
 <span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>
@@ -43,9 +43,9 @@
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link " ♫ ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
-        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
-        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: "btn btn-default btn-md btn-ldit-post unicode-lg upvote" %></span>
+       <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
+        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg  "%>
+        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
@@ -93,5 +93,5 @@
   //     document.getElementById("multi-colored-letter-16").innerHTML ="?";
 
 </script>
-<br><br><br>
- <a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>
+<br><br><br><br><br><br>
+ <!--<a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>-->

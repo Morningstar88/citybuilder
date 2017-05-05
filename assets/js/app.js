@@ -21,3 +21,5 @@ import "phoenix_html"
 // import socket from "./socket"
 
 import "phoenix_ujs";
+
+import "./upvote.js"

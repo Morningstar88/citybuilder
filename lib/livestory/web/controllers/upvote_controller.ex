@@ -9,15 +9,15 @@ defmodule LiveStory.Web.UpvoteController do
   plug :set_user
   plug :set_post when action in [:create]
 
-  def create(conn, params) do
+  def create(conn, _params) do
     post = conn.assigns.post
     case Stories.upvote(post.id, conn.assigns.user.id) do
-      {:ok, upvote} ->
+      {:ok, _upvote} ->
         conn
-        |> render("upvoted.js", upvote: upvote)
+        |> render("upvoted.json", post: post)
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
-        |> render("error.js", changeset: changeset)
+        |> render("error.json", changeset: changeset)
     end
   end
 

@@ -40,7 +40,7 @@ html, body {
 
 a.logout-button {
     position: absolute;
-    margin-top: -100%;
+    margin-top: -90%;
     margin-left: 190%;
     font-size: 30px;
     text-decoration: none;
@@ -97,6 +97,7 @@ a.logout-button {
  .login-btn {
      white-space: pre;
      font-size: 20px;
+     margin-left: -3%;
      
  }
  
@@ -506,18 +507,27 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 15px 4px 15px 4px !important;
 }
 
+.centered-txt {
+    position: absolute;
+    text-align: center !important;
+    display: table-cell !important;
+   }
+
 
 .btn-read-post {
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(140,20,0,0.5) !important;
+    border: 1px solid rgba(255,255,255,0.5) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
     font-family: 'Josefin Sans';
+    font-weight: bold;
+    font-variant: small-caps;
+    text-shadow: 2px 1px 2px rgba(20,20,80,0.3);
      border-radius: 20px;
-     color: rgba(155,20,55,1) !important;
-     background-color: rgba(134,40,13,0.01)!important;
+     color: rgba(20,20,20,0.8) !important;
+     background-color: rgba(222,200,34,0.9)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
   }
   
@@ -566,7 +576,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 2px;
     background-color: rgba(255,255,255,0.9) !important;
     font-size: 20px;
-    color: rgba(20,20,20,0.8);
+    color: rgba(5,60,60,0.8);
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
     
 }

@@ -1,0 +1,13 @@
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
+  type='text/css'>
+
+<h2 class="edit-title display-post-title"><span class="edit-letter-1">                            ಠ</span><span class="edit-letter-2">_</span><span class="edit-letter-3">ರೃ</span></h2>
+<br><br>
+<%= render "form.html", changeset: @changeset,
+                        action: post_path(@conn, :update, @post) %>
+                        
+ <h4 class="centered-text"> Hey <span class="teal-username"><%= @user.username %>. </span><span>This is your copy of <span class="green-post-title"><%= @post.title %>.</span><br> Can you fix it? Your fork will be saved separately. Readers upvote the winner.</h4>                       
+
+<span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default" %></span>
+
+<br><br><br>

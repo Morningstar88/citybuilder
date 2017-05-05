@@ -243,9 +243,21 @@ a.logout-button {
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
     white-space: pre-wrap !important;
-   
-  
-}
+ }
+ 
+ .display-post-body-show {
+    height: auto;
+    font-size: 26px;
+    padding-top: 10px;
+    font-family: 'Josefin Sans' !important;
+    font-weight: 500;
+    padding-left: 2px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
+    white-space: pre-wrap !important;
+ }
 
 /* COLOR FOR MAIN BUTTON */
 
@@ -512,6 +524,116 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-align: center !important;
     display: table-cell !important;
    }
+   
+
+.sidebar-1 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 30%;
+       margin-left: 250%;
+}
+
+.sidebar-2 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 44%;
+    margin-left: 250%;
+}
+
+.sidebar-3 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 59%;
+    margin-left: 250%;
+}
+
+.sidebar-4 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 74%;
+    margin-left: 250%;
+}
+
+.sidebar-5 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 88%;
+    margin-left: 250%;
+}
+
+.sidebar-6 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 100%;
+    margin-left: 248%;
+}
+
+.sidebar-7 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 112%;
+    margin-left: 247%;
+}
+
+.sidebar-8 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.80);
+            font-size: 25px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 145%;
+    margin-left: 250%;
+}
+
+.sidebar-9 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.87);
+            font-size: 25px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 160%;
+    margin-left: 250%;
+}
+
 
 
 .btn-read-post {

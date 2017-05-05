@@ -27,6 +27,19 @@
   <span><%= link "Sign Up", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
 <span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
+
+<!--SIDEBAR -->
+
+<div class="sidebar-1">Uplifting News</div>
+<div class="sidebar-2">Happiness</div>
+<div class="sidebar-3">Hacking</div>
+<div class="sidebar-4">Technology</div>
+<div class="sidebar-5">Art + Music</div>
+<div class="sidebar-6">Mysteries</div>
+<div class="sidebar-7">Classic</div>
+<!-- END SIDEBAR-->
+
+
 <div class="mask"></div>
 <span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>
 <span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>

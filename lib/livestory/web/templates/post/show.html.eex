@@ -13,10 +13,10 @@
     </h1>		   
     </p>
   	<div class="display-post-body-wrapper">
-	   <h4 class="display-post-body">
+	   <p class="display-post-body-show">
        <%= @post.body %>		     
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
-    </h4>	
+    </p>	
     </div>
     <br>
    </ul>		  

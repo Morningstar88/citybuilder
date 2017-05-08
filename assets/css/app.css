@@ -98,13 +98,27 @@ a.logout-button {
      white-space: pre;
      font-size: 20px;
      margin-left: -3%;
+     color: green;
      
  }
  
- 
+ .login-btn:hover {
+     white-space: pre;
+     font-size: 20px;
+     margin-left: -3%;
+     color: orange;
+     
+ }
  
  .sign-up-btn 
- { font-size: 18px;}
+ { font-size: 18px;
+   color: green;
+ }
+ 
+  .sign-up-btn:hover 
+ { font-size: 19px;
+   color: black;
+  }
     
 
 
@@ -492,7 +506,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-shadow: rgba();
 }
 
-#multi-colored-letter-14{
+#multi-colored-letter-14
     color: rgba(200,100,20,0.8);
     text-shadow: rgba();
 }
@@ -525,101 +539,128 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     display: table-cell !important;
    }
    
+   .sidebar-div {
+   
+   }
+   
 
 .sidebar-1 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 30%;
        margin-left: 250%;
+         color: rgba(255,255,255,0.8); /* ORIG (0,150,80) */
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-2 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+        
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 44%;
     margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-3 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+        
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 59%;
     margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-4 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+         
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 74%;
     margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-5 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+        
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 88%;
     margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-6 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+         
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 100%;
     margin-left: 248%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-7 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+           
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 112%;
     margin-left: 247%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-8 {    
     position: absolute;
   -webkit-transform: rotate(-26deg); 
             transform: rotate(-26deg);
-            color: rgba(20,20,20,0.80);
+           
             font-size: 25px;                
             height: 200px;
             width: 200px;
             margin-top: 145%;
     margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+       font-variant: small-caps;
 }
 
 .sidebar-9 {    
@@ -632,6 +673,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
             width: 200px;
             margin-top: 160%;
     margin-left: 250%;
+     font-variant: small-caps;
 }
 
 
@@ -649,7 +691,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-shadow: 2px 1px 2px rgba(20,20,80,0.3);
      border-radius: 20px;
      color: rgba(20,20,20,0.8) !important;
-     background-color: rgba(222,200,34,0.9)!important;
+     background-color: rgba(200,100,20,0.8)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
   }
   

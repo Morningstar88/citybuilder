@@ -30,13 +30,23 @@
 
 <!--SIDEBAR -->
 
+<!-- EXAMPLE TOPIC PATH 
+
+ <span><%#= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
+
+-->
+
+<div class="sidebar-div">
 <div class="sidebar-1">Uplifting News</div>
+<!-- Trying to add some links to topic. Below EEX link doesn't work -->
+<!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
 <div class="sidebar-2">Happiness</div>
 <div class="sidebar-3">Hacking</div>
 <div class="sidebar-4">Technology</div>
 <div class="sidebar-5">Art + Music</div>
 <div class="sidebar-6">Mysteries</div>
 <div class="sidebar-7">Classic</div>
+</div>
 <!-- END SIDEBAR-->
 
 

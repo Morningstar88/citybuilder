@@ -1,14 +1,7 @@
-@import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700,800|Raleway:200,300,400');
+@import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
-
-/*
-
-RESOURCES
-
-
-*/
 
 html, body {
     font-family: 'Josefin Sans', sans-serif !important;
@@ -82,82 +75,30 @@ a.logout-button {
 
 .show-page-fork-btn {
     position: absolute;
-    /*height: 195px;*/
-    /*width: 190px;*/
-    font-size: 104px !important;
-    /*border-radius: 2px !important;*/
-    border: 1px inset rgba(200,20,20,0) !important;
-    /*box-shadow: 2px 2px 2px rbga(30,30,30,0.5);*/
-    border-radius: 15px 2px 2px 15px !important;
+    height: 95px;
+    width: 120px;
+    font-size: 54px !important;
+    border-radius: 2px !important;
+    border: 1px solid rgba(20,20,20,0.5) !important;
+    box-shadow: 2px 2px 2px rbga(30,30,30,0.5);
     font-family: 'Century Gothic' !important;
-    font-weight: 100px;
     text-transform: small-caps !important;
-    margin-left: 75% !important;
-    margin-top: -7% !important;
-    /*background-color: rgba(30,140,40,0.7);*/
+    margin-left: 730px !important;
+    margin-top: 200px !important;
+    background-color: rgba(30,140,40,0.7);
     whitespace: pre-wrap !important;
-    color: rgba(200,100,10,0.7) !important;
-    text-shadow: 1px 1px 1px rgba(200,100,10,0.9), 2px 2px 2px rgba(180,90,0,0.8);
+     color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
     display: table-cell !important;
     vertical-align: middle !important;
-    line-height: -20px !important;
-    background-color: black !important;
- }
- 
- /*.show-page-fork-btn:hover {*/
- /*   position: absolute;*/
- /*   height: 195px;*/
- /*   width: 190px;*/
- /*   font-size: 104px !important;*/
-    /*border-radius: 2px !important;*/
- /*   border: 1px solid rgba(20,20,20,0) !important;*/
- /*   box-shadow: 2px 2px 2px rbga(30,30,30,0.5);*/
- /*   font-family: 'Century Gothic' !important;*/
- /*   text-transform: small-caps !important;*/
- /*   border-radius: 50% !important;*/
- /*   margin-left: 730px !important;*/
- /*   margin-top: 200px !important;*/
- /*   background-color: rgba(200,80,10,0.3) !important;*/
- /*   whitespace: pre-wrap !important;*/
- /*    color: rgba(20,10,10,0.6);*/
- /*   text-shadow: 1px 1px 1px rgba(200,100,10,0.9), 2px 2px 2px rgba(180,90,0,0.8);*/
- /*   display: table-cell !important;*/
- /*   vertical-align: middle !important;*/
- /*   line-height: -40px !important;*/
- /*   content: "Click me to fork";*/
- /*}*/
- 
-
- .show-edit {
-     background-color: rgba(10,10,10,0.9) !important;
-     color: orange !important;
-     border: 1px solid black !important;
-     font-size: 45px !important;   
-     font-family: 'Raleway' !important;
-     font-weight: 100 !important;
-     margin-left: 26% !important;
- }
- 
- .show-main {
-     background-color: rgba(10,10,10,0.9) !important;
-     color: orange !important;
-     border: 1px solid black !important;
-     font-size: 45px !important;   
-     font-family: 'Raleway' !important;
-     font-weight: 100 !important;
-     margin-left: 0% !important;
-     
-     
+    line-height: -40px !important;
  }
  
  .login-btn {
      white-space: pre;
-     font-size: 24px;
+     font-size: 20px;
      margin-left: -3%;
-     color: rgba(240,100,20,0.8);
-     /*text-shadow: 1px 1px 1px rgba(0,0,0,0.3);*/
-     font-family: 'Montserrat';
-     letter-spacing: 3px;
+     color: green;
      
  }
  
@@ -165,67 +106,20 @@ a.logout-button {
      white-space: pre;
      font-size: 20px;
      margin-left: -3%;
-     color: black;
+     color: orange;
      
  }
  
  .sign-up-btn 
- { font-size: 24px;
-   color: rgba(230,80,4,0.8);
-   font-family: 'Montserrat';
-   letter-spacing: -3px;
+ { font-size: 18px;
+   color: green;
  }
  
   .sign-up-btn:hover 
- { font-size: 20px;
+ { font-size: 19px;
    color: black;
   }
-  
-  .whats-happening {
-      /*DIV, NOT A BUTTON. DEPRECATED*/
-      margin-top: -20%;
-      margin-left: 15%;
-      font-size: 22px;
-      font-family: 'Montserrat';
-      font-weight: 500;
-      letter-spacing: 3px;
-  }
-  
-  
-  
-  /* WHAT'S UP BUTTONS */
-  
-  /* ORIGINAL COLORS
-  
-  .multi-letter-1 {
-      color: rgba(20,20,20,0.9);
-  }
     
-     .multi-letter-2 {
-      color: rgba(200,50,30,0.85);
-  }
-  
-   .multi-letter-3 {
-      color: rgba(20,20,20,0.8);
-  }
-  
-   .multi-letter-4 {
-      color: rgba(20,20,20,0.9);
-  }
-  
-   .multi-letter-5 {
-      color: rgba(20,20,20,0.9);
-  }
-  
-   .multi-letter-6 {
-      color: rgba(0,100,20,0.8);
-  }
-  
-   .multi-letter-7 {
-      color: rgba(20,120,230,0.6);
-  }
-
-*/
 
 
 /*.long-fork-button:hover {*/
@@ -245,38 +139,26 @@ a.logout-button {
 } 
 
 .whats-happening-button {
-    font-family: 'Century Gothic';
-    font-weight: 400;
 	position: relative;
 	display: block;
-	/*background: none center center no-repeat;*/
-	background-color: rgba(10,10,10,.95);
+	background: none center center no-repeat;
 	background-size: cover;
-	border: 1px inset rgba(100,100,100,0.2);
+	border: 1px solid #2e2e2e;
 	border-radius: 1px 3px 0px 10px;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
+	letter-spacing: .3rem;
 	padding: 25px 18px;
-	max-width: 800px !important;
-	min-width: 320px;
-	height: 80px;
 	text-align: center;
+	max-width: 390px;
+	min-width: 200px;
 	cursor: pointer;
 	overflow: hidden;
 	-webkit-transition: border 1s cubic-bezier(0.19,1,.22,1),color .6s cubic-bezier(0.19,1,.22,1);
 	transition: border 1s cubic-bezier(0.19,1,.22,1), color .6s cubic-bezier(0.19,1,.22,1), background 5s cubic-bezier(0.19,1,.22,1);
-    color: rgba(255,255,255,0.1);
-    text-shadow: 1px 0px 0px rgba(255,153,51,0.9) !important;
+    color: rgba(20,20,20,.8);
     text-decoration: none;
-    font-size: 23px;
-    box-shadow: rgba(100,100,100,0.8) !important;
-    /*text-shadow: 1px 0px 1px rgba(30,30,30,0.8) !important;*/
+    font-size: 15px;
 }
-
-.whats-happening-button:hover {
-    color: rgba(255,255,255,.9);
-}
-
-
 
 /*.button a {*/
 /*	color: #111 !important;*/
@@ -327,11 +209,6 @@ a.logout-button {
 	padding-left: 5px;
 }
 
-/* COLORS ON MAIN WHAT'S UP BUTTON*/
-
-/*ORIGINAL COLORS*/
-
-
 .first-letter-new {
     color: rgba(20,20,20,0.8);
        text-shadow: 2px 2px 2px rgba(100,20,100,0.7);
@@ -354,83 +231,47 @@ a.logout-button {
 
 /*Background gradients https://www.w3schools.com/css/css3_gradients.asp */
 
-/* SHOWＰＡＧＥSHOWＰＡＧＥ */
-
- .show-page-header {
-     position: absolute;
-     height: 150px;
-     width: 120%;
-     margin-left: -25%;
-     background: black;
-     box-shadow: 2px 2px 2px rgba(20,20,20,0.8);
- }
+/* INDEX.HTML.EEX Display Posts For Users */
 
 .display-post-title-index {
     /*MAIN INDEX PAGE*/
-    font-family: 'Montserrat' !important;
-    width: 700px;
-    font-size: 46px;
-    letter-spacing: 2px;
-    color: rgba(30,30,30,0.8);
-    text-shadow: 1px 1px 1px rgba(100,100,100,0.7);
-    /*text-align: center !important;*/
-    /*font-variant: small-caps;*/
-    margin-left: -2%;
-    font-weight: 600;
-   
-}
-
-.display-post-title-index-show {
-    /*MAIN INDEX PAGE
-    
-    http://www.webdesigndev.com/best-google-fonts-for-headings/
-    
-    */
-    font-family: 'Montserrat' !important;
-    width: 900px !important;
-    font-size: 46px;
-    letter-spacing: 2px;
-    color: rgba(35,35,35,0.8);
+    font-family: 'Josefin Sans' !important;
+    font-size: 38px;
+    letter-spacing: 6px;
+    color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.7);
     text-align: "center" !important;
-    /*font-variant: small-caps;*/
-    font-weight: 600;
-    margin-left:-16%;
+    font-variant: small-caps;
    
 }
-
-.display-post-body-show {
-    height: auto;
-    width: 800px !important;
-    font-size: 26px;
-     font-weight: 300;
-    padding-top: 10px;
-    font-family: 'Raleway' !important;
-    padding-left: 2px;
-    line-height: 40px;
-    margin-left: -13%;
-    letter-spacing: 1px;
-    color: rgba(10,10,10,0.8);
-    text-shadow: 1px 0px 2px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
-    white-space: pre-wrap !important;
-   
- }
 
 .display-post-body {
     height: auto;
     font-size: 21px;
     padding-top: 10px;
-    font-family: 'Raleway' !important;
-    font-weight: 300;
+    font-family: 'Josefin Sans' !important;
+    font-weight: 500;
     padding-left: 2px;
     line-height: 40px;
     letter-spacing: 1px;
     color: rgba(10,10,10,0.8);
-    text-shadow: 1px 0px 2px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
     white-space: pre-wrap !important;
-  }
+ }
  
- 
+ .display-post-body-show {
+    height: auto;
+    font-size: 26px;
+    padding-top: 10px;
+    font-family: 'Josefin Sans' !important;
+    font-weight: 500;
+    padding-left: 2px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
+    white-space: pre-wrap !important;
+ }
 
 /* COLOR FOR MAIN BUTTON */
 
@@ -440,7 +281,7 @@ a.logout-button {
 
 
 .display-post-title-edit {
-    font-family: 'Raleway' !important;
+    font-family: 'Josefin Sans' !important;
     font-size: 88px;
     letter-spacing: 9px;
     color: rgba(10,10,10,0.8);
@@ -450,25 +291,24 @@ a.logout-button {
    
 }
 
-/*.display-post-title {*/
-/*    font-family: 'Josefin Sans' !important;*/
-/*    font-size: 40px;*/
-/*    letter-spacing: 9px;*/
-/*    color: rgba(10,10,10,0.8);*/
-/*    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);*/
-/*    z-index: 2;*/
-/*    text-align: 'center' !important;*/
-/*    white-space: pre-wrap !important;*/
-/*    font-variant: small-caps;*/
+.display-post-title {
+    font-family: 'Josefin Sans' !important;
+    font-size: 40px;
+    letter-spacing: 9px;
+    color: rgba(10,10,10,0.8);
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.5);
+    z-index: 2;
+    text-align: 'center' !important;
+    white-space: pre-wrap !important;
    
    
-/*}*/
+}
 
 
 
 .display-post-title-wrapper {
     /*box-shadow: -8px 0px 5px -5px rgba(0,0,0,.2), 8px 0px 5px -5px rgba(0,0,0,.2) !important;*/
-    width: 900px;
+    width: 700px;
     height: auto;
     position: relative;
     padding-left: 9%;
@@ -545,7 +385,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 }
 
 .teal-username {
-    color: rgba(0,80,80,0.9)
+    rgba(0,80,80,0.9)
 }
 
 .block-btn {
@@ -562,7 +402,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-title {
      height: 60px !important;
     font-size: 34px !important;
-    font-family: 'Montserrat' !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
@@ -573,7 +413,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .form-control-body {
     height: 300px !important;
     font-size: 23px !important;
-    font-family: 'Raleway' !important;
+    font-family: 'Josefin Sans' !important;
      line-height: 2px;
     color: rgba(10,10,10,0.8);
     text-shadow: 1px 1px 1px rgba(100,100,100,0.4);
@@ -666,7 +506,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-shadow: rgba();
 }
 
-#multi-colored-letter-14 {
+#multi-colored-letter-14
     color: rgba(200,100,20,0.8);
     text-shadow: rgba();
 }
@@ -700,132 +540,113 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
    }
    
    .sidebar-div {
-   font-family: 'Montserrat';
-    font-variant: small-caps;
-    font-size: 25px;
+   
    }
    
 
 .sidebar-1 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 30%;
        margin-left: 250%;
-         color: rgba(25,25,25,0.8); /* ORIG (0,150,80) */
-       /*text-shadow: 0px 1px 1px rgba(200,100,10,0.8);*/
-       letter-spacing: 3px;
-       text-decoration: underline overline;
-       text-decoration-color: rgba(20,90,30,0.8);
-       
+         color: rgba(255,255,255,0.8); /* ORIG (0,150,80) */
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-2 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
         
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 44%;
     margin-left: 250%;
-        color: rgba(25,25,25,0.8);
-        text-decoration: underline overline;
-        letter-spacing: -2px;
-        text-decoration-color: rgba(20,90,30,0.8);
-     
-  
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-3 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
         
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 59%;
     margin-left: 250%;
-        color: rgba(25,25,25,0.8);
-        text-decoration: underline overline;
-        letter-spacing: 3px;
-        text-decoration-color: rgba(20,90,30,0.8);
-  
-     
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-4 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
          
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 74%;
     margin-left: 250%;
-        color: rgba(25,25,25,0.8);
-        text-decoration: underline overline;
-        letter-spacing: -2px;
-        text-decoration-color: rgba(20,90,30,0.8);
-  
-      
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-5 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
         
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 88%;
     margin-left: 250%;
-        color: rgba(25,25,25,0.9);
-        letter-spacing: 3px;
-        text-decoration: underline overline;
-        text-decoration-color: rgba(20,90,30,0.8);
-     
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-6 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
          
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 100%;
-    margin-left: 249%;
-        color: rgba(25,25,25,0.8);
-        letter-spacing: -2px;
-        text-decoration: underline overline;
-        text-decoration-color: rgba(20,90,30,0.8);
-      
+    margin-left: 248%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
 }
 
 .sidebar-7 {    
     position: absolute;
-  -webkit-transform: rotate(-10deg); 
-            transform: rotate(-10deg);
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
            
             font-size: 23px;                
             height: 200px;
             width: 200px;
             margin-top: 112%;
-    margin-left: 248%;
-        color: rgba(25,25,25,0.8);
-        letter-spacing: 3px;
-        text-decoration: underline overline;
-        text-decoration-color: rgba(20,90,30,0.8);
-  }
+    margin-left: 247%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+        font-variant: small-caps;
+}
 
 .sidebar-8 {    
     position: absolute;
@@ -864,13 +685,13 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
     width: 80px !important;
-    font-family: 'Montserrat';
-    font-weight: 600;
+    font-family: 'Josefin Sans';
+    font-weight: bold;
     font-variant: small-caps;
     text-shadow: 2px 1px 2px rgba(20,20,80,0.3);
      border-radius: 20px;
-     color: rgba(200,100,30,0.9) !important;
-     background-color: rgba(20,20,20,0.9)!important;
+     color: rgba(20,20,20,0.8) !important;
+     background-color: rgba(200,100,20,0.8)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
   }
   
@@ -933,18 +754,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
      background-color: rgba(255,255,255,0.9) !important;
      color: rgba(20,20,20,1) !important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7) !important;
-}
-
-.upvote-count {
-     font-family: garamond !important;
-    display: inline;
-    font-size: 24px;
-}
-
-.fork-count {
-    font-family: garamond !important;
-    display: inline;
-    font-size: 24px;
 }
 
 /* GHOST BUTTON CODE */

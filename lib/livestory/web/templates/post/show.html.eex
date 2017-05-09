@@ -1,28 +1,38 @@
 <!--<h2>Show Post</h2>-->
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Chivo:500,600,700|Josefin Sans|Libre+Franklin:200,300,400,800|Fira+Sans:700,800|Cardo|Radley|Cantarell|Montserrat:200,300,400,500,600,700,800|Raleway:100,200,300,400' rel='stylesheet'
   type='text/css'>
+  
+  <header class="show-page-header">
+    <span><%= link "< back", to: post_path(@conn, :index), class: "btn btn-default show-main" %></span>
+     <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit"%></span>
+     <span><%= link " Ψ	", to: post_path(@conn, :fork, @post), class: "btn btn-default show-page-fork-btn"%></span>
+     
+   
+   
+  </header>
   		  
- <br> <br> <br>
+ <br> <br> <br>  <br> <br> <br> <br> <br> <br>
   <ul>		 
-    <span><%= link " Ψ	", to: post_path(@conn, :fork, @post), class: "btn btn-default show-page-fork-btn"%></span>
+
  	    <br> <br>  <br> <br>
- 	    <p class="display-post-title-wrapper">
- 	   <h1 class="display-post-title">
+ 	    <!--<p class="display-post-title-wrapper">-->
+ 	   <h1 class="display-post-title-index-show">
        <%= @post.title %>		      
     </h1>		   
-    </p>
-  	<div class="display-post-body-wrapper">
+    <!--</p>-->
+  	<!--<div class="display-post-body-wrapper">-->
 	   <p class="display-post-body-show">
        <%= @post.body %>		     
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>	
-    </div>
+     <br><br><br> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
+    <!--</div>-->
     <br>
    </ul>		  
- <br><br><br>
+ <br><br><br> <br><br><br> <br><br><br>
  
-  <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default block-btn"%></span>
+
   <br><br>
- <span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default block-btn" %></span>
+
  <br><br><br>

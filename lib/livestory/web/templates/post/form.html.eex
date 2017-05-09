@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat|Raleway' rel='stylesheet'
   type='text/css'>
 
 <%= form_for @changeset, @action, fn f -> %>

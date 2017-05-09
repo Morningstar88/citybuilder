@@ -1,7 +1,7 @@
 <!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
 
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600' rel='stylesheet'
   type='text/css'>
 
   <header>
@@ -23,20 +23,36 @@
 <span class="hello-user">Hello <%= @user.username %>!</span>
 <span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
-  <span><%= link "Login                         ", to: user_path(@conn, :signin), class: "login-btn"%></span>
-  <span><%= link "Sign Up", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
+  <span><%= link "LOGIN      ", to: user_path(@conn, :signin), class: "login-btn"%></span>
+  <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
 <span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
 
+<!-- ORIGINAL MULTI-COLORED BUTTON -->
+<!--<div class="whats-happening">-->
+<!--<span class="multi-letter-1">W</span><span class="multi-letter-2">H</span><span class="multi-letter-3">A</span><span class="multi-letter-4">T</span><span class="multi-letter-4">'</span><span class="multi-letter-5">S </span><span class="multi-letter-6">U</span><span class="multi-letter-7">P</span><span class="multi-letter-8">?</span>-->
+<!--</div>-->
+<!--END MULTI COLORED BUTTON -->
+
 <!--SIDEBAR -->
 
-<div class="sidebar-1">Uplifting News</div>
-<div class="sidebar-2">Happiness</div>
-<div class="sidebar-3">Hacking</div>
-<div class="sidebar-4">Technology</div>
-<div class="sidebar-5">Art + Music</div>
-<div class="sidebar-6">Mysteries</div>
-<div class="sidebar-7">Classic</div>
+<!-- EXAMPLE TOPIC PATH 
+
+ <span><%#= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
+
+-->
+
+<div class="sidebar-div">
+<div class="sidebar-1">NEWS</div>
+<!-- Trying to add some links to topic. Below EEX link doesn't work -->
+<!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
+<div class="sidebar-2">HAPPINESS</div>
+<div class="sidebar-3">HACKING</div>
+<div class="sidebar-4">TECHNOLOGY</div>
+<div class="sidebar-5">ART + MUSIC</div>
+<div class="sidebar-6">MYSTERIES</div>
+<div class="sidebar-7">CLASSIC</div>
+</div>
 <!-- END SIDEBAR-->
 
 
@@ -52,7 +68,7 @@
 <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-      <h2 class="display-post-title-index"><%= post.title %></h2>
+      <h1 class="display-post-title-index"><%= post.title %></h1>
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
@@ -63,8 +79,9 @@
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
          <span class="fork-count display-post-body">23 Ψ</span>
+
          <span class="upvote-count"><%= post.upvotes_count.count %></span>⇧
-         <br><br><br>
+     <br><br><br>
       </td>
     </tr>
 <% end %>

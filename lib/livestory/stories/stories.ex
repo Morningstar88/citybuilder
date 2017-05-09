@@ -5,6 +5,7 @@ defmodule LiveStory.Stories do
   import Ecto.{Query, Changeset}, warn: false
   alias LiveStory.Repo
 
+  alias LiveStory.Auths.User
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.Upvotes
   alias LiveStory.Stories.UpvotesCounts
@@ -27,11 +28,17 @@ defmodule LiveStory.Stories do
     ) |> Repo.all
   end
 
-  def list_upvotes(post_id) do
-    from( up in Upvotes,
-    where: up.post_id == ^post_id)
+  def list_user_upvotes(%User{id: user_id}, post_ids) do
+    from(uv in Upvotes,
+      where: uv.user_id == ^user_id,
+      where: uv.post_id in ^post_ids,
+      select: uv.post_id
+    )
     |> Repo.all
+    |> Enum.map(fn(upvote_id) -> {upvote_id, true} end)
+    |> Map.new
   end
+  def list_user_upvotes(nil, _post_ids), do: %{}
 
   @doc """
   Gets a single post.

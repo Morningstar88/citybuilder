@@ -47,7 +47,7 @@
 <span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>
 </div>
 
-<table class="table">
+<table class="table posts">
   <tbody>
 <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
@@ -58,7 +58,7 @@
      <br><br>
        <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg  "%>
-        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: "btn btn-default btn-md btn-ldit-post unicode-lg" %></span>
+        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class(@upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-btn" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>

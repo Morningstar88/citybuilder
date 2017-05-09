@@ -58,7 +58,8 @@
      <br><br>
        <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg  "%>
-        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class(@upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-btn" %></span>
+        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-btn" %></span>
+        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-delete-btn" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>

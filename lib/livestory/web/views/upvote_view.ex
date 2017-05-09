@@ -3,7 +3,15 @@ defmodule LiveStory.Web.UpvoteView do
 
   def render("upvoted.json", %{post: post}) do
     %{
-      upvote_post: post.id
+      post_id: post.id,
+      action: :upvote
+    }
+  end
+
+  def render("deleted.json", %{post: post}) do
+    %{
+      post_id: post.id,
+      action: :delete_upvote
     }
   end
 

@@ -180,6 +180,17 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def delete_upvote(%Post{id: post_id}, user_id) do
+    Repo.transaction fn ->
+      upvote = Repo.get_by!(Upvotes, post_id: post_id, user_id: user_id)
+      Repo.delete!(upvote)
+      from(uc in UpvotesCounts,
+        where: uc.post_id == ^post_id,
+        update: [inc: [count: -1]]
+      ) |> Repo.update_all([])
+    end
+  end
+
   defp post_changeset(%Post{} = post, attrs) do
     post
     |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id]) #Need to change this to Para1, Para2 at some point.

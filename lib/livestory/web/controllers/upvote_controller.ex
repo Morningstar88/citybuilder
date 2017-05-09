@@ -7,7 +7,7 @@ defmodule LiveStory.Web.UpvoteController do
   # plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]
   plug :set_user
-  plug :set_post when action in [:create]
+  plug :set_post when action in [:create, :delete]
 
   def create(conn, _params) do
     post = conn.assigns.post
@@ -19,6 +19,13 @@ defmodule LiveStory.Web.UpvoteController do
         conn
         |> render("error.json", changeset: changeset)
     end
+  end
+
+  def delete(conn, _params) do
+    post = conn.assigns.post
+    {:ok, _post} = Stories.delete_upvote(post, conn.assigns.user.id)
+    conn
+    |> render("deleted.json", post: post)
   end
 
   defp set_user(conn, _opts) do

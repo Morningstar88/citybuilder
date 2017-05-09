@@ -30,7 +30,7 @@ html, body {
 /*            margin:0px !important;*/
 /*        }*/
 
-.posts .upvoted {
+.posts .upvote-delete-btn {
   color: red !important;
 }
 

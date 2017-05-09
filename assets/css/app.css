@@ -23,6 +23,10 @@ html, body {
 /*            margin:0px !important;*/
 /*        }*/
 
+.posts .upvoted {
+  color: red !important;
+}
+
 .header-img {
    position: absolute;
    z-index: -1;

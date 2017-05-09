@@ -5,8 +5,10 @@ defmodule LiveStory.Stories do
   import Ecto.{Query, Changeset}, warn: false
   alias LiveStory.Repo
 
+  alias LiveStory.Auths.User
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.Upvotes
+  alias LiveStory.Stories.UpvotesCounts
 
   @doc """
   Returns the list of posts.
@@ -19,16 +21,24 @@ defmodule LiveStory.Stories do
   """
   def list_posts do
     from(p in Post,
+      join: uc in assoc(p, :upvotes_count),
       where: p.published == true,
-      preload: :user
+      order_by: [desc: uc.count],
+      preload: [:user, :upvotes_count]
     ) |> Repo.all
   end
 
-  def list_upvotes(post_id) do
-    from( up in Upvotes,
-    where: up.post_id == ^post_id)
+  def list_user_upvotes(%User{id: user_id}, post_ids) do
+    from(uv in Upvotes,
+      where: uv.user_id == ^user_id,
+      where: uv.post_id in ^post_ids,
+      select: uv.post_id
+    )
     |> Repo.all
+    |> Enum.map(fn(upvote_id) -> {upvote_id, true} end)
+    |> Map.new
   end
+  def list_user_upvotes(nil, _post_ids), do: %{}
 
   @doc """
   Gets a single post.
@@ -65,9 +75,19 @@ defmodule LiveStory.Stories do
 
   """
   def create_post(attrs \\ %{}, user) do
-    %Post{}
-    |> post_changeset(Map.merge(attrs, %{"user_id" => user.id}))
-    |> Repo.insert()
+    try do
+      Repo.transaction fn ->
+        post = %Post{}
+        |> post_changeset(Map.merge(attrs, %{"user_id" => user.id}))
+        |> Repo.insert!
+        %UpvotesCounts{}
+        |> upvotes_counts_changeset(%{post_id: post.id})
+        |> Repo.insert!
+        post
+      end
+    rescue
+      error in Ecto.InvalidChangesetError -> {:error, error.changeset}
+    end
   end
 
   @doc """
@@ -146,8 +166,18 @@ defmodule LiveStory.Stories do
   end
 
   def upvote(post_id, user_id) do
-    upvote_changeset(%Upvotes{}, %{"user_id" => user_id, "post_id" => post_id})
-    |> Repo.insert()
+    try do
+      Repo.transaction fn ->
+        upvote_changeset(%Upvotes{}, %{"user_id" => user_id, "post_id" => post_id})
+        |> Repo.insert!
+        from(uc in UpvotesCounts,
+          where: uc.post_id == ^post_id,
+          update: [inc: [count: 1]]
+        ) |> Repo.update_all([])
+      end
+    rescue
+      error in Ecto.InvalidChangesetError -> {:error, error.changeset}
+    end
   end
 
   defp post_changeset(%Post{} = post, attrs) do
@@ -163,5 +193,13 @@ defmodule LiveStory.Stories do
     |> foreign_key_constraint(:post_id)
     |> foreign_key_constraint(:user_id)
     |> unique_constraint(:user_id, name: :stories_upvotes_post_id_user_id_index)
+  end
+
+  defp upvotes_counts_changeset(%UpvotesCounts{} = upvotes_counts, attrs) do
+    upvotes_counts
+    |> cast(attrs, [:post_id])
+    |> validate_required([:post_id])
+    |> foreign_key_constraint(:post_id)
+    |> unique_constraint(:post_id)
   end
 end

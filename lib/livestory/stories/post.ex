@@ -8,6 +8,7 @@ defmodule LiveStory.Stories.Post do
     field :path, :string, null: false, read_after_writes: true
     belongs_to :user, LiveStory.Auths.User
     belongs_to :original_post, LiveStory.Stories.Post
+    has_one :upvotes_count, LiveStory.Stories.UpvotesCounts
 
     timestamps()
   end

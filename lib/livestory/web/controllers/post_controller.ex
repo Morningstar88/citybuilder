@@ -10,8 +10,10 @@ defmodule LiveStory.Web.PostController do
   plug :check_same_user when action in [:edit, :update, :delete]
 
   def index(conn, _params) do
-    posts = Stories.list_posts() #Original code
-    render(conn, "index.html", posts: posts, user: conn.assigns.user)
+    posts = Stories.list_posts
+    post_ids = Enum.map(posts, &(&1.id))
+    upvotes = Stories.list_user_upvotes(conn.assigns.user, post_ids)
+    render(conn, "index.html", posts: posts, upvotes: upvotes, user: conn.assigns.user)
   end
 
   #Udia Web Controllers

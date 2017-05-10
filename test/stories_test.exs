@@ -1,5 +1,6 @@
 defmodule LiveStory.StoriesTest do
   use LiveStory.DataCase
+  #doctest LiveStory.Stories
 
   alias LiveStory.Auths
   alias LiveStory.Stories

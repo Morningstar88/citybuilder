@@ -12,8 +12,15 @@ defmodule LiveStory.Web.PostController do
   def index(conn, _params) do
     posts = Stories.list_posts
     post_ids = Enum.map(posts, &(&1.id))
+    post_paths = Enum.map(posts, &(&1.path))
     upvotes = Stories.list_user_upvotes(conn.assigns.user, post_ids)
-    render(conn, "index.html", posts: posts, upvotes: upvotes, user: conn.assigns.user)
+    forks_count = Stories.count_forks(post_paths)
+    render(conn, "index.html",
+      posts: posts,
+      upvotes: upvotes,
+      forks_count: forks_count,
+      user: conn.assigns.user
+    )
   end
 
   #Udia Web Controllers

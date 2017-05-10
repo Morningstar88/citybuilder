@@ -6,4 +6,8 @@ defmodule LiveStory.Web.PostView do
   def upvoted_class("upvoted", nil), do: "hidden "
   def upvoted_class("not_upvoted", true), do: "hidden "
   def upvoted_class("not_upvoted", nil), do: ""
+
+  def root_path(path) do
+    LiveStory.Stories.root_path(path)
+  end
 end

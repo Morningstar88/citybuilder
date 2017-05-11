@@ -1,59 +1,42 @@
 <!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
 
 
+
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600' rel='stylesheet'
   type='text/css'>
 
-  <header>
-
-  <img class="header-img"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/record-white.jpeg"></img>
+<header>
+  <br><br><br><br><br>
+<div id="gradient"></div>
+<h4 class="writing-top">Blogs you</h4>
+<h4 class="writing-base">can fork</h4>
   </header>
+  
+  <!--<header>-->
+  <!--OLD HEADER IMAGE. <img class="header-img"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/record-white.jpeg"></img>-->
+  <!--</header>-->
+  
+  <br><br><br><br>
 
   <style>
     body {
       font-family: 'Josefin Sans' !important;
-      margin-top: 15%;
+      /*margin-top: 15%;*/
     }
     </style>
 
-  <span class="blogs-u-can-fork"><span id="multi-colored-letter-1">B</span><span id="multi-colored-letter-2">l</span><span id="multi-colored-letter-3">o</span><span id="multi-colored-letter-4">g</span><span id="multi-colored-letter-5">s </span><span id="multi-colored-letter-6">y</span><span id="multi-colored-letter-7">o</span><span id="multi-colored-letter-8">u</span><span id="multi-colored-letter-9"> c</span><span id="multi-colored-letter-10">a</span><span id="multi-colored-letter-11">n</span><span id="multi-colored-letter-12"> f</span><span id="multi-colored-letter-13">o</span><span id="multi-colored-letter-14">r</span><span id="multi-colored-letter-15">k</span></span>
+  <!--BLOGS YOU CAN FORK MULTI-COLORED<span class="blogs-u-can-fork"><span id="multi-colored-letter-1">B</span><span id="multi-colored-letter-2">l</span><span id="multi-colored-letter-3">o</span><span id="multi-colored-letter-4">g</span><span id="multi-colored-letter-5">s </span><span id="multi-colored-letter-6">y</span><span id="multi-colored-letter-7">o</span><span id="multi-colored-letter-8">u</span><span id="multi-colored-letter-9"> c</span><span id="multi-colored-letter-10">a</span><span id="multi-colored-letter-11">n</span><span id="multi-colored-letter-12"> f</span><span id="multi-colored-letter-13">o</span><span id="multi-colored-letter-14">r</span><span id="multi-colored-letter-15">k</span></span>-->
 <br><br>
 <div class="center-wrap">
+  <br><br><br><br>
 <%= if @user do %>
-<span class="hello-user">Hello <%= @user.username %>!</span>
+<span><%= link "WHAT'S UP ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
+<span class="hello-user">Hello <%= @user.username %></span>
 <span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
   <span><%= link "LOGIN      ", to: user_path(@conn, :signin), class: "login-btn"%></span>
   <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
-<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
-
-<!-- ORIGINAL MULTI-COLORED BUTTON -->
-<!--<div class="whats-happening">-->
-<!--<span class="multi-letter-1">W</span><span class="multi-letter-2">H</span><span class="multi-letter-3">A</span><span class="multi-letter-4">T</span><span class="multi-letter-4">'</span><span class="multi-letter-5">S </span><span class="multi-letter-6">U</span><span class="multi-letter-7">P</span><span class="multi-letter-8">?</span>-->
-<!--</div>-->
-<!--END MULTI COLORED BUTTON -->
-
-<!--SIDEBAR -->
-
-<!-- EXAMPLE TOPIC PATH 
-
- <span><%#= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
-
--->
-
-<div class="sidebar-div">
-<div class="sidebar-1">NEWS</div>
-<!-- Trying to add some links to topic. Below EEX link doesn't work -->
-<!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
-<div class="sidebar-2">HAPPINESS</div>
-<div class="sidebar-3">HACKING</div>
-<div class="sidebar-4">TECHNOLOGY</div>
-<div class="sidebar-5">ART + MUSIC</div>
-<div class="sidebar-6">MYSTERIES</div>
-<div class="sidebar-7">CLASSIC</div>
-</div>
-<!-- END SIDEBAR-->
 
 
 <div class="mask"></div>
@@ -62,7 +45,7 @@
 <span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>
 <span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>
 </div>
-
+<br><br><br><br><br><br><br>
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>
@@ -78,10 +61,9 @@
         <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-delete-btn" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
-         <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
-         <span class="fork-count display-post-body">23 Ψ</span>
-
-         <span class="upvote-count"><%= post.upvotes_count.count %></span>⇧
+         <span><%= link " 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
+         <span class="upvote-count"><%= post.upvotes_count.count %>⇧</span>
+            <span class="fork-count display-post-body">23 Ψ</span>
      <br><br><br>
       </td>
     </tr>
@@ -105,23 +87,80 @@
 
 <script>
 
-  // document.getElementById("multi-colored-letter-1").innerHTML ="W";
-  // document.getElementById("multi-colored-letter-2").innerHTML ="H";
-  //   document.getElementById("multi-colored-letter-3").innerHTML ="A";
-  //   document.getElementById("multi-colored-letter-4").innerHTML ="T";
-  // document.getElementById("multi-colored-letter-5").innerHTML ="'";
-  //   document.getElementById("multi-colored-letter-6").innerHTML ="S";
-  //   document.getElementById("multi-colored-letter-7").innerHTML ="";
-  // document.getElementById("multi-colored-letter-8").innerHTML ="H";
-  //   document.getElementById("multi-colored-letter-9").innerHTML ="A";
-  //   document.getElementById("multi-colored-letter-10").innerHTML ="P";
-  // document.getElementById("multi-colored-letter-11").innerHTML ="P";
-  //   document.getElementById("multi-colored-letter-12").innerHTML ="E";
-  //   document.getElementById("multi-colored-letter-13").innerHTML ="N";
-  // document.getElementById("multi-colored-letter-14").innerHTML ="I";
-  //   document.getElementById("multi-colored-letter-15").innerHTML ="N";
-  //   document.getElementById("multi-colored-letter-16").innerHTML ="G";
-  //     document.getElementById("multi-colored-letter-16").innerHTML ="?";
+/* home page */
+
+/* color transitions */
+var colors = new Array(
+  [32,9,15],
+  [70,25,70],
+  [35,9,9],
+  [38,44,103],
+  [85,9,15],
+  [5,50,70]);
+
+/*
+ORIG: BLUEY GREEN COLORS
+
+ [32,90,150],
+  [30,155,90],
+  [35,98,98],
+  [35,145,230],
+  [35,90,155],
+  [35,128,97]);
+
+*/
+
+var step = 0;
+//color table indices for: 
+// current color left
+// next color left
+// current color right
+// next color right
+var colorIndices = [0,1,2,3];
+
+//transition speed
+var gradientSpeed = 0.009;
+
+//ORIG 0.002
+
+function updateGradient()
+{
+var c0_0 = colors[colorIndices[0]];
+var c0_1 = colors[colorIndices[1]];
+var c1_0 = colors[colorIndices[2]];
+var c1_1 = colors[colorIndices[3]];
+
+var istep = 1 - step;
+var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+var color1 = "#"+((r1 << 16) | (g1 << 8) | b1).toString(16);
+
+var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
+
+ $('#gradient').css({
+   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+  
+  step += gradientSpeed;
+  if ( step >= 1 )
+  {
+    step %= 1;
+    colorIndices[0] = colorIndices[1];
+    colorIndices[2] = colorIndices[3];
+    
+    //pick two new target color indices
+    //do not pick the same as the current one
+    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+    
+  }
+}
+
+setInterval(updateGradient,10);
 
 </script>
 <br><br><br><br><br><br>

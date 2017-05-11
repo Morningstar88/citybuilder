@@ -4,9 +4,9 @@
   type='text/css'>
   
   <header class="show-page-header">
-    <span><%= link "< back", to: post_path(@conn, :index), class: "btn btn-default show-main" %></span>
+    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-main" %></span>
      <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit"%></span>
-     <span><%= link " Ψ	", to: post_path(@conn, :fork, @post), class: "btn btn-default show-page-fork-btn"%></span>
+     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class: "btn btn-default show-page-fork-btn"%></span>
      
    
    

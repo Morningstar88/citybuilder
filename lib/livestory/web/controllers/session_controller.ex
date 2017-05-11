@@ -1,15 +1,15 @@
-defmodule LiveStory.Web.SessionController do 
-  use LiveStory.Web, :controller 
+defmodule LiveStory.Web.SessionController do
+  use LiveStory.Web, :controller
   # snip
   plug :scrub_params, "session" when action in ~w(create)
-  
+
 
   def create(conn, %{"session" => %{"username" => username, "password" => password}}) do
     case LiveStory.Session.authenticate(username, password) do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)
-        # |> put_flash(:info, "Welcome! Account created. Returning to main page.")
+        |> put_flash(:signed_in, true)
         |> redirect(to: "/")
 
       {:error, _err} ->
@@ -31,4 +31,4 @@ defmodule LiveStory.Web.SessionController do
     |> put_flash(:info, "Logged out. cu later!")
     |> redirect(to: "/")
   end
-end 
+end

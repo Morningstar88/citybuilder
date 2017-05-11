@@ -20,7 +20,7 @@
 <br><br>
 <div class="center-wrap">
 <%= if @user do %>
-<span class="hello-user">Hello <%= @user.username %>!</span>
+<span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
 <span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
   <span><%= link "LOGIN      ", to: user_path(@conn, :signin), class: "login-btn"%></span>

@@ -40,6 +40,41 @@ defmodule LiveStory.Stories do
   end
   def list_user_upvotes(nil, _post_ids), do: %{}
 
+  def count_forks([]), do: %{}
+  def count_forks(paths) do
+    from(p in Post,
+      where: p.published == true,
+      where: fragment("? ~ ?", p.path, ^paths_query(paths)),
+      group_by: fragment("top"),
+      select: {fragment("subpath(path, 0, 1) as top"), count(p.id)}
+    )
+    |> Repo.all
+    |> Enum.map(fn({key, count}) -> {key, count - 1} end)
+    |> Enum.into(%{})
+  end
+
+  @doc """
+  Converts paths list to `ltree` query
+
+  ## Example
+      iex> LiveStory.Stories.paths_query(~w(123 124))
+      "123|124.*"
+  """
+  def paths_query(paths) do
+    paths = paths
+    |> Enum.map(&root_path/1)
+    |> Enum.uniq
+    |> Enum.join("|")
+    paths <> ".*"
+    #{}"6|7.*"
+  end
+
+  def root_path(path) do
+    path
+    |> String.split(".")
+    |> List.first
+  end
+
   @doc """
   Gets a single post.
 

@@ -11,11 +11,11 @@
 <h4 class="writing-top">Blogs you</h4>
 <h4 class="writing-base">can fork</h4>
   </header>
-  
+
   <!--<header>-->
   <!--OLD HEADER IMAGE. <img class="header-img"src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/record-white.jpeg"></img>-->
   <!--</header>-->
-  
+
   <br><br><br><br>
 
   <style>
@@ -57,15 +57,13 @@
 -->
 
 <div class="sidebar-div">
-<div class="sidebar-1">NEWS</div>
 <!-- Trying to add some links to topic. Below EEX link doesn't work -->
 <!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
-<div class="sidebar-2">HAPPINESS</div>
-<div class="sidebar-3">HACKING</div>
-<div class="sidebar-4">TECHNOLOGY</div>
-<div class="sidebar-5">ART + MUSIC</div>
-<div class="sidebar-6">MYSTERIES</div>
-<div class="sidebar-7">CLASSIC</div>
+  <%= for {topic, index} <- Enum.with_index(@topics) do %>
+  <div class="sidebar-<%= index + 1 %>">
+    <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
+  </div>
+  <% end %>
 </div>
 <!-- END SIDEBAR-->
 
@@ -132,7 +130,7 @@ ORIG: BLUEY GREEN COLORS
 */
 
 var step = 0;
-//color table indices for: 
+//color table indices for:
 // current color left
 // next color left
 // current color right
@@ -165,19 +163,19 @@ var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
  $('#gradient').css({
    background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-  
+
   step += gradientSpeed;
   if ( step >= 1 )
   {
     step %= 1;
     colorIndices[0] = colorIndices[1];
     colorIndices[2] = colorIndices[3];
-    
+
     //pick two new target color indices
     //do not pick the same as the current one
     colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    
+
   }
 }
 

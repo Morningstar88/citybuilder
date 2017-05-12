@@ -7,9 +7,15 @@
 
 <header>
   <br><br><br><br><br>
+  
+  <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>
+  <!-- PEXELS https://www.pexels.com/photo/art-graffiti-light-long-exposure-134620/ -->
 <div id="gradient"></div>
 <h4 class="writing-top">Blogs you</h4>
 <h4 class="writing-base">can fork</h4>
+ <div class="opaque-overlay"></div>
+  <div class="opaque-overlay-thin"></div>
+ 
   </header>
   
   <!--<header>-->
@@ -28,20 +34,19 @@
   <!--BLOGS YOU CAN FORK MULTI-COLORED<span class="blogs-u-can-fork"><span id="multi-colored-letter-1">B</span><span id="multi-colored-letter-2">l</span><span id="multi-colored-letter-3">o</span><span id="multi-colored-letter-4">g</span><span id="multi-colored-letter-5">s </span><span id="multi-colored-letter-6">y</span><span id="multi-colored-letter-7">o</span><span id="multi-colored-letter-8">u</span><span id="multi-colored-letter-9"> c</span><span id="multi-colored-letter-10">a</span><span id="multi-colored-letter-11">n</span><span id="multi-colored-letter-12"> f</span><span id="multi-colored-letter-13">o</span><span id="multi-colored-letter-14">r</span><span id="multi-colored-letter-15">k</span></span>-->
 <br><br>
 <div class="center-wrap">
-  <br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<span><%= link "What's Up ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
+
 <%= if @user do %>
-
-<span><%= link "WHAT'S UP ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
-<span class="hello-user">Hello <%= @user.username %></span>
-
 <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
 <span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
 <% else %>
   <span><%= link "LOGIN      ", to: user_path(@conn, :signin), class: "login-btn"%></span>
   <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
-<span><%= link "WHAT'S HAPPENING?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
-
+</div>
 <!-- ORIGINAL MULTI-COLORED BUTTON -->
 <!--<div class="whats-happening">-->
 <!--<span class="multi-letter-1">W</span><span class="multi-letter-2">H</span><span class="multi-letter-3">A</span><span class="multi-letter-4">T</span><span class="multi-letter-4">'</span><span class="multi-letter-5">S </span><span class="multi-letter-6">U</span><span class="multi-letter-7">P</span><span class="multi-letter-8">?</span>-->
@@ -56,26 +61,21 @@
 
 -->
 
-<div class="sidebar-div">
-<div class="sidebar-1">NEWS</div>
+<!--<div class="sidebar-div">-->
+<!--<div class="sidebar-1">NEWS</div>-->
 <!-- Trying to add some links to topic. Below EEX link doesn't work -->
 <!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
-<div class="sidebar-2">HAPPINESS</div>
-<div class="sidebar-3">HACKING</div>
-<div class="sidebar-4">TECHNOLOGY</div>
-<div class="sidebar-5">ART + MUSIC</div>
-<div class="sidebar-6">MYSTERIES</div>
-<div class="sidebar-7">CLASSIC</div>
-</div>
+<!--<div class="sidebar-2">HAPPINESS</div>-->
+<!--<div class="sidebar-3">HACKING</div>-->
+<!--<div class="sidebar-4">TECHNOLOGY</div>-->
+<!--<div class="sidebar-5">ART + MUSIC</div>-->
+<!--<div class="sidebar-6">MYSTERIES</div>-->
+<!--<div class="sidebar-7">CLASSIC</div>-->
+<!--</div>-->
 <!-- END SIDEBAR-->
 
-<div class="mask"></div>
-<span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>
-<span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>
-<span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>
-<span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>
-</div>
-<br><br><br><br><br><br><br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>
@@ -85,19 +85,16 @@
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
-       <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
+       <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg  "%>
         <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-btn" %></span>
         <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-delete-btn" %></span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
          <span><%= link " 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
-         <span class="upvote-count"><%= post.upvotes_count.count %>⇧</span>
-            <span class="fork-count display-post-body">23 Ψ</span>
-
-         <span><%= link "Ψ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
-         <span class="fork-count display-post-body"><%= @forks_count[root_path(post.path)] %> Ψ</span>
-         <span class="upvote-count"><%= post.upvotes_count.count %></span>⇧
+         <span class="upvote-count"><%= post.upvotes_count.count %></span><span class="upvote-arrow">⇧</span>
+          <span class="fork-count display-post-body"><%= @forks_count[root_path(post.path)] %> Ψ</span>
+        
 
      <br><br><br>
       </td>
@@ -119,8 +116,8 @@ var colors = new Array(
   [85,9,15],
   [5,50,70]);
 
-/*
-ORIG: BLUEY GREEN COLORS
+// /*
+// ORIG: BLUEY GREEN COLORS
 
  [32,90,150],
   [30,155,90],
@@ -129,7 +126,7 @@ ORIG: BLUEY GREEN COLORS
   [35,90,155],
   [35,128,97]);
 
-*/
+// */
 
 var step = 0;
 //color table indices for: 
@@ -139,10 +136,10 @@ var step = 0;
 // next color right
 var colorIndices = [0,1,2,3];
 
-//transition speed
+// //transition speed
 var gradientSpeed = 0.009;
 
-//ORIG 0.002
+// //ORIG 0.002
 
 function updateGradient()
 {
@@ -163,7 +160,7 @@ var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
 var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
 
  $('#gradient').css({
-   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+  background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
   
   step += gradientSpeed;
@@ -186,3 +183,12 @@ setInterval(updateGradient,10);
 </script>
 <br><br><br><br><br><br>
  <!--<a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>-->
+
+<!-- HTML HELL -->
+
+<!--<div class="mask"></div>-->
+<!--<span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>-->
+<!--<span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>-->
+<!--<span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>-->
+<!--<span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>-->
+<!--</div>-->

@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700,800|Raleway:200,300,400');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400|Source Sans Pro:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -34,6 +34,7 @@ html, body {
   height: 50%;
   width: 100%;
   box-shadow: 2px 2px 2px rgba(30,30,30,0.5);
+  z-index: 5;
 }
 
 .writing-top {
@@ -42,10 +43,11 @@ html, body {
   margin-left:-23%;
   font-family: Helvetica !important;
   font-size: 100px !important;
-  letter-spacing: -10px;
-  color: rgba(200,100,0,0.7);
-  font-weight: 600;
-  
+  letter-spacing: -15px;
+  color: rgba(255,220,220,0.80); /*rgba(220,120,0,0.80);*/
+  font-weight: 700;
+  z-index: 3;
+  text-shadow: 1px 1px 1px rgba(5,5,5,0.3);
 }
 
 .writing-base {
@@ -54,11 +56,45 @@ html, body {
   margin-left: -23%;
   font-family: Helvetica !important;
   font-size: 100px !important;
-  letter-spacing: -10px;
-  color: rgba(200,100,0,0.7);
+  letter-spacing: -8px;
+  color: rgba(255,220,220,0.80);
   font-weight: 600;
+  z-index: 2;
+  text-shadow: 1px 1px 1px rgba(5,5,5,0.3);
     
 }
+
+/*.whats-happening-button {*/
+    /*WHAT's UP*/
+/*    font-family: Helvetica;*/
+/*    font-size: 150px;*/
+/*    letter-spacing: -8px;*/
+/*    font-weight: 800;*/
+/*	position: absolute;*/
+/*	margin-left: -80%;*/
+	/*background-color: rgba(255,255,255,0.07);*/
+	/*background-size: cover;*/
+	/*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg) no-repeat 50% 50% !important;*/
+/*	border: 1px inset rgba(100,100,100,0.2);*/
+/*	border-radius: 1px 3px 0px 10px;*/
+/*	max-width: 650px !important;*/
+/*	min-width: 550px;*/
+/*	height: 118px;*/
+/*	text-align: center;*/
+/*	cursor: pointer;*/
+/*	overflow: hidden;*/
+/*	-webkit-transition: border 0.2s cubic-bezier(0.19,1,.22,1),color .2s cubic-bezier(0.19,1,.22,1);*/
+/*	transition: border 1s cubic-bezier(0.19,1,.22,1), color .2s cubic-bezier(0.19,1,.22,1), background 1s cubic-bezier(0.19,1,.22,1);*/
+/*    color: rgba(200,100,0,0.1);*/
+/*    text-shadow: 1px 0px 0px rgba(0,0,0,0.9) !important;*/
+/*    text-decoration: none;*/
+/*    box-shadow: rgba(100,100,100,0.8) !important;*/
+    /*text-shadow: 1px 0px 1px rgba(30,30,30,0.8) !important;*/
+    /* Fallback: assume this color ON TOP of image */
+/*   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-110212_(1).jpeg) no-repeat !important;*/
+/*   -webkit-background-clip: text;*/
+/*   -webkit-text-fill-color: transparent;*/
+/*}*/
 
 
 /*.blogs-u-can-fork {*/
@@ -77,22 +113,54 @@ html, body {
       /*color: rgba(20,20,20,0.87);*/
 /*  }*/
 
-/*.header-img {*/
-/*   position: absolute;*/
-/*   z-index: -1;*/
-/*   margin-top: -18%;*/
-/*}*/
+.header-img {
+   position: absolute;
+   z-index: -1;
+   margin-top: -18%;
+   margin-left: -25%;
+   height: 100%;
+   width: 100%;
+}
+
+.opaque-overlay {
+  /*background-size: cover;*/
+  display: block;
+  position: absolute;
+  margin-top: -18%;
+  margin-left: -25%;
+  height:100%;
+  width: 100%;
+  background: rgba(50,30,85,0.6);
+  z-index: 1;
+ 
+}
+
+.opaque-overlay-thin {
+  /*background-size: cover;*/
+  display: block;
+  position: absolute;
+  margin-top: -18%;
+  margin-left: -25%;
+  height:100%;
+  width: 100%;
+  background: rgba(50,30,85,0.15);
+  z-index: 4;
+ 
+}
+
+
 
 
 .hello-user {
     position: absolute;
-    margin-left: 0%;
+    margin-left: 50%;
     font-family: 'Montserrat';
     margin-top: 48%; /* increase this positive integer to move down */
-    font-size: 30px;
+    font-size: 16px;
     text-shadow: 2px 2px 2px rgba(200,20,0.7);
     padding-bottom: 5px;
     border-radius: 0px 0px 15px 0px;
+    z-index: 5;
 }
 
 a.logout-button {
@@ -104,6 +172,7 @@ a.logout-button {
     font-size: 56px;
     text-decoration: none;
     color: rgba(220,100,0,0.7) !important;
+    z-index: 4;
     /*text-shadow: 2px 2px 2px rgba(220,220,220,0.2), 1px 1px 1px rgba(230,230,230,0.2);*/
 }
 
@@ -118,40 +187,47 @@ a.logout-button {
 
 .whats-happening-button {
     /*WHAT's UP*/
-    font-family: 'Montserrat';
-    font-size: 70px;
-    letter-spacing: -8px;
-    font-weight: 600;
+    font-family: Helvetica;
+    font-size: 90px;
+    letter-spacing: -9px;
+    font-weight: 800;
 	position: absolute;
-	/*display: block;*/
 	margin-left: -80%;
-	/*margin-top: 72% ;*/
-	/*background: none center center no-repeat;*/
-	background-color: rgba(255,255,255,0.07);
-	background-size: cover;
+	color: rgba(10,10,10,0.8);
+	/*background-color: rgba(255,255,255,0.07);*/
+	/*background-size: cover;*/
 	/*background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;*/
 	border: 1px inset rgba(100,100,100,0.2);
 	border-radius: 1px 3px 0px 10px;
-	/*text-transform: uppercase;*/
-	/*padding: 25px 18px;*/
 	max-width: 650px !important;
 	min-width: 550px;
-	height: 118px;
+	height: 130px;
 	text-align: center;
 	cursor: pointer;
-	overflow: hidden;
-	-webkit-transition: border 0.2s cubic-bezier(0.19,1,.22,1),color .2s cubic-bezier(0.19,1,.22,1);
-	transition: border 1s cubic-bezier(0.19,1,.22,1), color .2s cubic-bezier(0.19,1,.22,1), background 1s cubic-bezier(0.19,1,.22,1);
-    color: rgba(200,100,0,0.1);
-    text-shadow: 1px 0px 0px rgba(0,0,0,1) !important;
-    text-decoration: none;
-    box-shadow: rgba(100,100,100,0.8) !important;
-    /*text-shadow: 1px 0px 1px rgba(30,30,30,0.8) !important;*/
+   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-116191.jpeg) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
+
+/*List of pexels photos 
+STARRY NIGHT SKY 8/10
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-116191.jpeg
+DARKER STARRY NIGHT SKY:
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
+
+*/
+
 
 .whats-happening-button:hover {
     color: rgba(200,100,0,.6);
 }
+
+/*h1 {*/
+    /* Fallback: assume this color ON TOP of image 
+/*   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-239898.jpeg) no-repeat;*/
+/*   -webkit-background-clip: text;*/
+/*   -webkit-text-fill-color: transparent;*/
+/*}*/
 
 
 .latest-stories-main-title {
@@ -259,16 +335,7 @@ a.logout-button {
    color: black;
   }
   
-  .whats-happening {
-      /*DIV, NOT A BUTTON. DEPRECATED*/
-      margin-top: -20%;
-      margin-left: 15%;
-      font-size: 22px;
-      font-family: 'Montserrat';
-      font-weight: 500;
-      letter-spacing: 3px;
-  }
-  
+ 
   
   
   /* WHAT'S UP BUTTONS */
@@ -417,18 +484,37 @@ a.logout-button {
 
 .display-post-title-index {
     /*MAIN INDEX PAGE*/
-    font-family: 'Montserrat' !important;
+    font-family: 'Raleway' !important;
     width: 700px;
-    font-size: 41px;
-    letter-spacing: 2px;
-    color: rgba(35,35,35,0.8);
-    text-shadow: 1px 1px 1px rgba(100,100,100,0.7);
+    font-size: 45px;
+    letter-spacing: -1px;
+    color: rgba(10,10,10,0.9);
+    text-shadow: 1px 0px 1px rgba(10,10,10,0.8);
     /*text-align: center !important;*/
-    /*font-variant: small-caps;*/
+    font-variant: small-caps;
     margin-left: -2%;
-    font-weight: 600;
+    font-weight: 200;
+    /*text-decoration: underline;*/
    
 }
+
+.display-post-body {
+    /*Main index page */
+    height: auto;
+    font-size: 23px;
+    padding-top: 10px;
+    font-family: 'Montserrat' !important;
+    font-weight: 300;
+    padding-left: 2px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    color: rgba(10,10,10,0.9);
+    text-shadow: 1px 0px 2px rgba(30,30,30,0.3), 0px 1px 1px rgba(40,20,50,0.3);
+    white-space: pre-wrap !important;
+   /*    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/fire-spinner.jpg) 30% 0% no-repeat;*/
+   /*-webkit-background-clip: text;*/
+   /*-webkit-text-fill-color: transparent;*/
+  }
 
 .display-post-title-index-show {
     /*MAIN INDEX PAGE
@@ -440,14 +526,20 @@ a.logout-button {
     width: 900px !important;
     font-size: 46px;
     letter-spacing: 2px;
-    color: rgba(35,35,35,0.8);
-    text-shadow: 1px 1px 1px rgba(100,100,100,0.7);
+    color: rgba(3,3,3,0.8);
+    text-shadow: 1px 1px 1px rgba(10,10,10,0.4);
     text-align: "center" !important;
     /*font-variant: small-caps;*/
     font-weight: 600;
     margin-left:-16%;
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/fire-spinner.jpg) 30% 0% no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
    
 }
+
+
+ 
 
 .display-post-body-show {
     height: auto;
@@ -460,26 +552,13 @@ a.logout-button {
     line-height: 40px;
     margin-left: -13%;
     letter-spacing: 1px;
-    color: rgba(10,10,10,0.8);
-    text-shadow: 1px 0px 2px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
+    color: rgba(10,10,10,0.9);
+    text-shadow: 1px 0px 1px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
     white-space: pre-wrap !important;
    
  }
 
-.display-post-body {
-    height: auto;
-    font-size: 21px;
-    padding-top: 10px;
-    font-family: 'Raleway' !important;
-    font-weight: 300;
-    padding-left: 2px;
-    line-height: 40px;
-    letter-spacing: 1px;
-    color: rgba(10,10,10,0.8);
-    text-shadow: 1px 0px 2px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
-    white-space: pre-wrap !important;
-  }
- 
+
  
 
 /* COLOR FOR MAIN BUTTON */
@@ -929,11 +1008,17 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-family: 'Montserrat';
     font-weight: 600;
     font-variant: small-caps;
-    text-shadow: 2px 1px 2px rgba(20,20,80,0.3);
+    text-shadow: 2px 1px 2px rgba(20,20,30,0.3);
      border-radius: 20px;
      color: rgba(200,100,30,0.9) !important;
-     background-color: rgba(20,20,20,0.9)!important;
+     background-color: rgba(10,10,10,0.9)!important;
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
+  }
+  
+  .upvote-arrow {
+      font-size: 30px;
+      color: rgba(60,10,60,0.9);
+      text-shadow: 2px 2px 2px ;
   }
   
   

@@ -34,6 +34,8 @@ defmodule LiveStory.Web.Router do
       delete "/upvotes", UpvoteController, :delete
     end
 
+    resources "/topics", TopicController, only: [:show], param: "slug"
+
     get "/posts/fork/:id", PostController , :fork
   end
 

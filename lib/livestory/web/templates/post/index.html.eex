@@ -60,7 +60,9 @@
 <!-- Trying to add some links to topic. Below EEX link doesn't work -->
 <!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
   <%= for {topic, index} <- Enum.with_index(@topics) do %>
-  <div class="sidebar-<%= index + 1 %>"><%= topic.name %></div>
+  <div class="sidebar-<%= index + 1 %>">
+    <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
+  </div>
   <% end %>
 </div>
 <!-- END SIDEBAR-->

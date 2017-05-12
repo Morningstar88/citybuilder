@@ -104,6 +104,10 @@ defmodule LiveStory.Stories do
     |> Repo.one!
   end
 
+  def get_topic!(slug) do
+    Repo.get_by!(Topic, slug: slug)
+  end
+
   @doc """
   Creates a post.
 

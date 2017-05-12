@@ -7,6 +7,7 @@ defmodule LiveStory.Stories do
 
   alias LiveStory.Auths.User
   alias LiveStory.Stories.Post
+  alias LiveStory.Stories.Topic
   alias LiveStory.Stories.Upvotes
   alias LiveStory.Stories.UpvotesCounts
 
@@ -25,6 +26,12 @@ defmodule LiveStory.Stories do
       where: p.published == true,
       order_by: [desc: uc.count],
       preload: [:user, :upvotes_count]
+    ) |> Repo.all
+  end
+
+  def list_topics do
+    from(t in Topic,
+      order_by: t.position
     ) |> Repo.all
   end
 

@@ -155,7 +155,8 @@ html, body {
     position: absolute;
     margin-left: 50%;
     font-family: 'Montserrat';
-    margin-top: 48%; /* increase this positive integer to move down */
+    margin-top: 58%; /* increase this positive integer to move down */
+    /*width: 800px;*/
     font-size: 16px;
     text-shadow: 2px 2px 2px rgba(200,20,0.7);
     padding-bottom: 5px;
@@ -194,17 +195,18 @@ a.logout-button {
 	position: absolute;
 	margin-left: -80%;
 	color: rgba(10,10,10,0.8);
-	/*background-color: rgba(255,255,255,0.07);*/
+	background-color: rgba(255,25,255,0.7) !important;
 	/*background-size: cover;*/
 	/*background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;*/
-	border: 1px inset rgba(100,100,100,0.2);
+	border: 1px double rgba(10,10,10,0.6);
 	border-radius: 1px 3px 0px 10px;
 	max-width: 650px !important;
+	text-shadow: 1px 1px 1px rgba(150,10,150,0.2);
 	min-width: 550px;
 	height: 130px;
 	text-align: center;
 	cursor: pointer;
-   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-116191.jpeg) no-repeat;
+   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 70%; /* ORIG no-repeat*/
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -489,11 +491,14 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-size: 45px;
     letter-spacing: -1px;
     color: rgba(10,10,10,0.9);
-    text-shadow: 1px 0px 1px rgba(10,10,10,0.8);
+    text-shadow: 1px 0px 1px rgba(0,30,0,0.5);
     /*text-align: center !important;*/
     font-variant: small-caps;
     margin-left: -2%;
-    font-weight: 200;
+    font-weight: 400;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-141866.jpeg) 20% 70%; /* ORIG no-repeat*/
+     -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
     /*text-decoration: underline;*/
    
 }
@@ -511,9 +516,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: rgba(10,10,10,0.9);
     text-shadow: 1px 0px 2px rgba(30,30,30,0.3), 0px 1px 1px rgba(40,20,50,0.3);
     white-space: pre-wrap !important;
-   /*    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/fire-spinner.jpg) 30% 0% no-repeat;*/
-   /*-webkit-background-clip: text;*/
-   /*-webkit-text-fill-color: transparent;*/
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
 .display-post-title-index-show {
@@ -532,7 +537,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*font-variant: small-caps;*/
     font-weight: 600;
     margin-left:-16%;
-     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/fire-spinner.jpg) 30% 0% no-repeat;
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) no-repeat;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    
@@ -547,13 +552,16 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-size: 26px;
      font-weight: 300;
     padding-top: 10px;
-    font-family: 'Raleway' !important;
+    font-family: 'Montserrat' !important;
     padding-left: 2px;
     line-height: 40px;
     margin-left: -13%;
     letter-spacing: 1px;
-    color: rgba(10,10,10,0.9);
-    text-shadow: 1px 0px 1px rgba(30,30,30,0.5), 0px 1px 1px rgba(40,20,50,0.6);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(10,10,10,0.1);
+    text-shadow: 1px 0px 1px rgba(3,3,3,0.9), 0px 1px 1px rgba(40,20,50,0.6);
     white-space: pre-wrap !important;
    
  }
@@ -1004,15 +1012,16 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border: 1px solid rgba(255,255,255,0.5) !important;
      /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
-    width: 80px !important;
-    font-family: 'Montserrat';
-    font-weight: 600;
+    width: 140px !important;
+    font-family: 'Helvetica';
+    font-weight: 300;
     font-variant: small-caps;
     text-shadow: 2px 1px 2px rgba(20,20,30,0.3);
      border-radius: 20px;
-     color: rgba(200,100,30,0.9) !important;
-     background-color: rgba(10,10,10,0.9)!important;
+     color: rgba(255,230,255,0.9) !important;
+     background-color: rgba(10,10,10,0.9);
      box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620.jpeg) 100% 100% no-repeat !important;
   }
   
   .upvote-arrow {

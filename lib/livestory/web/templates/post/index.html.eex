@@ -7,7 +7,7 @@
 
 <header>
   <br><br><br><br><br>
-  
+
   <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>
   <!-- PEXELS https://www.pexels.com/photo/art-graffiti-light-long-exposure-134620/ -->
 <div id="gradient"></div>
@@ -15,7 +15,7 @@
 <h4 class="writing-base">can fork</h4>
  <div class="opaque-overlay"></div>
   <div class="opaque-overlay-thin"></div>
- 
+
   </header>
 
   <!--<header>-->
@@ -65,7 +65,7 @@
 <div class="sidebar-div">
 <!-- Trying to add some links to topic. Below EEX link doesn't work -->
 <!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
-  <%= for {topic, index} <- Enum.with_index(@topics) do %>
+  <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
   <div class="sidebar-<%= index + 1 %>">
     <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
   </div>
@@ -86,15 +86,18 @@
       <p class="display-post-body"><%= post.body %></p>
      <br><br>
        <span><%= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
-        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg  "%>
-        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-btn" %></span>
-        <span><%= link "⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-ldit-post unicode-lg upvote-delete-btn" %></span>
-        <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
+        <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg "    %>
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
-         <span><%= link " 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
-         <span class="upvote-count"><%= post.upvotes_count.count %></span><span class="upvote-arrow">⇧</span>
-          <span class="fork-count display-post-body"><%= @forks_count[root_path(post.path)] %> Ψ</span>
-        
+        <span><%= link "⇧ 153", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn" %></span>
+         <br>
+        <span><%= link "⇧ 153", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-delete-btn" %></span>
+        <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
+        <!--<span class="upvote-count"><%#= post.upvotes_count.count %></span><span class="upvote-arrow">⇧</span>-->
+        <span><%= link " 77 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
+        <!--<span class="fork-count display-post-body"><%#= @forks_count[root_path(post.path)] %> Ψ</span>-->
+
+
+
 
      <br><br><br>
       </td>

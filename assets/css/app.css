@@ -193,7 +193,7 @@ a.logout-button {
     font-weight: 800;
 	position: absolute;
 	margin-left: -80%;
-	color: rgba(10,10,10,0.8);
+	color: rgba(200,10,150,0.8);
 	/*background-color: rgba(255,255,255,0.07);*/
 	/*background-size: cover;*/
 	/*background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;*/
@@ -203,8 +203,9 @@ a.logout-button {
 	min-width: 550px;
 	height: 130px;
 	text-align: center;
+	text-shadow: 1px 1px 0px rgba(100,20,190,0.3);
 	cursor: pointer;
-   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-116191.jpeg) no-repeat;
+   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
@@ -220,6 +221,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .whats-happening-button:hover {
     color: rgba(200,100,0,.6);
+    text-decoration: none;
 }
 
 /*h1 {*/
@@ -1012,7 +1014,10 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
      border-radius: 20px;
      color: rgba(200,100,30,0.9) !important;
      background-color: rgba(10,10,10,0.9)!important;
-     box-shadow: 1px 1px 1px 1px rgba(130,130,130,0.7);
+     box-shadow: 1px 1px 1px 1px rgba(30,30,30,0.9);
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
   }
   
   .upvote-arrow {

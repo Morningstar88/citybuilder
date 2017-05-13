@@ -30,4 +30,8 @@ defmodule LiveStory.Web.PostView do
     {:safe, link} = link post.title, to: post_path(conn, :show, post)
     link
   end
+
+  def topic_select(topics) do
+    Enum.map(topics, &{&1.name, &1.id})
+  end
 end

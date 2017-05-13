@@ -21,12 +21,21 @@ defmodule LiveStory.Stories do
 
   """
   def list_posts do
+    posts_query() |> Repo.all
+  end
+  def list_posts(topic_id) do
+    from(p in posts_query(),
+      where: p.topic_id == ^topic_id
+    ) |> Repo.all
+  end
+
+  defp posts_query do
     from(p in Post,
       join: uc in assoc(p, :upvotes_count),
       where: p.published == true,
       order_by: [desc: uc.count],
       preload: [:user, :upvotes_count]
-    ) |> Repo.all
+    )
   end
 
   def list_topics do
@@ -99,7 +108,7 @@ defmodule LiveStory.Stories do
   def get_post!(id) do
     from(p in Post,
       where: p.id == ^id,
-      preload: :original_post
+      preload: [:topic, :original_post]
     )
     |> Repo.one!
   end
@@ -194,8 +203,8 @@ defmodule LiveStory.Stories do
       %Ecto.Changeset{source: %Post{}}
 
   """
-  def change_post(%Post{} = post) do
-    post_changeset(post, %{})
+  def change_post(%Post{} = post, attrs \\ %{}) do
+    post_changeset(post, attrs)
   end
 
   def create_forked_post(%Post{title: title, body: body, id: id}, user) do
@@ -239,8 +248,8 @@ defmodule LiveStory.Stories do
 
   defp post_changeset(%Post{} = post, attrs) do
     post
-    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id]) #Need to change this to Para1, Para2 at some point.
-    |> validate_required([:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
+    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
+    |> validate_required([:title, :body, :user_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

@@ -1,3 +1,15 @@
 <h1>
   <%= @topic.name %>
 </h1>
+
+<table>
+  <tbody>
+    <%= for post <- @posts do %>
+    <tr id="post_<%= post.id %>">
+      <td>
+        <h1 class="display-post-title-index"><%= link post.title, to: post_path(@conn, :show, post) %></h1>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

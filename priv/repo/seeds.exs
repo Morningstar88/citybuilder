@@ -18,17 +18,20 @@ topics = [
   {"ART + MUSIC", :art_and_music},
   {"MYSTERIES", :mysteries},
   {"CLASSIC", :classic},
+  {"RANDOM", :random}
 ]
 
 LiveStory.Repo.transaction fn ->
   topics
   |> Enum.with_index
   |> Enum.each(fn({{name, slug}, position}) ->
+    slug = Atom.to_string(slug)
     topic = %LiveStory.Stories.Topic{
       name: name,
-      slug: Atom.to_string(slug),
+      slug: slug,
       position: position
     }
-    LiveStory.Repo.insert! topic
+    LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: slug) ||
+      LiveStory.Repo.insert!(topic)
   end)
 end

@@ -21,12 +21,21 @@ defmodule LiveStory.Stories do
 
   """
   def list_posts do
+    posts_query() |> Repo.all
+  end
+  def list_posts(topic_id) do
+    from(p in posts_query(),
+      where: p.topic_id == ^topic_id
+    ) |> Repo.all
+  end
+
+  defp posts_query do
     from(p in Post,
       join: uc in assoc(p, :upvotes_count),
       where: p.published == true,
       order_by: [desc: uc.count],
       preload: [:user, :upvotes_count]
-    ) |> Repo.all
+    )
   end
 
   def list_topics do

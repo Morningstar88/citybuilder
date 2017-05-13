@@ -7,18 +7,17 @@ defmodule LiveStory.Web.PostController do
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
   plug :set_post when action in [:fork, :show, :edit, :update, :delete]
+  plug :set_topics when action in [:index, :new, :edit]
   plug :check_same_user when action in [:edit, :update, :delete]
 
   def index(conn, _params) do
     posts = Stories.list_posts
-    topics = Stories.list_topics
     post_ids = Enum.map(posts, &(&1.id))
     post_paths = Enum.map(posts, &(&1.path))
     upvotes = Stories.list_user_upvotes(conn.assigns.user, post_ids)
     forks_count = Stories.count_forks(post_paths)
     render(conn, "index.html",
       posts: posts,
-      topics: topics,
       upvotes: upvotes,
       forks_count: forks_count,
       user: conn.assigns.user
@@ -107,6 +106,10 @@ defmodule LiveStory.Web.PostController do
   defp set_post(conn, _opts) do
     %{"id" => id} = conn.params
     assign(conn, :post, Stories.get_post!(id))
+  end
+
+  def set_topics(conn, _opts) do
+    assign conn, :topics, Stories.list_topics
   end
 
   defp check_same_user(conn, _opts) do

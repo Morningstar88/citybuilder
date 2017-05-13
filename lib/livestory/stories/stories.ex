@@ -108,7 +108,7 @@ defmodule LiveStory.Stories do
   def get_post!(id) do
     from(p in Post,
       where: p.id == ^id,
-      preload: :original_post
+      preload: [:topic, :original_post]
     )
     |> Repo.one!
   end
@@ -248,8 +248,8 @@ defmodule LiveStory.Stories do
 
   defp post_changeset(%Post{} = post, attrs) do
     post
-    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id]) #Need to change this to Para1, Para2 at some point.
-    |> validate_required([:title, :body, :user_id]) #Need to change this to Para1, Para2 at some point.
+    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
+    |> validate_required([:title, :body, :user_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

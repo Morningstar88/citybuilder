@@ -40,7 +40,7 @@ html, body {
 .writing-top {
   position: absolute;
   margin-top: -5%;
-  margin-left:-23%;
+  margin-left:-12%;
   font-family: Helvetica !important;
   font-size: 100px !important;
   letter-spacing: -15px;
@@ -53,7 +53,7 @@ html, body {
 .writing-base {
   position: absolute;
   margin-top: 4%;
-  margin-left: -23%;
+  margin-left: -12%;
   font-family: Helvetica !important;
   font-size: 100px !important;
   letter-spacing: -8px;
@@ -117,9 +117,9 @@ html, body {
    position: absolute;
    z-index: -1;
    margin-top: -18%;
-   margin-left: -25%;
+   margin-left: -19%;
    height: 100%;
-   width: 100%;
+   width: 105%;
 }
 
 .opaque-overlay {
@@ -127,9 +127,9 @@ html, body {
   display: block;
   position: absolute;
   margin-top: -18%;
-  margin-left: -25%;
-  height:100%;
-  width: 100%;
+  margin-left: -19%;
+  height: 100%;
+  width: 105%;
   background: rgba(50,30,85,0.6);
   z-index: 1;
  
@@ -140,9 +140,9 @@ html, body {
   display: block;
   position: absolute;
   margin-top: -18%;
-  margin-left: -25%;
+  margin-left: -19%;
   height:100%;
-  width: 100%;
+  width: 105%;
   background: rgba(50,30,85,0.15);
   z-index: 4;
  

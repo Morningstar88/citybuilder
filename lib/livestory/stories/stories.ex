@@ -203,8 +203,8 @@ defmodule LiveStory.Stories do
       %Ecto.Changeset{source: %Post{}}
 
   """
-  def change_post(%Post{} = post) do
-    post_changeset(post, %{})
+  def change_post(%Post{} = post, attrs \\ %{}) do
+    post_changeset(post, attrs)
   end
 
   def create_forked_post(%Post{title: title, body: body, id: id}, user) do

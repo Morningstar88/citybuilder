@@ -10,6 +10,8 @@ defmodule LiveStory.Web.PostController do
   plug :set_topics when action in [:index, :new, :edit]
   plug :check_same_user when action in [:edit, :update, :delete]
 
+  @default_topic "random"
+
   def index(conn, _params) do
     posts = Stories.list_posts
     post_ids = Enum.map(posts, &(&1.id))
@@ -36,7 +38,11 @@ defmodule LiveStory.Web.PostController do
 #   end
 
   def new(conn, _params) do
-    changeset = Stories.change_post(%LiveStory.Stories.Post{})
+    default_topic = Stories.get_topic!(@default_topic)
+    changeset = Stories.change_post(
+      %LiveStory.Stories.Post{},
+      %{topic_id: default_topic.id}
+    )
     render(conn, "new.html", changeset: changeset)
   end
 

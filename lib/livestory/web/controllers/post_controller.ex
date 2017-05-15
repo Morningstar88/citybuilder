@@ -7,7 +7,7 @@ defmodule LiveStory.Web.PostController do
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
   plug :set_post when action in [:fork, :show, :edit, :update, :delete]
-  plug :set_topics when action in [:index, :new, :edit]
+  plug :set_topics when action in [:index, :new, :edit, :fork]
   plug :check_same_user when action in [:edit, :update, :delete]
 
   @default_topic "random"
@@ -59,7 +59,7 @@ defmodule LiveStory.Web.PostController do
 
   def fork(conn, _params) do
     forked_post = Stories.create_forked_post(conn.assigns.post, conn.assigns.user)
-    changeset = Stories.change_post(forked_post)
+    changeset = Stories.change_post(forked_post, %{})
     render(conn, "edit.html", post: forked_post, changeset: changeset)
   end
 

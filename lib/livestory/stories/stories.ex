@@ -31,7 +31,7 @@ defmodule LiveStory.Stories do
 
   def list_forks(post_id) do
     from(p in posts_query(),
-      where: fragment("? <@ ?", p.path, ^post_id),
+      where: p.original_post_id == ^post_id
     ) |> Repo.all
   end
 

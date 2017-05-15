@@ -213,12 +213,13 @@ defmodule LiveStory.Stories do
     post_changeset(post, attrs)
   end
 
-  def create_forked_post(%Post{title: title, body: body, id: id}, user) do
+  def create_forked_post(%Post{} = post, user) do
     create_post(%{
-      "title" => title,
-      "body" => body,
+      "topic_id" => post.topic_id,
+      "title" => post.title,
+      "body" => post.body,
       "published" => false,
-      "original_post_id" => id
+      "original_post_id" => post.id
     }, user)
     |> case do
       {:ok, new_post} -> new_post

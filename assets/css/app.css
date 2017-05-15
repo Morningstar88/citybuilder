@@ -27,15 +27,19 @@ html, body {
 /*  background-repeat: no-repeat;*/
 /* }*/
 
-#gradient {
-  position: absolute;
-  margin-top: -10%;
-  margin-left: -25%;
-  height: 50%;
-  width: 100%;
-  box-shadow: 2px 2px 2px rgba(30,30,30,0.5);
-  z-index: 5;
-}
+/*#gradient {*/
+/* CAN BE USED TO PUT A SHEEN BEHIND HEADERS AND TEXT. 
+/* PROBABLY A WASTE OF BANDWIDTH, BUT COULD BE OK 
+/* position: absolute;*/
+/*  margin-top: -10%;*/
+/*  margin-left: -25%;*/
+/*  height: 100%;*/
+/*  width: 105%;*/
+/*  box-shadow: 2px 2px 2px rgba(30,30,30,0.5);*/
+/*  z-index: 5;*/
+/*  opacity: 0.5;*/
+/*<!--OPAQUE..<div id="gradient"></div>-->*/
+/*}*/
 
 .writing-top {
   position: absolute;
@@ -122,6 +126,15 @@ html, body {
    width: 105%;
 }
 
+ .sidebar-div {
+   font-family: 'Montserrat';
+    font-variant: small-caps;
+    font-size: 25px;
+    color: rgba(20,20,20,0.8);
+    margin-left: 0%;
+    margin-top: 0%;
+   }
+
 .opaque-overlay {
   /*background-size: cover;*/
   display: block;
@@ -154,12 +167,14 @@ html, body {
 .hello-user {
     position: absolute;
     margin-left: 50%;
-    font-family: 'Montserrat';
+    font-family: 'Raleway';
     margin-top: 58%; /* increase this positive integer to move down */
     /*width: 800px;*/
     font-size: 16px;
+    font-weight: 500;
     text-shadow: 2px 2px 2px rgba(200,20,0.7);
     padding-bottom: 5px;
+    width: 600px;
     border-radius: 0px 0px 15px 0px;
     z-index: 5;
 }
@@ -478,19 +493,11 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 /* SHOWＰＡＧＥSHOWＰＡＧＥ */
 
- .show-page-header {
-     background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;
-     position: absolute;
-     height: 150px;
-     width: 120%;
-     margin-left: -25%;
-     background: rgba(255,255,255,0);
-     box-shadow: 2px 2px 2px rgba(20,20,20,0.8);
- }
+
 
 .display-post-title-index {
     /*MAIN INDEX PAGE*/
-    font-family: 'Roboto' !important;
+    font-family: 'Montserrat' !important;
     width: 700px;
     font-size: 45px;
     letter-spacing: 1px;
@@ -499,7 +506,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*text-align: center !important;*/
     font-variant: small-caps;
     margin-left: -2%;
-    font-weight: 700;
+    font-weight: 300;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-141866.jpeg) 20% 70%; /* ORIG no-repeat*/
      -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
@@ -513,20 +520,32 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-size: 25px;
     padding-top: 10px;
     font-family: 'Arima Madurai' !important;
-    font-weight: 400;
+    font-weight: 300;
     padding-left: 2px;
     line-height: 35px;
     letter-spacing: 1px;
     color: rgba(10,10,10,0.9);
-    text-shadow: 1px 0px 2px rgba(3,3,3,0.5), 0px 1px 1px rgba(4,2,5,0.5);
+    text-shadow: 1px 0px 1px rgba(3,3,3,0.7), 0px 1px 1px rgba(4,2,5,0.7);
     white-space: pre-wrap !important;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+ .show-page-header {
+     background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;
+     position: absolute;
+     height: 150px;
+     width: 120%;
+     margin-left: -18%;
+     background: rgba(255,255,255,0);
+     box-shadow: 2px 2px 2px rgba(20,20,20,0.8);
+ }
+ 
+ /*SHOW PAGE*/
+
 .display-post-title-index-show {
-    /*MAIN INDEX PAGE
+    /*SHOW PAGE
     
     http://www.webdesigndev.com/best-google-fonts-for-headings/
     
@@ -541,7 +560,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*font-variant: small-caps;*/
     font-weight: 600;
     margin-left:-16%;
-     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) no-repeat;
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    
@@ -552,20 +571,20 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .display-post-body-show {
     height: auto;
-    width: 800px !important;
-    font-size: 26px;
-     font-weight: 300;
-    padding-top: 10px;
+    width: 680px !important;
+    font-size: 24px;
+     font-weight: 200;
+    margin-top: -7%;
     font-family: 'Montserrat' !important;
     padding-left: 2px;
     line-height: 40px;
-    margin-left: -13%;
+    margin-left: -8%;
     letter-spacing: 1px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: rgba(10,10,10,0.1);
-    text-shadow: 1px 0px 1px rgba(3,3,3,0.9), 0px 1px 1px rgba(40,20,50,0.6);
+    color: rgba(0,0,0,0.9);
+    text-shadow: 1px 0px 1px rgba(3,3,3,0.9), 0px 0px 1px rgba(0,0,2,0.9);
     white-space: pre-wrap !important;
    
  }
@@ -846,17 +865,20 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 15px 4px 15px 4px !important;
 }
 
-.centered-txt {
-    position: absolute;
+.centered-text {
+    position: relative;
     text-align: center !important;
     display: table-cell !important;
+    margin-left: 10%;
    }
    
-   .sidebar-div {
-   font-family: 'Montserrat';
-    font-variant: small-caps;
-    font-size: 25px;
+   .publish-button {
+       background-color: rgba(10,10,10,0.9) !important;
+       color: rgba(200,100,20,0.9) !important;
+       font-family: Montserrat;
    }
+   
+  
    
 
 .sidebar-1 {    
@@ -1010,25 +1032,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 
 
-.btn-read-post {
-    /* READ BUTTON*/
-    /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(255,255,255,0.5) !important;
-     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
-    height: 20% !important;
-    width: 80px !important;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-variant: small-caps;
-    text-shadow: 2px 1px 2px rgba(20,20,30,0.3);
-     border-radius: 20px;
-     color: rgba(200,100,30,0.9) !important;
-     background-color: rgba(10,10,10,0.9)!important;
-     box-shadow: 1px 1px 1px 1px rgba(30,30,30,0.9);
-     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-  }
 
   
   .upvote-arrow {
@@ -1037,7 +1040,10 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
       text-shadow: 2px 2px 2px ;
   }
   
-  
+  .upvote-font {
+      font-family: 'Montserrat';
+      color: rgba(20,100,20,.9) !important;
+  }
 
 /*#test-me {*/
 /*    color: #222;*/

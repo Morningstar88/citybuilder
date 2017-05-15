@@ -2,7 +2,7 @@
 
 
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
 <header>
@@ -10,7 +10,6 @@
 
   <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>
   <!-- PEXELS https://www.pexels.com/photo/art-graffiti-light-long-exposure-134620/ -->
-<div id="gradient"></div>
 <h4 class="writing-top">Blogs you</h4>
 <h4 class="writing-base">can fork</h4>
  <div class="opaque-overlay"></div>
@@ -47,26 +46,12 @@
   <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
 </div>
-<!-- ORIGINAL MULTI-COLORED BUTTON -->
-<!--<div class="whats-happening">-->
-<!--<span class="multi-letter-1">W</span><span class="multi-letter-2">H</span><span class="multi-letter-3">A</span><span class="multi-letter-4">T</span><span class="multi-letter-4">'</span><span class="multi-letter-5">S </span><span class="multi-letter-6">U</span><span class="multi-letter-7">P</span><span class="multi-letter-8">?</span>-->
-<!--</div>-->
-<!--END MULTI COLORED BUTTON -->
-
-<!--SIDEBAR -->
-
-<!-- EXAMPLE TOPIC PATH
-
- <span><%#= link "?", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg btn-multi-color" %></span>
-
--->
 
 
 <div class="sidebar-div">
-<!-- Trying to add some links to topic. Below EEX link doesn't work -->
-<!--span><%#= link "Uplifting News", to: post_path(@conn, :show, post), class: "sidebar-1" %></span -->
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
-  <div class="sidebar-<%= index + 1 %>">
+  <div class="sidebar-1">
+      <!--<div class="sidebar-<%#= index + 1 %>">-->
     <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
   </div>
   <% end %>
@@ -89,8 +74,8 @@
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg "    %>
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
         <span class="upvote-count", data-current-count="<%= post.upvotes_count.count %>">
-          <%= link "⇧ #{post.upvotes_count.count}", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn" %>
-          <%= link "⇧ #{post.upvotes_count.count}", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn" %>
+          <%= link "⇧ #{post.upvotes_count.count}", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
+          <%= link "⇧ #{post.upvotes_count.count}", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
         </span>
         <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
         <span><%= link " #{@forks_count[root_path(post.path)]} 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
@@ -105,79 +90,79 @@
 
 /* home page */
 
-/* color transitions */
-var colors = new Array(
-  [32,9,15],
-  [70,25,70],
-  [35,9,9],
-  [38,44,103],
-  [85,9,15],
-  [5,50,70]);
+// /* color transitions */
+// var colors = new Array(
+//   [32,9,15],
+//   [70,25,70],
+//   [35,9,9],
+//   [38,44,103],
+//   [85,9,15],
+//   [5,50,70]);
 
-// /*
-// ORIG: BLUEY GREEN COLORS
+// // /*
+// // ORIG: BLUEY GREEN COLORS
 
-var fix_error_colors = new Array(
- [32,90,150],
-  [30,155,90],
-  [35,98,98],
-  [35,145,230],
-  [35,90,155],
-  [35,128,97]);
+// var fix_error_colors = new Array(
+// [32,90,150],
+//   [30,155,90],
+//   [35,98,98],
+//   [35,145,230],
+//   [35,90,155],
+//   [35,128,97]);
 
-// */
+// // */
 
-var step = 0;
-//color table indices for:
-// current color left
-// next color left
-// current color right
-// next color right
-var colorIndices = [0,1,2,3];
+// var step = 0;
+// //color table indices for:
+// // current color left
+// // next color left
+// // current color right
+// // next color right
+// var colorIndices = [0,1,2,3];
 
-// //transition speed
-var gradientSpeed = 0.009;
+// // //transition speed
+// var gradientSpeed = 0.009;
 
-// //ORIG 0.002
+// // //ORIG 0.002
 
-function updateGradient()
-{
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
+// function updateGradient()
+// {
+// var c0_0 = colors[colorIndices[0]];
+// var c0_1 = colors[colorIndices[1]];
+// var c1_0 = colors[colorIndices[2]];
+// var c1_1 = colors[colorIndices[3]];
 
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "#"+((r1 << 16) | (g1 << 8) | b1).toString(16);
+// var istep = 1 - step;
+// var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+// var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+// var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+// var color1 = "#"+((r1 << 16) | (g1 << 8) | b1).toString(16);
 
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
+// var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+// var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+// var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+// var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
 
- $('#gradient').css({
-  background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-    background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+// $('#gradient').css({
+//   background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+//     background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
 
-  step += gradientSpeed;
-  if ( step >= 1 )
-  {
-    step %= 1;
-    colorIndices[0] = colorIndices[1];
-    colorIndices[2] = colorIndices[3];
+//   step += gradientSpeed;
+//   if ( step >= 1 )
+//   {
+//     step %= 1;
+//     colorIndices[0] = colorIndices[1];
+//     colorIndices[2] = colorIndices[3];
 
-    //pick two new target color indices
-    //do not pick the same as the current one
-    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+//     //pick two new target color indices
+//     //do not pick the same as the current one
+//     colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+//     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
 
-  }
-}
+//   }
+// }
 
-setInterval(updateGradient,10);
+// setInterval(updateGradient,10);
 
 </script>
 <br><br><br><br><br><br>

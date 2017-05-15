@@ -10,11 +10,7 @@
 
   <!--https://www.sitepoint.com/everything-need-know-html-pre-element/-->
 
-  <div class="form-group">
-    <%= label f, :topic_id, class: "control-label" %>
-    <%= select f, :topic_id, topic_select(@conn.assigns.topics), class: "form-control form-control-topic", placeholder: "Select topic." %>
-    <%= error_tag f, :topic_id %>
-  </div>
+  
   <div class="form-group">
     <%= label f, :title, class: "control-label" %>
     <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Title here..." %>
@@ -30,6 +26,11 @@
     <b>Published</b>
     <%= error_tag f, :published %>
   </div>
+  <div class="form-group">
+    <%= label f, :topic_id, class: "control-label" %>
+    <%= select f, :topic_id, topic_select(@conn.assigns.topics), class: "form-control form-control-topic", placeholder: "Select topic." %>
+    <%= error_tag f, :topic_id %>
+  </div>
 
   <!--<div class="form-group">-->
   <!--  <%#= label f, :para1, class: "control-label" %>-->
@@ -44,6 +45,6 @@
   <!--</div>-->
 
   <div class="form-group">
-    <%= submit "Let the Games Begin", class: "btn btn-default block-btn" %>
+    <%= submit "Publish", class: "btn btn-default block-btn publish-button" %>
   </div>
 <% end %>

@@ -8,6 +8,7 @@
     <tr id="post_<%= post.id %>">
       <td>
         <h1 class="display-post-title-index"><%= link post.title, to: post_path(@conn, :show, post) %></h1>
+        <%= link "forks", to: post_fork_path(@conn, :index, post) %>
       </td>
     </tr>
     <% end %>

@@ -29,6 +29,12 @@ defmodule LiveStory.Stories do
     ) |> Repo.all
   end
 
+  def list_forks(post_id) do
+    from(p in posts_query(),
+      where: fragment("? <@ ?", p.path, ^post_id),
+    ) |> Repo.all
+  end
+
   defp posts_query do
     from(p in Post,
       join: uc in assoc(p, :upvotes_count),

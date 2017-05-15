@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <%= for post <- @forks do %>
+    <tr id="post_<%= post.id %>">
+      <td>
+        <h1><%= post.title %></h1>
+        Upvotes count: <%= post.upvotes_count.count %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -82,7 +82,7 @@
        <br><br>
        <span><%= link "	📖 ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg "    %>
-        <span><%= link " ␡ ", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
+        <span><%= link " delete ", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
         <span class="upvote-count", data-current-count="<%= post.upvotes_count.count %>">
           <%= link " #{post.upvotes_count.count} ⇧ ", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
           <%= link " #{post.upvotes_count.count} ⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
@@ -102,7 +102,8 @@
 
 <script>
 // console.clear(); Is this line causing font storage to wipe on page refresh?
-var fontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Crimson Text', 'Special Elite', 'Alegreya Sans', 'Cardo', 'Playfair Display']
+var titleFontsArr = ['Josefin Sans', 'Raleway', 'Montserrat', 'Cardo', 'Special Elite', 'Playfair Display'];
+var textFontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Cardo', 'Special Elite', 'Playfair Display'];
 var $fontSelector = $('.font-selector select');
 var $preview = $('.preview-title');
 var $fontTextSelector = $('.font-selector-text select');
@@ -123,18 +124,18 @@ $fontTextSelector.on('change', function() {
     fontFamily: $(this).val()
   });
 });
-_.forEach(fontsArr, function(fontName, index){
+_.forEach(titleFontsArr, function(fontName, index){
   var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
   $fontSelector.append($option);
 });
-_.forEach(fontsArr, function(fontName, index){
+_.forEach(titleFontsArr, function(fontName, index){
   var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
   $fontTextSelector.append($option);
 });
 $fontSelector.trigger('change');
 WebFont.load({
   google: {
-    families: fontsArr
+    families: titleFontsArr + textFontsArr
   }
 });
 </script>

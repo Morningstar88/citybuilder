@@ -68,54 +68,6 @@ html, body {
     
 }
 
-/*.whats-happening-button {*/
-    /*WHAT's UP*/
-/*    font-family: Helvetica;*/
-/*    font-size: 150px;*/
-/*    letter-spacing: -8px;*/
-/*    font-weight: 800;*/
-/*	position: absolute;*/
-/*	margin-left: -80%;*/
-	/*background-color: rgba(255,255,255,0.07);*/
-	/*background-size: cover;*/
-	/*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg) no-repeat 50% 50% !important;*/
-/*	border: 1px inset rgba(100,100,100,0.2);*/
-/*	border-radius: 1px 3px 0px 10px;*/
-/*	max-width: 650px !important;*/
-/*	min-width: 550px;*/
-/*	height: 118px;*/
-/*	text-align: center;*/
-/*	cursor: pointer;*/
-/*	overflow: hidden;*/
-/*	-webkit-transition: border 0.2s cubic-bezier(0.19,1,.22,1),color .2s cubic-bezier(0.19,1,.22,1);*/
-/*	transition: border 1s cubic-bezier(0.19,1,.22,1), color .2s cubic-bezier(0.19,1,.22,1), background 1s cubic-bezier(0.19,1,.22,1);*/
-/*    color: rgba(200,100,0,0.1);*/
-/*    text-shadow: 1px 0px 0px rgba(0,0,0,0.9) !important;*/
-/*    text-decoration: none;*/
-/*    box-shadow: rgba(100,100,100,0.8) !important;*/
-    /*text-shadow: 1px 0px 1px rgba(30,30,30,0.8) !important;*/
-    /* Fallback: assume this color ON TOP of image */
-/*   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-110212_(1).jpeg) no-repeat !important;*/
-/*   -webkit-background-clip: text;*/
-/*   -webkit-text-fill-color: transparent;*/
-/*}*/
-
-
-/*.blogs-u-can-fork {*/
-
-/* OLD COLORFUL BUTTON */
-
-/*    font-family: 'Josefin Sans';*/
-/*      position: absolute;*/
-/*      margin-top:-3%;*/
-/*      margin-left: -22%;*/
-/*      letter-spacing: -1px;*/
-/*      color: rgba(255,255,255,0.7)!important;*/
-/*      font-size: 75px;*/
-/*      font-weight: 700;*/
-/*      text-shadow: 1px 0px 0px rgba(255,153,51,0.5) !important;*/
-      /*color: rgba(20,20,20,0.87);*/
-/*  }*/
 
 .header-img {
    position: absolute;
@@ -287,7 +239,7 @@ html, body {
 }
 
 .preview-text {
-  font-family: 'Josefin Sans';
+  font-family: 'Raleway';
   margin-top: 30px;
   font-size: 29px;
   padding-left: 10px;
@@ -1230,7 +1182,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 }
 
 .upvote-count {
-     font-family: 'Century Gothic' !important;
+    font-family: 'Josefin Sans' !important;
     display: inline;
   
 }

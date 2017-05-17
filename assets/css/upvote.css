@@ -1,3 +1,4 @@
 .posts .upvote-delete-btn {
-  color: red !important;
+  color: rgba(160,80,0,0.8) !important;
+  font-family: 'Century Gothic' !important;
 }

@@ -43,9 +43,9 @@
 </div>
 </div>
 
-<div class="preview-title">Select Title Font </div>
+<!--<div class="preview-title">Select Title Font </div>-->
 
-<div class="preview-text">Select Text Font</div>
+<!--<div class="preview-text">Select Text Font</div>-->
 
 
 
@@ -81,18 +81,16 @@
 <!-- END SIDEBAR-->
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-      <h1 class="display-post-title-index"><%= post.title %></h1>
+      <h1 class="preview-title"><%= post.title %></h1> <!--display-post-title-index-->
       <!--<p>Created by: <%#= post.user.name %></p>-->
-      <div class="preview-text">
-      <p class="display-post-body preview-text"><%= post.body %></p>
-      </div>
-     <br><br>
+      <p class="preview-text"><%= post.body %></p>
+       <br><br>
        <span><%= link "	📖 ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg "    %>
         <span><%= link "♠", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
@@ -115,9 +113,9 @@
 
 <script>
 
-console.clear();
+// console.clear(); Is this line causing font storage to wipe on page refresh?
 
-var fontsArr = ['Josefin Sans',  'Raleway', 'Montserrat', 'Crimson Text', 'Special Elite', 'Alegreya Sans', 'Cardo', 'Playfair Display', 'Poppins', 'PT Sans']
+var fontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Crimson Text', 'Special Elite', 'Alegreya Sans', 'Cardo', 'Playfair Display']
 
 var $fontSelector = $('.font-selector select');
 var $preview = $('.preview-title');

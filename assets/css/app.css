@@ -1148,15 +1148,15 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
   
   .upvote-arrow {
-      font-size: 30px;
+      /*font-size: 20px;*/
       color: rgba(60,10,60,0.9);
       text-shadow: 2px 2px 2px ;
   }
   
-  .upvote-font {
-      font-family: 'Century Gothic';
-      color: rgba(20,100,20,.9) !important;
-  }
+  /*.upvote-font {*/
+  /*    font-family: 'Century Gothic';*/
+  /*    color: rgba(20,100,20,.9) !important;*/
+  /*}*/
 
 /*#test-me {*/
 /*    color: #222;*/
@@ -1230,7 +1230,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 }
 
 .upvote-count {
-     font-family: garamond !important;
+     font-family: 'Century Gothic' !important;
     display: inline;
   
 }

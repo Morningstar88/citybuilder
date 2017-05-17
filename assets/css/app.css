@@ -122,7 +122,7 @@ html, body {
    z-index: -1;
    margin-top: -18%;
    margin-left: -19%;
-   height: 100%;
+   height: 90%;
    width: 105%;
 }
 
@@ -141,7 +141,7 @@ html, body {
   position: absolute;
   margin-top: -18%;
   margin-left: -19%;
-  height: 100%;
+  height: 90%;
   width: 105%;
   background: rgba(50,30,85,0.6);
   z-index: 1;
@@ -154,7 +154,7 @@ html, body {
   position: absolute;
   margin-top: -18%;
   margin-left: -19%;
-  height:100%;
+  height:90%;
   width: 105%;
   background: rgba(50,30,85,0.15);
   z-index: 4;
@@ -303,7 +303,7 @@ a.logout-button {
     position: absolute;
     font-family: Helvetica !important;
     letter-spacing: -8px;
-    margin-top: -90%; /*Increment the negative integer to push me up */
+    margin-top: -300%; /*Increment the negative integer to push me up */
     margin-left: 215%;
     font-size: 56px;
     text-decoration: none;
@@ -1159,7 +1159,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
   }
   
   .upvote-font {
-      font-family: 'Montserrat';
+      font-family: 'Century Gothic';
       color: rgba(20,100,20,.9) !important;
   }
 
@@ -1237,7 +1237,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .upvote-count {
      font-family: garamond !important;
     display: inline;
-    font-size: 24px;
+  
 }
 
 .upvote-btn {

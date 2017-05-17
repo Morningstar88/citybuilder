@@ -112,16 +112,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 
 <script>
-
 // console.clear(); Is this line causing font storage to wipe on page refresh?
-
 var fontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Crimson Text', 'Special Elite', 'Alegreya Sans', 'Cardo', 'Playfair Display']
-
 var $fontSelector = $('.font-selector select');
 var $preview = $('.preview-title');
 var $fontTextSelector = $('.font-selector-text select');
 var $previewText = $('.preview-text');
-
 $fontSelector.on('change', function() {
   $(this).css({
     fontFamily: $(this).val()
@@ -130,7 +126,6 @@ $fontSelector.on('change', function() {
     fontFamily: $(this).val()
   });
 });
-
 $fontTextSelector.on('change', function() {
   $(this).css({
     fontFamily: $(this).val()
@@ -139,26 +134,20 @@ $fontTextSelector.on('change', function() {
     fontFamily: $(this).val()
   });
 });
-
 _.forEach(fontsArr, function(fontName, index){
   var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
   $fontSelector.append($option);
 });
-
 _.forEach(fontsArr, function(fontName, index){
   var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
   $fontTextSelector.append($option);
 });
-
 $fontSelector.trigger('change');
-
 WebFont.load({
   google: {
     families: fontsArr
   }
 });
-
-
 </script>
 <br><br><br><br><br><br>
  <!--<a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>-->

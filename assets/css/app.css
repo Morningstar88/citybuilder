@@ -161,14 +161,11 @@ html, body {
  
 }
 
-
-
-
 .hello-user {
     position: absolute;
     margin-left: -30%;
     font-family: 'Montserrat';
-    margin-top: 58%; /* increase this positive integer to move down */
+    margin-top: -45%; /* increase this positive integer to move down */
     /*width: 800px;*/
     font-size: 18px;
     font-weight: 500;
@@ -277,7 +274,8 @@ html, body {
 }
 
 .font-select-div {
-    margin-top:30%;
+    margin-top: 25%;
+    margin-left: -25%; 
 }
 
 .preview-title {
@@ -303,7 +301,7 @@ a.logout-button {
     position: absolute;
     font-family: Helvetica !important;
     letter-spacing: -8px;
-    margin-top: -300%; /*Increment the negative integer to push me up */
+    margin-top: -200%; /*Increment the negative integer to push me up */
     margin-left: 215%;
     font-size: 56px;
     text-decoration: none;
@@ -328,13 +326,9 @@ a.logout-button {
     letter-spacing: -9px;
     font-weight: 800;
 	position: absolute;
-	margin-left: -80%;
-
+	margin-top: -100%;
+	margin-left: -70%;
 	color: rgba(200,10,150,0.8);
-	/*background-color: rgba(255,255,255,0.07);*/
-
-	/*background-size: cover;*/
-	/*background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;*/
 	border: 1px double rgba(10,10,10,0.6);
 	border-radius: 1px 3px 0px 10px;
 	max-width: 650px !important;
@@ -369,6 +363,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 /*   -webkit-background-clip: text;*/
 /*   -webkit-text-fill-color: transparent;*/
 /*}*/
+
 
 
 .latest-stories-main-title {

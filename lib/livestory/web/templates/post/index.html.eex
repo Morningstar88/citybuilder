@@ -35,7 +35,7 @@
 </select>
 </div>
 <!--<div class="preview-title">Select Title Font </div>-->
-<br><br>
+<br>
 
 <div class="font-selector-text">
 <select>
@@ -43,18 +43,9 @@
 </div>
 </div>
 
-<!--<div class="preview-title">Select Title Font </div>-->
-
-<!--<div class="preview-text">Select Text Font</div>-->
-
-
-
-
-
- 
 <br><br>
 <div class="center-wrap">
-  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
 
 
 <span><%= link "What's Up ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
@@ -80,8 +71,6 @@
 
 <!-- END SIDEBAR-->
 
-
-<br><br><br><br><br><br><br><br><br><br><br>
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>

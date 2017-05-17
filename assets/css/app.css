@@ -166,18 +166,138 @@ html, body {
 
 .hello-user {
     position: absolute;
-    margin-left: 50%;
-    font-family: 'Raleway';
+    margin-left: -30%;
+    font-family: 'Montserrat';
     margin-top: 58%; /* increase this positive integer to move down */
     /*width: 800px;*/
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    text-shadow: 2px 2px 2px rgba(200,20,0.7);
+    text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
     padding-bottom: 5px;
     width: 600px;
     border-radius: 0px 0px 15px 0px;
     z-index: 5;
 }
+
+/*FONT SELECTOR */
+
+.font-selector {
+  background: #222;
+  display: inline-block;
+  border-radius: 4px;
+  position: relative;
+}
+.font-selector:before {
+  content: ' ';
+  position: absolute;
+  right: 9px;
+  bottom: 10px;
+  color: #fff;
+  border-top: 9px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+.font-selector select::-ms-expand {
+  /* for IE 11 */
+  display: none;
+}
+.font-selector select {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 18px;
+  max-width: 200px;
+  width: 200px;
+  height: 40px;
+  max-height: 40px;
+  line-height: 40px;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  border: 0px;
+  outline: 0px;
+  border-radius: 0;
+}
+.font-selector select option {
+  font-size: 15px;
+  background: #2a3a4a;
+  border: 0px solid;
+  outline: 0px solid;
+  border-radius: 4px;
+}
+
+/* END FONT SELECTOR TEXT */
+.font-selector-text {
+  background: #222;
+  display: inline-block;
+  border-radius: 4px;
+  position: relative;
+}
+.font-selector-text:before {
+  content: ' ';
+  position: absolute;
+  right: 9px;
+  bottom: 10px;
+  /*color: #fff;*/
+  border-top: 9px solid #fff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+.font-selector-text select::-ms-expand {
+  /* for IE 11 */
+  display: none;
+}
+.font-selector-text select {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 18px;
+  max-width: 200px;
+  width: 200px;
+  height: 40px;
+  max-height: 40px;
+  line-height: 40px;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #fff;
+  border: 0px;
+  outline: 0px;
+  border-radius: 0;
+}
+.font-selector-text select option {
+  font-size: 15px;
+  background: #2a3a4a;
+  border: 0px solid;
+  outline: 0px solid;
+  border-radius: 4px;
+}
+
+.font-select-div {
+    margin-top:30%;
+}
+
+.preview-title {
+  margin-top: 20px;
+  font-size: 42px;
+  color: rgba(20, 20, 20, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.4);
+  font-weight: bold;
+}
+
+.preview-text {
+  font-family: 'Josefin Sans';
+  margin-top: 30px;
+  font-size: 29px;
+  padding-left: 10px;
+  color: rgba(10, 10, 10, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
+  white-space: pre-wrap;
+}
+
 
 a.logout-button {
     position: absolute;
@@ -519,15 +639,15 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     height: auto;
     font-size: 25px;
     padding-top: 10px;
-    font-family: 'Arima Madurai' !important;
+    font-family: 'Raleway';
     font-weight: 300;
     padding-left: 2px;
     line-height: 35px;
     letter-spacing: 1px;
-    color: rgba(10,10,10,0.9);
-    text-shadow: 1px 0px 1px rgba(3,3,3,0.7), 0px 1px 1px rgba(4,2,5,0.7);
+    color: rgba(200,10,10,0.9) !important;
+    /*text-shadow: 2px 2px 2px rgba(100,100,100,0.4);*/
     white-space: pre-wrap !important;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -546,20 +666,19 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .display-post-title-index-show {
     /*SHOW PAGE
-    
     http://www.webdesigndev.com/best-google-fonts-for-headings/
-    
     */
     font-family: 'Montserrat' !important;
     width: 900px !important;
     font-size: 46px;
     letter-spacing: 2px;
     color: rgba(3,3,3,0.8);
-    text-shadow: 1px 1px 1px rgba(10,10,10,0.4);
+    text-shadow: 1px 1px 1px rgba(10,10,10,0.6);
     text-align: "center" !important;
     /*font-variant: small-caps;*/
     font-weight: 600;
     margin-left:-16%;
+    padding-bottom: 4%;
      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
@@ -573,20 +692,19 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     height: auto;
     width: 680px !important;
     font-size: 24px;
-     font-weight: 200;
+     font-weight: 300;
     margin-top: -7%;
-    font-family: 'Montserrat' !important;
+    font-family: 'Montserrat';
     padding-left: 2px;
     line-height: 40px;
     margin-left: -8%;
     letter-spacing: 1px;
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
     color: rgba(0,0,0,0.9);
-    text-shadow: 1px 0px 1px rgba(3,3,3,0.9), 0px 0px 1px rgba(0,0,2,0.9);
-    white-space: pre-wrap !important;
-   
+    text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
+    white-space: pre-wrap;
  }
 
 

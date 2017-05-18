@@ -25,7 +25,8 @@ defmodule LiveStory.Stories do
   end
   def list_posts(topic_id) do
     from(p in posts_query(),
-      where: p.topic_id == ^topic_id
+      where: p.topic_id == ^topic_id,
+      distinct: fragment("subpath(path, 0, 1)")
     ) |> Repo.all
   end
 

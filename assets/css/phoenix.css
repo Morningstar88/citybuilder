@@ -28,7 +28,13 @@ body, form, ul, table {
 
 /* 
 Phoenix flash messages */
-.alert:empty { display: none; }
+.alert:empty { display: none; 
+}
+
+.alert-info .alert-warning {
+  z-index: 6;
+  color: black !important;
+}
 
 /* Phoenix inline forms in links and buttons */
 form.link, form.button {

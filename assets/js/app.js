@@ -23,3 +23,5 @@ import "phoenix_html"
 import "phoenix_ujs";
 
 import "./upvote.js"
+
+import "./cool_fonts.js"

@@ -1,7 +1,3 @@
-<!--<img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/snow-landscape-smaller.jpeg">-->
-
-
-
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
@@ -9,7 +5,6 @@
   <br><br><br><br><br>
 
   <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>
-  <!-- PEXELS https://www.pexels.com/photo/art-graffiti-light-long-exposure-134620/ -->
 <h4 class="writing-top">Blogs you</h4>
 <h4 class="writing-base">can fork</h4>
  <div class="opaque-overlay"></div>
@@ -21,20 +16,15 @@
 
   <style>
     body {
-      font-family: 'Josefin Sans' !important;
-      /*margin-top: 15%;*/
+      font-family: 'Josefin Sans', 'Century Gothic' !important;
     }
     </style>
-    
       <br>
-      
       <div class="font-select-div">
-    
     <div class="font-selector">
 <select>
 </select>
 </div>
-<!--<div class="preview-title">Select Title Font </div>-->
 <br>
 
 <div class="font-selector-text">
@@ -63,20 +53,16 @@
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
   <div class="sidebar-1">
-      <!--<div class="sidebar-<%#= index + 1 %>">-->
-    <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
+   <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
   </div>
   <% end %>
 </div>
-
-<!-- END SIDEBAR-->
-
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-      <h1 class="preview-title"><%= post.title %></h1> <!--display-post-title-index-->
+      <h1 class="preview-title"><%= post.title %></h1>
       <!--<p>Created by: <%#= post.user.name %></p>-->
       <p class="preview-text"><%= post.body %></p>
        <br><br>
@@ -101,43 +87,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 
 <script>
-// console.clear(); Is this line causing font storage to wipe on page refresh?
-var titleFontsArr = ['Josefin Sans', 'Raleway', 'Montserrat', 'Cardo', 'Special Elite', 'Playfair Display'];
-var textFontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Cardo', 'Special Elite', 'Playfair Display'];
-var $fontSelector = $('.font-selector select');
-var $preview = $('.preview-title');
-var $fontTextSelector = $('.font-selector-text select');
-var $previewText = $('.preview-text');
-$fontSelector.on('change', function() {
-  $(this).css({
-    fontFamily: $(this).val()
-  });
-  $preview.css({
-    fontFamily: $(this).val()
-  });
-});
-$fontTextSelector.on('change', function() {
-  $(this).css({
-    fontFamily: $(this).val()
-  });
-  $previewText.css({
-    fontFamily: $(this).val()
-  });
-});
-_.forEach(titleFontsArr, function(fontName, index){
-  var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
-  $fontSelector.append($option);
-});
-_.forEach(titleFontsArr, function(fontName, index){
-  var $option = $('<option style="font-family:'+fontName+'">'+fontName+'</option>');
-  $fontTextSelector.append($option);
-});
-$fontSelector.trigger('change');
-WebFont.load({
-  google: {
-    families: titleFontsArr + textFontsArr
-  }
-});
+
 </script>
 <br><br><br><br><br><br>
  <!--<a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>-->

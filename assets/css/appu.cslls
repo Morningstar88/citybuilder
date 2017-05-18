@@ -78,174 +78,16 @@ html, body {
    width: 105%;
 }
 
-/* START SIDEBAR */
-
  .sidebar-div {
-   /*font-family: 'Montserrat';*/
-    position: relative;
-    /*display: inline;*/
+   font-family: 'Montserrat';
     font-variant: small-caps;
-    font-size: 20px !important;*/
-    color: rgba(20,20,20,0.8) !important;
-    margin-left: 105%;
+    font-size: 25px;
+    color: rgba(20,20,20,0.8);
+    margin-left: 0%;
     margin-top: 0%;
-    /*background: orange;*/
-    /*z-index: 9;*/
+    background: orange;
+    z-index: 9;
    }
-   
-     
-
-/*.sidebar-1 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 30%;*/
-/*       margin-left: 250%;*/
-     /*    color: rgba(25,25,25,0.8); /* ORIG (0,150,80) 
-       /*text-shadow: 0px 1px 1px rgba(200,100,10,0.8);*/
-/*       letter-spacing: 3px;*/
-/*       text-decoration: underline overline;*/
-/*       text-decoration-color: rgba(20,90,30,0.8);*/
-       
-/*}*/
-
-/*.sidebar-2 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-        
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 44%;*/
-/*    margin-left: 250%;*/
-/*        color: rgba(25,25,25,0.8);*/
-/*        text-decoration: underline overline;*/
-/*        letter-spacing: 20px;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-     
-  
-/*}*/
-
-/*.sidebar-3 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-        
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 59%;*/
-/*    margin-left: 250%;*/
-/*        color: rgba(25,25,25,0.8);*/
-/*        text-decoration: underline overline;*/
-/*        letter-spacing: 3px;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-  
-     
-/*}*/
-
-/*.sidebar-4 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-         
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 74%;*/
-/*    margin-left: 250%;*/
-/*        color: rgba(25,25,25,0.8);*/
-/*        text-decoration: underline overline;*/
-/*        letter-spacing: -2px;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-  
-      
-/*}*/
-
-/*.sidebar-5 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-        
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 88%;*/
-/*    margin-left: 250%;*/
-/*        color: rgba(25,25,25,0.9);*/
-/*        letter-spacing: 3px;*/
-/*        text-decoration: underline overline;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-     
-/*}*/
-
-/*.sidebar-6 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-         
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 100%;*/
-/*    margin-left: 249%;*/
-/*        color: rgba(25,25,25,0.8);*/
-/*        letter-spacing: -2px;*/
-/*        text-decoration: underline overline;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-      
-/*}*/
-
-/*.sidebar-7 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-10deg); */
-/*            transform: rotate(-10deg);*/
-           
-/*            font-size: 23px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 112%;*/
-/*    margin-left: 248%;*/
-/*        color: rgba(25,25,25,0.8);*/
-/*        letter-spacing: 3px;*/
-/*        text-decoration: underline overline;*/
-/*        text-decoration-color: rgba(20,90,30,0.8);*/
-/*  }*/
-
-/*.sidebar-8 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-26deg); */
-/*            transform: rotate(-26deg);*/
-           
-/*            font-size: 25px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 145%;*/
-/*    margin-left: 250%;*/
-/*        color: rgba(255,255,255,0.8);*/
-/*       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);*/
-/*       font-variant: small-caps;*/
-/*}*/
-
-/*.sidebar-9 {    */
-/*    position: absolute;*/
-/*  -webkit-transform: rotate(-26deg); */
-/*            transform: rotate(-26deg);*/
-/*            color: rgba(20,20,20,0.87);*/
-/*            font-size: 25px;                */
-/*            height: 200px;*/
-/*            width: 200px;*/
-/*            margin-top: 160%;*/
-/*    margin-left: 250%;*/
-/*     font-variant: small-caps;*/
-/*}*/
-
-
-/* END SIDEBAR */
 
 .opaque-overlay {
   /*background-size: cover;*/
@@ -1104,7 +946,159 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
    }
    
   
- 
+   
+
+.sidebar-1 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 30%;
+       margin-left: 250%;
+         color: rgba(25,25,25,0.8); /* ORIG (0,150,80) */
+       /*text-shadow: 0px 1px 1px rgba(200,100,10,0.8);*/
+       letter-spacing: 3px;
+       text-decoration: underline overline;
+       text-decoration-color: rgba(20,90,30,0.8);
+       
+}
+
+.sidebar-2 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+        
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 44%;
+    margin-left: 250%;
+        color: rgba(25,25,25,0.8);
+        text-decoration: underline overline;
+        letter-spacing: -2px;
+        text-decoration-color: rgba(20,90,30,0.8);
+     
+  
+}
+
+.sidebar-3 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+        
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 59%;
+    margin-left: 250%;
+        color: rgba(25,25,25,0.8);
+        text-decoration: underline overline;
+        letter-spacing: 3px;
+        text-decoration-color: rgba(20,90,30,0.8);
+  
+     
+}
+
+.sidebar-4 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+         
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 74%;
+    margin-left: 250%;
+        color: rgba(25,25,25,0.8);
+        text-decoration: underline overline;
+        letter-spacing: -2px;
+        text-decoration-color: rgba(20,90,30,0.8);
+  
+      
+}
+
+.sidebar-5 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+        
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 88%;
+    margin-left: 250%;
+        color: rgba(25,25,25,0.9);
+        letter-spacing: 3px;
+        text-decoration: underline overline;
+        text-decoration-color: rgba(20,90,30,0.8);
+     
+}
+
+.sidebar-6 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+         
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 100%;
+    margin-left: 249%;
+        color: rgba(25,25,25,0.8);
+        letter-spacing: -2px;
+        text-decoration: underline overline;
+        text-decoration-color: rgba(20,90,30,0.8);
+      
+}
+
+.sidebar-7 {    
+    position: absolute;
+  -webkit-transform: rotate(-10deg); 
+            transform: rotate(-10deg);
+           
+            font-size: 23px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 112%;
+    margin-left: 248%;
+        color: rgba(25,25,25,0.8);
+        letter-spacing: 3px;
+        text-decoration: underline overline;
+        text-decoration-color: rgba(20,90,30,0.8);
+  }
+
+.sidebar-8 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+           
+            font-size: 25px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 145%;
+    margin-left: 250%;
+        color: rgba(255,255,255,0.8);
+       text-shadow: 0px 1px 1px rgba(200,100,10,0.8);
+       font-variant: small-caps;
+}
+
+.sidebar-9 {    
+    position: absolute;
+  -webkit-transform: rotate(-26deg); 
+            transform: rotate(-26deg);
+            color: rgba(20,20,20,0.87);
+            font-size: 25px;                
+            height: 200px;
+            width: 200px;
+            margin-top: 160%;
+    margin-left: 250%;
+     font-variant: small-caps;
+}
+
+
+
 
   
   .upvote-arrow {

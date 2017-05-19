@@ -92,31 +92,90 @@ html, body {
    
    /*TOPIC SHOW PAGE*/
    
+   .topic-header {
+       position: absolute;
+       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 70%;
+       background-color: rgba:(200,100,30,0.4);
+       height: 37%;
+       width: 110%;
+       margin-left: -28%;
+       margin-top: -5%;
+       z-index: -5;
+       box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
+   }
+   
+   /*.topic-header-opacity {*/
+   /*   position: absolute;     */
+   /*    background-color: rgba:(200,100,30,0.2) !important;*/
+   /*    height: 30%;*/
+   /*    width: 110%;*/
+   /*    margin-left: -28%;*/
+   /*    margin-top: -5%;*/
+   /*    z-index: 1;*/
+   /*    box-shadow: 2px 2px 2px rgba(100,100,100,0.7);*/
+   /*}*/
+   
    .topic-headline {
        font-family: 'Raleway' !important;
-       font-size: 60px;
+       font-size: 100px;
+       font-weight: 300;
        text-align: center;
+       color: rgba(20,20,200,0.3);
+       text-shadow: 0px 0px 2px rgba(100,100,200,0.4);
+       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       z-index: 2;
        
    }
    
-   .display-each-headline {
-       display: inline;
+   .display-each-headline a {
+       /*display: inline;*/
+       /*position: absolute;*/
+       margin-top: -40%;
        font-family: 'Montserrat';
        font-size: 40px;
-       color: black !important;
+       color: rgba(20,20,20,0.9);
+       text-shadow: 2px 2px 2px rgba(100,100,100,0.4);
+   }
+   
+   .display-each-headline a:hover {
+       /*display: inline;*/
+       font-variant: small-caps;
+       font-size: 40px;
+       /*color: rgba(20,60,100,0.9);*/
+       text-shadow: 0px 0px 1px rgba(10,90,150,0.4);
+       /*text-decoration: none;*/
+       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
    }
    
    .topic-upvote-count {
        position: absolute;
-       display: inline;
        font-family: 'Montserrat';
-       font-size: 31px;
-       margin-left: 2%;
+       font-size: 27px;
+       font-weight: 700;
+       margin-left: -5%;
+       margin-top: -5.5%;
+       background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       text-shadow: 0px 0px 1px rgba(0,60,0,0.9);
       }
    
-   .show-competing-forks {
+   .show-competing-forks a {
+       position: absolute;
        font-family: 'Montserrat';
        font-size: 18px;
+       margin-left: -30%;
+       
+     
+   }
+   
+   .show-competing-forks a:hover {
+       color: rgba(200,100,20,0.8);
+       
    }
    
    
@@ -306,7 +365,7 @@ html, body {
 
 .hello-user {
     position: absolute;
-    margin-left: -30%;
+   text-align: center;
     font-family: 'Montserrat';
     margin-top: -45%; /* increase this positive integer to move down */
     /*width: 800px;*/
@@ -457,10 +516,6 @@ a.logout-button {
     text-decoration: none;
     color: rgba(255,123,0,0.9);
 }
-
-/*.hello-user-and-whats-up-div {*/
-/*    position: relative;*/
-/*}*/
 
 .whats-happening-button {
     /*WHAT's UP*/

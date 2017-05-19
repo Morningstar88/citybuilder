@@ -16,7 +16,7 @@
       <td>
         <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>⇧</p> 
           <br>
-          <%= link "Show Competing Forks", to: post_fork_path(@conn, :index, post), class: "show-competing-forks" %>
+          <%= link "Show Fighting Forks", to: post_fork_path(@conn, :index, post), class: "show-competing-forks" %>
         <!-- SHOWS POST PATH path: <%#= post.path %>-->
 
         <br>

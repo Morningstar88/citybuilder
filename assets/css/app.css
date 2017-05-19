@@ -81,16 +81,13 @@ html, body {
 /* START SIDEBAR */
 
  .sidebar-div {
-   /*font-family: 'Montserrat';*/
-    position: relative;
+    position: absolute;
     /*display: inline;*/
     font-variant: small-caps;
     font-size: 20px !important;*/
     color: rgba(20,20,20,0.8) !important;
-    margin-left: 105%;
-    margin-top: 0%;
-    /*background: orange;*/
-    /*z-index: 9;*/
+    margin-left: 65%;
+    margin-top: -25%;
    }
    
      
@@ -553,6 +550,8 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
  
  .login-btn {
+     position: absolute;
+     margin-top: -50%;
      white-space: pre;
      font-size: 24px;
      margin-left: -3%;
@@ -565,22 +564,25 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
  
  .login-btn:hover {
      white-space: pre;
-     font-size: 20px;
+     font-size: 24px;
      margin-left: -3%;
-     color: black;
+     color: rgba(200,50,4,1);
      
  }
  
  .sign-up-btn 
  { font-size: 24px;
+   position: absolute;
+   margin-left: 50%;
+   margin-top: -50%;
    color: rgba(230,80,4,0.8);
    font-family: 'Montserrat';
    letter-spacing: -3px;
  }
  
   .sign-up-btn:hover 
- { font-size: 20px;
-   color: black;
+ { font-size: 24px;
+   color: rgba(200,50,4,1)
   }
   
  

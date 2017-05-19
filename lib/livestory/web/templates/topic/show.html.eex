@@ -10,7 +10,8 @@
     <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-        <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>⇧</p> 
+        <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>⇧</p>
+        <p class=""><%= truncate post.body, length: 400, separator: " " %></p>
           <br>
           <%= link "Show Competing Forks", to: post_fork_path(@conn, :index, post), class: "show-competing-forks" %>
         <!-- SHOWS POST PATH path: <%#= post.path %>-->

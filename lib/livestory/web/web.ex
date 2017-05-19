@@ -39,6 +39,8 @@ defmodule LiveStory.Web do
       import LiveStory.Web.Router.Helpers
       import LiveStory.Web.ErrorHelpers
       import LiveStory.Web.Gettext
+
+      import Phoenix.HTML.SimplifiedHelpers.Truncate
     end
   end
 

@@ -1,9 +1,13 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
+<header class="topic-header topic-header-opacity"></header>
+
 <h1 class="topic-headline">
   <%= @topic.name %>
 </h1>
+
+<br><br>
 
 <table>
   <tbody>

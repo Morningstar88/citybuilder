@@ -64,7 +64,7 @@
       <td>
       <h1 class="preview-title"><%= post.title %></h1>
       <!--<p>Created by: <%#= post.user.name %></p>-->
-      <p class="preview-text"><%= post.body %></p>
+      <p class="preview-text"><%= truncate post.body, length: 400, separator: " " %></p>
        <br><br>
        <span><%= link "	📖 ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
         <span><%= link "✎", to: post_path(@conn, :edit, post), class: "btn btn-default btn-md btn-edit-post unicode-lg "    %>

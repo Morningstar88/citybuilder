@@ -90,7 +90,41 @@ html, body {
     margin-top: -25%;
    }
    
+   /*TOPIC SHOW PAGE*/
+   
+   .topic-headline {
+       font-family: 'Raleway' !important;
+       font-size: 60px;
+       text-align: center;
+       
+   }
+   
+   .display-each-headline {
+       display: inline;
+       font-family: 'Montserrat';
+       font-size: 40px;
+       color: black !important;
+   }
+   
+   .topic-upvote-count {
+       position: absolute;
+       display: inline;
+       font-family: 'Montserrat';
+       font-size: 31px;
+       margin-left: 2%;
+      }
+   
+   .show-competing-forks {
+       font-family: 'Montserrat';
+       font-size: 18px;
+   }
+   
+   
      
+
+
+  /**/
+
 
 /*.sidebar-1 {    */
 /*    position: absolute;*/

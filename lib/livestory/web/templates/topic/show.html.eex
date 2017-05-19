@@ -1,4 +1,7 @@
-<h1>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
+  type='text/css'>
+
+<h1 class="topic-headline">
   <%= @topic.name %>
 </h1>
 
@@ -7,10 +10,12 @@
     <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-        <h1 class="display-post-title-index"><%= link post.title, to: post_path(@conn, :show, post) %></h1>
-        upvotes: <%= post.upvotes_count.count %>
-        path: <%= post.path %>
-        <%= link "forks", to: post_fork_path(@conn, :index, post) %>
+        <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>⇧</p> 
+          <br>
+          <%= link "Show Competing Forks", to: post_fork_path(@conn, :index, post), class: "show-competing-forks" %>
+        <!-- SHOWS POST PATH path: <%#= post.path %>-->
+
+        <br>
       </td>
     </tr>
     <% end %>

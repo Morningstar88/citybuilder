@@ -4,11 +4,15 @@ var $fontSelector = $('.font-selector select');
 var $preview = $('.preview-title');
 var $fontTextSelector = $('.font-selector-text select');
 var $previewText = $('.preview-text');
+var $previewChoose = $('.preview-text-choose-font');
 $fontSelector.on('change', function() {
   $(this).css({
     fontFamily: $(this).val()
   });
   $preview.css({
+    fontFamily: $(this).val()
+  });
+  $previewChoose({
     fontFamily: $(this).val()
   });
 });

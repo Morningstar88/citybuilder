@@ -52,7 +52,10 @@ html, body {
   font-weight: 700;
   z-index: 3;
   text-shadow: 1px 1px 1px rgba(5,5,5,0.3);
+  
 }
+
+
 
 .writing-base {
   position: absolute;
@@ -78,6 +81,12 @@ html, body {
    width: 105%;
 }
 
+.sign-up-form-btn {
+    background-color: rgba(20,20,20,.9) !important;
+    color: rgba(200,100,20,0.9) !important;
+    
+}
+
 /* START SIDEBAR */
 
  .sidebar-div {
@@ -86,9 +95,30 @@ html, body {
     font-variant: small-caps;
     font-size: 20px !important;*/
     color: rgba(20,20,20,0.8) !important;
+    text-shadow: 3px,3px,9px rgba(100,100,100,0.3);
     margin-left: 65%;
     margin-top: -25%;
+    font-weight: 500;
    }
+   
+   .sidebar-div a {
+       color: rgba(20,20,20,1);
+       text-shadow: 0px 1px 1px rgba(100,100,100,0.4);
+   }
+   
+   /*
+   /*FROM POSITIVE TECHNOLOGY
+   .ticker{
+  margin-top: 7%;
+  text-shadow: 2px 2px 2px rgba(25,60,40,1);
+  font-size: 55px;
+  color: rgba(255,255,255,1);
+  letter-spacing: 2px;
+  // -webkit-filter: saturate(4);
+  -webkit-filter:saturate(2);
+  white-space: pre;
+   
+   */
    
    /*TOPIC SHOW PAGE*/
    
@@ -104,16 +134,16 @@ html, body {
        box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
    }
    
-   /*.topic-header-opacity {*/
-   /*   position: absolute;     */
-   /*    background-color: rgba:(200,100,30,0.2) !important;*/
-   /*    height: 30%;*/
-   /*    width: 110%;*/
-   /*    margin-left: -28%;*/
-   /*    margin-top: -5%;*/
-   /*    z-index: 1;*/
-   /*    box-shadow: 2px 2px 2px rgba(100,100,100,0.7);*/
-   /*}*/
+   .topic-header-opacity {
+      position: absolute;     
+       background-color: rgba:(20,10,30,0.7) !important;
+       height: 30%;
+       width: 110%;
+       margin-left: -28%;
+       margin-top: -5%;
+       z-index: 1;
+       box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
+   }
    
    .topic-headline {
        font-family: 'Raleway' !important;
@@ -363,22 +393,81 @@ html, body {
  
 }
 
-.hello-user {
+.hello-user { /* Text in post view */
     position: absolute;
-   text-align: center;
+    text-align: center;
     font-family: 'Montserrat';
+    margin-left: -70%; /* 70% Looks good.*/
     margin-top: -45%; /* increase this positive integer to move down */
     /*width: 800px;*/
     font-size: 18px;
     font-weight: 500;
     text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
     padding-bottom: 5px;
-    width: 600px;
+    width: 500px;
     border-radius: 0px 0px 15px 0px;
     z-index: 5;
 }
 
+.hello-user a { /* Text in post view */
+   color: rgba(180,90,10,0.9)
+}
+
+.hello-user a:hover {
+  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 70%; *//* ORIG no-repeat
+   /* -webkit-background-clip: text;*/
+   /* -webkit-text-fill-color: transparent;*/
+   color: rgba(0,45,0,0.9);
+    /*text-shadow: 0px 0px 0px rgba(0,45,0,0.7);*/
+}
+
 /*FONT SELECTOR */
+
+.choose-a-font{
+    position: absolute;
+    /*display: inline;*/
+    font-family: 'Raleway';
+    font-weight: 300;
+    text-shadow: 0px 0px 1px black;
+    font-size: 20px;
+    color: rgba(0,0,0,.87);
+    margin-top: 14%;
+    margin-left: -13%;
+}
+
+.preview-title {
+  font-size: 42px;
+  color: rgba(20, 20, 20, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.4);
+  font-weight: bold;
+}
+
+.preview-text {
+  font-size: 29px;
+  color: rgba(10, 10, 10, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
+  white-space: pre-wrap;
+}
+
+.preview-title-choose-font {
+  position: absolute;
+  font-size: 42px;
+  margin-left: -16%;
+  margin-top: 23%;
+  color: rgba(20, 20, 20, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.4);
+  font-weight: bold;
+}
+
+.preview-text-choose-font {
+  position: absolute;
+  margin-top: 24.2%;
+  margin-left: -7%;
+  font-size: 29px;
+  color: rgba(10, 10, 10, 0.85);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
+  white-space: pre-wrap;
+}
 
 .font-selector {
   background: #222;
@@ -480,23 +569,7 @@ html, body {
     margin-left: -25%; 
 }
 
-.preview-title {
-  margin-top: 20px;
-  font-size: 42px;
-  color: rgba(20, 20, 20, 0.85);
-  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.4);
-  font-weight: bold;
-}
 
-.preview-text {
-  font-family: 'Raleway';
-  margin-top: 30px;
-  font-size: 29px;
-  padding-left: 10px;
-  color: rgba(10, 10, 10, 0.85);
-  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
-  white-space: pre-wrap;
-}
 
 
 a.logout-button {

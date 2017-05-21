@@ -30,6 +30,6 @@
   </div>
 
   <div class="form-group">
-    <%= submit "Enter", class: "btn btn-warning" %>
+    <%= submit "Enter", class: "btn sign-up-form-btn" %>
   </div>
 <% end %>

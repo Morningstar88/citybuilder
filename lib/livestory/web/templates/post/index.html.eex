@@ -20,6 +20,7 @@
     }
     </style>
       <br>
+     <p class="choose-a-font preview-title-choose-font">Title</p><p class="choose-a-font preview-text-choose-font">Body</p>
       <div class="font-select-div">
     <div class="font-selector">
 <select>

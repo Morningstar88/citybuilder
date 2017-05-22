@@ -79,7 +79,10 @@ defmodule LiveStory.Web.PostController do
   # # end
 
   def show(conn, _params) do
-    render(conn, "show.html", post: conn.assigns.post)
+    post = conn.assigns.post
+    render(conn, "show.html",
+      post: post, comment_changeset: Stories.new_post_comment(post)
+    )
   end
 
   def edit(conn, _params) do

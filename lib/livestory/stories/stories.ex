@@ -6,6 +6,7 @@ defmodule LiveStory.Stories do
   alias LiveStory.Repo
 
   alias LiveStory.Auths.User
+  alias LiveStory.Stories.Comment
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.Topic
   alias LiveStory.Stories.Upvotes
@@ -254,10 +255,22 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def new_post_comment(post) do
+    post
+    |> Ecto.build_assoc(:comments)
+    |> comment_changeset()
+  end
+
   defp post_changeset(%Post{} = post, attrs) do
     post
     |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
     |> validate_required([:title, :body, :user_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
+  end
+
+  def comment_changeset(%Comment{} = comment, attrs \\ %{}) do
+    comment
+    |> cast(attrs, [:guest_name, :body, :post_id, :user_id])
+    |> validate_required([:body, :post_id])
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

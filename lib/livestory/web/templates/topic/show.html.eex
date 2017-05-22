@@ -1,12 +1,9 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
-<div style="background-color:rgba(20,20,20,0.5) !important;">
+<!--<div style="background-color:rgba(20,20,20,0.9) !important; z-index: 7;">-->
 <header class="topic-header"></header>
-</div>
-
-https://robertnyman.com/2010/01/11/css-background-transparency-without-affecting-child-elements-through-rgba-and-filters/
-
+<!--</div>-->
 <h1 class="topic-headline">
   <%= @topic.name %>
 </h1>
@@ -31,3 +28,4 @@ https://robertnyman.com/2010/01/11/css-background-transparency-without-affecting
   </tbody>
 </table>
 <br><br><br><br><br>
+<div class="topic-header-opacity"></div>

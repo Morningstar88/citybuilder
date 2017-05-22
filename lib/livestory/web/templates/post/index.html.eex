@@ -49,7 +49,7 @@
   <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
 </div>
-
+<button onclick="change()" class="color-button">Random Color</button>
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
@@ -88,6 +88,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 
 <script>
+
+function change() {
+	var x = Math.floor(Math.random() * 255); // range is 0-255
+	var y = Math.floor(Math.random() * 255);
+	var z = Math.floor(Math.random() * 255);
+  var avoidgreyminus = x - 150;
+  var avoidgreyplus = x + 150;
+  var opacity = 0.05;
+  
+   
+  if (x < 125) {
+   //alert("x is less than 125, avoidgreyplus will be used")
+   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")"; 
+  // alert("the rgba is " + thergb)
+   	console.log(thergb,document.body.style.background);
+	document.body.style.background=thergb;
+  }
+  
+  else {
+ // alert ("x is more than 125, avoidgreyminus will be used")
+  var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
+ // alert("the rgba is " + thergb)
+  	console.log(thergb,document.body.style.background);
+	document.body.style.background=thergb;
+  }
 
 </script>
 <br><br><br><br><br><br>

@@ -11,9 +11,6 @@ RESOURCES
 */
 
 html, body {
-    /*font-family: 'Josefin Sans', sans-serif !important;*/
-    /*font-size: 33px;*/
-    /*color: rgba(20,20,20,0.8);*/
     padding: 0px;
     margin: 0px;
 }
@@ -120,12 +117,24 @@ html, body {
    
    */
    
+   .color-button {
+	margin: auto;
+	display: block;
+    font-variant: small-caps;
+    height: 50px; 
+    width: 70px;
+    border: 1px solid rgba(20,20,20,.6);
+    border-radius: 15px 2px 15px 2px;
+    background-color: rgba(255,255,255,0.6) ;
+    font-family: 'Raleway', 'Century Gothic';
+}
+   
    /*TOPIC SHOW PAGE*/
    
    .topic-header {
        position: absolute;
        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 70%;
-       background-color: rgba:(200,100,30,0.4);
+       background-color: rgba:(200,100,30,0.9) !important;
        height: 37%;
        width: 110%;
        margin-left: -28%;
@@ -135,13 +144,11 @@ html, body {
    }
    
    .topic-header-opacity {
-      position: absolute;     
-       background-color: rgba:(20,10,30,0.7) !important;
-       height: 30%;
-       width: 110%;
-       margin-left: -28%;
-       margin-top: -5%;
-       z-index: 1;
+       position: absolute;     
+       color: black !important;
+       height: 200px;
+       width: 200px;
+       z-index: 6;
        box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
    }
    
@@ -167,6 +174,8 @@ html, body {
        font-size: 40px;
        color: rgba(20,20,20,0.9);
        text-shadow: 2px 2px 2px rgba(100,100,100,0.4);
+       -webkit-transition: font-variant 0.8s;
+       -transition: font-variant 0.8s;
    }
    
    .display-each-headline a:hover {

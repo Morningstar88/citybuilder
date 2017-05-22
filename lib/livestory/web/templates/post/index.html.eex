@@ -49,7 +49,9 @@
   <span><%= link "SIGN UP", to: user_path(@conn, :new), class: "sign-up-btn" %></span>
 <% end %>
 </div>
-<button onclick="change()" class="color-button">Random Color</button>
+
+<button onclick="changeColor()" class="color-button">Random Color</button>
+<button onclick="testAlert()">Test Alert</button>
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
@@ -89,7 +91,13 @@
 
 <script>
 
-function change() {
+function testAlert(){
+    alert("Test Alert Was Pushed")
+};
+
+
+function changeColor() {
+    alert("change color was pushed");
 	var x = Math.floor(Math.random() * 255); // range is 0-255
 	var y = Math.floor(Math.random() * 255);
 	var z = Math.floor(Math.random() * 255);

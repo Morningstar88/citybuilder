@@ -10,6 +10,17 @@ RESOURCES
 
 */
 
+/* WORKING MEDIA QUERY CODE
+
+@media screen and (min-width: 180px) {
+    body {
+        background-color: lightgreen !important;
+    }
+}
+
+*/
+
+
 html, body {
     padding: 0px;
     margin: 0px;
@@ -52,6 +63,15 @@ html, body {
   
 }
 
+/* MQ */
+
+@media (max-width: 800px) {
+    .writing-top {
+display: none;
+ }
+  
+}
+
 
 
 .writing-base {
@@ -68,6 +88,15 @@ html, body {
     
 }
 
+/* MQ */
+
+@media (max-width: 800px)
+ {
+     .writing-base {
+     display: none;
+ }
+     
+ }
 
 .header-img {
    position: absolute;
@@ -76,6 +105,14 @@ html, body {
    margin-left: -19%;
    height: 90%;
    width: 105%;
+}
+
+/* MQ */
+
+@media (max-width: 800px) {
+    .header-img {
+        display: none !important;
+    }
 }
 
 .sign-up-form-btn {
@@ -386,7 +423,14 @@ html, body {
   width: 105%;
   background: rgba(50,30,85,0.6);
   z-index: 1;
- 
+}
+
+/* MQ */
+
+@media (max-width: 800px) {
+    .opaque-overlay {
+        display: none !important;
+    }
 }
 
 .opaque-overlay-thin {
@@ -399,7 +443,16 @@ html, body {
   width: 105%;
   background: rgba(50,30,85,0.15);
   z-index: 4;
- 
+}
+
+
+/* MQ */
+
+@media (max-width: 800px) {
+    .opaque-overlay-thin {
+        display: none !important;
+    }
+    
 }
 
 .hello-user { /* Text in post view */
@@ -457,6 +510,15 @@ html, body {
   text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.3);
   white-space: pre-wrap;
 }
+
+/*@media (max-width: 800px) {*/
+    /* Not sure if working */
+/*    .preview-text {*/
+/*        display: none !important;*/
+/*    }*/
+/*}*/
+
+
 
 .preview-title-choose-font {
   position: absolute;
@@ -573,6 +635,17 @@ html, body {
   border-radius: 4px;
 }
 
+/* MQ */
+
+@media (max-width: 900px) {
+    .font-select-div {
+    margin-top: 25%;
+    margin-left: -25%;
+    display: none !important;
+}
+  
+}
+
 .font-select-div {
     margin-top: 25%;
     margin-left: -25%; 
@@ -621,6 +694,15 @@ a.logout-button {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+    .whats-happening-button {
+      font-size: 80px;
+      min-width: 350px !important;
+      max-width: 600px !important;
+      margin-left: -50%;
+    }
 }
 
 /*List of pexels photos 

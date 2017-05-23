@@ -140,6 +140,12 @@ display: none;
        text-shadow: 0px 1px 1px rgba(100,100,100,0.4);
    }
    
+   @media (max-width:800px) {
+       .sidebar-div{
+        margin-left: auto !important;   
+       }
+   }
+   
    /*
    /*FROM POSITIVE TECHNOLOGY
    .ticker{
@@ -701,7 +707,7 @@ a.logout-button {
       font-size: 80px;
       min-width: 350px !important;
       max-width: 600px !important;
-      margin-left: -50%;
+      margin-left: auto !important;
     }
 }
 
@@ -1027,16 +1033,14 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
  /*SHOW PAGE*/
 
 .display-post-title-index-show {
-    /*SHOW PAGE
-    http://www.webdesigndev.com/best-google-fonts-for-headings/
-    */
+    /*SHOW PAGE*/
     font-family: 'Montserrat' !important;
     width: 900px !important;
     font-size: 46px;
     letter-spacing: 2px;
     color: rgba(3,3,3,0.8);
     text-shadow: 1px 1px 1px rgba(10,10,10,0.6);
-    text-align: "center" !important;
+    text-align: center !important;
     /*font-variant: small-caps;*/
     font-weight: 600;
     margin-left:-16%;
@@ -1045,6 +1049,13 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
    
+}
+
+@media (max-width: 800px){
+    .display-post-title-index-show {
+    width: auto !important;
+    margin-left: auto !important;
+}
 }
 
 
@@ -1061,14 +1072,20 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     line-height: 40px;
     margin-left: -8%;
     letter-spacing: 1px;
-    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
     color: rgba(0,0,0,0.9);
     text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
     white-space: pre-wrap;
  }
-
+ 
+ @media (max-width: 800px)
+{
+    .display-post-body-show {
+        width: auto !important;
+        margin-left: auto !important;
+    
+}
+    
+}
 
  
 

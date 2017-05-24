@@ -22,7 +22,7 @@ defmodule LiveStory.Web.PostView do
   def welcome(true, conn, [post1]) do
     "The latest top story is #{link_post conn, post1}. Help edit it."
   end
-  def welcome(nil, conn, _posts) do
+  def welcome(_, conn, _posts) do
     ""
   end
 

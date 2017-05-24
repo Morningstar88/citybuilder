@@ -10,6 +10,7 @@ defmodule LiveStory.Stories.Post do
     belongs_to :original_post, LiveStory.Stories.Post
     belongs_to :topic, LiveStory.Stories.Topic
     has_one :upvotes_count, LiveStory.Stories.UpvotesCounts
+    has_many :comments, LiveStory.Stories.Comment
 
     timestamps()
   end

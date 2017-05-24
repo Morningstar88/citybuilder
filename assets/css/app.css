@@ -53,20 +53,26 @@ body
 
 .writing-top
 {
-    font-family: Helvetica !important;
-    font-size: 100px !important;
-    font-weight: 700;
+    font-family: 'Raleway' !important;
+    font-size: 120px !important;
+    font-weight: 100;
+    font-variant: small-caps;
 
     position: absolute;
     z-index: 3;
 
     margin-top: -5%;
-    margin-left: -12%;
+    margin-left: -14%;
 
-    letter-spacing: -15px;
+    white-space: pre-wrap;
+    letter-spacing: -10px;
 
-    color: rgba(255,220,220,.80); /*rgba(220,120,0,0.80);*/
-    text-shadow: 1px 1px 1px rgba(5,5,5,.3);
+    color: rgba(255,170,20,.60); /*rgba(220,120,0,0.80);*/
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.8);
+
+    -webkit-text-fill-color: transparent;
 }
 
 /* MQ */
@@ -83,20 +89,26 @@ body
 
 .writing-base
 {
-    font-family: Helvetica !important;
-    font-size: 100px !important;
-    font-weight: 600;
+    font-family: 'Raleway' !important;
+    font-size: 120px !important;
+    font-weight: 100;
+    font-variant: small-caps;
 
     position: absolute;
     z-index: 2;
 
     margin-top: 4%;
-    margin-left: -12%;
+    margin-left: -16%;
 
+    white-space: pre-wrap;
     letter-spacing: -8px;
 
-    color: rgba(255,220,220,.80);
-    text-shadow: 1px 1px 1px rgba(5,5,5,.3);
+    color: rgba(240,150,20,.80);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px rgba(255,255,255,.8);
+
+    -webkit-text-fill-color: transparent;
 }
 
 /* MQ */
@@ -115,9 +127,11 @@ body
     z-index: -1;
 
     width: 105%;
-    height: 90%;
+    height: 105%;
     margin-top: -18%;
     margin-left: -19%;
+
+    box-shadow: 2px 2px 2px rgba(50,50,50,.8);
 }
 
 /* MQ */
@@ -129,6 +143,51 @@ body
         display: none !important;
     }
 }
+
+
+.opaque-overlay
+{
+    position: absolute;
+    z-index: 1;
+    /*background-size: cover;*/
+
+    display: block;
+
+    width: 105%;
+    height: 105%;
+    margin-top: -18%;
+    margin-left: -19%;
+
+    background: rgba(30,30,35,.5);
+}
+
+/* MQ */
+
+@media (max-width: 800px)
+{
+    .opaque-overlay
+    {
+        display: none !important;
+    }
+}
+
+.opaque-overlay-thin
+{
+    position: absolute;
+    z-index: 4;
+    /*background-size: cover;*/
+
+    display: block;
+
+    width: 105%;
+    height: 105%;
+    margin-top: -18%;
+    margin-left: -19%;
+
+    background: rgba(50,30,85,.10);
+}
+
+
 
 .sign-up-form-btn
 {
@@ -164,7 +223,9 @@ body
 {
     .sidebar-div
     {
+        height: 30px;
         margin-left: auto !important;
+        padding-bottom: 300px;
     }
 }
 
@@ -244,6 +305,9 @@ body
 
     -webkit-text-fill-color: transparent;
 }
+
+
+
 
 .display-each-headline a
 {
@@ -469,47 +533,6 @@ body
 
 /* END SIDEBAR */
 
-.opaque-overlay
-{
-    position: absolute;
-    z-index: 1;
-    /*background-size: cover;*/
-
-    display: block;
-
-    width: 105%;
-    height: 90%;
-    margin-top: -18%;
-    margin-left: -19%;
-
-    background: rgba(50,30,85,.6);
-}
-
-/* MQ */
-
-@media (max-width: 800px)
-{
-    .opaque-overlay
-    {
-        display: none !important;
-    }
-}
-
-.opaque-overlay-thin
-{
-    position: absolute;
-    z-index: 4;
-    /*background-size: cover;*/
-
-    display: block;
-
-    width: 105%;
-    height: 90%;
-    margin-top: -18%;
-    margin-left: -19%;
-
-    background: rgba(50,30,85,.15);
-}
 
 
 /* MQ */
@@ -807,15 +830,15 @@ a.logout-button
 .whats-happening-button
 {
     /*WHAT's UP*/
-    font-family: Helvetica;
+    font-family: 'Raleway';
     font-size: 90px;
-    font-weight: 800;
+    font-weight: 500;
 
     position: absolute;
 
     min-width: 550px;
     max-width: 650px !important;
-    height: 130px;
+    height: auto !important;
     margin-top: -100%;
     margin-left: -70%;
 
@@ -823,10 +846,11 @@ a.logout-button
     text-align: center;
     letter-spacing: -9px;
 
-    color: rgba(200,10,150,.8);
-    border: 1px double rgba(10,10,10,.6);
+    color: rgba(10,10,160,.8);
+    border: 1px double rgba(10,10,10,.1);
     border-radius: 1px 3px 0 10px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;*/
     -webkit-background-clip: text;
     text-shadow: 1px 1px 1px rgba(150,10,150,.38);
     text-shadow: 1px 1px 0 rgba(100,20,190,.3);
@@ -838,11 +862,25 @@ a.logout-button
 {
     .whats-happening-button
     {
-        font-size: 80px;
+        font-size: 80px; /*40 causes no alignment problems*/
 
-        min-width: 350px !important;
-        max-width: 600px !important;
+        display: block;
+
+        min-width: auto !important;
+        max-width: auto !important;
+        max-height: auto;
         margin-left: auto !important;
+        padding: 20px;
+
+        border: none;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .mobile-hide
+    {
+        display: none !important;
     }
 }
 
@@ -1068,6 +1106,19 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 250px;
     height: 200px;
+}
+
+@media (max-width: 800px)
+{
+    .center-wrap
+    {
+        position: relative;
+        top: calc(50% - 100px);
+        left: calc(50% - 125px);
+
+        width: auto !important;
+        height: 200px;
+    }
 }
 
 
@@ -1389,19 +1440,19 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .edit-letter-1
 {
-    color: rgba(0,20,20,.1);
+    color: rgba(0,20,20,.9);
     text-shadow: rgba(00,100,100,.9);
 }
 
 .edit-letter-2
 {
-    color: rgba(0,25,20,.1);
+    color: rgba(0,25,20,.9);
     text-shadow: rgba(00,100,100,.9);
 }
 
 .edit-letter-3
 {
-    color: rgba(0,30,20,.1);
+    color: rgba(200,100,20,.5);
     text-shadow: rgba(00,100,100,.9);
 }
 

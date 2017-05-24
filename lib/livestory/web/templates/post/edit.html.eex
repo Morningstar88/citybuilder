@@ -6,8 +6,8 @@
 <%= render "form.html", conn: @conn, changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>
 
- <h4 class="centered-text"> Hey <span class="teal-username"><%= @user.username %>. </span><span>This is your copy of <span class="orange-post-title"><%= @post.title %>.</span><br> Can you fix it? Your fork will be saved separately. Readers upvote the winner.</h4>
+ <h4 class="centered-text"> Hey <span class="teal-username"><%= @user.username %>. </span><span>This is your copy of <span class="orange-post-title"><%= @post.title %>.</span><br> Can you fix it? Your fork will be saved separately. Readers upvote the best writers. <br> Plz choose a topic, or your story gets thrown into Random</h4>
 <br>
-<span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default" %></span>
+<span><%= link "Back to Main", to: post_path(@conn, :index), class: "btn btn-default block-btn publish-button" %></span>
 
 <br><br><br>

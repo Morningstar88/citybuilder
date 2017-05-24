@@ -1,0 +1,4 @@
+<tr>
+  <td><%= @comment.guest_name %></td>
+  <td><%= @comment.body %></td>
+</tr>

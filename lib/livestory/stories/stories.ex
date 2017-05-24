@@ -244,6 +244,21 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def post_comments(post_id) do
+    from(c in Comment,
+      where: c.post_id == ^post_id,
+      order_by: [desc: :id]
+    ) |> Repo.all
+  end
+
+  def create_comment(params, post_id, user_id) do
+    %Comment{}
+    |> comment_changeset(params)
+    |> put_change(:user_id, user_id)
+    |> put_change(:post_id, post_id)
+    |> Repo.insert
+  end
+
   def delete_upvote(%Post{id: post_id}, user_id) do
     Repo.transaction fn ->
       upvote = Repo.get_by!(Upvotes, post_id: post_id, user_id: user_id)
@@ -269,8 +284,8 @@ defmodule LiveStory.Stories do
 
   def comment_changeset(%Comment{} = comment, attrs \\ %{}) do
     comment
-    |> cast(attrs, [:guest_name, :body, :post_id, :user_id])
-    |> validate_required([:body, :post_id])
+    |> cast(attrs, [:guest_name, :body])
+    |> validate_required([:body])
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

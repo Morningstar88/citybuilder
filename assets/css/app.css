@@ -147,8 +147,8 @@ body
 
     position: absolute;
 
-    margin-top: -25%;
-    margin-left: 65%;
+    margin-top: -20%;
+    margin-left: 67%;
 
     color: rgba(20,20,20,.8) !important;
     text-shadow: 3px,3px,9px rgba(100,100,100,.3);
@@ -614,7 +614,7 @@ body
 
     position: absolute;
 
-    margin-top: 23%;
+    margin-top: 10%;
     margin-left: -16%;
 
     color: rgba(20, 20, 20, .85);
@@ -627,7 +627,7 @@ body
 
     position: absolute;
 
-    margin-top: 24.2%;
+    margin-top: 11.2%;
     margin-left: -7%;
 
     white-space: pre-wrap;
@@ -643,7 +643,8 @@ body
     display: inline-block;
 
     border-radius: 4px;
-    background: #222;
+    background: rgba(200,100,20,0.9) !important;
+    color: rgba(20,20,20,0.9) !important;
 }
 .font-selector:before
 {
@@ -677,7 +678,7 @@ body
 
     cursor: pointer;
 
-    color: #fff;
+    color: rgba(10,10,10,0.9);
     border: 0;
     border-radius: 0;
     outline: 0;
@@ -705,8 +706,8 @@ body
     display: inline-block;
 
     border-radius: 4px;
-    background: #222;
-}
+    background: rgba(200,100,10,0.8) !important;
+ }
 .font-selector-text:before
 {
     position: absolute;
@@ -739,7 +740,7 @@ body
 
     cursor: pointer;
 
-    color: #fff;
+    color: rgba(10,10,10,0.9);
     border: 0;
     border-radius: 0;
     outline: 0;
@@ -757,6 +758,7 @@ body
     border-radius: 4px;
     outline: 0 solid;
     background: #2a3a4a;
+    color: teal !important;
 }
 
 /* MQ */
@@ -774,7 +776,7 @@ body
 
 .font-select-div
 {
-    margin-top: 25%;
+    margin-top: 5%;
     margin-left: -25%;
 }
 
@@ -789,7 +791,7 @@ a.logout-button
     position: absolute;
     z-index: 4;
 
-    margin-top: -200%; /*Increment the negative integer to push me up */
+    margin-top: -120%; /*Increment the negative integer to push me up */
     margin-left: 215%;
 
     text-decoration: none;
@@ -818,7 +820,7 @@ a.logout-button
     min-width: 550px;
     max-width: 650px !important;
     height: auto !important;
-    margin-top: -100%;
+    margin-top: -110%; /*Increment this negative integer to push me up*/
     margin-left: -70%;
 
     cursor: pointer;
@@ -826,7 +828,7 @@ a.logout-button
     letter-spacing: -9px;
 
     color: rgba(200,10,150,.8);
-    border: 1px double rgba(50,50,50,.3);
+    border: 1px double rgba(150,150,150,.1);
     border-radius: 1px 3px 0 10px;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;

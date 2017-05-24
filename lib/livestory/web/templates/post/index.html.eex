@@ -1,53 +1,22 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
-<!--
-<!--<header>-->
-<!--  <br><br><br><br><br>-->
-  
-<!--    <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>-->
-<!--<h4 class="writing-top">Blogs you</h4>-->
-<!--<h4 class="writing-base">can fork</h4>-->
-<!-- <div class="opaque-overlay"></div>-->
-<!--  <div class="opaque-overlay-thin"></div>-->
-
-
-<!--  </header>-->
-<!--
-<!--<header>-->
-
-
-<!--  <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg"></img>-->
-<!--<h4 class="writing-top">Blogs   you</h4>-->
-<!--<h4 class="writing-base">can      fork</h4>-->
-<!-- <div class="opaque-overlay"></div>-->
-<!--  <div class="opaque-overlay-thin"></div>-->
-
-<!--  </header>-->
-
-  
-  <!-- OLD BLAGS U CAN FORK HEADER CODE 
-  
-
-  
-  <header> -->
-
-
   <style>
     body {
       font-family: 'Josefin Sans', 'Century Gothic' !important;
     }
     </style>
       <br>
-     <p class="choose-a-font preview-title-choose-font mobile-hide">Title</p><p class="choose-a-font preview-text-choose-font mobile-hide">Body</p>
+     <!--<p class="choose-a-font preview-title-choose-font mobile-hide">Title</p><p class="choose-a-font preview-text-choose-font mobile-hide">Body</p>-->
+           
       <div class="font-select-div mobile-hide">
-    <div class="font-selector">
+    <div class="font-selector"><!-- FOR TITLE -->
 <select>
 </select>
 </div>
 <br>
 
-<div class="font-selector-text">
+<div class="font-selector-text"><!--FOR BODY -->
 <select>
 </select>
 </div>
@@ -78,7 +47,7 @@
   </div>
   <% end %>
 </div>
-<button onclick="changeColor()" class="color-button mobile-hide">Random Color</button>
+<!--<button onclick="changeColor()" class="color-button mobile-hide">Random Color</button>-->
 <!--<button onclick="testAlert()">Test Alert</button>-->
 <table class="table posts">
   <tbody>

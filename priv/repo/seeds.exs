@@ -11,15 +11,14 @@
 # and so on) as they will fail if something goes wrong.
 
 topics = [
-  {"NEWS", :news},
+  {"RANDOM", :random},
   {"HAPPINESS", :happiness},
   {"HACKING", :hacking},
+  {"NEWS", :news},
   {"TECHNOLOGY", :technology},
   {"ART + MUSIC", :art_and_music},
   {"MYSTERIES", :mysteries},
-  {"CLASSIC", :classic},
-  {"RANDOM", :random}
-]
+  {"CLASSIC", :classic},]
 
 LiveStory.Repo.transaction fn ->
   topics

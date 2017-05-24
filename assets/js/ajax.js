@@ -1,5 +1,5 @@
 document.addEventListener("ajax:success", function(event) {
-  if (event.target && event.target.hasAttribute("ujs-remote")) {
+  if (event.target && event.target.hasAttribute("ujs-json")) {
     var response = JSON.parse(event.data.xhr.response);
     var post_id = response.post_id;
     var upvotes_container = $("#post_" + response.post_id + " .upvote-count");
@@ -18,5 +18,7 @@ document.addEventListener("ajax:success", function(event) {
     var upvote_btns = $("#post_" + response.post_id + " .upvote-btn");
     upvote_btns.text("⇧ " + current_count);
     upvotes_container.data("current-count", current_count);
-  }
+  } else if (event.target && event.target.hasAttribute("ujs-eval")) {
+    eval(event.data.xhr.responseText);
+  };
 });

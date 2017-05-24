@@ -1,6 +1,8 @@
 defmodule LiveStory.Web.UpvoteController do
   use LiveStory.Web, :controller
 
+  import LiveStory.Plugs
+
   alias LiveStory.Stories
   alias LiveStory.Web.ErrorHandler
 
@@ -26,14 +28,5 @@ defmodule LiveStory.Web.UpvoteController do
     {:ok, _post} = Stories.delete_upvote(post, conn.assigns.user.id)
     conn
     |> render("deleted.json", post: post)
-  end
-
-  defp set_user(conn, _opts) do
-    assign(conn, :user, Guardian.Plug.current_resource(conn))
-  end
-
-  defp set_post(conn, _opts) do
-    %{"post_id" => id} = conn.params
-    assign(conn, :post, Stories.get_post!(id))
   end
 end

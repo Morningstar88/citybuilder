@@ -6,6 +6,7 @@ defmodule LiveStory.Stories do
   alias LiveStory.Repo
 
   alias LiveStory.Auths.User
+  alias LiveStory.Stories.Comment
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.Topic
   alias LiveStory.Stories.Upvotes
@@ -243,6 +244,21 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def post_comments(post_id) do
+    from(c in Comment,
+      where: c.post_id == ^post_id,
+      order_by: [desc: :id]
+    ) |> Repo.all
+  end
+
+  def create_comment(params, post_id, user_id) do
+    %Comment{}
+    |> comment_changeset(params)
+    |> put_change(:user_id, user_id)
+    |> put_change(:post_id, post_id)
+    |> Repo.insert
+  end
+
   def delete_upvote(%Post{id: post_id}, user_id) do
     Repo.transaction fn ->
       upvote = Repo.get_by!(Upvotes, post_id: post_id, user_id: user_id)
@@ -254,10 +270,22 @@ defmodule LiveStory.Stories do
     end
   end
 
+  def new_post_comment(post) do
+    post
+    |> Ecto.build_assoc(:comments)
+    |> comment_changeset()
+  end
+
   defp post_changeset(%Post{} = post, attrs) do
     post
     |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
     |> validate_required([:title, :body, :user_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
+  end
+
+  def comment_changeset(%Comment{} = comment, attrs \\ %{}) do
+    comment
+    |> cast(attrs, [:guest_name, :body])
+    |> validate_required([:body])
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

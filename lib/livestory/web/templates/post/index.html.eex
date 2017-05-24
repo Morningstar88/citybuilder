@@ -3,22 +3,19 @@
 
 <header>
   <br><br><br><br><br>
-
-  <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg"></img>
-<h4 class="writing-top">Blogs   you</h4>
-<h4 class="writing-base">can      fork</h4>
- <div class="opaque-overlay"></div>
-  <div class="opaque-overlay-thin"></div>
-
-  </header>
-  
-  <!-- OLD BLAGS U CAN FORK HEADER CODE 
   
     <img class="header-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620%20(1).jpeg"></img>
 <h4 class="writing-top">Blogs you</h4>
 <h4 class="writing-base">can fork</h4>
  <div class="opaque-overlay"></div>
   <div class="opaque-overlay-thin"></div>
+
+
+  </header>
+  
+  <!-- OLD BLAGS U CAN FORK HEADER CODE 
+  
+
   
   <header> -->
   <br><br><br><br><br>

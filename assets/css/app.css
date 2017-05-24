@@ -4,20 +4,15 @@
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
 /*
-
 RESOURCES
-
-
 */
 
 /* WORKING MEDIA QUERY CODE
-
 @media screen and (min-width: 180px) {
     body {
         background-color: lightgreen !important;
     }
 }
-
 */
 
 
@@ -53,26 +48,20 @@ body
 
 .writing-top
 {
-    font-family: 'Raleway' !important;
-    font-size: 120px !important;
-    font-weight: 100;
-    font-variant: small-caps;
+    font-family: Helvetica !important;
+    font-size: 100px !important;
+    font-weight: 700;
 
     position: absolute;
     z-index: 3;
 
     margin-top: -5%;
-    margin-left: -14%;
+    margin-left: -12%;
 
-    white-space: pre-wrap;
-    letter-spacing: -10px;
+    letter-spacing: -15px;
 
-    color: rgba(255,170,20,.60); /*rgba(220,120,0,0.80);*/
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
-    -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px rgba(255,255,255,.8);
-
-    -webkit-text-fill-color: transparent;
+    color: rgba(255,220,220,.80); /*rgba(220,120,0,0.80);*/
+    text-shadow: 1px 1px 1px rgba(5,5,5,.3);
 }
 
 /* MQ */
@@ -89,26 +78,20 @@ body
 
 .writing-base
 {
-    font-family: 'Raleway' !important;
-    font-size: 120px !important;
-    font-weight: 100;
-    font-variant: small-caps;
+    font-family: Helvetica !important;
+    font-size: 100px !important;
+    font-weight: 600;
 
     position: absolute;
     z-index: 2;
 
     margin-top: 4%;
-    margin-left: -16%;
+    margin-left: -12%;
 
-    white-space: pre-wrap;
     letter-spacing: -8px;
 
-    color: rgba(240,150,20,.80);
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
-    -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px rgba(255,255,255,.8);
-
-    -webkit-text-fill-color: transparent;
+    color: rgba(255,220,220,.80);
+    text-shadow: 1px 1px 1px rgba(5,5,5,.3);
 }
 
 /* MQ */
@@ -127,11 +110,9 @@ body
     z-index: -1;
 
     width: 105%;
-    height: 105%;
+    height: 90%;
     margin-top: -18%;
     margin-left: -19%;
-
-    box-shadow: 2px 2px 2px rgba(50,50,50,.8);
 }
 
 /* MQ */
@@ -143,51 +124,6 @@ body
         display: none !important;
     }
 }
-
-
-.opaque-overlay
-{
-    position: absolute;
-    z-index: 1;
-    /*background-size: cover;*/
-
-    display: block;
-
-    width: 105%;
-    height: 105%;
-    margin-top: -18%;
-    margin-left: -19%;
-
-    background: rgba(30,30,35,.5);
-}
-
-/* MQ */
-
-@media (max-width: 800px)
-{
-    .opaque-overlay
-    {
-        display: none !important;
-    }
-}
-
-.opaque-overlay-thin
-{
-    position: absolute;
-    z-index: 4;
-    /*background-size: cover;*/
-
-    display: block;
-
-    width: 105%;
-    height: 105%;
-    margin-top: -18%;
-    margin-left: -19%;
-
-    background: rgba(50,30,85,.10);
-}
-
-
 
 .sign-up-form-btn
 {
@@ -305,9 +241,6 @@ body
 
     -webkit-text-fill-color: transparent;
 }
-
-
-
 
 .display-each-headline a
 {
@@ -533,6 +466,47 @@ body
 
 /* END SIDEBAR */
 
+.opaque-overlay
+{
+    position: absolute;
+    z-index: 1;
+    /*background-size: cover;*/
+
+    display: block;
+
+    width: 105%;
+    height: 90%;
+    margin-top: -18%;
+    margin-left: -19%;
+
+    background: rgba(50,30,85,.6);
+}
+
+/* MQ */
+
+@media (max-width: 800px)
+{
+    .opaque-overlay
+    {
+        display: none !important;
+    }
+}
+
+.opaque-overlay-thin
+{
+    position: absolute;
+    z-index: 4;
+    /*background-size: cover;*/
+
+    display: block;
+
+    width: 105%;
+    height: 90%;
+    margin-top: -18%;
+    margin-left: -19%;
+
+    background: rgba(50,30,85,.15);
+}
 
 
 /* MQ */
@@ -830,9 +804,9 @@ a.logout-button
 .whats-happening-button
 {
     /*WHAT's UP*/
-    font-family: 'Raleway';
+    font-family: Helvetica;
     font-size: 90px;
-    font-weight: 500;
+    font-weight: 800;
 
     position: absolute;
 
@@ -846,11 +820,10 @@ a.logout-button
     text-align: center;
     letter-spacing: -9px;
 
-    color: rgba(10,10,160,.8);
-    border: 1px double rgba(10,10,10,.1);
+    color: rgba(200,10,150,.8);
+    border: 1px double rgba(10,10,10,.6);
     border-radius: 1px 3px 0 10px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 70% 30%;
-    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;*/
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
     text-shadow: 1px 1px 1px rgba(150,10,150,.38);
     text-shadow: 1px 1px 0 rgba(100,20,190,.3);
@@ -889,7 +862,6 @@ STARRY NIGHT SKY 8/10
 https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-116191.jpeg
 DARKER STARRY NIGHT SKY:
 https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
-
 */
 
 
@@ -1086,7 +1058,6 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
    .multi-letter-7 {
       color: rgba(20,120,230,0.6);
   }
-
 */
 
 
@@ -1406,9 +1377,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 /* http://stackoverflow.com/questions/2360386/prevent-box-shadow-from-showing-on-a-specific-side
-
 http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
-
 */
 
 .display-post-body-wrapper
@@ -1540,27 +1509,22 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*BLOGS YOU CAN FORK LETTERS*/
 
 /*
-
 #multi-colored-letter-1{
     color: rgba(150,40,150,0.75) !important;
     text-shadow: rgba();
     
 }
-
 #multi-colored-letter-2{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-3{
     color: rgba();
     text-shadow: rgba();
 }
-
 */
 
 /*
-
 #multi-colored-letter-4{
     /* g */
 
@@ -1568,64 +1532,52 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     color: rgba(20,130,10,0.7);
     text-shadow: rgba();
 }
-
 #multi-colored-letter-5{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-6{
     /* y */ /*
    color: rgba(180,0,0,0.8);
     text-shadow: rgba();
 }
-
 #multi-colored-letter-7{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-8{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-9{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-10{
     /* A */ /*
     color: rgba(20,20,20,0.1);
     text-shadow: rgba(255,255,255,0.9), rgba(100,100,100,0.7);
 }
-
 #multi-colored-letter-11{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-12{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-13{
     color: rgba();
     text-shadow: rgba();
 }
-
 #multi-colored-letter-14 {
     color: rgba(200,100,20,0.8);
     text-shadow: rgba();
 }
-
 #multi-colored-letter-15 {
     color: rgba();
     text-shadow: rgba();
 }
-
 */
 
 #btn-huge-div

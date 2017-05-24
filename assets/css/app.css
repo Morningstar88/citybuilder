@@ -164,7 +164,9 @@ body
 {
     .sidebar-div
     {
+        height: 30px;
         margin-left: auto !important;
+        padding-bottom: 300px;
     }
 }
 
@@ -815,7 +817,7 @@ a.logout-button
 
     min-width: 550px;
     max-width: 650px !important;
-    height: 130px;
+    height: auto !important;
     margin-top: -100%;
     margin-left: -70%;
 
@@ -838,11 +840,25 @@ a.logout-button
 {
     .whats-happening-button
     {
-        font-size: 80px;
+        font-size: 80px; /*40 causes no alignment problems*/
 
-        min-width: 350px !important;
-        max-width: 600px !important;
+        display: block;
+
+        min-width: auto !important;
+        max-width: auto !important;
+        max-height: auto;
         margin-left: auto !important;
+        padding: 20px;
+
+        border: none;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .mobile-hide
+    {
+        display: none !important;
     }
 }
 
@@ -1068,6 +1084,19 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 250px;
     height: 200px;
+}
+
+@media (max-width: 800px)
+{
+    .center-wrap
+    {
+        position: relative;
+        top: calc(50% - 100px);
+        left: calc(50% - 125px);
+
+        width: auto !important;
+        height: 200px;
+    }
 }
 
 
@@ -1389,19 +1418,19 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .edit-letter-1
 {
-    color: rgba(0,20,20,.1);
+    color: rgba(0,20,20,.9);
     text-shadow: rgba(00,100,100,.9);
 }
 
 .edit-letter-2
 {
-    color: rgba(0,25,20,.1);
+    color: rgba(0,25,20,.9);
     text-shadow: rgba(00,100,100,.9);
 }
 
 .edit-letter-3
 {
-    color: rgba(0,30,20,.1);
+    color: rgba(200,100,20,.5);
     text-shadow: rgba(00,100,100,.9);
 }
 

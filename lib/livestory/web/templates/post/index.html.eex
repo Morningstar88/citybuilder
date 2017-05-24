@@ -20,8 +20,8 @@
     }
     </style>
       <br>
-     <p class="choose-a-font preview-title-choose-font">Title</p><p class="choose-a-font preview-text-choose-font">Body</p>
-      <div class="font-select-div">
+     <p class="choose-a-font preview-title-choose-font mobile-hide">Title</p><p class="choose-a-font preview-text-choose-font mobile-hide">Body</p>
+      <div class="font-select-div mobile-hide">
     <div class="font-selector">
 <select>
 </select>
@@ -50,8 +50,7 @@
 <% end %>
 </div>
 
-<button onclick="changeColor()" class="color-button">Random Color</button>
-<button onclick="testAlert()">Test Alert</button>
+
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
@@ -60,6 +59,8 @@
   </div>
   <% end %>
 </div>
+<button onclick="changeColor()" class="color-button mobile-hide">Random Color</button>
+<!--<button onclick="testAlert()">Test Alert</button>-->
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>

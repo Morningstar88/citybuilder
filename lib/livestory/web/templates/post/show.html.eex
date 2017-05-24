@@ -32,6 +32,7 @@
         <%= for comment <- @comments do %>
         <%= render "_comment.html", comment: comment, class: "comment-class" %>
         <% end %>
+        <br><br><br>  <br><br><br>
       </tbody>
     </table>
      <br><br><br> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>

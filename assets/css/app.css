@@ -769,8 +769,22 @@ body
     box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
-.comment-class {
-    height: 900px !important;
+.commenter {
+    font-size: 30px; 
+}
+
+.comment-body {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 5%;
+    margin-left: -12%;
+    border: 1px solid rgba(1,50,1,0.8);
+    padding: 200px;
+    white-space: pre-wrap;
+}
+
+#body-editor {
+    height: 200px;
 }
 
 /* MQ */

@@ -11,7 +11,7 @@
   </div>
   <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-    <%= textarea f, :body, class: "form-control", id: "body-editor", placeholder: "Comment" %>
+    <%= textarea f, :body, class: "form-control", id: "body-editor", placeholder: "1. Short and Sweet. Max 1100 characters.  \n2. Please don't out personal info. \n3. Try not to be a passive-aggresive jerk." %>
     <%= error_tag f, :body %>
   </div>
   <div class="form-group">

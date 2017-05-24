@@ -30,7 +30,7 @@
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>
-        <%= render "_comment.html", comment: comment %>
+        <%= render "_comment.html", comment: comment, class: "comment-class" %>
         <% end %>
       </tbody>
     </table>

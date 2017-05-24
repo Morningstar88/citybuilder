@@ -761,6 +761,18 @@ body
     color: teal !important;
 }
 
+.comment-btn {
+    border-radius: 3px 10px 20px 15px !important;
+    color: rgba(1,1,1,0.87) !important;
+    background-color: rgba(220,120,0,0.9) !important;
+    height: 10% !important;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+
+.comment-class {
+    height: 900px !important;
+}
+
 /* MQ */
 
 @media (max-width: 900px)

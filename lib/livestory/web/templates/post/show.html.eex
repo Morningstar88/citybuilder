@@ -26,7 +26,7 @@
        <%= @post.body %>
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>
-      <h1>Comments!</h1>
+      <h1>Comm<span class="reversed-letter">e</span>nts<span class="orange">!</span></h1>
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>

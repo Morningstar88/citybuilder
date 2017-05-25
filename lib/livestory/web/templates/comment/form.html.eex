@@ -15,6 +15,6 @@
     <%= error_tag f, :body %>
   </div>
   <div class="form-group">
-    <%= submit "All The World's a Stage", class: "btn btn-warning block-btn comment-btnm" %>
+    <%= submit "All The World's a Stage", class: "btn btn-warning block-btn comment-btn" %>
   </div>
 <% end %>

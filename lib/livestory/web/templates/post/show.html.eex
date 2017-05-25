@@ -1,12 +1,12 @@
 <!--<h2>Show Post</h2>-->
 
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Chivo:500,600,700|Josefin Sans|Libre+Franklin:200,300,400,800|Fira+Sans:700,800|Cardo|Radley|Cantarell|Montserrat:200,300,400,500,600,700,800|Raleway:100,200,300,400' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Chivo:500,600,700|Josefin Sans|Cutive+Mono:300,400|Montserrat:200,300,400,500,600,700,800|Raleway:100,200,300,400' rel='stylesheet'
   type='text/css'>
 
   <header class="show-page-header">
-    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-main" %></span>
-     <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit"%></span>
-     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class: "btn btn-default show-page-fork-btn"%></span>
+    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-white-btn" %></span><!--show-main -->
+     <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit-white-btn"%></span><!--show-edit -->
+     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class:  "btn btn-defaul show-white-fork-btn"%></span><!--show-page-fork-button-->
 
 
 
@@ -26,15 +26,18 @@
        <%= @post.body %>
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>
-    <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post) %>
+      <h1>Comm<span class="reversed-letter">e</span>nts<span class="orange">!</span></h1>
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>
         <%= render "_comment.html", comment: comment, class: "comment-class" %>
         <% end %>
-        <br><br><br>  <br><br><br>
+        <hr>
+        <br><br>
       </tbody>
     </table>
+  
+        <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post) %>
      <br><br><br> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
     <!--</div>-->
     <br>

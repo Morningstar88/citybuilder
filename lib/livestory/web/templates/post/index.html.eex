@@ -49,6 +49,7 @@
 </div>
 <!--<button onclick="changeColor()" class="color-button mobile-hide">Random Color</button>-->
 <!--<button onclick="testAlert()">Test Alert</button>-->
+<br>
 <table class="table posts">
   <tbody>
 <%= for post <- @posts do %>

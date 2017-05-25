@@ -4,14 +4,15 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
+  <h3>Comments!</h3>
   <div class="form-group">
     <%= label f, :guest_name, class: "control-label" %>
-    <%= text_input f, :guest_name, class: "form-control", placeholder: "Your name" %>
+    <%= text_input f, :guest_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?" %>
     <%= error_tag f, :guest_name %>
   </div>
   <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-    <%= textarea f, :body, class: "form-control", id: "body-editor", placeholder: "1. Short and Sweet. Max 1100 characters.  \n2. Please don't out personal info. \n3. Try not to be a passive-aggresive jerk." %>
+    <%= textarea f, :body, class: "form-control", id: "comment-body-editor", placeholder: "1. Short and Sweet. Max 1100 characters.  \n2. Please don't out personal info. \n3. Try not to be a passive-aggresive jerk." %>
     <%= error_tag f, :body %>
   </div>
   <div class="form-group">

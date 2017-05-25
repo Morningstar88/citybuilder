@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400|Arima+Madurai:200,300,400,500|Source Sans Pro:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -61,9 +61,10 @@ body
     letter-spacing: -15px;
 
     color: rgba(255,255,255,.01); /*rgba(220,120,0,0.80);*/
-    text-shadow: 1px 1px 1px rgba(5,5,5,.0);
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/violet-flame-pexels.jpeg) 50% 50%;
     -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px rgba(5,5,5,.0);
+
     -webkit-text-fill-color: transparent;
 }
 
@@ -116,8 +117,8 @@ body
     height: 50%;
     margin-top: -18%;
     margin-left: -19%;
-    
-    box-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+
+    box-shadow: 2px 2px 2px rgba(100,100,100,.6);
 }
 
 /* MQ */
@@ -475,7 +476,7 @@ body
 /*{*/
 /*    position: absolute;*/
 /*    z-index: 1;*/
-    /*background-size: cover;*/
+/*background-size: cover;*/
 
 /*    display: block;*/
 
@@ -501,7 +502,7 @@ body
 /*{*/
 /*    position: absolute;*/
 /*    z-index: 4;*/
-    /*background-size: cover;*/
+/*background-size: cover;*/
 
 /*    display: block;*/
 
@@ -641,11 +642,16 @@ body
     position: relative;
 
     display: inline-block;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/girl-reading-fairytale-book.jpeg) 70% 30% !important;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
 
+    color: rgba(255,255,255,.9) !important;
     border-radius: 4px;
-    background: rgba(200,100,20,0.9) !important;
-    color: rgba(20,20,20,0.9) !important;
+    background: rgba(2,170,140,.9) !important;
 }
+
+
 .font-selector:before
 {
     position: absolute;
@@ -678,7 +684,7 @@ body
 
     cursor: pointer;
 
-    color: rgba(10,10,10,0.9);
+    color: rgba(255,255,255,.9);
     border: 0;
     border-radius: 0;
     outline: 0;
@@ -705,9 +711,10 @@ body
 
     display: inline-block;
 
+    color: rgba(255,255,255,.9);
     border-radius: 4px;
-    background: rgba(200,100,10,0.8) !important;
- }
+    background: rgba(2,180,170,.8) !important;
+}
 .font-selector-text:before
 {
     position: absolute;
@@ -740,7 +747,7 @@ body
 
     cursor: pointer;
 
-    color: rgba(10,10,10,0.9);
+    color: rgba(255,255,255,.9);
     border: 0;
     border-radius: 0;
     outline: 0;
@@ -754,36 +761,71 @@ body
 {
     font-size: 15px;
 
+    color: teal !important;
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
     background: #2a3a4a;
-    color: teal !important;
 }
 
-.comment-btn {
-    border-radius: 3px 10px 20px 15px !important;
-    color: rgba(1,1,1,0.87) !important;
-    background-color: rgba(220,120,0,0.9) !important;
+.comment-btn
+{
     height: 10% !important;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+
+    color: rgba(1,1,1,1) !important;
+    border-radius: 3px 10px 20px 15px !important;
+    background-color: rgba(180,90,0,.9) !important;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.9);
 }
 
-.commenter {
-    font-size: 30px; 
-}
-
-.comment-body {
-    position: absolute;
+.commenter
+{
+    font-family: 'Raleway' ;
     font-size: 25px;
-    margin-top: 5%;
-    margin-left: -12%;
-    border: 1px solid rgba(1,50,1,0.8);
-    padding: 200px;
-    white-space: pre-wrap;
+    font-weight: 600;
+    font-variant: small-caps;
+
+    position: absolute;
+
+    margin-top: -3%;
+    margin-left: 5%;
+    padding-bottom: 100px;
+
+    color: rgba(20,20,20,1);
+    text-shadow: 1px 1px 1px rgba(100,100,100,.5);
 }
 
-#body-editor {
+.comment-body
+{
+    font-family: 'Raleway' ;
+    font-size: 25px;
+    font-weight: 200;
+
+    overflow: auto;
+
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    padding-bottom: 100px;
+
+    white-space: pre-wrap !important;
+    word-break: normal;
+
+    color: rgba(30,30,30,1);
+    /*border: 1px solid rgba(1,50,1,.8);*/
+    text-shadow: 1px 1px 1px rgba(100,100,100,.5);
+}
+
+
+#comment-title-editor
+{
+    font-size: 22px;
+}
+
+#comment-body-editor
+{
+    font-size: 22px;
+
     height: 200px;
 }
 

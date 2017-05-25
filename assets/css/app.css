@@ -243,9 +243,8 @@ body
     color: rgba(20,20,200,.3);
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
-    text-shadow: 0 0 2px rgba(100,100,200,.4);
-
     -webkit-text-fill-color: transparent;
+     text-shadow: 0 0 2px rgba(100,100,200,.4);
 }
 
 .display-each-headline a
@@ -774,8 +773,13 @@ body
 
     color: rgba(1,1,1,1) !important;
     border-radius: 3px 10px 20px 15px !important;
-    background-color: rgba(180,90,0,.9) !important;
+    /*background-color: rgba(180,90,0,.9) !important;*/
     box-shadow: 1px 1px 1px rgba(0,0,0,.9);
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30% !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .commenter
@@ -979,9 +983,53 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     font-family: garamond !important;
 }
+/* SHOW PAGE NEW WHITE BUTTONS */
 
+.show-white-btn{
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 2%;
+    height: 25%;
+    width: 17%;
+    color: rgba(0,0,0,1) !important;
+    border-radius: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 50% 50% !important;
+    
+}
 
-/* SHOW PAGE BUTTONS */
+.show-white-btn:hover{
+    background-color: rgba(0,170,150,0.2) !important;
+}
+
+.show-edit-white-btn {
+    position: absolute;
+    margin-top: 12%;
+    margin-left: 31%;
+    height: 25%;
+    width: 17%;
+    color: rgba(200,100,0,1) !important;
+    border-radius: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 45% 45% !important;
+}
+
+.show-white-fork-btn{
+      position: absolute;
+    margin-top: 12%;
+    margin-left: 63%;
+    height: 25%;
+    width: 17%;
+    color: rgba(0,0,0,1) !important;
+    border-radius: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 60% 55% !important;
+}
+
+/* SHOW PAGE OLD ORNAGE BUTTONS */
 
 .show-main
 {
@@ -1321,9 +1369,10 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     height: 150px;
     margin-left: -18%;
 
-    background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50% !important;
+    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) no-repeat 50% 50% !important;
     background: rgba(255,255,255,0);
     box-shadow: 2px 2px 2px rgba(20,20,20,.8);
+    /* ORIG METAL GREY HEADER: https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg*/
 }
 
 /*SHOW PAGE*/
@@ -1344,11 +1393,12 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     letter-spacing: 2px;
 
     color: rgba(3,3,3,.8);
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;
-    -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px rgba(10,10,10,.6);
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    text-shadow: 1px 1px 1px rgba(10,10,10,.9);
 
-    -webkit-text-fill-color: transparent;
+  
 }
 
 @media (max-width: 800px)
@@ -1374,7 +1424,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     height: auto;
     margin-top: -7%;
     margin-left: -8%;
-    padding-left: 2px;
+    padding-left: 80px;
 
     white-space: pre-wrap;
     letter-spacing: 1px;

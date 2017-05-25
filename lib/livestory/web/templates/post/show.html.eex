@@ -26,15 +26,18 @@
        <%= @post.body %>
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>
-    <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post) %>
+      <h1>Comments!</h1>
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>
         <%= render "_comment.html", comment: comment, class: "comment-class" %>
         <% end %>
-        <br><br><br>  <br><br><br>
+        <hr>
+        <br><br>
       </tbody>
     </table>
+  
+        <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post) %>
      <br><br><br> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
     <!--</div>-->
     <br>

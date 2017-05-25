@@ -1410,7 +1410,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     }
 }
 
-
+.glass {
+    webkit-filter: blur(5px) !important;
+}
 
 
 .display-post-body-show

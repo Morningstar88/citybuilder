@@ -4,7 +4,6 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-  <h3>Comments!</h3>
   <div class="form-group">
     <%= label f, :guest_name, class: "control-label" %>
     <%= text_input f, :guest_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?" %>

@@ -142,7 +142,7 @@ body
 .sidebar-div
 {
     font-size: 20px !important;
-    font-weight: 500;
+    font-weight: 700;
     /*display: inline;*/
     font-variant: small-caps;
 
@@ -151,14 +151,30 @@ body
     margin-top: -20%;
     margin-left: 67%;
 
-    color: rgba(20,20,20,.8) !important;
-    text-shadow: 3px,3px,9px rgba(100,100,100,.3);
+    letter-spacing: 1px;
+
+    color: rgba(20,20,200,.8) !important;
+    color: rgba(255,255,255,.01); /*rgba(220,120,0,0.80);*/
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 100% 50%;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 0 rgba(200,100,190,.4) !important; /* OVERLAY CHANGE COLOR */
+    /*text-shadow: 1px 1px 1px rgba(5,5,5,.0);*/
+
+    -webkit-text-fill-color: transparent;
 }
 
 .sidebar-div a
 {
-    color: rgba(20,20,20,1);
-    text-shadow: 0 1px 1px rgba(100,100,100,.4);
+    color: rgba(0,1,1,.8) !important;
+}
+
+.sidebar-div a:hover
+{
+    font-size: 22px !important;
+
+    letter-spacing: -1px;
+
+    color: rgba(20,80,80,.7) !important;
 }
 
 @media (max-width:800px)
@@ -582,7 +598,7 @@ body
 
 .preview-title
 {
-    font-size: 38px;
+    font-size: 37px;
     font-weight: bold;
 
     margin-left: -1%;
@@ -816,9 +832,9 @@ body
 
 .comment-btn
 {
-    font-size: 34px;
+    font-size: 44px;
 
-    height: 15% !important;
+    height: 25% !important;
 
     color: rgba(200,100,1,1) !important;
     border: none !important;
@@ -826,6 +842,11 @@ body
     background: black !important;
     /*background-color: rgba(180,90,0,.9) !important;*/
     box-shadow: 1px 1px 1px rgba(0,0,0,.9);
+    /*color: rgba(20,20,200,.3);*/
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 8% 8% !important;*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    text-shadow: 1px 1px 2px rgba(10,10,200,.9) !important;
 }
 
 .commenter
@@ -843,7 +864,7 @@ body
 
     text-align: center;
 
-    color: rgba(180,80,20,.87);
+    color: rgba(160,80,120,.87);
     text-shadow: 0 1px 1px rgba(160,60,10,.5);
 }
 
@@ -1199,7 +1220,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     white-space: pre;
     letter-spacing: 3px;
 
-    color: rgba(240,100,20,.8);
+    color: rgba(200,100,30,.7);
 }
 
 .login-btn:hover
@@ -1225,7 +1246,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     letter-spacing: -3px;
 
-    color: rgba(230,80,4,.8);
+    color: rgba(150,80,160,.4);
 }
 
 .sign-up-btn:hover

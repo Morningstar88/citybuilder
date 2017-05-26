@@ -2,7 +2,6 @@ defmodule LiveStory.Web.PostController do
   use LiveStory.Web, :controller
 
   alias LiveStory.Stories
-  alias LiveStory.Web.ErrorHandler
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user

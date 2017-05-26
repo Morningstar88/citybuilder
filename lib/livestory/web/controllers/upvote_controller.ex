@@ -4,7 +4,6 @@ defmodule LiveStory.Web.UpvoteController do
   import LiveStory.Plugs
 
   alias LiveStory.Stories
-  alias LiveStory.Web.ErrorHandler
 
   # plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]

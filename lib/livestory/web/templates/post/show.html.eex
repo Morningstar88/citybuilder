@@ -36,8 +36,12 @@
         <br><br>
       </tbody>
     </table>
-  
-        <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post) %>
+
+    <%= if @conn.assigns.user do %>
+      <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post), conn: @conn %>
+    <% else %>
+      <i>You must be <%= link "signed in", to: user_path(@conn, :signin) %> to comment this post</i>
+    <% end %>
      <br><br><br> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
     <!--</div>-->
     <br>

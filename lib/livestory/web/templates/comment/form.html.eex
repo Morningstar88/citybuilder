@@ -5,9 +5,9 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= label f, :guest_name, class: "control-label" %>
-    <%= text_input f, :guest_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?" %>
-    <%= error_tag f, :guest_name %>
+    <%= label f, :user_name, class: "control-label" %>
+    <%= text_input f, :user_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?", value: @conn.assigns.user.username %>
+    <%= error_tag f, :user_name %>
   </div>
   <div class="form-group">
     <%= label f, :body, class: "control-label" %>

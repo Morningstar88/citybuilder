@@ -284,8 +284,8 @@ defmodule LiveStory.Stories do
 
   def comment_changeset(%Comment{} = comment, attrs \\ %{}) do
     comment
-    |> cast(attrs, [:guest_name, :body])
-    |> validate_required([:body])
+    |> cast(attrs, [:user_name, :body])
+    |> validate_required([:user_name, :body])
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

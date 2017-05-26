@@ -5,6 +5,7 @@ defmodule LiveStory.Web.CommentController do
 
   alias LiveStory.Stories
 
+  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]
   plug :set_user
   plug :set_post
 

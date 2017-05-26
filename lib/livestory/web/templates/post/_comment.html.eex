@@ -1,4 +1,8 @@
 <tr>
-  <td class="commenter"><%= @comment.user_name %></td>
+  <td class="commenter">
+    <%= @comment.user_name %>
+    <br>
+    <%= format_datetime @comment.inserted_at %>
+  </td>
   <td class="comment-body"><%= @comment.body %></td>
 </tr>

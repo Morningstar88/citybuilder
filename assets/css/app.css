@@ -661,7 +661,7 @@ body
 
     color: rgba(200,100,5,.7) !important;
     border-radius: 4px;
-    background: rgba(2,170,140,.4) !important;
+    background: rgba(2,170,140,.4) !important; /*LIGHT TEAL*/
 }
 
 
@@ -1481,6 +1481,40 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .glass
 {
     webkit-filter: blur(5px) !important;
+}
+
+.select-fonts-1 { 
+   color: rgba(); 
+}
+.select-fonts-2 {
+    color: rgba(); }
+.select-fonts-3 { /* L */
+    color: rgba(200,100,1,1); }
+.select-fonts-4 {
+    color: rgba(); }
+.select-fonts-5 { /* C */
+    color: rgba(10,100,255,0.9); }
+.select-fonts-6 { /* T */
+    color: rgba(100,0,100,0.8); }
+.select-fonts-7 {
+    color: rgba(); }
+.select-fonts-8 {
+    color: rgba(200,100,1,1); }
+.select-fonts-9 {
+    color: rgba(); }
+.select-fonts-10 {
+    color: rgba(210,210,3,1);
+    text-shadow: 1px 1px 1px rgba(2,2,2,0.3);}
+.select-fonts-11 {
+    color: rgba(); }
+.select-fonts-12 {
+    color: rgba(1,70,1,0.9); }
+.select-fonts-13 {
+    color: rgba(1,160,255,0.9); }
+.select-fonts-14 {
+    color: rgba(2,170,140,.8); }
+.select-fonts-15 { 
+    color: rgba(); 
 }
 
 

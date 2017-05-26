@@ -582,23 +582,29 @@ body
 
 .preview-title
 {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
+    
+    margin-left: -1%;
+    
+    letter-spacing: 1px;
 
-    color: rgba(20, 20, 20, .85);
-    text-shadow: 2px 2px 2px rgba(100, 100, 100, .4);
+    color: rgba(35, 35, 35, .85);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, .3);
 }
 
 .preview-text
 {
-    font-size: 29px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 35px;
 
     width: 600px !important;
 
     white-space: pre-wrap;
 
-    color: rgba(10, 10, 10, .85);
-    text-shadow: 2px 2px 2px rgba(100, 100, 100, .3);
+    color: rgba(25, 25, 25, .85);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, .3);
 }
 
 
@@ -1402,7 +1408,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     /*MUST CHANGE PREVIEW_TEXT TO ALTER WIDTH*/
     font-family: 'Raleway';
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 35px;
     /*Main index page */
@@ -1418,9 +1424,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     color: rgba(200,10,10,.9) !important;
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;*/
-    -webkit-background-clip: text;
+    /*-webkit-background-clip: text;*/
 
-    -webkit-text-fill-color: transparent;
+    /*-webkit-text-fill-color: transparent;*/
 }
 
 .show-page-header
@@ -1481,9 +1487,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .display-post-body-show
 {
     font-family: 'Montserrat';
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 300;
-    line-height: 40px;
+    line-height: 34px;
 
     width: 680px !important;
     height: auto;
@@ -1492,9 +1498,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     padding-left: 80px;
 
     white-space: pre-wrap;
-    letter-spacing: 1px;
+    /*letter-spacing: 0px;*/
 
-    color: rgba(25,25,25,.9);
+    color: rgba(35,35,35,.85);
     text-shadow: 1px 1px 0 rgba(100,100,100,.3);
 }
 

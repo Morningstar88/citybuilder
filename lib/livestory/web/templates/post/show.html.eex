@@ -26,14 +26,15 @@
        <%= @post.body %>
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>
-      <h1>Comm<span class="reversed-letter">e</span>nts<span class="orange">!</span></h1>
+    <br><br><br><hr>
+      <h1>C<span class="burgundy">o</span>mm<span class="orange">e</span>nts<span class="teal-jade">!</span></h1>
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>
         <%= render "_comment.html", comment: comment, class: "comment-class" %>
         <% end %>
         <hr>
-        <br><br>
+        <br><br> <br><br> <br><br>
       </tbody>
     </table>
 

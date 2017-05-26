@@ -4,9 +4,11 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
+  <hr>
+  <h3>Your Comment Here</h3>
   <div class="form-group">
     <%= label f, :user_name, class: "control-label" %>
-    <%= text_input f, :user_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?" %>
+    <%= text_input f, :user_name, class: "form-control", id: "comment-title-editor", placeholder: "Enter Name" %>
     <%= error_tag f, :user_name %>
   </div>
   <div class="form-group">

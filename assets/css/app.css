@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -720,7 +720,7 @@ body
 /* END FONT SELECTOR TEXT */
 .font-selector-text /*Body selector*/
 {
-    position: relative;
+    /*position: relative;*/
     position: absolute;
 
     display: inline-block;
@@ -730,7 +730,7 @@ body
 
     color: rgba(200,100,5,.7);
     border-radius: 4px;
-    background: rgba(2,180,170,.4) !important;
+    background: rgba(100,18,100,.4) !important; /* ORIG rgba(2,180,170,.4) */
 }
 .font-selector-text:before
 {
@@ -779,7 +779,7 @@ body
 {
     font-size: 15px;
 
-    color: teal !important;
+    color: rgba(0,100,100,.3) !important;
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
@@ -933,7 +933,7 @@ a.logout-button
 .whats-happening-button
 {
     /*WHAT's UP*/
-    font-family: Helvetica;
+    font-family: 'Raleway';
     font-size: 90px;
     font-weight: 800;
 
@@ -948,17 +948,40 @@ a.logout-button
     cursor: pointer;
     text-align: center;
     letter-spacing: -9px;
+    /*color: rgba(200,10,150,.8);*/
 
-    color: rgba(200,10,150,.8);
     border: 1px double rgba(150,150,150,.1);
     border-radius: 1px 3px 0 10px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
     -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px rgba(150,10,150,.38);
-    text-shadow: 1px 1px 0 rgba(100,20,190,.3);
+    /*text-shadow: 1px 1px 1px rgba(150,10,150,.38);*/
+    text-shadow: 1px 1px 1px rgba(200,20,90,.2);
+    /*
+    */
+    /*   text-shadow: 1px 1px 0 -webkit-linear-gradient(left,red,yellow)*/
 
     -webkit-text-fill-color: transparent;
 }
+
+/*.whats-happening-opaque-overlay*/
+/*{*/
+/*    font-family: 'Raleway';*/
+/*    font-size: 90px;*/
+/*    font-weight: 800;*/
+
+/*    position: absolute;*/
+/*    z-index: 10;*/
+
+/*    min-width: 550px;*/
+/*    max-width: 650px !important;*/
+/*    height: 130px !important;*/
+/* margin-top: -75%; /*Increment this negative integer to push me up*/
+/*    margin-left: -70%;*/
+
+/*    color: rgba(250,10,150,.5);*/
+/*-webkit-background-clip: text;*/
+/*-webkit-text-fill-color: transparent*/
+/*}*/
 
 @media (max-width: 800px)
 {

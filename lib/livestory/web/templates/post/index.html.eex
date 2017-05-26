@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
   <style>
@@ -39,6 +39,7 @@
 
 
 <span><%= link "What's Up ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>
+<!--<div class="whats-happening-opaque-overlay">What's Up ?</div>-->
 
 <%= if @user do %>
 <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>

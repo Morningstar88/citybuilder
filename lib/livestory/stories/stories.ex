@@ -270,10 +270,10 @@ defmodule LiveStory.Stories do
     end
   end
 
-  def new_post_comment(post) do
+  def new_post_comment(post, comment_attrs \\ %{}) do
     post
     |> Ecto.build_assoc(:comments)
-    |> comment_changeset()
+    |> comment_changeset(comment_attrs)
   end
 
   defp post_changeset(%Post{} = post, attrs) do
@@ -286,6 +286,8 @@ defmodule LiveStory.Stories do
     comment
     |> cast(attrs, [:user_name, :body])
     |> validate_required([:user_name, :body])
+    |> validate_length(:user_name, max: 25) # same in auths username
+    |> validate_length(:body, max: 1100)
   end
 
   defp upvote_changeset(%Upvotes{} = upvote, attrs) do

@@ -83,7 +83,9 @@ defmodule LiveStory.Web.PostController do
     render(conn, "show.html",
       post: post,
       comments: comments,
-      comment_changeset: Stories.new_post_comment(post)
+      comment_changeset: Stories.new_post_comment(post, %{
+        user_name: conn.assigns.user.username
+      })
     )
   end
 

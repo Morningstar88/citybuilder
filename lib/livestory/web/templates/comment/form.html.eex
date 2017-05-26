@@ -6,7 +6,7 @@
   <% end %>
   <div class="form-group">
     <%= label f, :user_name, class: "control-label" %>
-    <%= text_input f, :user_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?", value: @conn.assigns.user.username %>
+    <%= text_input f, :user_name, class: "form-control", id: "comment-title-editor", placeholder: "What's your name?" %>
     <%= error_tag f, :user_name %>
   </div>
   <div class="form-group">

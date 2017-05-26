@@ -1,2 +1,2 @@
 $("#comment-form").replaceWith("<%= escape_javascript render("form.html", changeset: @changeset, action: post_comment_path(@conn, :create, @post), conn: @conn) %>");
-$("#comments").prepend("<%= escape_javascript render(LiveStory.Web.PostView, "_comment.html", comment: @comment) %>");
+$("#comments").append("<%= escape_javascript render(LiveStory.Web.PostView, "_comment.html", comment: @comment) %>");

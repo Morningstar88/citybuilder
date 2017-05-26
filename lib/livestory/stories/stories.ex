@@ -247,7 +247,7 @@ defmodule LiveStory.Stories do
   def post_comments(post_id) do
     from(c in Comment,
       where: c.post_id == ^post_id,
-      order_by: [desc: :id]
+      order_by: [asc: :id]
     ) |> Repo.all
   end
 

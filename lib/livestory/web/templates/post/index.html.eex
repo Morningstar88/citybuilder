@@ -10,7 +10,7 @@
      <!--<p class="choose-a-font preview-title-choose-font mobile-hide">Title</p><p class="choose-a-font preview-text-choose-font mobile-hide">Body</p>-->
            
       <div class="font-select-div mobile-hide">
-          <h3 class="select-fonts">Select fonts!</h3>
+          <h3 class="select-fonts">Select fonts!!</h3>
     <div class="font-selector"><!-- FOR TITLE -->
 <select>
 </select>

@@ -109,6 +109,7 @@ defmodule LiveStory.Auths do
     |> cast(attrs, [:username, :password, :password_confirmation]) #Remove name
     |> validate_required([:username, :password, :password_confirmation]) #Remove name
     |> validate_length(:password, min: 6)
+    |> validate_length(:username, max: 25) # same in comments user name
     |> validate_confirmation(:password)
     |> unique_constraint(:username, message: "Username already taken")
     |> generate_encrypted_password

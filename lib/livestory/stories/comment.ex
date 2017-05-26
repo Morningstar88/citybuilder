@@ -3,7 +3,7 @@ defmodule LiveStory.Stories.Comment do
 
   schema "stories_comments" do
     field :body, :string
-    field :guest_name, :string
+    field :user_name, :string
     belongs_to :user, Livestory.Auth.User
     belongs_to :post, LiveStory.Stories.Post
 

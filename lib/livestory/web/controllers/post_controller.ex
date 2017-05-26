@@ -2,7 +2,6 @@ defmodule LiveStory.Web.PostController do
   use LiveStory.Web, :controller
 
   alias LiveStory.Stories
-  alias LiveStory.Web.ErrorHandler
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
@@ -84,7 +83,9 @@ defmodule LiveStory.Web.PostController do
     render(conn, "show.html",
       post: post,
       comments: comments,
-      comment_changeset: Stories.new_post_comment(post)
+      comment_changeset: Stories.new_post_comment(post, %{
+        user_name: conn.assigns.user.username
+      })
     )
   end
 

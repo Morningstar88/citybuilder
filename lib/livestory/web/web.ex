@@ -22,6 +22,8 @@ defmodule LiveStory.Web do
       import Plug.Conn
       import LiveStory.Web.Router.Helpers
       import LiveStory.Web.Gettext
+
+      alias LiveStory.Web.ErrorHandler
     end
   end
 
@@ -39,6 +41,7 @@ defmodule LiveStory.Web do
       import LiveStory.Web.Router.Helpers
       import LiveStory.Web.ErrorHelpers
       import LiveStory.Web.Gettext
+      import LiveStory.Web.Controller.Helpers
 
       import Phoenix.HTML.SimplifiedHelpers.Truncate
     end

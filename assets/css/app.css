@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -582,23 +582,29 @@ body
 
 .preview-title
 {
-    font-size: 42px;
+    font-size: 38px;
     font-weight: bold;
 
-    color: rgba(20, 20, 20, .85);
-    text-shadow: 2px 2px 2px rgba(100, 100, 100, .4);
+    margin-left: -1%;
+
+    letter-spacing: 1px;
+
+    color: rgba(35, 35, 35, .85);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, .3);
 }
 
 .preview-text
 {
-    font-size: 29px;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 35px;
 
     width: 600px !important;
 
     white-space: pre-wrap;
 
-    color: rgba(10, 10, 10, .85);
-    text-shadow: 2px 2px 2px rgba(100, 100, 100, .3);
+    color: rgba(25, 25, 25, .85);
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, .3);
 }
 
 
@@ -638,7 +644,7 @@ body
     position: absolute;
 
     margin-top: 27%;
-    margin-left: -16.7%;
+    margin-left: 65.7%; /* ORIG 16.7% */
 }
 
 .font-selector
@@ -648,14 +654,14 @@ body
     display: inline-block;
 
     margin-top: 29.5%;
-    margin-left: -16%; /*Moves top one*/
+    margin-left: 66.5%; /*Moves top one ORIG: -16%*/
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/girl-reading-fairytale-book.jpeg) 70% 30% !important;*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
 
     color: rgba(200,100,5,.7) !important;
     border-radius: 4px;
-    background: rgba(2,170,140,.4) !important;
+    background: rgba(2,170,140,.4) !important; /*LIGHT TEAL*/
 }
 
 
@@ -714,17 +720,17 @@ body
 /* END FONT SELECTOR TEXT */
 .font-selector-text /*Body selector*/
 {
-    position: relative;
+    /*position: relative;*/
     position: absolute;
 
     display: inline-block;
 
-    margin-top: 30%;
-    margin-left: -15%; /*Moves top one*/
+    margin-top: 30.2%;
+    margin-left: 67.8%; /*Moves top one*/ /* ORIG -15% - to be stuck on the left. Added 83 to get it to the right */
 
     color: rgba(200,100,5,.7);
     border-radius: 4px;
-    background: rgba(2,180,170,.4) !important;
+    background: rgba(100,18,100,.4) !important; /* ORIG rgba(2,180,170,.4) */
 }
 .font-selector-text:before
 {
@@ -773,7 +779,7 @@ body
 {
     font-size: 15px;
 
-    color: teal !important;
+    color: rgba(0,100,100,.3) !important;
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
@@ -927,7 +933,7 @@ a.logout-button
 .whats-happening-button
 {
     /*WHAT's UP*/
-    font-family: Helvetica;
+    font-family: 'Raleway';
     font-size: 90px;
     font-weight: 800;
 
@@ -942,17 +948,40 @@ a.logout-button
     cursor: pointer;
     text-align: center;
     letter-spacing: -9px;
+    /*color: rgba(200,10,150,.8);*/
 
-    color: rgba(200,10,150,.8);
     border: 1px double rgba(150,150,150,.1);
     border-radius: 1px 3px 0 10px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
     -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px rgba(150,10,150,.38);
-    text-shadow: 1px 1px 0 rgba(100,20,190,.3);
+    /*text-shadow: 1px 1px 1px rgba(150,10,150,.38);*/
+    text-shadow: 1px 1px 1px rgba(200,20,90,.2);
+    /*
+    */
+    /*   text-shadow: 1px 1px 0 -webkit-linear-gradient(left,red,yellow)*/
 
     -webkit-text-fill-color: transparent;
 }
+
+/*.whats-happening-opaque-overlay*/
+/*{*/
+/*    font-family: 'Raleway';*/
+/*    font-size: 90px;*/
+/*    font-weight: 800;*/
+
+/*    position: absolute;*/
+/*    z-index: 10;*/
+
+/*    min-width: 550px;*/
+/*    max-width: 650px !important;*/
+/*    height: 130px !important;*/
+/* margin-top: -75%; /*Increment this negative integer to push me up*/
+/*    margin-left: -70%;*/
+
+/*    color: rgba(250,10,150,.5);*/
+/*-webkit-background-clip: text;*/
+/*-webkit-text-fill-color: transparent*/
+/*}*/
 
 @media (max-width: 800px)
 {
@@ -1402,7 +1431,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     /*MUST CHANGE PREVIEW_TEXT TO ALTER WIDTH*/
     font-family: 'Raleway';
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
     line-height: 35px;
     /*Main index page */
@@ -1418,9 +1447,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     color: rgba(200,10,10,.9) !important;
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/winter_arch_black_and_white.jpeg) 30% 50%;*/
-    -webkit-background-clip: text;
+    /*-webkit-background-clip: text;*/
 
-    -webkit-text-fill-color: transparent;
+    /*-webkit-text-fill-color: transparent;*/
 }
 
 .show-page-header
@@ -1477,13 +1506,78 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     webkit-filter: blur(5px) !important;
 }
 
+.select-fonts-1
+{
+    color: rgba();
+}
+.select-fonts-2
+{
+    color: rgba();
+}
+.select-fonts-3
+{
+    /* L */
+    color: rgba(200,100,1,1);
+}
+.select-fonts-4
+{
+    color: rgba();
+}
+.select-fonts-5
+{
+    /* C */
+    color: rgba(10,100,255,.9);
+}
+.select-fonts-6
+{
+    /* T */
+    color: rgba(100,0,100,.8);
+}
+.select-fonts-7
+{
+    color: rgba();
+}
+.select-fonts-8
+{
+    color: rgba(200,100,1,1);
+}
+.select-fonts-9
+{
+    color: rgba();
+}
+.select-fonts-10
+{
+    color: rgba(210,210,3,1);
+    text-shadow: 1px 1px 1px rgba(2,2,2,.3);
+}
+.select-fonts-11
+{
+    color: rgba();
+}
+.select-fonts-12
+{
+    color: rgba(1,70,1,.9);
+}
+.select-fonts-13
+{
+    color: rgba(1,160,255,.9);
+}
+.select-fonts-14
+{
+    color: rgba(2,170,140,.8);
+}
+.select-fonts-15
+{
+    color: rgba();
+}
+
 
 .display-post-body-show
 {
     font-family: 'Montserrat';
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 300;
-    line-height: 40px;
+    line-height: 34px;
 
     width: 680px !important;
     height: auto;
@@ -1492,9 +1586,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     padding-left: 80px;
 
     white-space: pre-wrap;
-    letter-spacing: 1px;
+    /*  j letter-spacing: 0px;*/
 
-    color: rgba(25,25,25,.9);
+    color: rgba(35,35,35,.85);
     text-shadow: 1px 1px 0 rgba(100,100,100,.3);
 }
 

@@ -632,18 +632,30 @@ body
     text-shadow: 2px 2px 2px rgba(100, 100, 100, .3);
 }
 
+.select-fonts
+{
+    /* Select Fonts Text*/
+    position: absolute;
+
+    margin-top: 27%;
+    margin-left: -16.7%;
+}
+
 .font-selector
 {
-    position: relative;
+    position: absolute;
 
     display: inline-block;
+
+    margin-top: 29.5%;
+    margin-left: -16%; /*Moves top one*/
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/girl-reading-fairytale-book.jpeg) 70% 30% !important;*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
 
-    color: rgba(255,255,255,.9) !important;
+    color: rgba(200,100,5,.7) !important;
     border-radius: 4px;
-    background: rgba(2,170,140,.9) !important;
+    background: rgba(2,170,140,.4) !important;
 }
 
 
@@ -671,8 +683,8 @@ body
     font-size: 18px;
     line-height: 40px;
 
-    width: 200px;
-    max-width: 200px;
+    width: 140px;
+    max-width: 140px;
     height: 40px;
     max-height: 40px;
     padding: 0 10px;
@@ -696,19 +708,23 @@ body
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
-    background: #fff;
+    background: #008080;
 }
 
 /* END FONT SELECTOR TEXT */
-.font-selector-text
+.font-selector-text /*Body selector*/
 {
     position: relative;
+    position: absolute;
 
     display: inline-block;
 
-    color: rgba(255,255,255,.9);
+    margin-top: 30%;
+    margin-left: -15%; /*Moves top one*/
+
+    color: rgba(200,100,5,.7);
     border-radius: 4px;
-    background: rgba(2,180,170,.8) !important;
+    background: rgba(2,180,170,.4) !important;
 }
 .font-selector-text:before
 {
@@ -717,8 +733,9 @@ body
     bottom: 10px;
 
     content: ' ';
-    /*color: #fff;*/
 
+    color: #fff;
+    /*color: #fff;*/
     border-top: 9px solid #fff;
     border-right: 4px solid transparent;
     border-bottom: 4px solid transparent;
@@ -729,13 +746,13 @@ body
     /* for IE 11 */
     display: none;
 }
-.font-selector-text select
+.font-selector-text select /*Lower one*/
 {
     font-size: 18px;
     line-height: 40px;
 
-    width: 200px;
-    max-width: 200px;
+    width: 140px;
+    max-width: 140px;
     height: 40px;
     max-height: 40px;
     padding: 0 10px;
@@ -760,13 +777,36 @@ body
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
-    background: #2a3a4a;
+    background: #008080;
 }
 
 .reversed-letter
 {
     direction: rtl !important;
 }
+
+/* COMMENTS */
+
+/*Colors for title */
+
+.orange
+{
+    color: rgba(180,80,20,.87);
+    text-shadow: 0 1px 1px rgba(160,60,10,.2);
+}
+
+.teal-jade
+{
+    color: rgba(0,120,100,1);
+}
+
+.burgundy
+{
+    color: rgba(148,0,32,1);
+    text-shadow: 0 1px 1px rgba(160,0,10,.2);
+}
+
+/* End colors for title */
 
 .comment-btn
 {
@@ -791,7 +831,7 @@ body
 
     position: absolute;
 
-    margin-top: -3%;
+    margin-top: -3.5%;
     margin-left: -1%;
     padding-bottom: 100px;
 
@@ -801,19 +841,14 @@ body
     text-shadow: 0 1px 1px rgba(160,60,10,.5);
 }
 
-.orange
-{
-    color: rgba(180,80,20,.87);
-    text-shadow: 0 1px 1px rgba(160,60,10,.5);
-}
+
 
 .comment-body
 {
     font-family: 'Raleway' ;
     font-size: 22px;
     font-weight: 300;
-
-    overflow: auto;
+    /*overflow: auto;*/
 
     width: auto;
     max-width: 700px;
@@ -854,11 +889,12 @@ body
     }
 }
 
-.font-select-div
-{
-    margin-top: 5%;
-    margin-left: -25%;
-}
+/*.font-select-div*/
+/*{*/
+/*    position: absolute;*/
+/*    margin-top: 55%;*/
+/*    margin-left: -25%;*/
+/*}*/
 
 
 
@@ -900,7 +936,7 @@ a.logout-button
     min-width: 550px;
     max-width: 650px !important;
     height: auto !important;
-    margin-top: -110%; /*Increment this negative integer to push me up*/
+    margin-top: -75%; /*Increment this negative integer to push me up*/
     margin-left: -70%;
 
     cursor: pointer;
@@ -1128,7 +1164,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     position: absolute;
 
-    margin-top: -50%;
+    margin-top: -20%; /*increment this negative integer to push me up*/
     margin-left: -3%;
 
     white-space: pre;
@@ -1155,7 +1191,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     position: absolute;
 
-    margin-top: -50%;
+    margin-top: -20%; /*increment this negative integer to push me up*/
     margin-left: 50%;
 
     letter-spacing: -3px;
@@ -1407,22 +1443,24 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     /*SHOW PAGE*/
     font-family: 'Montserrat' !important;
-    font-size: 46px;
+    font-size: 40px;
     /*font-variant: small-caps;*/
     font-weight: 600;
 
     width: 900px !important;
-    margin-left: -20%;
+    margin-left: -25%;
     padding-bottom: 4%;
 
     text-align: center !important;
     letter-spacing: 2px;
 
-    color: rgba(18,18,18,.8);
+    color: rgba(15,25,15,.87);
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;*/
     /*-webkit-background-clip: text;*/
     /*-webkit-text-fill-color: transparent;*/
-    text-shadow: 1px 1px 1px rgba(10,10,10,.9);
+    text-shadow: 1px 1px 1px rgba(100,100,100,.6);
+
+    -webkit-font-smoothing: antialiased;
 }
 
 @media (max-width: 800px)
@@ -1456,8 +1494,8 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     white-space: pre-wrap;
     letter-spacing: 1px;
 
-    color: rgba(0,0,0,.9);
-    text-shadow: 2px 2px 2px rgba(100,100,100,.3);
+    color: rgba(25,25,25,.9);
+    text-shadow: 1px 1px 0 rgba(100,100,100,.3);
 }
 
 @media (max-width: 800px)

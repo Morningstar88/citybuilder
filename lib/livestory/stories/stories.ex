@@ -121,6 +121,14 @@ defmodule LiveStory.Stories do
     |> Repo.one!
   end
 
+  def get_comment!(id) do
+    from(c in Comment,
+      where: c.id == ^id,
+      preload: :post
+    )
+    |> Repo.one!
+  end
+
   def get_topic!(slug) do
     Repo.get_by!(Topic, slug: slug)
   end
@@ -202,6 +210,10 @@ defmodule LiveStory.Stories do
     Repo.delete(post)
   end
 
+  def delete_comment(%Comment{} = comment) do
+    Repo.delete(comment)
+  end
+
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking post changes.
 
@@ -257,6 +269,12 @@ defmodule LiveStory.Stories do
     |> put_change(:user_id, user_id)
     |> put_change(:post_id, post_id)
     |> Repo.insert
+  end
+
+  def update_comment(params, comment) do
+    comment
+    |> comment_changeset(params)
+    |> Repo.update
   end
 
   def delete_upvote(%Post{id: post_id}, user_id) do

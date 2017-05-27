@@ -1,11 +1,14 @@
 defmodule LiveStory.Web.Router do
   use LiveStory.Web, :router
 
+  require Logger
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    plug :protect_from_forgery
+    Logger.error "Uncomment protect_from_forgery before production release!"
+    # plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
@@ -33,8 +36,9 @@ defmodule LiveStory.Web.Router do
       post "/upvotes", UpvoteController, :create
       delete "/upvotes", UpvoteController, :delete
       resources "/forks", ForkController, only: [:index]
-      resources "/comments", CommentController, only: [:create, :delete, :update]
+      resources "/comments", CommentController, only: [:create]
     end
+    resources "/comments", CommentController, only: [:edit, :delete, :update]
 
     resources "/topics", TopicController, only: [:show], param: "slug"
 

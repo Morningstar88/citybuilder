@@ -658,6 +658,8 @@ body
 {
     /* Select Fonts Text*/
     position: absolute;
+    
+    font-size: 33px !important;
 
     margin-top: 27%;
     margin-left: 65.7%; /* ORIG 16.7% */
@@ -730,7 +732,7 @@ body
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
-    background: #008080;
+    background: rgba(0,100,100,0.4);
 }
 
 /* END FONT SELECTOR TEXT */
@@ -746,7 +748,7 @@ body
 
     color: rgba(200,100,5,.7);
     border-radius: 4px;
-    background: rgba(100,18,100,.4) !important; /* ORIG rgba(2,180,170,.4) */
+    background: rgba(222,130,0,.4) !important; /* ORIG rgba(2,180,170,.4) (100,18,100,.4)*/
 }
 .font-selector-text:before
 {
@@ -795,11 +797,11 @@ body
 {
     font-size: 15px;
 
-    color: rgba(0,100,100,.3) !important;
+    color: rgba(233,130,0,.3) !important;
     border: 0 solid;
     border-radius: 4px;
     outline: 0 solid;
-    background: #008080;
+    background: rgba(233,130,0,.3) ;
 }
 
 .reversed-letter
@@ -1201,6 +1203,160 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 /* END SHOW PAGE NAVBAR BUTTONS */
 
+/* Login Multi */
+
+.login-multicolored {
+    position: absolute;
+    margin-top: -20%;
+    margin-left: -20%;
+    font-size: 40px;
+}
+
+.login-multicolored:hover {
+text-decoration: none;
+}
+
+.login-multi-1 {
+    color: rgba(168,0,42,0.8);
+    transition: 0s 2s;
+}
+
+.login-multi-2 {
+    color: rgba(210,100,10,0.8);
+    transition:; 0s 2s;
+}
+
+.login-multi-3 {
+    color: rgba();
+    transition: 0s 2s;
+}
+
+.login-multi-4 {
+    color: rgba(2,80,20,0.8);
+    transition: 0s 2s;
+}
+
+.login-multi-5 {
+    color: rgba(12,158,210,0.7);
+    transition: 0s 2s;
+}
+
+.login-multi-1:hover {
+    color: rgba(12,158,255,0.7);
+    transition: 0s;
+}
+
+.login-multi-2:hover {
+    color: rgba(200,6,60,0.7);
+    transition: 0s;
+}
+
+.login-multi-3:hover {
+    color: rgba(255,190,240,0.7);
+    transition: 0s;
+      /*font-family: 'Montserrat';*/
+      /*letter-spacing: -1px;*/
+}
+
+.login-multi-4:hover {
+    color: rgba(180,80,2,0.7);
+    transition: 0s;
+  
+}
+
+.login-multi-5:hover {
+    color: rgba(128,0,32,0.8);
+    transition: 0s;
+      
+}
+
+.test-transition {
+    color: purple;
+    transition: 0s 3s;
+}
+
+.test-transition:hover {
+    color: yellow;
+    transition: 0s;
+}
+
+/* Sign-up multi-colored */
+
+.signup-multicolored {
+    position: absolute;
+    margin-top: -20%;
+    margin-left: 50%;
+    font-size: 40px;
+    transition: 0s 3s;
+}
+
+.signup-multicolored:hover {
+text-decoration: none;
+color: pink !important;
+}
+
+.signup-multi-1 { /* S */
+    color: rgba(168,0,42,0.8);
+    transition: 0s 3s;
+}
+
+.signup-multi-2 { /* I */
+    color: rgba(210,100,10,0.8);
+     transition: 0s 3s;
+}
+
+.signup-multi-3 { /* G */
+    color: rgba(168,0,42,0.8);
+     transition: 0s 3s;
+    
+}
+
+.signup-multi-4 { /* N */
+    color: rgba(210,100,10,0.8);
+     transition: 0s 3s;
+}
+
+.signup-multi-5 { /* U */
+    color: rgba(168,0,42,0.8);
+     transition: 0s 3s;
+}
+
+.signup-multi-6 { /* P */
+    color: rgba(210,100,10,0.8);
+     transition: 0s 3s;
+}
+
+.signup-multi-1:hover { /* */
+    color: rgba(2,35,1,0.8);
+    transition: 0s;
+}
+
+.signup-multi-2:hover { /* */
+    color: rgba(2,55,1,0.8);
+      transition: 0s;
+}
+
+.signup-multi-3:hover { /* */
+    color: rgba(2,75,1,0.8);
+      /*font-family: 'Montserrat';*/
+      /*letter-spacing: -1px;*/
+        transition: 0s;
+}
+
+.signup-multi-4:hover { /* */
+    color: rgba(2,95,1,0.8);
+    transition: 0s;
+}
+
+.signup-multi-5:hover { /* */
+    color: rgba(2,105,1,0.8);
+        transition: 0s;
+}
+
+.signup-multi-6:hover { /* */
+    color: rgba(2,125,1,0.8);
+        transition: 0s;
+}
 
 
 
@@ -1209,30 +1365,38 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .login-btn
 {
     /*text-shadow: 1px 1px 1px rgba(0,0,0,0.3);*/
-    font-family: 'Montserrat';
-    font-size: 24px;
+    /*font-family: 'Montserrat';*/
+    /*font-size: 24px;*/
 
     position: absolute;
+    font-size: 50px;
+    margin-left: -15%;
+    margin-top: -20%;
 
-    margin-top: -20%; /*increment this negative integer to push me up*/
-    margin-left: -3%;
-
-    white-space: pre;
-    letter-spacing: 3px;
-
-    color: rgba(200,100,30,.7);
-}
-
-.login-btn:hover
-{
-    font-size: 24px;
-
-    margin-left: -3%;
+   /* margin-top: -20%; *//*increment this negative integer to push me up*/
+    /*margin-left: -3%;*/
 
     white-space: pre;
+    z-index: 1;
+    /*letter-spacing: 3px;*/
 
-    color: rgba(200,50,4,1);
+    /*color: rgba(200,100,30,.7);*/
 }
+
+.login-btn a  {
+    color: white;
+}
+
+/*.login-btn:hover*/
+/*{*/
+/*    font-size: 24px;*/
+
+/*    margin-left: -3%;*/
+
+/*    white-space: pre;*/
+
+/*    color: rgba(200,50,4,1);*/
+/*}*/
 
 .sign-up-btn
 {

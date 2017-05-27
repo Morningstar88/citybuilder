@@ -37,7 +37,7 @@
 
 <!--<span><%#= link "What's Up ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>-->
  <a href="/posts/new" class="whatsup-multicolored"> 
- <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-2">s</span><span class="whatsup-multi-3"> U</span><span class="whatsup-multi-4">p</span><span class="whatsup-multi-5">?</span></a>
+ <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
 <!--<div class="whats-happening-opaque-overlay">What's Up ?</div>-->
 
 <%= if @user do %>
@@ -52,6 +52,8 @@
       <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
 <% end %>
 </div>
+
+<h1>Change my color</h1>
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>

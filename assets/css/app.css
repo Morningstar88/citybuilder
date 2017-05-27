@@ -661,7 +661,7 @@ body
 
     position: absolute;
 
-    margin-top: 27%;
+    margin-top: 26%;
     margin-left: 65.7%; /* ORIG 16.7% */
 }
 
@@ -987,27 +987,32 @@ a.logout-button
 
 .whatsup-multicolored
 {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 
 .whatsup-multi-1
 {
     transition: 0s 3s;
-
+    
+     text-shadow: 1px 1px 1px rgba(150,10,150,0.1);
+     
     color: rgba();
 }
 
 .whatsup-multi-2
 {
     transition: 0s 3s;
+    
+     text-shadow: 0 0 1px rgba(150,10,150,0.4);
 
-    color: rgba();
 }
 
 .whatsup-multi-3
 {
     transition: 0s 3s;
+    
+     text-shadow: 1px 1px 1px rgba(150,10,150,0.2);
 
     color: rgba();
 }
@@ -1015,6 +1020,8 @@ a.logout-button
 .whatsup-multi-4
 {
     transition: 0s 3s;
+    
+     text-shadow: 1px 1px 1px rgba(150,10,150,0.3);
 
     color: rgba();
 }
@@ -1022,6 +1029,8 @@ a.logout-button
 .whatsup-multi-5
 {
     transition: 0s 3s;
+    
+     text-shadow: 1px 1px 1px rgba(150,10,150,0.4);
 
     color: rgba();
 }
@@ -1029,103 +1038,126 @@ a.logout-button
 .whatsup-multi-6
 {
     transition: 0s 3s;
+    
+      text-shadow: 1px 1px 1px rgba(150,5,150,0.5);
 
     color: rgba();
 }
 
 .whatsup-multi-7
 {
-    transition: 0s 3s;
-
-    color: rgba();
+   transition: 0s 3s;
+   text-shadow: 1px 1px 1px rgba(150,10,150,0.5);
+   color: rgba();
 }
 
 .whatsup-multi-8
 {
     transition: 0s 3s;
+    
+    /*text-shadow: 1px 1px 1px rgba(10,0,250,0.5);*/
+    /*color: rgba(255,255,255,0.9);*/
+    /*text-shadow: 1px 1px 1px rgba(255,255,255,1);*/
+    text-shadow: 1px 1px 1px rgba(150,5,150,0.5);
+    /*animation-name: spinning-question-mark;*/
+    /*animation-duration: 5s;*/
+}
 
+.whatsup-multi-9 {
+    transition: 0s 3s;
+    text-shadow: 1px 1px 1px rgba(130,10,200,0.5);
     color: rgba();
 }
 
+/*@keyframes spinning-question-mark {*/
+/*    from {text-shadow: 1px 1px 1px red;}*/
+/*    to {text-shadow: 1px 1px 1px blue;}*/
+/*}*/
 
 .whatsup-multi-1:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,200,.1);
+
 }
 
 .whatsup-multi-2:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,175,.2);
+  
 }
 
 .whatsup-multi-3:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,150,.2);
+
 }
 
 .whatsup-multi-:hover4
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,125,.2);
+ 
 }
 
 .whatsup-multi-5:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,100,.2);
+ 
 }
 
 .whatsup-multi-6:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,75,.2);
+ 
 }
 
 .whatsup-multi-7:hover
 {
-    font-weight: 600;
+    font-weight: 700;
 
-    transition: 5s;
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,50,.2);
+
 }
 
 .whatsup-multi-8:hover
 {
-    font-weight: 600;
-
-    transition: 5s;
+    font-weight: 800;
+    
+    transition: .5s;
 
     color: rgba();
-    text-shadow: 0 0 1px rgba(2,2,50,.2);
+}
+
+.whatsup-multi-9:hover {
+    font-weight: 800;
+    
+    transition: .5s;
+    
 }
 
 

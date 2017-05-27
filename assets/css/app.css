@@ -953,11 +953,12 @@ a.logout-button
     color: rgba(255,123,0,.9);
 }
 
-.whatsup-multicolored {
+.whatsup-multicolored
+{
     /*WHAT's UP*/
     font-family: 'Raleway';
     font-size: 90px;
-    font-weight: 800;
+    font-weight: 300;
 
     position: absolute;
 
@@ -970,33 +971,165 @@ a.logout-button
     cursor: pointer;
     text-align: center;
     letter-spacing: -9px;
+
     border: 1px double rgba(150,150,150,.1);
     border-radius: 1px 3px 0 10px;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
     -webkit-background-clip: text;
-     text-shadow: 1px 1px 1px rgba(200,20,90,.2);
+    text-shadow: 0 0 1px rgba(200,20,40,.1);
+
     -webkit-text-fill-color: transparent;
 }
 
-/*.whats-happening-opaque-overlay*/
-/*{*/
-/*    font-family: 'Raleway';*/
-/*    font-size: 90px;*/
-/*    font-weight: 800;*/
-
-/*    position: absolute;*/
-/*    z-index: 10;*/
-
-/*    min-width: 550px;*/
-/*    max-width: 650px !important;*/
-/*    height: 130px !important;*/
-/* margin-top: -75%; /*Increment this negative integer to push me up*/
-/*    margin-left: -70%;*/
-
-/*    color: rgba(250,10,150,.5);*/
-/*-webkit-background-clip: text;*/
-/*-webkit-text-fill-color: transparent*/
+/*.whatsup-multicolored:hover {*/
+/*    display: none;*/
 /*}*/
+
+.whatsup-multicolored
+{
+    text-decoration: none;
+}
+
+
+.whatsup-multi-1
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-2
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-3
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-4
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-5
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-6
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-7
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+.whatsup-multi-8
+{
+    transition: 0s 3s;
+
+    color: rgba();
+}
+
+
+.whatsup-multi-1:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,200,.1);
+}
+
+.whatsup-multi-2:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,175,.2);
+}
+
+.whatsup-multi-3:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,150,.2);
+}
+
+.whatsup-multi-:hover4
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,125,.2);
+}
+
+.whatsup-multi-5:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,100,.2);
+}
+
+.whatsup-multi-6:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,75,.2);
+}
+
+.whatsup-multi-7:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,50,.2);
+}
+
+.whatsup-multi-8:hover
+{
+    font-weight: 600;
+
+    transition: 5s;
+
+    color: rgba();
+    text-shadow: 0 0 1px rgba(2,2,50,.2);
+}
+
+
+
 
 @media (max-width: 800px)
 {

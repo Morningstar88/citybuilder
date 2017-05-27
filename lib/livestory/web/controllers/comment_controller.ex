@@ -48,6 +48,12 @@ defmodule LiveStory.Web.CommentController do
     end
   end
 
+  def delete(conn, _params) do
+    {:ok, _comment} = Stories.delete_comment(conn.assigns.comment)
+    conn
+    |> render("delete.js", comment: conn.assigns.comment)
+  end
+
   defp set_comment(%{params: %{"id" => id}} = conn, _opts) do
     assign(conn, :comment, Stories.get_comment!(id))
   end

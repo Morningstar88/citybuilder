@@ -210,6 +210,10 @@ defmodule LiveStory.Stories do
     Repo.delete(post)
   end
 
+  def delete_comment(%Comment{} = comment) do
+    Repo.delete(comment)
+  end
+
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking post changes.
 

@@ -53,7 +53,8 @@
 <% end %>
 </div>
 
-<h1>Change my color</h1>
+<!--<h1 class="stupid-flash">Change my color</h1>-->
+<!--<div class="stupid-flash"></div>-->
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>

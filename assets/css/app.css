@@ -543,7 +543,7 @@ body
 
 .hello-user
 {
-    font-family: 'Montserrat';
+    font-family: helvetica ;
     /*width: 800px;*/
     font-size: 18px;
     font-weight: 500;
@@ -553,7 +553,7 @@ body
     z-index: 5;
 
     width: 500px;
-    margin-top: -45%; /* increase this positive integer to move down */
+    margin-top: -10%; /* increase this negative integer to move up */
     margin-left: -70%; /* 70% Looks good.*/
     padding-bottom: 5px;
 
@@ -936,7 +936,7 @@ a.logout-button
     position: absolute;
     z-index: 4;
 
-    margin-top: -120%; /*Increment the negative integer to push me up */
+    margin-top: -89%; /*Increment the negative integer to push me up */
     margin-left: 215%;
 
     text-decoration: none;
@@ -990,10 +990,34 @@ a.logout-button
     text-decoration: none !important;
 }
 
+/* Test Animation */
+
+.stupid-flash {
+     color: black;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+}
+
 
 .whatsup-multi-1
 {
     transition: 0s 3s;
+    
+    font-weight: 200;
     
      text-shadow: 1px 1px 1px rgba(150,10,150,0.1);
      
@@ -1074,9 +1098,13 @@ a.logout-button
 /*    to {text-shadow: 1px 1px 1px blue;}*/
 /*}*/
 
+ 
+
+/*@keyframes {}*/
+
 .whatsup-multi-1:hover
 {
-    font-weight: 700;
+    font-weight: 100;
 
     transition: .5s;
 
@@ -1086,7 +1114,7 @@ a.logout-button
 
 .whatsup-multi-2:hover
 {
-    font-weight: 700;
+    font-weight: 100;
 
     transition: .5s;
 
@@ -1096,18 +1124,18 @@ a.logout-button
 
 .whatsup-multi-3:hover
 {
-    font-weight: 700;
-
+    font-weight: 100;
+    
     transition: .5s;
 
     color: rgba();
 
 }
 
-.whatsup-multi-:hover4
+.whatsup-multi-4:hover
 {
-    font-weight: 700;
-
+    font-weight: 100;
+    
     transition: .5s;
 
     color: rgba();
@@ -1116,7 +1144,7 @@ a.logout-button
 
 .whatsup-multi-5:hover
 {
-    font-weight: 700;
+    font-weight: 100;
 
     transition: .5s;
 
@@ -1126,7 +1154,7 @@ a.logout-button
 
 .whatsup-multi-6:hover
 {
-    font-weight: 700;
+    font-weight: 100;
 
     transition: .5s;
 
@@ -1136,7 +1164,7 @@ a.logout-button
 
 .whatsup-multi-7:hover
 {
-    font-weight: 700;
+    font-weight: 100;
 
     transition: .5s;
 
@@ -1146,7 +1174,7 @@ a.logout-button
 
 .whatsup-multi-8:hover
 {
-    font-weight: 800;
+    font-weight: 100;
     
     transition: .5s;
 
@@ -1154,7 +1182,7 @@ a.logout-button
 }
 
 .whatsup-multi-9:hover {
-    font-weight: 800;
+    font-weight: 100;
     
     transition: .5s;
     

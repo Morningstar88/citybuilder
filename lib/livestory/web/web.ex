@@ -22,6 +22,7 @@ defmodule LiveStory.Web do
       import Plug.Conn
       import LiveStory.Web.Router.Helpers
       import LiveStory.Web.Gettext
+      import LiveStory.Web.Controller.Helpers
 
       alias LiveStory.Web.ErrorHandler
     end

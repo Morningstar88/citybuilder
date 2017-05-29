@@ -80,12 +80,15 @@ defmodule LiveStory.Web.PostController do
   def show(conn, _params) do
     post = conn.assigns.post
     comments = Stories.post_comments(post.id)
+    comment_changeset = if conn.assigns.user do
+      Stories.new_post_comment(post, %{
+        user_name: conn.assigns.user.username
+      })
+    end
     render(conn, "show.html",
       post: post,
       comments: comments,
-      comment_changeset: Stories.new_post_comment(post, %{
-        user_name: conn.assigns.user.username
-      })
+      comment_changeset: comment_changeset
     )
   end
 
@@ -130,6 +133,7 @@ defmodule LiveStory.Web.PostController do
       conn
       |> put_flash(:error, "This post belongs to another user! You can fork someone else's post, but not edit it.")
       |> redirect(to: post_path(conn, :index))
+      |> halt
     else
       conn
     end

@@ -210,9 +210,18 @@ defmodule LiveStory.Stories do
     Repo.delete(post)
   end
 
-  def delete_comment(%Comment{} = comment) do
-    Repo.delete(comment)
+  def delete_comment(%Comment{} = comment, %User{} = user) do
+    removal_key = comment_removal_key(user)
+    comment
+    |> comment_changeset()
+    |> put_change(:modified_by_id, user.id)
+    |> put_change(removal_key, true)
+    |> Repo.update
   end
+
+  defp comment_removal_key(%User{admin: true}), do: :removed_by_moderator
+  defp comment_removal_key(%User{moderator: true}), do: :removed_by_moderator
+  defp comment_removal_key(%User{}), do: :removed_by_owner
 
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking post changes.
@@ -271,9 +280,10 @@ defmodule LiveStory.Stories do
     |> Repo.insert
   end
 
-  def update_comment(params, comment) do
+  def update_comment(params, comment, user) do
     comment
     |> comment_changeset(params)
+    |> put_change(:modified_by_id, user.id)
     |> Repo.update
   end
 

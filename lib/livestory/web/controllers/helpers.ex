@@ -7,7 +7,10 @@ defmodule LiveStory.Web.Controller.Helpers do
     |> Timex.format!("{Mfull} {D}, {h12}:{m}{am}, {YYYY}")
   end
 
+  def can_modify_comment?(nil, _comment), do: false
   def can_modify_comment?(user, comment) do
-    user.id == comment.user_id
+    user.admin ||
+    user.moderator ||
+    (user.id == comment.user_id)
   end
 end

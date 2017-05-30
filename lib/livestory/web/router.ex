@@ -7,8 +7,7 @@ defmodule LiveStory.Web.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    Logger.error "Uncomment protect_from_forgery before production release!"
-    # plug :protect_from_forgery
+    plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
@@ -38,7 +37,10 @@ defmodule LiveStory.Web.Router do
       resources "/forks", ForkController, only: [:index]
       resources "/comments", CommentController, only: [:create]
     end
-    resources "/comments", CommentController, only: [:edit, :delete, :update]
+    resources "/comments", CommentController, only: [:delete, :update]
+    # workaround, use PUT instead of GET, because with GET, phoenix_ujs
+    # won't send Origin header and this will trigger CORS forgery protection
+    put "/comments/:id/edit", CommentController, :edit
 
     resources "/topics", TopicController, only: [:show], param: "slug"
 

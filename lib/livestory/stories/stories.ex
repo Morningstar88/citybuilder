@@ -7,6 +7,8 @@ defmodule LiveStory.Stories do
 
   alias LiveStory.Auths.User
   alias LiveStory.Stories.Comment
+  alias LiveStory.Stories.CommentsUpvotes
+  alias LiveStory.Stories.CommentsUpvotesCount
   alias LiveStory.Stories.Post
   alias LiveStory.Stories.Topic
   alias LiveStory.Stories.Upvotes
@@ -52,7 +54,7 @@ defmodule LiveStory.Stories do
     ) |> Repo.all
   end
 
-  def list_user_upvotes(%User{id: user_id}, post_ids) do
+  def list_user_post_upvotes(%User{id: user_id}, post_ids) do
     from(uv in Upvotes,
       where: uv.user_id == ^user_id,
       where: uv.post_id in ^post_ids,
@@ -62,7 +64,19 @@ defmodule LiveStory.Stories do
     |> Enum.map(fn(upvote_id) -> {upvote_id, true} end)
     |> Map.new
   end
-  def list_user_upvotes(nil, _post_ids), do: %{}
+  def list_user_post_upvotes(nil, _post_ids), do: %{}
+
+  def list_user_comment_upvotes(%User{id: user_id}, comment_ids) do
+    from(cu in CommentsUpvotes,
+      where: cu.user_id == ^user_id,
+      where: cu.comment_id in ^comment_ids,
+      select: cu.comment_id
+    )
+    |> Repo.all
+    |> Enum.map(fn(upvote_id) -> {upvote_id, true} end)
+    |> Map.new
+  end
+  def list_user_comment_upvotes(nil, _comment_ids), do: %{}
 
   def count_forks([]), do: %{}
   def count_forks(paths) do
@@ -268,16 +282,28 @@ defmodule LiveStory.Stories do
   def post_comments(post_id) do
     from(c in Comment,
       where: c.post_id == ^post_id,
-      order_by: [asc: :id]
+      order_by: [asc: :id],
+      preload: [:upvotes_count]
     ) |> Repo.all
   end
 
   def create_comment(params, post_id, user_id) do
-    %Comment{}
-    |> comment_changeset(params)
-    |> put_change(:user_id, user_id)
-    |> put_change(:post_id, post_id)
-    |> Repo.insert
+    try do
+      Repo.transaction fn ->
+        comment = %Comment{}
+        |> comment_changeset(params)
+        |> put_change(:user_id, user_id)
+        |> put_change(:post_id, post_id)
+        |> Repo.insert!
+        %CommentsUpvotesCount{}
+        |> comments_upvotes_counts_changeset(%{comment_id: comment.id})
+        |> Repo.insert!
+        comment
+        |> Repo.preload(:upvotes_count)
+      end
+    rescue
+      error in Ecto.InvalidChangesetError -> {:error, error.changeset}
+    end
   end
 
   def update_comment(params, comment, user) do
@@ -333,5 +359,13 @@ defmodule LiveStory.Stories do
     |> validate_required([:post_id])
     |> foreign_key_constraint(:post_id)
     |> unique_constraint(:post_id)
+  end
+
+  defp comments_upvotes_counts_changeset(%CommentsUpvotesCount{} = upvotes_counts, attrs) do
+    upvotes_counts
+    |> cast(attrs, [:comment_id])
+    |> validate_required([:comment_id])
+    |> foreign_key_constraint(:comment_id)
+    |> unique_constraint(:comment_id)
   end
 end

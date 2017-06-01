@@ -31,7 +31,7 @@
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>
-        <%= render "_comment.html", conn: @conn, post: @post, comment: comment, class: "comment-class" %>
+        <%= render "_comment.html", conn: @conn, post: @post, comment: comment, upvote: @upvotes[comment.id], class: "comment-class" %>
         <% end %>
         <hr>
         <br><br> <br><br> <br><br>

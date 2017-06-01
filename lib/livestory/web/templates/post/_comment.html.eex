@@ -1,10 +1,13 @@
 <tr id="comment_<%= @comment.id %>">
   <%= cond do %>
     <% @comment.removed_by_owner -> %>
-      <td colspan="3">deleted</td>
+      <td colspan="4">deleted</td>
     <% @comment.removed_by_moderator -> %>
-      <td colspan="3">Sorry this, post was deleted by our anti-spam squad</td>
+      <td colspan="4">Sorry this, post was deleted by our anti-spam squad</td>
     <% true -> %>
+      <td>
+        <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote %>
+      </td>
       <td class="commenter">
         <%= @comment.user_name %>
         <br>

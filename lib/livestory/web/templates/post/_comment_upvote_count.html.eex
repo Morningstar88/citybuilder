@@ -1,0 +1,4 @@
+<span class="upvote-count", data-current-count="<%= @comment.upvotes_count.count %>">
+  <%= link " #{@comment.upvotes_count.count} ⇧", to: comment_upvote_path(@conn, :create, @comment), "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: upvoted_class("not_upvoted", @upvote) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
+  <%= link " #{@comment.upvotes_count.count} ⇧", to: comment_upvote_path(@conn, :delete, @comment), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: upvoted_class("upvoted", @upvote) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
+</span>

@@ -1,1 +1,1 @@
-$("#comments #comment_<%= @comment.id %>").remove();
+$("#comments #comment_<%= @comment.id %>").replaceWith("<%= escape_javascript render(LiveStory.Web.PostView, "_comment.html", conn: @conn, comment: @comment) %>");

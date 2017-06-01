@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.CreateCommentsUpvotes do
+defmodule LiveStory.Repo.Migrations.CreateCommentUpvotes do
   use Ecto.Migration
 
   def change do

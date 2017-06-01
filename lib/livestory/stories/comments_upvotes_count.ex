@@ -1,4 +1,4 @@
-defmodule LiveStory.Stories.CommentsUpvotesCount do
+defmodule LiveStory.Stories.CommentUpvotesCount do
   use Ecto.Schema
 
   schema "stories_comments_upvotes_counts" do

@@ -38,9 +38,12 @@ defmodule LiveStory.Web.CommentController do
   def update(conn, params) do
     case Stories.update_comment(params["comment"], conn.assigns.comment, conn.assigns.user) do
       {:ok, comment} ->
+        upvote = Stories.list_user_comment_upvotes(conn.assigns.user, [comment.id])[comment.id]
+        comment = Stories.preload_comment_upvotes_count(comment)
         conn
         |> render("update.js",
           comment: comment,
+          upvote: upvote,
           post: conn.assigns.comment.post,
           changeset: Stories.new_post_comment(conn.assigns.comment.post, %{
             user_name: conn.assigns.user.username

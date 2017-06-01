@@ -9,7 +9,7 @@ defmodule LiveStory.Stories.Comment do
     belongs_to :user, Livestory.Auth.User
     belongs_to :modified_by, LiveStory.Auth.User
     belongs_to :post, LiveStory.Stories.Post
-    has_one :upvotes_count, LiveStory.Stories.CommentsUpvotesCount
+    has_one :upvotes_count, LiveStory.Stories.CommentUpvotesCount
 
     timestamps()
   end

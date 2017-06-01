@@ -6,10 +6,7 @@
       <td colspan="4">Sorry this, post was deleted by our anti-spam squad</td>
     <% true -> %>
       <td>
-        <span class="upvote-count", data-current-count="<%= @comment.upvotes_count.count %>">
-          <%= link " #{@comment.upvotes_count.count} ⇧", to: comment_upvote_path(@conn, :create, @comment), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvote) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
-          <%= link " #{@comment.upvotes_count.count} ⇧", to: comment_upvote_path(@conn, :delete, @comment), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvote) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
-        </span>
+        <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote %>
       </td>
       <td class="commenter">
         <%= @comment.user_name %>

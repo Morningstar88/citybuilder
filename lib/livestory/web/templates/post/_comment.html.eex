@@ -1,4 +1,4 @@
-<tr id="comment_<%= @comment.id %>">
+<tr id="comment_<%= @comment.id %>" class="<%= comment_upvote_class(@comment) %>">
   <%= cond do %>
     <% @comment.removed_by_owner -> %>
       <td colspan="4">deleted</td>

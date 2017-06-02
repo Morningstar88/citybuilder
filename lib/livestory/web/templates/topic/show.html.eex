@@ -4,9 +4,9 @@
 <!--<div style="background-color:rgba(20,20,20,0.9) !important; z-index: 7;">-->
 <header class="topic-header"></header>
 <!--</div>-->
-<h1 class="topic-headline">
+<p class="topic-headline">
   <%= @topic.name %>
-</h1>
+</p>
 
 <br><br>
 
@@ -27,5 +27,4 @@
     <% end %>
   </tbody>
 </table>
-<br><br><br><br><br>
-<div class="topic-header-opacity"></div>
+

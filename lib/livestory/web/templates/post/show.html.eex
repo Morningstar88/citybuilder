@@ -27,7 +27,9 @@
    	      <!--<span><%#= link "Fork this", to: post_path(@conn, :update, @post), class: "btn btn-default"%></span>-->
     </p>
     <br><hr>
-      <h1>C<span class="burgundy">o</span>mm<span class="orange">e</span>nts<span class="teal-jade">!</span></h1>
+    <div class="bitspinner">
+      <h1><span class="eurospinner"><span class="eurospinner bitspinner">C</span><span class="burgundy">o</span>mm</span><span class="bitspinner"><span class="orange">e</span>nts</span><span class="teal-jade">!</span></h1>
+    </div>
     <table id="comments">
       <tbody>
         <%= for comment <- @comments do %>

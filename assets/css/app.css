@@ -148,18 +148,15 @@ body
 
     position: absolute;
 
-    margin-top: -20%;
+    margin-top: -18%; /*-15% LOWER ON PAGE. -25% HIGHER.*/
     margin-left: 67%;
 
     letter-spacing: 1px;
 
     color: rgba(20,20,200,.8) !important;
-    color: rgba(255,255,255,.01); /*rgba(220,120,0,0.80);*/
-    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 100% 50%;*/
-    /*-webkit-background-clip: text;*/
+    color: rgba(255,255,255,.01); 
     text-shadow: 1px 1px 0 rgba(0,20,60,.7) !important; /* OVERLAY CHANGE COLOR */
-    /*text-shadow: 1px 1px 1px rgba(5,5,5,.0);*/
-
+ 
     -webkit-text-fill-color: transparent;
 }
 
@@ -2488,4 +2485,50 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     {
         transform: rotateY(-27deg);
     }
+}
+
+/*Bit Letter Spinning Class*/
+
+.bitspinner{
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    animation-name: bitspinner;
+    animation-iteration-count: 20;
+    animation-duration: 0s;
+    animation-timing-function:  cubic-bezier(0.9,0.9,0.9,0.9)
+    transform-style: preserve-3d;
+/*     margin-left: 300px; */
+    animation-play-state: paused;
+  display: inline-block;
+}
+
+.bitspinner:hover {
+   animation-play-state: running;
+   animation-duration: 5s;
+  animation-iteration-count:10;
+  animation-delay: 0s;
+  cursor:crosshair;
+/*    pointer-events: none; */
+
+}
+.bitspinner {
+/*     margin: 0; */
+/*     font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.25em; */
+}
+@keyframes bitspinner {
+  0% {
+    transform: rotateZ(-2700deg);
+  }
+  50% {
+    transform: rotateZ(-0deg);
+  }
+  80% {
+    transform: rotateY(-37deg);
+  }
+  
+  90% {
+    transform:rotateZ(1600deg);
+     }
 }

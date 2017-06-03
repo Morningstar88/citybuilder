@@ -7,24 +7,18 @@
     }
     </style>
       <br>
-     <!--<p class="choose-a-font preview-title-choose-font mobile-hide">Title</p><p class="choose-a-font preview-text-choose-font mobile-hide">Body</p>-->
-           
+    
       <div class="font-select-div mobile-hide">
           <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>
               </h3>
    
-   
-   
-   
-   
-   
-    <div class="font-selector"><!-- FOR TITLE -->
+       <div class="font-selector">
 <select>
 </select>
 </div>
 <br>
 
-<div class="font-selector-text"><!--FOR BODY -->
+<div class="font-selector-text">
 <select>
 </select>
 </div>
@@ -34,11 +28,10 @@
 <div class="center-wrap">
   <br><br><br><br><br><br><br>
 
-
-<!--<span><%#= link "What's Up ?", to: post_path(@conn, :new), class: "whats-happening-button" %></span>-->
- <a href="/posts/new" class="whatsup-multicolored"> 
+ <a href="/posts/new" class="whatsup-multicolored "> <!-- data-tooltip="left-tooltip" data-placement="left" -->
  <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
-<!--<div class="whats-happening-opaque-overlay">What's Up ?</div>-->
+
+<!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
 
 <%= if @user do %>
   <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
@@ -47,7 +40,7 @@
     <%= split_logout("logout") %>
   <% end %>
 <% else %>
-  <!--<span><%#= link " ---              ", to: user_path(@conn, :signin), class: "logout-btn"%></span>-->
+
  <a href="/users/signin" class="login-multicolored"> 
       <span class="login-multi-1">L</span><span class="login-multi-2">O</span><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
       
@@ -55,10 +48,7 @@
       <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
 <% end %>
 </div>
-<!-- -->
 
-<!--<h1 class="stupid-flash">Change my color</h1>-->
-<!--<div class="stupid-flash"></div>-->
 
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
@@ -67,8 +57,7 @@
   </div>
   <% end %>
 </div>
-<!--<button onclick="changeColor()" class="color-button mobile-hide">Random Color</button>-->
-<!--<button onclick="testAlert()">Test Alert</button>-->
+
 <br>
 <table class="table posts">
   <tbody>
@@ -76,7 +65,7 @@
     <tr id="post_<%= post.id %>">
       <td>
       <h1 class="preview-title"><%= post.title %></h1>
-      <!--<p>Created by: <%#= post.user.name %></p>-->
+   
       <p class="preview-text"><%= truncate post.body, length: 400, separator: " " %></p>
        <br><br>
        <span><%= link "	📖 ", to: post_path(@conn, :show, post), class: "btn btn-default btn-md btn-read-post unicode-lg" %></span>
@@ -86,7 +75,7 @@
           <%= link " #{post.upvotes_count.count} ⇧ ", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
           <%= link " #{post.upvotes_count.count} ⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
         </span>
-        <!--<span><%#= link "Fork", to: post_path(@conn, :fork, post), class: "btn btn-default btn-xs" %></span>-->
+ 
         <span><%= link " #{@forks_count[root_path(post.path)]} 𝝍 ", to: post_path(@conn, :fork, post), class: "btn btn-default btn-md unicode-lg" %> </span>
      <br><br><br>
       </td>
@@ -134,15 +123,3 @@ function changeColor() {
 
 </script>
 <br><br><br><br><br><br>
- <!--<a href="http://codepen.io/ARS" target="_blank"><span class="large-test-button">               Ψ</span></a>-->
-
-<!-- HTML HELL -->
-
-<!--<div class="mask"></div>-->
-<!--<span id="multi-colored-letter-1"></span><span id="multi-colored-letter-2"></span><span id="multi-colored-letter-3"></span>-->
-<!--<span id="multi-colored-letter-4"></span><span id="multi-colored-letter-5"></span><span id="multi-colored-letter-6"></span>-->
-<!--<span id="multi-colored-letter-7"></span><span id="multi-colored-letter-7"></span><span id="multi-colored-letter-8"></span><span id="multi-colored-letter-9"></span>-->
-<!--<span id="multi-colored-letter-10"></span><span id="multi-colored-letter-11"></span><span id="multi-colored-letter-12"></span><span id="multi-colored-letter-13"></span><span id="multi-colored-letter-14"></span><span id="multi-colored-letter-15"></span><span id="multi-colored-letter-16"></span>-->
-<!--</div>-->
-
- <!--BLOGS YOU CAN FORK MULTI-COLORED<span class="blogs-u-can-fork"><span id="multi-colored-letter-1">B</span><span id="multi-colored-letter-2">l</span><span id="multi-colored-letter-3">o</span><span id="multi-colored-letter-4">g</span><span id="multi-colored-letter-5">s </span><span id="multi-colored-letter-6">y</span><span id="multi-colored-letter-7">o</span><span id="multi-colored-letter-8">u</span><span id="multi-colored-letter-9"> c</span><span id="multi-colored-letter-10">a</span><span id="multi-colored-letter-11">n</span><span id="multi-colored-letter-12"> f</span><span id="multi-colored-letter-13">o</span><span id="multi-colored-letter-14">r</span><span id="multi-colored-letter-15">k</span></span>-->

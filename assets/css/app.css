@@ -323,6 +323,8 @@ body
     margin-left: -30%;
 }
 
+
+
 .show-competing-forks a:hover
 {
     color: rgba(200,100,20,.8);
@@ -1146,6 +1148,25 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     background-color: rgba(0,170,150,.2) !important;
 }
 
+.show-fork-index{
+      position: absolute;
+    font-size: 46px;
+    color: rgba(0,200,250,0.8);
+    margin-top: -16.2%;
+    margin-left: -10.4%;
+    z-index: 22;
+}
+
+.show-fork-edit {
+    position: absolute;
+    font-size: 46px;
+    color: rgba(200,100,20,1);
+    margin-top: -15.8%;
+    margin-left: 24%;
+    z-index: 22;
+    
+}
+
 .show-edit-white-btn
 {
     position: absolute;
@@ -1161,6 +1182,15 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
+}
+
+.show-fork-text{
+    position: absolute;
+    color: rgba(150,20,150,0.8);
+    font-size: 36px;
+    margin-top: -15.5%;
+    margin-left: 63.5%;
+    z-index: 22;
 }
 
 .show-white-fork-btn
@@ -2598,5 +2628,105 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
   }
 }
 
-/*Underscore Link*/
+/* TOOLTIPS */
 
+/*body {*/
+/*  margin: 20px;*/
+/*}*/
+
+a[data-tooltip] {
+  /*position: relative;*/
+}
+a[data-tooltip]::before,
+a[data-tooltip]::after {
+  /*position: absolute;*/
+  display: none;
+  opacity: 0.85;
+}
+
+a[data-tooltip]::before {
+  /*
+   * using data-tooltip instead of title so we 
+   * don't have the real tooltip overlapping
+   */
+  content: attr(data-tooltip);
+  background: rgba(200,100,0,0.8);
+  color: #fff;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 5px;
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+}
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+  display: block;
+}
+
+/** positioning **/
+
+/* left tooltip */
+a[data-tooltip][data-placement="left"]::before {
+  top: -25%;
+  right: 100%;
+  margin-right: 10px;
+}
+a[data-tooltip][data-placement="left"]::after {
+  border-left-color: rgba(150,80,0,0.8);
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+/* right tooltip */
+a[data-tooltip][data-placement="right"]::before {
+  top: -25%;
+  left: 100%;
+  margin-left: 10px;
+}
+a[data-tooltip][data-placement="right"]::after {
+  border-right-color: rgba(150,80,0,0.8);
+  border-left: none;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 4px;
+}
+
+/* top tooltip */
+a[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+}
+a[data-tooltip][data-placement="top"]::after {
+  border-top-color: rgba(150,80,0,0.8);
+  border-bottom: none;
+  bottom: 100%;
+  left: 10px;
+  margin-bottom: 4px;
+}
+
+/* bottom tooltip */
+a[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+a[data-tooltip][data-placement="bottom"]::after {
+  border-bottom-color: rgba(150,80,80,0.8);
+  border-top: none;
+  top: 100%;
+  left: 10px;
+  margin-top: 4px;
+}

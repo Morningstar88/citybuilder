@@ -13,10 +13,14 @@
   </header>
 
  <br> <br> <br>  <br> <br> <br> <br> <br> <br>
+ 
   <ul>
 
  	    <br> <br>  <br> <br>
  	    <!--<p class="display-post-title-wrapper">-->
+ 	    <p class="show-fork-text">  𝜓  </p>
+ 	    <p class="show-fork-edit"> ✎  </p>
+ 	    <p class="show-fork-index"> < </p>
  	   <h1 class="display-post-title-index-show">
        <%= @post.title %>
     </h1>

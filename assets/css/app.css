@@ -807,6 +807,9 @@ a.logout-button
 
 .whatsup-multicolored:hover {
     text-decoration: none;
+    border-bottom: 1px solid rgba(20,50,100,0.4);
+    transition: 0.4s;
+    border-radius: 10px;
 }
 
 
@@ -2532,3 +2535,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     transform:rotateZ(1600deg);
      }
 }
+
+/*Underscore Link*/
+

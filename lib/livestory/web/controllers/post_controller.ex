@@ -15,7 +15,7 @@ defmodule LiveStory.Web.PostController do
     posts = Stories.list_posts
     post_ids = Enum.map(posts, &(&1.id))
     post_paths = Enum.map(posts, &(&1.path))
-    upvotes = Stories.list_user_upvotes(conn.assigns.user, post_ids)
+    upvotes = Stories.list_user_post_upvotes(conn.assigns.user, post_ids)
     forks_count = Stories.count_forks(post_paths)
     render(conn, "index.html",
       posts: posts,
@@ -80,12 +80,18 @@ defmodule LiveStory.Web.PostController do
   def show(conn, _params) do
     post = conn.assigns.post
     comments = Stories.post_comments(post.id)
+    comment_ids = Enum.map(comments, &(&1.id))
+    upvotes = Stories.list_user_comment_upvotes(conn.assigns.user, comment_ids)
+    comment_changeset = if conn.assigns.user do
+      Stories.new_post_comment(post, %{
+        user_name: conn.assigns.user.username
+      })
+    end
     render(conn, "show.html",
       post: post,
       comments: comments,
-      comment_changeset: Stories.new_post_comment(post, %{
-        user_name: conn.assigns.user.username
-      })
+      comment_changeset: comment_changeset,
+      upvotes: upvotes
     )
   end
 
@@ -130,6 +136,7 @@ defmodule LiveStory.Web.PostController do
       conn
       |> put_flash(:error, "This post belongs to another user! You can fork someone else's post, but not edit it.")
       |> redirect(to: post_path(conn, :index))
+      |> halt
     else
       conn
     end

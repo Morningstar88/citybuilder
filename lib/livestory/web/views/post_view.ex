@@ -1,6 +1,8 @@
 defmodule LiveStory.Web.PostView do
   use LiveStory.Web, :view
 
+  alias LiveStory.Stories.Comment
+
   @spec upvoted_class(button_state :: binary, upvote_state :: boolean) :: binary
   def upvoted_class("upvoted", true), do: ""
   def upvoted_class("upvoted", nil), do: "hidden "
@@ -33,5 +35,28 @@ defmodule LiveStory.Web.PostView do
 
   def topic_select(topics) do
     Enum.map(topics, &{&1.name, &1.id})
+  end
+
+  def comment_upvote_class(%Comment{upvotes_count: %{count: count}}) when count >= 10 do
+    "upvotes-above-ten"
+  end
+  def comment_upvote_class(%Comment{upvotes_count: %{count: count}}) when count >= 5 do
+    "upvotes-above-five"
+  end
+  def comment_upvote_class(%Comment{}), do: ""
+
+  def split_topic_name(name) do
+    letters = name
+    |> String.trim
+    |> String.graphemes
+    |> Enum.with_index(1)
+    |> Enum.map(fn({letter, index}) ->
+      content_tag :span, class: "select-fonts-#{index}" do
+        letter
+      end
+    end)
+    content_tag :div, class: "font-select-div mobile-hide" do
+      letters
+    end
   end
 end

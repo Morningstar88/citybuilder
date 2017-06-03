@@ -1,18 +1,24 @@
-<tr id="comment_<%= @comment.id %>">
-  <td class="commenter">
-    <div class="comment-date">
-     <span class="commenter">
+<tr id="comment_<%= @comment.id %>" class="<%= comment_upvote_class(@comment) %>">
+  <%= cond do %>
+    <% @comment.removed_by_owner -> %>
+      <td colspan="4">deleted</td>
+    <% @comment.removed_by_moderator -> %>
+      <td colspan="4">Sorry this, post was deleted by our anti-spam squad</td>
+    <% true -> %>
+      <td>
+        <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote %>
+      </td>
+      <td class="commenter">
         <%= @comment.user_name %>
-        </span>    
-    <span class="comment-datetime">
-    <%= format_datetime @comment.inserted_at %>
-    </span>
-    </div>
-</td>
-  </div>
-  <td class="comment-body"><%= @comment.body %></td>
-  <%= if can_modify_comment?(@conn.assigns.user, @comment) do %>
-    <td><%= link "Edit", to: comment_path(@conn, :edit, @comment), "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-edit-btn" %></td>
-    <td><%= link "Delete", to: comment_path(@conn, :delete, @comment), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-delete-btn" %></td>
+        <br>
+        <%= format_datetime @comment.inserted_at %>
+      </td>
+      <td class="comment-body"><%= @comment.body %></td>
+      <td>
+        <%= if can_modify_comment?(@conn.assigns.user, @comment) do %>
+          <td><%= link "Edit", to: comment_path(@conn, :edit, @comment), "ujs-method": "put", "ujs-remote": true, "ujs-eval": true, class:  "btn btn-default comment-edit-btn" %></td>
+          <td><%= link "Delete", to: comment_path(@conn, :delete, @comment), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class:"btn btn-default comment-delete-btn" %></td>
+        <% end %>
+      </td>
   <% end %>
 </tr>

@@ -62,7 +62,7 @@
 <div class="sidebar-div">
   <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
   <div class="sidebar-1">
-   <%= link topic.name, to: topic_path(@conn, :show, topic.slug) %>
+   <%= link split_topic_name(topic.name), to: topic_path(@conn, :show, topic.slug) %>
   </div>
   <% end %>
 </div>

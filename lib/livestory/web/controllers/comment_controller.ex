@@ -9,7 +9,7 @@ defmodule LiveStory.Web.CommentController do
   plug :set_user
   plug :set_post when not action in [:edit, :update, :delete]
   plug :set_comment when action in [:edit, :update, :delete]
-  plug :check_same_user when action in [:edit, :update, :delete]
+  plug :check_can_modify_comment when action in [:edit, :update, :delete]
 
   def create(conn, params) do
     post = conn.assigns.post
@@ -18,7 +18,9 @@ defmodule LiveStory.Web.CommentController do
         conn
         |> render("create.js",
           comment: comment,
-          changeset: Stories.new_post_comment(post)
+          changeset: Stories.new_post_comment(post, %{
+            user_name: conn.assigns.user.username
+          })
         )
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
@@ -34,13 +36,18 @@ defmodule LiveStory.Web.CommentController do
   end
 
   def update(conn, params) do
-    case Stories.update_comment(params["comment"], conn.assigns.comment) do
+    case Stories.update_comment(params["comment"], conn.assigns.comment, conn.assigns.user) do
       {:ok, comment} ->
+        upvote = Stories.list_user_comment_upvotes(conn.assigns.user, [comment.id])[comment.id]
+        comment = Stories.preload_comment_upvotes_count(comment)
         conn
         |> render("update.js",
           comment: comment,
+          upvote: upvote,
           post: conn.assigns.comment.post,
-          changeset: Stories.new_post_comment(conn.assigns.comment.post)
+          changeset: Stories.new_post_comment(conn.assigns.comment.post, %{
+            user_name: conn.assigns.user.username
+          })
         )
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
@@ -49,9 +56,9 @@ defmodule LiveStory.Web.CommentController do
   end
 
   def delete(conn, _params) do
-    {:ok, _comment} = Stories.delete_comment(conn.assigns.comment)
+    {:ok, comment} = Stories.delete_comment(conn.assigns.comment, conn.assigns.user)
     conn
-    |> render("delete.js", comment: conn.assigns.comment)
+    |> render("delete.js", comment: comment)
   end
 
   defp set_comment(%{params: %{"id" => id}} = conn, _opts) do
@@ -59,12 +66,13 @@ defmodule LiveStory.Web.CommentController do
   end
 
   # similar to function in PostController, but has some differences
-  defp check_same_user(conn, _opts) do
-    if conn.assigns.user.id != conn.assigns.comment.user_id do
+  defp check_can_modify_comment(conn, _opts) do
+    if can_modify_comment?(conn.assigns.user, conn.assigns.comment) do
       conn
-      |> render("access_error.js", message: "This comment belongs to another user! You can't edit it.")
     else
       conn
+      |> render("access_error.js", message: "This comment belongs to another user! You can't edit it.")
+      |> halt
     end
   end
 end

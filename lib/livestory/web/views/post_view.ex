@@ -44,4 +44,19 @@ defmodule LiveStory.Web.PostView do
     "upvotes-above-five"
   end
   def comment_upvote_class(%Comment{}), do: ""
+
+  def split_topic_name(name) do
+    letters = name
+    |> String.trim
+    |> String.graphemes
+    |> Enum.with_index(1)
+    |> Enum.map(fn({letter, index}) ->
+      content_tag :span, class: "select-fonts-#{index}" do
+        letter
+      end
+    end)
+    content_tag :div, class: "font-select-div mobile-hide" do
+      letters
+    end
+  end
 end

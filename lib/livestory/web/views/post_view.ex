@@ -46,17 +46,24 @@ defmodule LiveStory.Web.PostView do
   def comment_upvote_class(%Comment{}), do: ""
 
   def split_topic_name(name) do
-    letters = name
+    content_tag :div, class: "font-select-div mobile-hide" do
+      do_split(name, "select-fonts")
+    end
+  end
+
+  def split_logout(text) do
+    do_split(text, "logout-multi")
+  end
+
+  defp do_split(string, class_prefix) do
+    string
     |> String.trim
     |> String.graphemes
     |> Enum.with_index(1)
     |> Enum.map(fn({letter, index}) ->
-      content_tag :span, class: "select-fonts-#{index}" do
+      content_tag :span, class: Enum.join([class_prefix, index], "-") do
         letter
       end
     end)
-    content_tag :div, class: "font-select-div mobile-hide" do
-      letters
-    end
   end
 end

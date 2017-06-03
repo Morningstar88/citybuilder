@@ -712,6 +712,18 @@ body
     text-shadow: 1px 1px 1px rgba(100,100,100,.5);
 }
 
+.comment-multi-1{
+    color: rgba(100,10,50,0.7);
+}
+
+.comment-multi-2{
+    color: rgba(10,100,30,0.7);
+}
+
+.comment-multi-3{
+    color: rgba(200,100,20,0.8);
+}
+
 
 #comment-title-editor
 {
@@ -2534,6 +2546,46 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
   90% {
     transform:rotateZ(1600deg);
      }
+}
+
+/* Spinning text  */
+
+.spinner{
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    animation-name: spinner;
+    animation-iteration-count: 20;
+    animation-duration: 0s;
+    animation-timing-function:  cubic-bezier(0.9,0.9,0.9,0.9)
+    transform-style: preserve-3d;
+    text-align: center;
+    animation-play-state: paused;
+}
+
+.spinner:hover {
+   animation-play-state: running;
+   animation-duration: 5s;
+  animation-iteration-count:10;
+  animation-delay: 0s;
+  cursor:crosshair;
+
+}
+.spinner {
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+@keyframes spinner {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-1440deg);
+  }
 }
 
 /*Underscore Link*/

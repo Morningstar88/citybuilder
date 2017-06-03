@@ -13,12 +13,12 @@
   
   <div class="form-group">
     <%= label f, :title, class: "control-label" %>
-    <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Title here..." %>
+    <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Write your title here..." %>
     <%= error_tag f, :title %>
   </div>
    <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "What happened today?"  %>
+    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "What's on your mind?"  %>
     <%= error_tag f, :body %>
   </div>
   <div class="form-group">

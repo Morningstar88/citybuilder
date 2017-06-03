@@ -18,7 +18,9 @@ topics = [
   {"TECHNOLOGY", :technology},
   {"ART + MUSIC", :art_and_music},
   {"MYSTERIES", :mysteries},
-  {"CLASSIC", :classic},]
+  {"CLASSIC", :classic},
+  {"CITY-BUILDING", :city_building},
+  {"LONGEVITY", :longevity}]
 
 LiveStory.Repo.transaction fn ->
   topics

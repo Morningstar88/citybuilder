@@ -41,10 +41,11 @@
 <!--<div class="whats-happening-opaque-overlay">What's Up ?</div>-->
 
 <%= if @user do %>
-<span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
- <a href="/#" class="logout-multicolored"> 
-<span class="logout-multi-1">l</span><span class="logout-multi-2">o</span><span class="logout-multi-3">g</span><span class="logout-multi-4">-</span><span class="logout-multi-5">o</span><span class="logout-multi-6">u</span><span class="logout-multi-7">t</span></a>
-<span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
+  <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
+
+  <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
+    <%= split_logout("logout") %>
+  <% end %>
 <% else %>
   <!--<span><%#= link " ---              ", to: user_path(@conn, :signin), class: "logout-btn"%></span>-->
  <a href="/users/signin" class="login-multicolored"> 

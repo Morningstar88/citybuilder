@@ -724,6 +724,16 @@ body
     color: rgba(200,100,20,0.8);
 }
 
+.comment-edit-btn {
+    color: rgba(255,255,255,1) !important;
+    background-color: rgba(200,100,20,0.8) !important;
+}
+
+.comment-delete-btn {
+    color: rgba(230,130,20,0.8) !important;
+    background-color: rgba(10,10,10,0.8) !important;
+}
+
 
 #comment-title-editor
 {

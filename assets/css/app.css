@@ -154,9 +154,9 @@ body
     letter-spacing: 1px;
 
     color: rgba(20,20,200,.8) !important;
-    color: rgba(255,255,255,.01); 
+    color: rgba(255,255,255,.01);
     text-shadow: 1px 1px 0 rgba(0,20,60,.7) !important; /* OVERLAY CHANGE COLOR */
- 
+
     -webkit-text-fill-color: transparent;
 }
 
@@ -646,12 +646,18 @@ body
     overflow: hidden;
 
     width: 500px;
-    margin-top: -0;
-    margin-right: 146% !important;
+    margin-top: -60%;
+    margin-right: 186% !important;
 
     color: rgba(40,40,40,.6);
     /*display: block;*/
     /*text-decoration: underline;*/
+}
+
+.comment-upvote-btn
+{
+    width: 50%;
+    height: 1000px;
 }
 
 .comment-btn
@@ -704,7 +710,7 @@ body
     width: auto;
     max-width: 900px;
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 
     white-space: pre-wrap !important;
     word-break: normal;
@@ -714,26 +720,31 @@ body
     text-shadow: 1px 1px 1px rgba(100,100,100,.5);
 }
 
-.comment-multi-1{
-    color: rgba(100,10,50,0.7);
+.comment-multi-1
+{
+    color: rgba(100,10,50,.7);
 }
 
-.comment-multi-2{
-    color: rgba(10,100,30,0.7);
+.comment-multi-2
+{
+    color: rgba(10,100,30,.7);
 }
 
-.comment-multi-3{
-    color: rgba(200,100,20,0.8);
+.comment-multi-3
+{
+    color: rgba(200,100,20,.8);
 }
 
-.comment-edit-btn {
+.comment-edit-btn
+{
     color: rgba(255,255,255,1) !important;
-    background-color: rgba(200,100,20,0.8) !important;
+    background-color: rgba(200,100,20,.8) !important;
 }
 
-.comment-delete-btn {
-    color: rgba(230,130,20,0.8) !important;
-    background-color: rgba(10,10,10,0.8) !important;
+.comment-delete-btn
+{
+    color: rgba(230,130,20,.8) !important;
+    background-color: rgba(10,10,10,.8) !important;
 }
 
 
@@ -829,15 +840,17 @@ a.logout-button
     -webkit-text-fill-color: transparent;
 }
 
-.whatsup-multicolored:hover {
+.whatsup-multicolored:hover
+{
+    transition: .4s;
     text-decoration: none;
-    border-bottom: 1px solid rgba(20,50,100,0.4);
-    transition: 0.4s;
+
+    border-bottom: 1px solid rgba(20,50,100,.4);
     border-radius: 10px;
 }
 
 
-  
+
 
 /* Test Animation */
 
@@ -949,9 +962,9 @@ a.logout-button
 
 .whatsup-multi-9
 {
-    transition: 0s 3s;
-    
     font-weight: 100;
+
+    transition: 0s 3s;
 
     color: rgba();
     text-shadow: 1px 1px 1px rgba(130,10,200,.5);
@@ -1148,23 +1161,30 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     background-color: rgba(0,170,150,.2) !important;
 }
 
-.show-fork-index{
-      position: absolute;
+.show-fork-index
+{
     font-size: 46px;
-    color: rgba(0,200,250,0.8);
+
+    position: absolute;
+    z-index: 22;
+
     margin-top: -16.2%;
     margin-left: -10.4%;
-    z-index: 22;
+
+    color: rgba(0,200,250,.8);
 }
 
-.show-fork-edit {
-    position: absolute;
+.show-fork-edit
+{
     font-size: 46px;
-    color: rgba(200,100,20,1);
+
+    position: absolute;
+    z-index: 22;
+
     margin-top: -15.8%;
     margin-left: 24%;
-    z-index: 22;
-    
+
+    color: rgba(200,100,20,1);
 }
 
 .show-edit-white-btn
@@ -1184,13 +1204,17 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     -webkit-text-fill-color: transparent;
 }
 
-.show-fork-text{
-    position: absolute;
-    color: rgba(150,20,150,0.8);
+.show-fork-text
+{
     font-size: 36px;
+
+    position: absolute;
+    z-index: 22;
+
     margin-top: -15.5%;
     margin-left: 63.5%;
-    z-index: 22;
+
+    color: rgba(150,20,150,.8);
 }
 
 .show-white-fork-btn
@@ -2544,88 +2568,104 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 /*Bit Letter Spinning Class*/
 
-.bitspinner{
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+.bitspinner
+{
+    display: inline-block;
+
     animation-name: bitspinner;
-    animation-iteration-count: 20;
     animation-duration: 0s;
-    animation-timing-function:  cubic-bezier(0.9,0.9,0.9,0.9)
-    transform-style: preserve-3d;
-/*     margin-left: 300px; */
+    /*     margin-left: 300px; */
     animation-play-state: paused;
-  display: inline-block;
+    animation-timing-function: cubic-bezier(.9,.9,.9,.9)
+    transform-style: preserve-3d;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    animation-iteration-count: 20;
 }
 
-.bitspinner:hover {
-   animation-play-state: running;
-   animation-duration: 5s;
-  animation-iteration-count:10;
-  animation-delay: 0s;
-  cursor:crosshair;
-/*    pointer-events: none; */
-
+.bitspinner:hover
+{
+    cursor: crosshair;
+    animation-duration: 5s;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-iteration-count: 10;
+    /*    pointer-events: none; */
 }
-.bitspinner {
-/*     margin: 0; */
-/*     font-weight: normal;
+.bitspinner
+{
+    /*     margin: 0; */
+    /*     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.25em; */
 }
-@keyframes bitspinner {
-  0% {
-    transform: rotateZ(-2700deg);
-  }
-  50% {
-    transform: rotateZ(-0deg);
-  }
-  80% {
-    transform: rotateY(-37deg);
-  }
-  
-  90% {
-    transform:rotateZ(1600deg);
-     }
+@keyframes bitspinner
+{
+    0%
+    {
+        transform: rotateZ(-2700deg);
+    }
+    50%
+    {
+        transform: rotateZ(-0deg);
+    }
+    80%
+    {
+        transform: rotateY(-37deg);
+    }
+
+    90%
+    {
+        transform: rotateZ(1600deg);
+    }
 }
 
 /* Spinning text  */
 
-.spinner{
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+.spinner
+{
     animation-name: spinner;
-    animation-iteration-count: 20;
     animation-duration: 0s;
-    animation-timing-function:  cubic-bezier(0.9,0.9,0.9,0.9)
-    transform-style: preserve-3d;
-    text-align: center;
     animation-play-state: paused;
+    animation-timing-function: cubic-bezier(.9,.9,.9,.9)
+    transform-style: preserve-3d;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    animation-iteration-count: 20;
+    text-align: center;
 }
 
-.spinner:hover {
-   animation-play-state: running;
-   animation-duration: 5s;
-  animation-iteration-count:10;
-  animation-delay: 0s;
-  cursor:crosshair;
-
+.spinner:hover
+{
+    cursor: crosshair;
+    animation-duration: 5s;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-iteration-count: 10;
 }
-.spinner {
-    margin: 0;
+.spinner
+{
     font-weight: normal;
+
+    margin: 0;
+
+    letter-spacing: .25em;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
 }
-@keyframes spinner {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(-1440deg);
-  }
+@keyframes spinner
+{
+    0%
+    {
+        transform: rotateY(0deg);
+    }
+    50%
+    {
+        transform: rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateY(-1440deg);
+    }
 }
 
 /* TOOLTIPS */
@@ -2634,99 +2674,130 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*  margin: 20px;*/
 /*}*/
 
-a[data-tooltip] {
-  /*position: relative;*/
+a[data-tooltip]
+{
+    /*position: relative;*/
 }
 a[data-tooltip]::before,
-a[data-tooltip]::after {
-  /*position: absolute;*/
-  display: none;
-  opacity: 0.85;
+a[data-tooltip]::after
+{
+    /*position: absolute;*/
+    display: none;
+
+    opacity: .85;
 }
 
-a[data-tooltip]::before {
-  /*
+a[data-tooltip]::before
+{
+    font-size: 13px;
+
+    padding: 5px;
+    /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
    */
-  content: attr(data-tooltip);
-  background: rgba(200,100,0,0.8);
-  color: #fff;
-  font-size: 13px;
-  padding: 5px;
-  border-radius: 5px;
-  /* we don't want the text to wrap */
-  white-space: nowrap;
-  text-decoration: none;
+
+    content: attr(data-tooltip);
+    /* we don't want the text to wrap */
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: #fff;
+    border-radius: 5px;
+    background: rgba(200,100,0,.8);
 }
-a[data-tooltip]::after {
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  content: '';
+a[data-tooltip]::after
+{
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border: 6px solid transparent;
 }
 
 a[data-tooltip]:hover::before,
-a[data-tooltip]:hover::after {
-  display: block;
+a[data-tooltip]:hover::after
+{
+    display: block;
 }
 
 /** positioning **/
 
 /* left tooltip */
-a[data-tooltip][data-placement="left"]::before {
-  top: -25%;
-  right: 100%;
-  margin-right: 10px;
+a[data-tooltip][data-placement='left']::before
+{
+    top: -25%;
+    right: 100%;
+
+    margin-right: 10px;
 }
-a[data-tooltip][data-placement="left"]::after {
-  border-left-color: rgba(150,80,0,0.8);
-  border-right: none;
-  top: 50%;
-  right: 100%;
-  margin-top: -6px;
-  margin-right: 4px;
+a[data-tooltip][data-placement='left']::after
+{
+    top: 50%;
+    right: 100%;
+
+    margin-top: -6px;
+    margin-right: 4px;
+
+    border-right: none;
+    border-left-color: rgba(150,80,0,.8);
 }
 
 /* right tooltip */
-a[data-tooltip][data-placement="right"]::before {
-  top: -25%;
-  left: 100%;
-  margin-left: 10px;
+a[data-tooltip][data-placement='right']::before
+{
+    top: -25%;
+    left: 100%;
+
+    margin-left: 10px;
 }
-a[data-tooltip][data-placement="right"]::after {
-  border-right-color: rgba(150,80,0,0.8);
-  border-left: none;
-  top: 50%;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: 4px;
+a[data-tooltip][data-placement='right']::after
+{
+    top: 50%;
+    left: 100%;
+
+    margin-top: -6px;
+    margin-left: 4px;
+
+    border-right-color: rgba(150,80,0,.8);
+    border-left: none;
 }
 
 /* top tooltip */
-a[data-tooltip][data-placement="top"]::before {
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 10px;
+a[data-tooltip][data-placement='top']::before
+{
+    bottom: 100%;
+    left: 0;
+
+    margin-bottom: 10px;
 }
-a[data-tooltip][data-placement="top"]::after {
-  border-top-color: rgba(150,80,0,0.8);
-  border-bottom: none;
-  bottom: 100%;
-  left: 10px;
-  margin-bottom: 4px;
+a[data-tooltip][data-placement='top']::after
+{
+    bottom: 100%;
+    left: 10px;
+
+    margin-bottom: 4px;
+
+    border-top-color: rgba(150,80,0,.8);
+    border-bottom: none;
 }
 
 /* bottom tooltip */
-a[data-tooltip][data-placement="bottom"]::before {
-  top: 100%;
-  left: 0;
-  margin-top: 10px;
+a[data-tooltip][data-placement='bottom']::before
+{
+    top: 100%;
+    left: 0;
+
+    margin-top: 10px;
 }
-a[data-tooltip][data-placement="bottom"]::after {
-  border-bottom-color: rgba(150,80,80,0.8);
-  border-top: none;
-  top: 100%;
-  left: 10px;
-  margin-top: 4px;
+a[data-tooltip][data-placement='bottom']::after
+{
+    top: 100%;
+    left: 10px;
+
+    margin-top: 4px;
+
+    border-top: none;
+    border-bottom-color: rgba(150,80,80,.8);
 }

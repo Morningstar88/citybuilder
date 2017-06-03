@@ -3,15 +3,15 @@
     <% @comment.removed_by_owner -> %>
       <td colspan="4">deleted</td>
     <% @comment.removed_by_moderator -> %>
-      <td colspan="4">Sorry this, post was deleted by our anti-spam squad</td>
+      <td colspan="4">Sorry, this post was deleted by our anti-spam squad</td>
     <% true -> %>
       <td>
-        <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote %>
+        <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote, class: "comment-upvote-btn" %>
       </td>
       <td class="commenter">
         <%= @comment.user_name %>
         <br>
-        <%= format_datetime @comment.inserted_at %>
+       <span class="comment-datetime"><%= format_datetime @comment.inserted_at %></span>
       </td>
       <td class="comment-body"><%= @comment.body %></td>
       <td>

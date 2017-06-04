@@ -1,6 +1,8 @@
 defmodule LiveStory.Web.CommentController do
   use LiveStory.Web, :controller
 
+  require Logger
+
   import LiveStory.Plugs
 
   alias LiveStory.Stories
@@ -10,12 +12,14 @@ defmodule LiveStory.Web.CommentController do
   plug :set_post when not action in [:edit, :update, :delete]
   plug :set_comment when action in [:edit, :update, :delete]
   plug :check_can_modify_comment when action in [:edit, :update, :delete]
+  plug :check_captcha when action in [:create]
 
   def create(conn, params) do
     post = conn.assigns.post
     case Stories.create_comment(params["comment"], post.id, conn.assigns.user.id) do
       {:ok, comment} ->
         conn
+        |> put_flash(:captcha, true)
         |> render("create.js",
           comment: comment,
           changeset: Stories.new_post_comment(post, %{
@@ -24,7 +28,8 @@ defmodule LiveStory.Web.CommentController do
         )
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
-        |> render("error.js", changeset: changeset, post: post)
+        |> put_flash(:captcha, true)
+        |> render("create_error.js", changeset: changeset, post: post)
     end
   end
 
@@ -41,6 +46,7 @@ defmodule LiveStory.Web.CommentController do
         upvote = Stories.list_user_comment_upvotes(conn.assigns.user, [comment.id])[comment.id]
         comment = Stories.preload_comment_upvotes_count(comment)
         conn
+        |> put_flash(:captcha, true)
         |> render("update.js",
           comment: comment,
           upvote: upvote,
@@ -51,7 +57,7 @@ defmodule LiveStory.Web.CommentController do
         )
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
-        |> render("error.js", changeset: changeset, post: conn.assigns.post)
+        |> render("update_error.js", changeset: changeset, post: conn.assigns.comment.post)
     end
   end
 
@@ -73,6 +79,20 @@ defmodule LiveStory.Web.CommentController do
       conn
       |> render("access_error.js", message: "This comment belongs to another user! You can't edit it.")
       |> halt
+    end
+  end
+
+  defp check_captcha(conn, _opts) do
+    case Recaptcha.verify(conn.params["g-recaptcha-response"]) do
+      {:ok, _response} ->
+        Logger.info("captcha checked")
+        conn
+      {:error, _errors} ->
+        Logger.info("captcha error")
+        conn
+        |> put_flash(:captcha, true)
+        |> render("captcha_error.js")
+        |> halt
     end
   end
 end

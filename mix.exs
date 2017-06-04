@@ -34,6 +34,8 @@ defmodule LiveStory.Mixfile do
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
+     # from official repository, but not from hex, because latest patches are not released yet
+     {:recaptcha, "~> 2.0", github: "samueljseay/recaptcha"},
      {:timex, "~> 3.0"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},

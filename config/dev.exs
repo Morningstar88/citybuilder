@@ -58,3 +58,8 @@ config :livestory, LiveStory.Repo,
   hostname: "localhost",
   template: "template0",
   pool_size: 10
+
+# this will work only on localhost, please don't try to use this in production
+config :recaptcha,
+  public_key: "6Lfd0yMUAAAAALrGE9Y2WVnciARoQ6ZGqnl3FZTS",
+  secret: "6Lfd0yMUAAAAAPjaO9NbiUX9S-5U4zq1ZVI-HpdH"

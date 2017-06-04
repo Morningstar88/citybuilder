@@ -1,0 +1,1 @@
+$("#comment-form").replaceWith("<%= escape_javascript render("form.html", changeset: @changeset, action: comment_path(@conn, :update, @comment), conn: @conn) %>");

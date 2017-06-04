@@ -1,0 +1,1 @@
+$("#captcha-error").text("captcha not checked");

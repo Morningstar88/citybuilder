@@ -1,5 +1,4 @@
 <%= form_for @changeset, @action, [id: "comment-form", "ujs-remote": true, "ujs-eval": true], fn f -> %>
-  <%= raw Recaptcha.Template.display %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! Please check the errors below.</p>
@@ -17,6 +16,10 @@
     <%= textarea f, :body, class: "form-control", id: "comment-body-editor", placeholder: "1. Short and Sweet. Max 1100 characters.  \n2. Please don't out personal info. \n3. Try not to be a passive-aggresive jerk." %>
     <%= error_tag f, :body %>
   </div>
+  <%= if get_flash(@conn, :captcha) do %>
+    <%= raw Recaptcha.Template.display %>
+  <% end %>
+  <div id="captcha-error"></div>
   <div class="form-group">
     <%= submit "All The World's a Stage", class: "btn btn-warning block-btn comment-btn" %>
   </div>

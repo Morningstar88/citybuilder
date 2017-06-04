@@ -87,7 +87,9 @@ defmodule LiveStory.Web.PostController do
         user_name: conn.assigns.user.username
       })
     end
-    render(conn, "show.html",
+    conn
+    |> put_flash(:captcha, true)
+    |> render("show.html",
       post: post,
       comments: comments,
       comment_changeset: comment_changeset,

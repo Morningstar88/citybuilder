@@ -835,7 +835,7 @@ a.logout-button
     border-radius: 1px 3px 0 10px;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
     -webkit-background-clip: text;
-    text-shadow: 0 0 1px rgba(200,20,40,.01);
+    text-shadow: 0 0 1px rgba(200,100,40,.01);
 
     -webkit-text-fill-color: transparent;
 }
@@ -2494,6 +2494,11 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7) !important;
 }
 
+.you-must-be-signed {
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .upvote-count
 {
     font-family: 'Josefin Sans' !important;
@@ -2674,130 +2679,100 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*  margin: 20px;*/
 /*}*/
 
-a[data-tooltip]
-{
-    /*position: relative;*/
+a[data-tooltip] {
+  position: relative;
 }
 a[data-tooltip]::before,
-a[data-tooltip]::after
-{
-    /*position: absolute;*/
-    display: none;
-
-    opacity: .85;
+a[data-tooltip]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
 }
-
-a[data-tooltip]::before
-{
-    font-size: 13px;
-
-    padding: 5px;
-    /*
+a[data-tooltip]::before {
+  /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
    */
-
-    content: attr(data-tooltip);
-    /* we don't want the text to wrap */
-    white-space: nowrap;
-    text-decoration: none;
-
-    color: #fff;
-    border-radius: 5px;
-    background: rgba(200,100,0,.8);
+  content: attr(data-tooltip);
+  background: rgba(200,100,100,0.8);
+  color: rgba(255,255,255,1);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px rgba(20,20,20,0.8);
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
 }
-a[data-tooltip]::after
-{
-    width: 0;
-    height: 0;
-
-    content: '';
-
-    border: 6px solid transparent;
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
 }
 
 a[data-tooltip]:hover::before,
-a[data-tooltip]:hover::after
-{
-    display: block;
+a[data-tooltip]:hover::after {
+  display: block;
 }
 
 /** positioning **/
 
 /* left tooltip */
-a[data-tooltip][data-placement='left']::before
-{
-    top: -25%;
-    right: 100%;
-
-    margin-right: 10px;
+a[data-tooltip][data-placement="left"]::before {
+  top: -25%;
+  right: 100%;
+  margin-right: 10px;
 }
-a[data-tooltip][data-placement='left']::after
-{
-    top: 50%;
-    right: 100%;
-
-    margin-top: -6px;
-    margin-right: 4px;
-
-    border-right: none;
-    border-left-color: rgba(150,80,0,.8);
+a[data-tooltip][data-placement="left"]::after {
+  border-left-color: rgba(200,100,100,0.5);
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  margin-right: 4px;
 }
 
 /* right tooltip */
-a[data-tooltip][data-placement='right']::before
-{
-    top: -25%;
-    left: 100%;
-
-    margin-left: 10px;
+a[data-tooltip][data-placement="right"]::before {
+  top: -25%;
+  left: 100%;
+  margin-left: 10px;
 }
-a[data-tooltip][data-placement='right']::after
-{
-    top: 50%;
-    left: 100%;
-
-    margin-top: -6px;
-    margin-left: 4px;
-
-    border-right-color: rgba(150,80,0,.8);
-    border-left: none;
+a[data-tooltip][data-placement="right"]::after {
+  border-right-color: rgba(200,100,100,0.8);
+  border-left: none;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 4px;
 }
 
 /* top tooltip */
-a[data-tooltip][data-placement='top']::before
-{
-    bottom: 100%;
-    left: 0;
-
-    margin-bottom: 10px;
+a[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
 }
-a[data-tooltip][data-placement='top']::after
-{
-    bottom: 100%;
-    left: 10px;
-
-    margin-bottom: 4px;
-
-    border-top-color: rgba(150,80,0,.8);
-    border-bottom: none;
+a[data-tooltip][data-placement="top"]::after {
+  border-top-color: rgba(200,100,100,0.8) ;
+  border-bottom: none;
+  bottom: 100%;
+  left: 10px;
+  margin-bottom: 4px;
 }
 
 /* bottom tooltip */
-a[data-tooltip][data-placement='bottom']::before
-{
-    top: 100%;
-    left: 0;
-
-    margin-top: 10px;
+a[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
 }
-a[data-tooltip][data-placement='bottom']::after
-{
-    top: 100%;
-    left: 10px;
-
-    margin-top: 4px;
-
-    border-top: none;
-    border-bottom-color: rgba(150,80,80,.8);
+a[data-tooltip][data-placement="bottom"]::after {
+  border-bottom-color: rgba(200,100,100,0.8) ;
+  border-top: none;
+  top: 100%;
+  left: 10px;
+  margin-top: 4px;
 }

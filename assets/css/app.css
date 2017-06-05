@@ -812,57 +812,12 @@ a.logout-button
     color: rgba(255,123,0,.9);
 }
 
-.whatsup-multicolored
-{
-    /*WHAT's UP*/
-    font-family: 'Raleway';
-    font-size: 90px;
-    font-weight: 200;
-
-    position: absolute;
-
-    min-width: 550px;
-    max-width: 650px !important;
-    height: auto !important;
-    margin-top: -75%; /*Increment this negative integer to push me up*/
-    margin-left: -70%;
-
-    cursor: pointer;
-    text-align: center;
-    letter-spacing: -9px;
-    /*border: 2px double rgba(200,100,30,.1);*/
-
-    border-radius: 1px 3px 0 10px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
-    -webkit-background-clip: text;
-    text-shadow: 0 0 1px rgba(200,100,40,.01);
-
-    -webkit-text-fill-color: transparent;
-}
-
-.whatsup-multicolored:hover
-{
-    transition: .4s;
-    text-decoration: none;
-
-    border-bottom: 1px solid rgba(20,50,100,.4);
-    border-radius: 10px;
-}
 
 
 
 
 /* Test Animation */
 
-.stupid-flash
-{
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-            animation-name: example;
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-            animation-duration: 4s;
-
-    color: black;
-}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes example
@@ -890,6 +845,46 @@ a.logout-button
     }
 }
 
+.whatsup-multicolored
+{
+    /*WHAT's UP*/
+    font-family: 'Raleway';
+    font-size: 100px;
+    font-weight: 200;
+
+    position: absolute;
+
+    min-width: 550px;
+    max-width: 650px !important;
+    height: auto !important;
+    margin-top: -75%; /*Increment this negative integer to push me up*/
+    margin-left: -70%;
+
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: -9px;
+    /*border: 2px double rgba(200,100,30,.1);*/
+
+    border-radius: 1px 3px 0 10px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 1px rgba(10,10,10,.9);
+
+    -webkit-text-fill-color: transparent;
+}
+
+.whatsup-multicolored:hover
+{
+    transition: .4s;
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(200,100,0,1);
+    border-radius: 10px;
+    
+
+}
+
+
 
 .whatsup-multi-1
 {
@@ -898,76 +893,91 @@ a.logout-button
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,10,150,.1);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.1);
 }
 
 .whatsup-multi-2
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
-    text-shadow: 0 0 1px rgba(150,10,150,.4);
+    text-shadow: 0 0 1px rgba(200,100,30,.4);
 }
 
 .whatsup-multi-3
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,10,150,.2);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.2);
 }
 
 .whatsup-multi-4
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,10,150,.3);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.3);
 }
 
 .whatsup-multi-5
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,10,150,.4);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.4);
 }
 
 .whatsup-multi-6
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,5,150,.5);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.5);
 }
 
 .whatsup-multi-7
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(150,10,150,.5);
+    text-shadow: 1px 1px 1px rgba(200,100,180,.5);
 }
 
 .whatsup-multi-8
 {
+    
+    font-weight: 100;
     transition: 0s 3s;
     /*text-shadow: 1px 1px 1px rgba(10,0,250,0.5);*/
     /*color: rgba(255,255,255,0.9);*/
     /*text-shadow: 1px 1px 1px rgba(255,255,255,1);*/
 
-    text-shadow: 1px 1px 1px rgba(150,5,150,.5);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.5);
     /*animation-name: spinning-question-mark;*/
     /*animation-duration: 5s;*/
 }
 
 .whatsup-multi-9
 {
+    
     font-weight: 100;
 
     transition: 0s 3s;
 
     color: rgba();
-    text-shadow: 1px 1px 1px rgba(130,10,200,.5);
+    text-shadow: 1px 1px 1px rgba(200,100,30,.5);
 }
 
 /*@keyframes spinning-question-mark {*/
@@ -1053,7 +1063,7 @@ a.logout-button
 
 .whatsup-multi-9:hover
 {
-    font-weight: 100;
+    font-weight: 200;
 
     transition: .3s;
 }
@@ -1307,7 +1317,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     position: absolute;
 
-    margin-top: -20%;
+    margin-top: -18%; /* Further away from zero = higher */
     margin-left: -20%;
 }
 
@@ -1565,7 +1575,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     position: absolute;
 
-    margin-top: -20%;
+    margin-top: -18%; /* Further away from zero = higher*/
     margin-left: 42%;
 
     transition: 0s 3s;
@@ -2776,3 +2786,160 @@ a[data-tooltip][data-placement="bottom"]::after {
   left: 10px;
   margin-top: 4px;
 }
+
+
+
+
+
+
+
+/* WHATS UP TOOLTIP*/
+
+a[data-tooltip-whats] {
+  /*position: relative;*/
+}
+a[data-tooltip-whats]::before,
+a[data-tooltip-whats]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
+}
+a[data-tooltip-whats]::before {
+  /*
+   * using data-tooltip instead of title so we 
+   * don't have the real tooltip overlapping
+   */
+  content: attr(data-tooltip-whats);
+  background: rgba(200,100,100,0.8);
+  color: rgba(255,255,255,1);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px rgba(20,20,20,0.8);
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+  /*text-shadow: 1px 1px 1px rgba(20,20,20,0.8);*/
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
+}
+a[data-tooltip-whats]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: '';
+   color: rgba(255,255,255,1) !important;
+}
+
+a[data-tooltip-whats]:hover::before,
+a[data-tooltip-whats]:hover::after {
+  display: block;
+}
+
+/* INSTRUCTIONS */
+
+.instructions-wrapper{
+    position: absolute;
+    margin-left: -160%; /* o is more or less center */
+    margin-top: -35%;
+    min-width: 800px;
+  
+}
+
+.sentence{
+     color: #222;
+     font-size: 20px;
+     /*text-align: left;*/
+}
+
+.book-instructions{
+  color: rgba(1,130,120,0.9);
+}
+
+.fork-instructions{
+  color: rgba(37,0,65,0.9) !important;
+}
+
+.edit-instructions {
+  color: rgba(139,0,39,0.8);
+}
+
+.upvote-instructions {
+  color: rgba(230,14,25,0.8);
+}
+
+.flower-instructions{
+  color: rgba(128,10,28,0.8);
+}
+
+.star-instructions{
+  color: rgba(218,165,62,0.8);
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgba(255,100,50,0.8);
+}
+
+/*Vertical Flip*/
+.verticalFlip{
+	display: inline;
+	text-indent: 8px;
+}
+.verticalFlip > span{
+	animation: vertical 15s linear infinite 0s;
+	-ms-animation: vertical 15s linear infinite 0s;
+	-webkit-animation: vertical 15s linear infinite 0s;
+	color: #000;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.verticalFlip > span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.verticalFlip > span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.verticalFlip > span:nth-child(4){
+	animation-delay: 7.5s;
+	-ms-animation-delay: 7.5s;
+	-webkit-animation-delay: 7.5s;
+}
+.verticalFlip > span:nth-child(5){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
+
+.verticalFlip > span:nth-child(6){
+	animation-delay: 12.5s;
+	-ms-animation-delay: 12.5s;
+	-webkit-animation-delay: 12.5s;
+}
+
+/*Vertical Flip Animation*/
+@-moz-keyframes vertical{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: rotateX(180deg); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0;}
+}
+@-webkit-keyframes vertical{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: rotateX(180deg); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+
+

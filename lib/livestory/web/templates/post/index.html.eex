@@ -28,10 +28,27 @@
 <div class="center-wrap">
   <br><br><br><br><br><br><br>
 
- <a href="/posts/new" class="whatsup-multicolored "> <!-- data-tooltip="left-tooltip" data-placement="left" -->
- <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
+ <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
+ <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6 eurospinner bitspinner">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
 
 <!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
+
+<section class="wrapper">
+ 
+ <div class="instructions-wrapper">
+ <h2 class="sentence">
+    <div class="verticalFlip">
+      <span>1. <span class="book-instructions">📖</span> Find a Blog post. </span>
+      <!-- Fixed as per Stack Overflow -->
+      <span>2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
+      <span>3. <span class="edit-instructions">✎</span> Edit your copy. Publish.</span>
+      <span>4. <span class="upvote-instructions">❤</span> Readers upvote best writers.</span>
+      <span> <span class="star-instructions">☆ Frrk.io</span></span>
+         <span> (<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
+    </div>
+  </h2>
+  </div>
+</section>
 
 <%= if @user do %>
   <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(get_flash(@conn, :signed_in), @conn, @posts) %></span>
@@ -66,14 +83,14 @@
       <td>
       <h1 class="preview-title"><%= post.title %></h1>
    
-      <p class="preview-text"><%= truncate post.body, length: 400, separator: " " %></p>
+      <p class="preview-text"><%= truncate post.body, length: 140, separator: " " %></p>
        <br><br>
       <%= link(" 📖  ", to: post_path(@conn, :show, post), "data-tooltip": " Read ☺ ", "data-placement": "left", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
       <%= link("✎", to: post_path(@conn, :edit, post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "top", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%> 
       <%= link " delete ", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
         <span class="upvote-count", data-current-count="<%= post.upvotes_count.count %>">
-          <%= link " #{post.upvotes_count.count} ⇧ ", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
-          <%= link " #{post.upvotes_count.count} ⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
+          <%= link(" #{post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, post), "data-tooltip": "Up! 🚀", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
+          <%= link " #{post.upvotes_count.count} ❤", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
         </span>
  
        <%= link(" #{@forks_count[root_path(post.path)]} 𝝍 ", to: post_path(@conn, :fork, post),"data-tooltip": "Make a copy of this post","data-placement": "right", class: "btn btn-default btn-md unicode-lg") %> </span>

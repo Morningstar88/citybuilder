@@ -2787,10 +2787,16 @@ a[data-tooltip][data-placement="bottom"]::after {
   margin-top: 4px;
 }
 
+
+
+
+
+
+
 /* WHATS UP TOOLTIP*/
 
 a[data-tooltip-whats] {
-  position: relative;
+  /*position: relative;*/
 }
 a[data-tooltip-whats]::before,
 a[data-tooltip-whats]::after {
@@ -2814,15 +2820,126 @@ a[data-tooltip-whats]::before {
   /* we don't want the text to wrap */
   white-space: nowrap;
   text-decoration: none;
+  /*text-shadow: 1px 1px 1px rgba(20,20,20,0.8);*/
+  /* we don't want the text to wrap */
+  white-space: nowrap;
+  text-decoration: none;
 }
 a[data-tooltip-whats]::after {
   width: 0;
   height: 0;
   border: 6px solid transparent;
   content: '';
+   color: rgba(255,255,255,1) !important;
 }
 
 a[data-tooltip-whats]:hover::before,
 a[data-tooltip-whats]:hover::after {
   display: block;
 }
+
+/* INSTRUCTIONS */
+
+.instructions-wrapper{
+    position: absolute;
+    margin-left: -160%; /* o is more or less center */
+    margin-top: -35%;
+    min-width: 800px;
+  
+}
+
+.sentence{
+     color: #222;
+     font-size: 20px;
+     /*text-align: left;*/
+}
+
+.book-instructions{
+  color: rgba(1,130,120,0.9);
+}
+
+.fork-instructions{
+  color: rgba(37,0,65,0.9) !important;
+}
+
+.edit-instructions {
+  color: rgba(139,0,39,0.8);
+}
+
+.upvote-instructions {
+  color: rgba(230,14,25,0.8);
+}
+
+.flower-instructions{
+  color: rgba(128,10,28,0.8);
+}
+
+.star-instructions{
+  color: rgba(218,165,62,0.8);
+  font-size: 25px;
+  text-shadow: 1px 1px 1px rgba(255,100,50,0.8);
+}
+
+/*Vertical Flip*/
+.verticalFlip{
+	display: inline;
+	text-indent: 8px;
+}
+.verticalFlip > span{
+	animation: vertical 15s linear infinite 0s;
+	-ms-animation: vertical 15s linear infinite 0s;
+	-webkit-animation: vertical 15s linear infinite 0s;
+	color: #000;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.verticalFlip > span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.verticalFlip > span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.verticalFlip > span:nth-child(4){
+	animation-delay: 7.5s;
+	-ms-animation-delay: 7.5s;
+	-webkit-animation-delay: 7.5s;
+}
+.verticalFlip > span:nth-child(5){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
+
+.verticalFlip > span:nth-child(6){
+	animation-delay: 12.5s;
+	-ms-animation-delay: 12.5s;
+	-webkit-animation-delay: 12.5s;
+}
+
+/*Vertical Flip Animation*/
+@-moz-keyframes vertical{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: rotateX(180deg); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0;}
+}
+@-webkit-keyframes vertical{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: rotateX(180deg); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(0px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+
+

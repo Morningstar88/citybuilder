@@ -29,7 +29,7 @@
   <br><br><br><br><br><br><br>
 
  <a href="/posts/new" class="whatsup-multicolored "> <!-- data-tooltip="left-tooltip" data-placement="left" -->
- <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
+ <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6 eurospinner bitspinner">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
 
 <!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
 
@@ -66,13 +66,13 @@
       <td>
       <h1 class="preview-title"><%= post.title %></h1>
    
-      <p class="preview-text"><%= truncate post.body, length: 400, separator: " " %></p>
+      <p class="preview-text"><%= truncate post.body, length: 140, separator: " " %></p>
        <br><br>
       <%= link(" 📖  ", to: post_path(@conn, :show, post), "data-tooltip": " Read ☺ ", "data-placement": "left", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
       <%= link("✎", to: post_path(@conn, :edit, post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "top", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%> 
       <%= link " delete ", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
         <span class="upvote-count", data-current-count="<%= post.upvotes_count.count %>">
-          <%= link " #{post.upvotes_count.count} ⇧ ", to: post_upvote_path(@conn, :create, post), "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font" %>
+          <%= link(" #{post.upvotes_count.count} ⇧ ", to: post_upvote_path(@conn, :create, post), "data-tooltip": "Up! 🚀", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
           <%= link " #{post.upvotes_count.count} ⇧", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
         </span>
  

@@ -89,8 +89,8 @@
       <%= link("✎", to: post_path(@conn, :edit, post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "top", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%> 
       <%= link " delete ", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Delete...Are you sure?"], class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
         <span class="upvote-count", data-current-count="<%= post.upvotes_count.count %>">
-          <%= link(" #{post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, post), "data-tooltip": "Up! 🚀", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
-          <%= link " #{post.upvotes_count.count} ❤", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
+          <%= link(" #{post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, post), "data-tooltip": "🚀💖", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, class: upvoted_class("not_upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
+          <%= link " #{post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, post), "ujs-method": "delete", "ujs-remote": true, class: upvoted_class("upvoted", @upvotes[post.id]) <> "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
         </span>
  
        <%= link(" #{@forks_count[root_path(post.path)]} 𝝍 ", to: post_path(@conn, :fork, post),"data-tooltip": "Make a copy of this post","data-placement": "right", class: "btn btn-default btn-md unicode-lg") %> </span>

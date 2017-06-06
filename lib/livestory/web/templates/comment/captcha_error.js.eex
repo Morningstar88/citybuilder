@@ -1,1 +1,1 @@
-$("#captcha-error").text("captcha not checked");
+$("#captcha-error").text("Please check the box to prove you're human. ");

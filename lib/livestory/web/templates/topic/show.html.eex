@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Ubuntu:100,200,300,400|Montserrat:100,200,300,400,500,600,700,800|Raleway:100,200,300,400,500,600|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
 <!--<div style="background-color:rgba(20,20,20,0.9) !important; z-index: 7;">-->
@@ -8,15 +8,13 @@
   <%= @topic.name %>
 </p>
 
-<br><br>
-
-<table>
+<table class="topic-table">
   <tbody>
     <%= for post <- @posts do %>
     <tr id="post_<%= post.id %>">
       <td>
-        <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>⇧</p>
-        <p class=""><%= truncate post.body, length: 400, separator: " " %></p>
+        <p class="display-each-headline"><%= link post.title, to: post_path(@conn, :show, post) %></p> <p class="topic-upvote-count"><%= post.upvotes_count.count %>❤</p>
+        <p class="topic-body"><%= truncate post.body, length: 180, separator: " " %></p>
           <br>
           <%= link "Show Competing Forks", to: post_fork_path(@conn, :index, post), class: "show-competing-forks" %>
         <!-- SHOWS POST PATH path: <%#= post.path %>-->
@@ -28,3 +26,15 @@
   </tbody>
 </table>
 
+<script>
+  
+  $('a').mouseenter(function(){
+    $(this).animate({
+        color: '#ff0000'
+    }, 1000);
+}).mouseout(function(){
+    $(this).animate({
+        color: '#000000'
+    }, 1000);
+});
+</script>

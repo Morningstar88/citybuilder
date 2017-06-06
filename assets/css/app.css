@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:200,300,400,700,800|Raleway:200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
+@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -142,9 +142,9 @@ body
 .sidebar-div
 {
     font-size: 20px !important;
-    font-weight: 700;
+    font-weight: 300;
     /*display: inline;*/
-    font-variant: small-caps;
+    /*font-variant: small-caps;*/
 
     position: absolute;
 
@@ -153,9 +153,9 @@ body
 
     letter-spacing: 1px;
 
-    color: rgba(20,20,200,.8) !important;
-    color: rgba(255,255,255,.01);
-    text-shadow: 1px 1px 0 rgba(0,20,60,.7) !important; /* OVERLAY CHANGE COLOR */
+    /*color: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) !important; */
+  
+    text-shadow: 1px 1px 0px rgba(8,2,12,0.8) !important; /* OVERLAY CHANGE COLOR */
 
     -webkit-text-fill-color: transparent;
 }
@@ -225,17 +225,16 @@ body
     height: 37%;
     margin-top: -5%;
     margin-left: -28%;
-    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 70%;*/
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 85.2% 70% no-repeat;
 
-    background-color: rgba(30,30,30,.9) !important;
+    background-color: rgba(13,13,13,.9) !important;
     box-shadow: 2px 2px 2px rgba(100,100,100,.7);
 }
 
 .topic-header-opacity
 {
     position: absolute;
-    z-index: 6;
-
+   
     width: 200px;
     height: 200px;
 
@@ -245,12 +244,16 @@ body
 
 .topic-headline
 {
-    font-family: 'Century Gothic' !important;
+    position: absolute;
+    
+    font-family: 'Montserrat' !important;
     font-size: 70px;
-    font-weight: 200;
+    font-weight: 100;
     font-variant: normal;
 
-    position: absolute;
+    margin-top: 1%;
+    margin-left: 17%;
+   
     z-index: 2;
 
     text-align: center;
@@ -267,10 +270,12 @@ body
 {
     font-family: 'Montserrat';
     font-size: 40px;
+    font-weight: 400;
     /*display: inline;*/
     /*position: absolute;*/
 
     margin-top: -40%;
+    max-width: 400px;
 
     -webkit-transition: font-variant .8s;
 
@@ -285,12 +290,12 @@ body
     font-size: 40px;
     /*display: inline;*/
     /*font-variant: small-caps;*/
-    /*text-decoration: none;*/
+    text-decoration: none;
 
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
     /*color: rgba(20,60,100,0.9);*/
-    text-shadow: 0 0 1px rgba(10,90,150,.4);
+    text-shadow: 0 1px 0px rgba(200,100,50,.3);
 
     -webkit-text-fill-color: transparent;
 }
@@ -308,7 +313,8 @@ body
 
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
-    text-shadow: 0 0 1px rgba(0,60,0,.9);
+    text-shadow: 0px 1px 0px rgba(180,60,10,.35);
+    
 
     -webkit-text-fill-color: transparent;
 }
@@ -317,8 +323,10 @@ body
 {
     font-family: 'Montserrat';
     font-size: 18px;
-
+    
     position: absolute;
+    
+    color: rgba(220,100,40);
 
     margin-left: -30%;
 }
@@ -329,6 +337,16 @@ body
 {
     color: rgba(200,100,20,.8);
 }
+
+
+.topic-body {
+    font-family: 'Century Gothic';
+    font-size: 19px;
+    font-weight: 200;
+    text-shadow: 1px 0px 0px rgba(100,100,100,0.9);
+}
+
+/* END SHOW PAGE */
 
 
 .hello-user
@@ -2457,14 +2475,14 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .btn-read-post
 {
     font-family: 'Century Gothic';
-    font-weight: 300;
+    font-weight: 800;
     font-variant: small-caps;
 
     width: 140px !important;
     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     height: 20% !important;
 
-    color: rgba(170,90,2,.9) !important;
+    color: rgba(178,70,20,0.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px solid rgba(255,255,255,.5) !important;
@@ -2552,7 +2570,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 .eurospinner:hover
 {
     cursor: auto;
-    animation-duration: 5s;
+    animation-duration: 5.5s;
     animation-play-state: running;
     animation-delay: 0s;
     animation-iteration-count: 10;
@@ -2577,7 +2595,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     }
     100%
     {
-        transform: rotateY(-27deg);
+        transform: rotateY(-30deg);
     }
 }
 
@@ -2789,89 +2807,58 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 
 
-
-
-
-
-/* WHATS UP TOOLTIP*/
-
-a[data-tooltip-whats] {
-  /*position: relative;*/
-}
-a[data-tooltip-whats]::before,
-a[data-tooltip-whats]::after {
-  position: absolute;
-  display: none;
-  opacity: 0.85;
-}
-a[data-tooltip-whats]::before {
-  /*
-   * using data-tooltip instead of title so we 
-   * don't have the real tooltip overlapping
-   */
-  content: attr(data-tooltip-whats);
-  background: rgba(200,100,100,0.8);
-  color: rgba(255,255,255,1);
-  font-size: 20px;
-  font-weight: 600;
-  padding: 6px;
-  border-radius: 5px;
-  text-shadow: 1px 1px 1px rgba(20,20,20,0.8);
-  /* we don't want the text to wrap */
-  white-space: nowrap;
-  text-decoration: none;
-  /*text-shadow: 1px 1px 1px rgba(20,20,20,0.8);*/
-  /* we don't want the text to wrap */
-  white-space: nowrap;
-  text-decoration: none;
-}
-a[data-tooltip-whats]::after {
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  content: '';
-   color: rgba(255,255,255,1) !important;
-}
-
-a[data-tooltip-whats]:hover::before,
-a[data-tooltip-whats]:hover::after {
-  display: block;
-}
-
 /* INSTRUCTIONS */
 
 .instructions-wrapper{
     position: absolute;
     margin-left: -160%; /* o is more or less center */
+    margin-top: -65%;
+    min-width: 800px;
+}
+    
+    /*     
+    NESTS IT JUST ABOVE MAIN BLOG POST BODY
+    
+        position: absolute;
+    margin-left: -160%; /* o is more or less center 
     margin-top: -35%;
     min-width: 800px;
+    -webkit-transform: rotate(-20deg)
+    
+    */
   
-}
+
 
 .sentence{
      color: #222;
      font-size: 20px;
      /*text-align: left;*/
+         -webkit-transform: rotate(-20deg);
 }
 
 .book-instructions{
-  color: rgba(1,130,120,0.9);
+  color: rgba(178,30,20,0.9);
+      -webkit-transform: rotate(-20deg);
 }
 
 .fork-instructions{
   color: rgba(37,0,65,0.9) !important;
+      -webkit-transform: rotate(-20deg);
 }
 
 .edit-instructions {
   color: rgba(139,0,39,0.8);
+      -webkit-transform: rotate(-20deg);
 }
 
 .upvote-instructions {
   color: rgba(230,14,25,0.8);
+      -webkit-transform: rotate(-18deg);
 }
 
 .flower-instructions{
   color: rgba(128,10,28,0.8);
+      -webkit-transform: rotate(-5deg);
 }
 
 .star-instructions{
@@ -2913,6 +2900,7 @@ a[data-tooltip-whats]:hover::after {
 	animation-delay: 10s;
 	-ms-animation-delay: 10s;
 	-webkit-animation-delay: 10s;
+	-webkit-transform: rotate(20deg);
 }
 
 .verticalFlip > span:nth-child(6){
@@ -2941,5 +2929,9 @@ a[data-tooltip-whats]:hover::after {
 	100% { opacity: 0; }
 }
 
+.topic-table{
+    position: absolute;
+    margin-top: 15%;
+}
 
 

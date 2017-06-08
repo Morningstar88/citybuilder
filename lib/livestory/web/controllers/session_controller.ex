@@ -9,7 +9,6 @@ defmodule LiveStory.Web.SessionController do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)
-        |> put_flash(:signed_in, true)
         |> redirect(to: "/")
 
       {:error, _err} ->

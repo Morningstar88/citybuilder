@@ -15,16 +15,16 @@ defmodule LiveStory.Web.PostView do
 
   # Avoid fail on less than 3 posts by doing different matches
   # Text duplication here is unavoidable.
-  def welcome(true, conn, [post1, post2, post3, post4 | _tail]) do
-    "Latest top stories are #{link_post conn, post1}, #{link_post conn, post2} and #{link_post conn, post2}. Click 𝜓 to fork the post. 𝜓 means you get your own copy. "
+  def welcome(conn, [post1, post2, post3 | _tail]) do
+    "Latest top stories are #{link_post conn, post1}, #{link_post conn, post2} and #{link_post conn, post3}. Click 𝜓 to fork the post. 𝜓 means you get your own copy. "
   end
-  def welcome(true, conn, [post1, post2]) do
+  def welcome(conn, [post1, post2]) do
     "Latest top stories are #{link_post conn, post1} and #{link_post conn, post2}. Click 𝜓 to fork any post. 𝜓 means you get your own copy"
   end
-  def welcome(true, conn, [post1]) do
+  def welcome(conn, [post1]) do
     "The latest top story is #{link_post conn, post1}. Click 𝜓 to fork any post. 𝜓 means you get your own copy."
   end
-  def welcome(_, conn, _posts) do
+  def welcome(_conn, []) do
     ""
   end
 

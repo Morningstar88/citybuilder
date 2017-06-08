@@ -9,9 +9,9 @@ defmodule LiveStory.Web.CommentController do
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]
   plug :set_user
-  plug :set_post when not action in [:edit, :update, :delete]
-  plug :set_comment when action in [:edit, :update, :delete]
-  plug :check_can_modify_comment when action in [:edit, :update, :delete]
+  plug :set_post when not action in [:edit, :update, :delete, :restore]
+  plug :set_comment when action in [:edit, :update, :delete, :restore]
+  plug :check_can_modify_comment when action in [:edit, :update, :delete, :restore]
   plug :check_captcha when action in [:create]
 
   def create(conn, params) do
@@ -65,6 +65,18 @@ defmodule LiveStory.Web.CommentController do
     {:ok, comment} = Stories.delete_comment(conn.assigns.comment, conn.assigns.user)
     conn
     |> render("delete.js", comment: comment)
+  end
+
+  def restore(conn, _params) do
+    case Stories.restore_comment(conn.assigns.comment, conn.assigns.user) do
+      {:ok, comment} ->
+        upvote = Stories.list_user_comment_upvotes(conn.assigns.user, [comment.id])[comment.id]
+        conn
+        |> render("restore.js", comment: comment, upvote: upvote)
+      {:error, message} ->
+        conn
+        |> render("restore_error.js", message: message)
+    end
   end
 
   defp set_comment(%{params: %{"id" => id}} = conn, _opts) do

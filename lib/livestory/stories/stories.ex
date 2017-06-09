@@ -252,7 +252,7 @@ defmodule LiveStory.Stories do
   end
 
   defp updated_recently?(%{updated_at: updated_at}) do
-    Timex.before?(Timex.shift(updated_at, seconds: -10), Timex.now)
+    Timex.before?(Timex.now, Timex.shift(updated_at, seconds: 10))
   end
 
   defp comment_removal_key(%User{admin: true}), do: :removed_by_moderator

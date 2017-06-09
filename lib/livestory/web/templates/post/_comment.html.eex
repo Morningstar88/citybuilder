@@ -1,12 +1,11 @@
 <tr id="comment_<%= @comment.id %>" class="<%= comment_upvote_class(@comment) %>">
   <%= cond do %>
     <% @comment.removed_by_owner -> %>
-      <td colspan="4">
-        deleted
-        <td><%= link "Restore", to: comment_path(@conn, :restore, @comment), "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-restore-btn" %></td>
-      </td>
+      <td colspan="2" class="comment-deleted-message">deleted</td>
+      <%= render "_comment_restore.html", conn: @conn, comment: @comment %>
     <% @comment.removed_by_moderator -> %>
-      <td colspan="4">Sorry, this post was deleted by our anti-spam squad</td>
+      <td colspan="2" class="comment-deleted-message">Sorry, this post was deleted by our anti-spam squad</td>
+      <%= render "_comment_restore.html", conn: @conn, comment: @comment %>
     <% true -> %>
       <td>
         <%= render "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote, class: "comment-upvote-btn" %>

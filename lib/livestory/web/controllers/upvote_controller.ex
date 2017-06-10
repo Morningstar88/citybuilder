@@ -15,10 +15,10 @@ defmodule LiveStory.Web.UpvoteController do
     case Stories.upvote(post.id, conn.assigns.user.id) do
       {:ok, _upvote} ->
         conn
-        |> render("upvoted.json", post: post)
+        |> render("upvoted.js", post: reload(post), forks_count: forks_count(post))
       {:error, %Ecto.Changeset{} = changeset} ->
         conn
-        |> render("error.json", changeset: changeset)
+        |> render("error.js", changeset: changeset)
     end
   end
 
@@ -26,6 +26,14 @@ defmodule LiveStory.Web.UpvoteController do
     post = conn.assigns.post
     {:ok, _post} = Stories.delete_upvote(post, conn.assigns.user.id)
     conn
-    |> render("deleted.json", post: post)
+    |> render("deleted.js", post: reload(post), forks_count: forks_count(post))
+  end
+
+  defp forks_count(post) do
+    Stories.count_forks([post.path])
+  end
+
+  defp reload(post) do
+    Stories.get_post!(post.id)
   end
 end

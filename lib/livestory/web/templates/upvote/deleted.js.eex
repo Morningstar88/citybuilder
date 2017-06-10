@@ -1,0 +1,1 @@
+$("#post_<%= @post.id %>").replaceWith("<%= escape_javascript render(LiveStory.Web.PostView, "_post.html", conn: @conn, post: @post, upvote: false, forks_count: @forks_count) %>");

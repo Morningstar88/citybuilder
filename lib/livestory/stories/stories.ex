@@ -130,7 +130,7 @@ defmodule LiveStory.Stories do
   def get_post!(id) do
     from(p in Post,
       where: p.id == ^id,
-      preload: [:topic, :original_post]
+      preload: [:topic, :original_post, :upvotes_count]
     )
     |> Repo.one!
   end

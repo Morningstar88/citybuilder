@@ -225,12 +225,34 @@ defmodule LiveStory.Stories do
   end
 
   def delete_comment(%Comment{} = comment, %User{} = user) do
-    removal_key = comment_removal_key(user)
     comment
     |> comment_changeset()
     |> put_change(:modified_by_id, user.id)
-    |> put_change(removal_key, true)
+    |> put_change(comment_removal_key(user), true)
     |> Repo.update
+  end
+
+  def restore_comment(%Comment{} = comment, %User{} = user) do
+    comment
+    |> updated_recently?()
+    |> do_restore(comment, user)
+  end
+
+  defp do_restore(true, %Comment{} = comment, %User{} = user) do
+    comment = comment
+    |> comment_changeset()
+    |> put_change(:modified_by_id, user.id)
+    |> put_change(comment_removal_key(user), false)
+    |> Repo.update!
+    |> preload_comment_upvotes_count
+    {:ok, comment}
+  end
+  defp do_restore(false, _comment, _user) do
+    {:error, "Comment can't be restored"}
+  end
+
+  defp updated_recently?(%{updated_at: updated_at}) do
+    Timex.before?(Timex.now, Timex.shift(updated_at, seconds: 10))
   end
 
   defp comment_removal_key(%User{admin: true}), do: :removed_by_moderator

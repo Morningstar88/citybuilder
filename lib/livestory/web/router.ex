@@ -41,6 +41,7 @@ defmodule LiveStory.Web.Router do
       resources "/upvotes", CommentUpvoteController, only: [:create, :delete],
         as: :upvote, singleton: true
     end
+    post "/comments/:id", CommentController, :restore
     # workaround, use PUT instead of GET, because with GET, phoenix_ujs
     # won't send Origin header and this will trigger CORS forgery protection
     # https://github.com/jalkoby/phoenix_ujs/issues/4

@@ -1,0 +1,4 @@
+<td colspan="2" class="comment-restore hidden">
+  Comment deleted. Click here to undelete... In 10 seconds it'll be gone forever.
+  <%= link "Restore", to: comment_path(@conn, :restore, @comment), "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-restore-btn" %>
+</td>

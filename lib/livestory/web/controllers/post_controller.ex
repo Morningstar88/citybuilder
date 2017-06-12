@@ -114,10 +114,9 @@ defmodule LiveStory.Web.PostController do
   end
 
   def delete(conn, _params) do
-    {:ok, _post} = Stories.delete_post(conn.assigns.post)
+    {:ok, post} = Stories.delete_post(conn.assigns.post, conn.assigns.user)
     conn
-    |> put_flash(:info, "Post deleted successfully.")
-    |> redirect(to: post_path(conn, :index))
+    |> render("delete.js", post: post)
   end
 
   defp set_user(conn, _opts) do

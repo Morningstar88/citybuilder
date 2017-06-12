@@ -220,15 +220,19 @@ defmodule LiveStory.Stories do
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_post(%Post{} = post) do
-    Repo.delete(post)
+  def delete_post(%Post{} = post, %User{} = user) do
+    post
+    |> post_changeset()
+    |> put_change(:modified_by_id, user.id)
+    |> put_change(removal_key(user), true)
+    |> Repo.update
   end
 
   def delete_comment(%Comment{} = comment, %User{} = user) do
     comment
     |> comment_changeset()
     |> put_change(:modified_by_id, user.id)
-    |> put_change(comment_removal_key(user), true)
+    |> put_change(removal_key(user), true)
     |> Repo.update
   end
 
@@ -242,7 +246,7 @@ defmodule LiveStory.Stories do
     comment = comment
     |> comment_changeset()
     |> put_change(:modified_by_id, user.id)
-    |> put_change(comment_removal_key(user), false)
+    |> put_change(removal_key(user), false)
     |> Repo.update!
     |> preload_comment_upvotes_count
     {:ok, comment}
@@ -255,9 +259,9 @@ defmodule LiveStory.Stories do
     Timex.before?(Timex.now, Timex.shift(updated_at, seconds: 10))
   end
 
-  defp comment_removal_key(%User{admin: true}), do: :removed_by_moderator
-  defp comment_removal_key(%User{moderator: true}), do: :removed_by_moderator
-  defp comment_removal_key(%User{}), do: :removed_by_owner
+  defp removal_key(%User{admin: true}), do: :removed_by_moderator
+  defp removal_key(%User{moderator: true}), do: :removed_by_moderator
+  defp removal_key(%User{}), do: :removed_by_owner
 
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking post changes.
@@ -383,7 +387,7 @@ defmodule LiveStory.Stories do
     |> comment_changeset(comment_attrs)
   end
 
-  defp post_changeset(%Post{} = post, attrs) do
+  defp post_changeset(%Post{} = post, attrs \\ %{}) do
     post
     |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id]) #Need to change this to Para1, Para2 at some point.
     |> validate_required([:title, :body, :user_id, :topic_id]) #Need to change this to Para1, Para2 at some point.

@@ -76,10 +76,10 @@
 </div>
 
 <br>
-<table class="table posts">
+<table id="posts" class="table posts">
   <tbody>
 <%= for post <- @posts do %>
-    <%= render "_post.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
+    <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
 <% end %>
   </tbody>
 </table>

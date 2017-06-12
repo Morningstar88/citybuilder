@@ -1,13 +1,16 @@
 defmodule LiveStory.Web.PostController do
   use LiveStory.Web, :controller
 
+  import LiveStory.Plugs
+
   alias LiveStory.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
-  plug :set_post when action in [:fork, :show, :edit, :update, :delete]
+  plug :set_post when action in [:fork, :show, :edit, :update, :delete, :restore]
   plug :set_topics when action in [:index, :new, :edit, :fork]
-  plug :check_same_user when action in [:edit, :update, :delete]
+  plug :check_can_modify, %{key: :post, message: "This post belongs to another user! You can fork someone else's post, but not edit it."}
+    when action in [:edit, :update, :delete, :restore]
 
   @default_topic "random"
 
@@ -114,33 +117,25 @@ defmodule LiveStory.Web.PostController do
   end
 
   def delete(conn, _params) do
-    {:ok, _post} = Stories.delete_post(conn.assigns.post)
+    {:ok, post} = Stories.delete_post(conn.assigns.post, conn.assigns.user)
     conn
-    |> put_flash(:info, "Post deleted successfully.")
-    |> redirect(to: post_path(conn, :index))
+    |> render("delete.js", post: post)
   end
 
-  defp set_user(conn, _opts) do
-    assign(conn, :user, Guardian.Plug.current_resource(conn))
-  end
-
-  defp set_post(conn, _opts) do
-    %{"id" => id} = conn.params
-    assign(conn, :post, Stories.get_post!(id))
+  def restore(conn, _params) do
+    case Stories.restore_post(conn.assigns.post, conn.assigns.user) do
+      {:ok, post} ->
+        upvote = Stories.list_user_post_upvotes(conn.assigns.user, [post.id])[post.id]
+        forks_count = Stories.count_forks(["#{post.id}"])
+        conn
+        |> render("restore.js", post: post, upvote: upvote, forks_count: forks_count)
+      {:error, message} ->
+        conn
+        |> render("restore_error.js", message: message)
+    end
   end
 
   def set_topics(conn, _opts) do
     assign conn, :topics, Stories.list_topics
-  end
-
-  defp check_same_user(conn, _opts) do
-    if conn.assigns.user.id != conn.assigns.post.user_id do
-      conn
-      |> put_flash(:error, "This post belongs to another user! You can fork someone else's post, but not edit it.")
-      |> redirect(to: post_path(conn, :index))
-      |> halt
-    else
-      conn
-    end
   end
 end

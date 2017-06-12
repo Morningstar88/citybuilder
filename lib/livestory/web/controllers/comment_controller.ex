@@ -11,7 +11,9 @@ defmodule LiveStory.Web.CommentController do
   plug :set_user
   plug :set_post when not action in [:edit, :update, :delete, :restore]
   plug :set_comment when action in [:edit, :update, :delete, :restore]
-  plug :check_can_modify_comment when action in [:edit, :update, :delete, :restore]
+  plug :check_can_modify, %{key: :comment, message: "This comment belongs to another user! You can't edit it."}
+    when action in [:edit, :update, :delete, :restore]
+
   plug :check_captcha when action in [:create]
 
   def create(conn, params) do
@@ -81,17 +83,6 @@ defmodule LiveStory.Web.CommentController do
 
   defp set_comment(%{params: %{"id" => id}} = conn, _opts) do
     assign(conn, :comment, Stories.get_comment!(id))
-  end
-
-  # similar to function in PostController, but has some differences
-  defp check_can_modify_comment(conn, _opts) do
-    if can_modify_comment?(conn.assigns.user, conn.assigns.comment) do
-      conn
-    else
-      conn
-      |> render("access_error.js", message: "This comment belongs to another user! You can't edit it.")
-      |> halt
-    end
   end
 
   defp check_captcha(conn, _opts) do

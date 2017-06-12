@@ -17,7 +17,7 @@
       </td>
       <td class="comment-body"><%= @comment.body %></td>
       <td>
-        <%= if can_modify_comment?(@conn.assigns.user, @comment) do %>
+        <%= if can_modify?(@conn.assigns.user, @comment) do %>
           <td><%= link "Edit", to: comment_path(@conn, :edit, @comment), "ujs-method": "put", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-edit-btn" %></td>
           <td><%= link "Delete", to: comment_path(@conn, :delete, @comment), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default comment-delete-btn" %></td>
         <% end %>

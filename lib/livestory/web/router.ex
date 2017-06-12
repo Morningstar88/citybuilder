@@ -31,7 +31,8 @@ defmodule LiveStory.Web.Router do
 
     get "/", PostController, :index
 
-    resources "/posts", PostController, param: "post_id" do
+    resources "/posts", PostController, param: "post_id"
+    resources "/posts", PostController, only: [] do
       post "/upvotes", UpvoteController, :create
       delete "/upvotes", UpvoteController, :delete
       resources "/forks", ForkController, only: [:index]

@@ -31,7 +31,7 @@ defmodule LiveStory.Web.Router do
 
     get "/", PostController, :index
 
-    resources "/posts", PostController do
+    resources "/posts", PostController, param: "post_id" do
       post "/upvotes", UpvoteController, :create
       delete "/upvotes", UpvoteController, :delete
       resources "/forks", ForkController, only: [:index]
@@ -41,7 +41,7 @@ defmodule LiveStory.Web.Router do
       resources "/upvotes", CommentUpvoteController, only: [:create, :delete],
         as: :upvote, singleton: true
     end
-    post "/posts/:id", PostController, :restore
+    post "/posts/:post_id", PostController, :restore
     post "/comments/:id", CommentController, :restore
     # workaround, use PUT instead of GET, because with GET, phoenix_ujs
     # won't send Origin header and this will trigger CORS forgery protection
@@ -50,7 +50,7 @@ defmodule LiveStory.Web.Router do
 
     resources "/topics", TopicController, only: [:show], param: "slug"
 
-    get "/posts/fork/:id", PostController , :fork
+    get "/posts/fork/:post_id", PostController , :fork
   end
 
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/

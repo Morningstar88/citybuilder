@@ -228,6 +228,24 @@ defmodule LiveStory.Stories do
     |> Repo.update
   end
 
+  def restore_post(%Post{} = post, %User{} = user) do
+    post
+    |> updated_recently?()
+    |> do_restore(post, user)
+  end
+
+  defp do_restore(true, %Post{} = post, %User{} = user) do
+    post = post
+    |> post_changeset()
+    |> put_change(:modified_by_id, user.id)
+    |> put_change(removal_key(user), false)
+    |> Repo.update!
+    {:ok, post}
+  end
+  defp do_restore(false, _post, _user) do
+    {:error, "Post can't be restored"}
+  end
+
   def delete_comment(%Comment{} = comment, %User{} = user) do
     comment
     |> comment_changeset()

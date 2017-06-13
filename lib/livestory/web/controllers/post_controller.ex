@@ -8,7 +8,7 @@ defmodule LiveStory.Web.PostController do
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug :set_user
   plug :set_post when action in [:fork, :show, :edit, :update, :delete, :restore]
-  plug :set_topics when action in [:index, :new, :edit, :fork]
+  plug :set_topics when action in [:index, :new, :edit, :update, :fork]
   plug :check_can_modify, %{key: :post, message: "This post belongs to another user! You can fork someone else's post, but not edit it."}
     when action in [:edit, :update, :delete, :restore]
 

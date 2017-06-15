@@ -17,8 +17,8 @@ defmodule LiveStory.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {LiveStory.Application, []},
-     extra_applications: [:logger]]
+    [mod: {LiveStory.Application,  []},
+     extra_applications: [:logger, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,7 +41,9 @@ defmodule LiveStory.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:guardian, "~> 0.14"},
-     {:comeonin, "~> 3.0"}]
+     {:comeonin, "~> 3.0"},
+     {:distillery, "~> 1.0"},
+     {:edeliver, "~> 1.4.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

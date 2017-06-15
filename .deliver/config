@@ -6,7 +6,11 @@ BUILD_AT="/tmp/edeliver/livestory/builds"
 
 STAGING_HOSTS="46.101.77.175"
 STAGING_USER="jake"
-DELIVER_TO="/home/jake"
+TEST_AT="/home/jake"
+
+PRODUCTION_HOSTS="46.101.77.175"
+PRODUCTION_USER="release"
+DELIVER_TO="/home/release"
 
 # For *Phoenix* projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {

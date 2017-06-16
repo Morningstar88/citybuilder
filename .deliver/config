@@ -36,6 +36,9 @@ pre_erlang_clean_compile() {
 
     mkdir -p priv/static # required by the phoenix.digest task
 
+    # Phoenix 1.3
+    cd assets
+
     # installing npm dependencies
     npm install
 

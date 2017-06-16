@@ -15,6 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :livestory, LiveStory.Web.Endpoint,
   http: [port: 4001],
+  server: true,
   on_init: {LiveStory.Web.Endpoint, :load_from_system_env, []},
   url: [host: "www.microflow.io", port: 80], # Changed from 80. 8080 is standard for Cloud9 IDE
   cache_static_manifest: "priv/static/cache_manifest.json"

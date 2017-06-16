@@ -20,7 +20,7 @@ defmodule LiveStory.Mixfile do
     [mod: {LiveStory.Application,  []},
       applications: [
         :logger, :postgrex, :ecto, :timex, :phoenix, :phoenix_html, :phoenix_pubsub,
-        :phoenix_ecto, :cowboy, :gettext, :comeonin, :recaptcha, :edeliver
+        :phoenix_ecto, :cowboy, :gettext, :guardian, :comeonin, :recaptcha, :edeliver
       ]
     ]
   end

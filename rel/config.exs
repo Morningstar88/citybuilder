@@ -40,8 +40,5 @@ end
 
 release :livestory do
   set version: current_version(:livestory)
-  set applications: [
-    :runtime_tools
-  ]
 end
 

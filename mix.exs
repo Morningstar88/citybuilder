@@ -18,7 +18,7 @@ defmodule LiveStory.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {LiveStory.Application,  []},
-     extra_applications: [:logger, :edeliver]]
+     applications: [:logger, :edeliver]]
   end
 
   # Specifies which paths to compile per environment.

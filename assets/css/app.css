@@ -2842,7 +2842,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 .fork-instructions{
-  color: rgba(37,0,65,0.9) !important;
+  color: rgba(170,0,65,0.9) !important;
       -webkit-transform: rotate(-20deg);
 }
 
@@ -2858,13 +2858,15 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 .flower-instructions{
   color: rgba(128,10,28,0.8);
+  font-size: 30px;
       -webkit-transform: rotate(-5deg);
 }
 
 .star-instructions{
   color: rgba(218,165,62,0.8);
-  font-size: 25px;
+  font-size: 30px;
   text-shadow: 1px 1px 1px rgba(255,100,50,0.8);
+  -webkit-transform: rotate(20deg);
 }
 
 /*Vertical Flip*/

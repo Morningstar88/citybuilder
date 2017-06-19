@@ -20,7 +20,7 @@ topics = [
   {"MYSTERIES", :mysteries},
   {"CLASSIC", :classic},
   {"CITY-BUILDING", :city_building},
-  {"LONGEVITY", :longevity}]
+  {"LONG-LIFE", :long-life}]
 
 LiveStory.Repo.transaction fn ->
   topics

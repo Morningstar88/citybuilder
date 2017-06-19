@@ -1,0 +1,10 @@
+1. Port is set to 8080, originally was 80. How should I test the release in Cloud9 iex? 
+2. Path to file is _build/rel/livetory/bin/livestory
+3. Build success message: ==> Release successfully built!
+    You can run it in one of the following ways:
+      Interactive: _build/dev/rel/livestory/bin/livestory console
+      Foreground: _build/dev/rel/livestory/bin/livestory foreground
+      Daemon: _build/dev/rel/livestory/bin/livestory start
+4. Ping not working: Node livestory@127.0.0.1 not responding to pings.
+5. MIX_ENV=prod mix ecto.create doesn't work yet. Returns: ** Mix Cannot execute task because the project 
+was not yet compiled. When build_embedded is set to true, "MIX_ENV=prod mix compile" must be explicitly executed

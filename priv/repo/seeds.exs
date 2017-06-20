@@ -20,7 +20,23 @@ topics = [
   {"MYSTERIES", :mysteries},
   {"CLASSIC", :classic},
   {"CITY-BUILDING", :city_building},
-  {"LONGEVITY", :longevity}]
+  {"LONG-LIFE", :long_life}]
+  
+# LiveStory.Repo.all LiveStory.Stories.Topic - see all topics
+# LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: "longevity") - get specific topic
+# LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: "longevity") |> Ecto.Changeset.change(name: "Long Life") |> LiveStory.Repo.update! - update topic name.3:56 PM
+# To run this console, login to jake, then run
+# cd livestory
+# bin/livestory remote_console
+  #
+  #
+  #
+  #
+  #
+  #
+  #
+  #
+  #
 
 LiveStory.Repo.transaction fn ->
   topics

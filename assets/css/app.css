@@ -19,8 +19,10 @@ RESOURCES
 html,
 body
 {
-    margin: 0;
+    margin-left:-60px;
     padding: 0;
+    display:flex;
+    justify-content: center;
 }
 
 

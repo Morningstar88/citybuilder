@@ -4,6 +4,10 @@
 /deps
 /*.ez
 
+#Questions for Denis
+
+qfd
+
 # Generated on crash by the VM
 erl_crash.dump
 

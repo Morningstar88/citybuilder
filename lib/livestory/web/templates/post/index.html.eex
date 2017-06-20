@@ -7,6 +7,8 @@
     }
     </style>
       <br>
+      
+      <div class="">
     
       <div class="font-select-div mobile-hide">
           <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>
@@ -83,6 +85,8 @@
 <% end %>
   </tbody>
 </table>
+
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

@@ -6,7 +6,11 @@ BUILD_AT="/tmp/edeliver/livestory/builds"
 
 STAGING_HOSTS="46.101.77.175"
 STAGING_USER="jake"
-DELIVER_TO="/home/jake"
+TEST_AT="/home/jake"
+
+PRODUCTION_HOSTS="46.101.77.175"
+PRODUCTION_USER="release"
+DELIVER_TO="/home/release"
 
 # For *Phoenix* projects, symlink prod.secret.exs to our tmp source
 pre_erlang_get_and_update_deps() {
@@ -16,4 +20,34 @@ pre_erlang_get_and_update_deps() {
       ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
     "
   fi
+}
+
+pre_erlang_clean_compile() {
+  status "Preparing assets with: brunch build and phoenix.digest"
+  __sync_remote "
+    # runs the commands on the build host
+    [ -f ~/.profile ] && source ~/.profile # load profile (optional)
+
+    # fail if any command fails (recommended)
+    set -e
+
+    # enter the build directory on the build host (required)
+    cd '$BUILD_AT'
+
+    mkdir -p priv/static # required by the phoenix.digest task
+
+    # Phoenix 1.3
+    cd assets
+
+    # installing npm dependencies
+    npm install
+
+    # building brunch
+    brunch build --production
+
+    cd ..
+
+    # run your custom task
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phoenix.digest $SILENCE
+  "
 }

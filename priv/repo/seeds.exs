@@ -28,16 +28,7 @@ topics = [
 # To run this console, login to jake, then run
 # cd livestory
 # bin/livestory remote_console
-  #
-  #
-  #
-  #
-  #
-  #
-  #
-  #
-  #
-
+ 
 LiveStory.Repo.transaction fn ->
   topics
   |> Enum.with_index

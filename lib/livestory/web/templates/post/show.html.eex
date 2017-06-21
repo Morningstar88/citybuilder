@@ -4,9 +4,9 @@
   type='text/css'>
 
   <header class="show-page-header">
-    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-white-btn" %></span><!--show-main -->
+    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-index-white-btn" %></span><!--show-main -->
      <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit-white-btn"%></span><!--show-edit -->
-     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class:  "btn btn-default show-white-fork-btn"%></span><!--show-page-fork-button-->
+     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class:  "btn btn-default show-fork-white-btn"%></span><!--show-page-fork-button-->
 
 
 
@@ -14,13 +14,13 @@
 
  <br> <br> <br>  <br> <br> <br> <br> <br> <br>
  
-  <ul>
+  <ul class="display-post-show-wrapper">
 
  	    <br> <br>  <br> <br>
  	    <!--<p class="display-post-title-wrapper">-->
- 	    <p class="show-fork-text">  𝜓  </p>
- 	    <p class="show-fork-edit"> ✎  </p>
- 	    <p class="show-fork-index"> < </p>
+ 	    <!--<p class="show-fork-text">  𝜓  </p>-->
+ 	    <!--<p class="show-fork-edit"> ✎  </p>-->
+ 	    <!--<p class="show-fork-index"> < </p>-->
  	   <h1 class="display-post-title-index-show">
        <%= @post.title %>
     </h1>

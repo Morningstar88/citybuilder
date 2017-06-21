@@ -699,17 +699,13 @@ body
 
 .comment-datetime
 {
-    font-size: 27px !important;
+    font-size: 2vw !important;
     font-weight: 200;
     font-variant: normal !important;
-
-    position: absolute;
-
+    margin-top: 20%;
     overflow: hidden;
-
-    width: 500px;
     margin-top: -60%;
-    margin-right: 186% !important;
+    /*margin-right: 186% !important;*/
 
     color: rgba(40,40,40,.6);
     /*display: block;*/
@@ -718,8 +714,8 @@ body
 
 .comment-upvote-btn
 {
-    width: 50%;
-    height: 1000px;
+    width: 100%;
+
 }
 
 .comment-btn
@@ -727,6 +723,7 @@ body
     font-size: 44px;
 
     height: 25% !important;
+    width: 135%;
 
     color: rgba(200,100,1,1) !important;
     border: none !important;
@@ -744,8 +741,8 @@ body
 .commenter
 {
     font-family: 'Josefin Sans' ;
-    font-size: 27px;
-    font-weight: 500;
+    font-size: 3vw;
+    font-weight: 400;
     /*font-variant: small-caps;*/
 
     position: absolute;
@@ -756,7 +753,7 @@ body
 
     text-align: center;
 
-    color: rgba(20,20,20,.77);
+    color: rgba(120,20,120,.77);
     text-shadow: 0 1px 1px rgba(100,100,100,.5);
 }
 
@@ -765,21 +762,20 @@ body
 .comment-body
 {
     font-family: 'Raleway' ;
-    font-size: 22px;
+    font-size: 3.3vw;
     font-weight: 300;
     /*overflow: auto;*/
 
     width: auto;
-    max-width: 900px;
     height: auto;
-    padding-bottom: 200px;
+    padding-bottom: 20%;
 
     white-space: pre-wrap !important;
     word-break: normal;
 
     color: rgba(30,30,30,1);
     /*border: 1px solid rgba(1,50,1,.8);*/
-    text-shadow: 1px 1px 1px rgba(100,100,100,.5);
+    text-shadow: 1px 1px 0px rgba(100,100,100,.5);
 }
 
 .comment-multi-1
@@ -799,12 +795,14 @@ body
 
 .comment-edit-btn
 {
+    width: 50%;
     color: rgba(255,255,255,1) !important;
     background-color: rgba(200,100,20,.8) !important;
 }
 
 .comment-delete-btn
 {
+    width: 50%;
     color: rgba(230,130,20,.8) !important;
     background-color: rgba(10,10,10,.8) !important;
 }
@@ -1208,21 +1206,25 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 /* SHOW PAGE NEW WHITE BUTTONS */
 
-.show-white-btn
+.display-post-show-wrapper {
+    margin-top: 20%;
+}
+
+.show-index-white-btn
 {
-    font-size: 45px;
+    font-size: 4vw;
     /*BACK*/
 
     position: absolute;
 
-    width: 17%;
+    width: 20%;
     height: 25%; /* ORIG: height: 25%*/
-    margin-top: 8%; /* ORIG: 12% (leaves it below*/
-    margin-left: 2%;
+    margin-top: 35%; /* ORIG: 12% (leaves it below*/
+    margin-left: 10%;
 
     color: rgba(0,0,0,1) !important;
     border-radius: 20px;
-    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 35% 50% !important;
+    /*background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 35% 50% !important;*/
     -webkit-background-clip: text;
 
     -webkit-text-fill-color: transparent;
@@ -1232,6 +1234,41 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     background-color: rgba(0,170,150,.2) !important;
 }
+
+.show-edit-white-btn
+{
+    position: absolute;
+
+    width: 20%;
+    height: 25%;
+    margin-top: 35%;
+    margin-left: 39%;
+
+    color: rgba(200,100,0,1) !important;
+    border-radius: 20px;
+    /*background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 45% 45% !important;*/
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.show-fork-white-btn
+{
+    position: absolute;
+
+    width: 20%;
+    height: 25%;
+    margin-top: 35%;
+    margin-left: 69%;
+
+    color: rgba(255,0,0,1) !important;
+    border-radius: 20px;
+    /*background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 60% 55% !important;*/
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
 
 .show-fork-index
 {
@@ -1259,22 +1296,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: rgba(200,100,20,1);
 }
 
-.show-edit-white-btn
-{
-    position: absolute;
 
-    width: 17%;
-    height: 25%;
-    margin-top: 8%;
-    margin-left: 31%;
-
-    color: rgba(200,100,0,1) !important;
-    border-radius: 20px;
-    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 45% 45% !important;
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-}
 
 .show-fork-text
 {
@@ -1289,22 +1311,6 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: rgba(150,20,150,.8);
 }
 
-.show-white-fork-btn
-{
-    position: absolute;
-
-    width: 17%;
-    height: 25%;
-    margin-top: 8%;
-    margin-left: 63%;
-
-    color: rgba(255,0,0,1) !important;
-    border-radius: 20px;
-    background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 60% 55% !important;
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-}
 
 /* SHOW PAGE OLD ORNAGE BUTTONS */
 
@@ -2024,9 +2030,11 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     position: absolute;
 
-    width: 120%;
-    height: 150px;
-    margin-left: -18%;
+    width: 110%;
+    height: 20%;
+    
+    margin-left: -10%;
+    margin-top: -2%;
 
     background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) no-repeat 50% 50% !important;
     background: rgba(255,255,255,0);
@@ -2040,16 +2048,16 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     /*SHOW PAGE*/
     font-family: 'Montserrat' !important;
-    font-size: 40px;
+    font-size: 8vw;
     /*font-variant: small-caps;*/
     font-weight: 600;
 
-    width: 50% !important;
-    margin-left: -25%;
+    width: 75% !important;
+    /*margin-left: -5%;*/
     padding-bottom: 4%;
 
     text-align: center !important;
-    letter-spacing: 2px;
+    /*letter-spacing: 2px;*/
 
     color: rgba(15,25,15,.87);
     /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 20% 20%;*/
@@ -2143,15 +2151,15 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .display-post-body-show
 {
     font-family: 'Montserrat';
-    font-size: 21px;
+    font-size: 4vw;
     font-weight: 300;
-    line-height: 34px;
+    line-height: 4.4vh;
 
-    width: 50% !important;
+    width: auto !important;
     height: auto;
-    margin-top: -7%;
-    margin-left: -10%;
-    padding-left: 80px;
+    /*margin-top: -7%;*/
+    /*margin-left: -10%;*/
+    /*padding-left: 80px;*/
 
     white-space: pre-wrap;
     /*  j letter-spacing: 0px;*/
@@ -2232,17 +2240,17 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 */
 
-.display-post-body-wrapper
-{
-    position: relative;
-    z-index: 1;
+/*.display-post-body-wrapper*/
+/*{*/
+/*    position: relative;*/
+/*    z-index: 1;*/
 
-    width: auto;
+/*    width: auto;*/
     /*box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;*/
-    height: 600px;
-    margin-top: -4%;
-    padding: 0;
-}
+/*    height: 600px;*/
+/*    margin-top: -4%;*/
+/*    padding: 0;*/
+/*}*/
 
 .unicode-lg
 {

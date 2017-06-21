@@ -1,3 +1,7 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
 
@@ -8,7 +12,7 @@
     </style>
       <br>
       
-      <div class="">
+      <div class="flexbox-body-wrapper">
     
       <div class="font-select-div mobile-hide">
           <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>
@@ -27,16 +31,12 @@
 </div>
 
 <br><br>
-<div class="center-wrap">
   <br><br><br><br><br><br><br>
 
- <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
- <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6 eurospinner bitspinner">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
 
 <!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
 
 <section class="wrapper">
- 
  <div class="instructions-wrapper">
  <h2 class="sentence">
     <div class="verticalFlip">
@@ -60,6 +60,11 @@
   <% end %>
 <% else %>
 
+
+<div class="start-writing-flex-wrapper">
+ <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
+ <span class="whatsup-multi-1">W</span><span class="whatsup-multi-2">h</span><span class="whatsup-multi-3">a</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5">'</span><span class="whatsup-multi-6 eurospinner bitspinner">s</span><span class="whatsup-multi-7"> U</span><span class="whatsup-multi-8">p</span><span class="whatsup-multi-9">?</span></a>
+
  <a href="/users/signin" class="login-multicolored"> 
       <span class="login-multi-1">L</span><span class="login-multi-2">O</span><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
       
@@ -67,6 +72,7 @@
       <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
 <% end %>
 </div>
+
 
 
 <div class="sidebar-div">
@@ -78,8 +84,9 @@
 </div>
 
 <br>
-<table id="posts" class="table posts">
-  <tbody>
+
+<table id="posts" class="table posts flex-table-posts">
+  <tbody class="">
 <%= for post <- @posts do %>
     <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
 <% end %>

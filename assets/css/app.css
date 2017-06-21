@@ -19,12 +19,54 @@ RESOURCES
 html,
 body
 {
-    margin-left:-60px;
+    margin-left:0px;
     padding: 0;
-    display:flex;
+    /*display:flex;*/
     justify-content: center;
+
 }
 
+/*.test-flex {*/
+/*    display: flex;*/
+/*    flex: 1;*/
+/*    padding-left: 20%;*/
+/*}*/
+
+/*.flexbox-body-wrapper {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    flex-direction: column;*/
+/*    flex: 1;*/
+/*    max-width: 100%;*/
+/*}*/
+
+/*@media (max-width: 800px)*/
+/*{*/
+/*    .flexbox-body-wrapper*/
+/*    {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    background: red;*/
+/*    font-size: 1vw !important;*/
+/*    flex: 1;*/
+/*    padding-left:300px;*/
+/*    padding-right:300px;*/
+/*    }*/
+/*}*/
+
+
+/*.start-writing-flex-wrapper {*/
+/*    background: red !important;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    font-size: 300px;*/
+/*}*/
+
+.flex-table-posts {
+    display:flex;
+    margin-top:30%;
+    /*width: 550%;*/
+}
 
 
 /*html, body {*/
@@ -182,7 +224,7 @@ body
     {
         height: 30px;
         margin-left: auto !important;
-        padding-bottom: 300px;
+        padding-bottom: 30%;
     }
 }
 
@@ -207,8 +249,8 @@ body
 
     display: block;
 
-    width: 70px;
-    height: 50px;
+    width: 10%;
+    height: 10%;
     margin: auto;
 
     border: 1px solid rgba(20,20,20,.6);
@@ -237,8 +279,8 @@ body
 {
     position: absolute;
    
-    width: 200px;
-    height: 200px;
+    width: 20%;
+    height: 20%;
 
     color: black !important;
     box-shadow: 2px 2px 2px rgba(100,100,100,.7);
@@ -277,7 +319,7 @@ body
     /*position: absolute;*/
 
     margin-top: -40%;
-    max-width: 400px;
+    max-width: 50%;
 
     -webkit-transition: font-variant .8s;
 
@@ -362,10 +404,10 @@ body
     position: absolute;
     z-index: 5;
 
-    width: 500px;
+    width: 50%;
     margin-top: -10%; /* increase this negative integer to move up */
     margin-left: -70%; /* 70% Looks good.*/
-    padding-bottom: 5px;
+    padding-bottom: 1%;
 
     text-align: center;
 
@@ -421,11 +463,11 @@ body
 
 .preview-text
 {
-    font-size: 25px;
+    font-size: 4.6vw;
     font-weight: 300;
-    line-height: 35px;
+    line-height: 4vh;
 
-    width: 600px !important;
+    width: 90% !important;
 
     white-space: pre-wrap;
 
@@ -519,7 +561,7 @@ body
     font-size: 18px;
     line-height: 40px;
 
-    width: 140px;
+    width: 10%;
     max-width: 140px;
     height: 40px;
     max-height: 40px;
@@ -874,8 +916,8 @@ a.logout-button
 
     position: absolute;
 
-    min-width: 550px;
-    max-width: 650px !important;
+    min-width: 20%;
+    max-width: 20% !important;
     height: auto !important;
     margin-top: -75%; /*Increment this negative integer to push me up*/
     margin-left: -70%;
@@ -1806,28 +1848,28 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 /* ORIGINAL CODEPEN http://codepen.io/Teeke/pen/JNXmKj */
 
-.center-wrap
-{
-    position: relative;
-    top: calc(50% - 100px);
-    left: calc(50% - 125px);
+/*.center-wrap*/
+/*{*/
+/*    position: relative;*/
+/*    top: calc(50% - 100px);*/
+/*    left: calc(50% - 125px);*/
 
-    width: 250px;
-    height: 200px;
-}
+/*    width: 250px;*/
+/*    height: 200px;*/
+/*}*/
 
-@media (max-width: 800px)
-{
-    .center-wrap
-    {
-        position: relative;
-        top: calc(50% - 100px);
-        left: calc(50% - 125px);
+/*@media (max-width: 800px)*/
+/*{*/
+/*    .center-wrap*/
+/*    {*/
+/*        position: relative;*/
+/*        top: calc(50% - 100px);*/
+/*        left: calc(50% - 125px);*/
 
-        width: auto !important;
-        height: 200px;
-    }
-}
+/*        width: auto !important;*/
+/*        height: 200px;*/
+/*    }*/
+/*}*/
 
 
 
@@ -1852,7 +1894,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     display: block;
 
-    width: 200px;
+    width: 20%;
     height: 100px;
 
     -webkit-transition: all 1.1s cubic-bezier(.19,1,.22,1);
@@ -1938,7 +1980,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*text-align: center !important;*/
     font-variant: small-caps;
 
-    max-width: 700px !important;
+    max-width: 50% !important;
     margin-left: -2%;
 
     white-space: pre-wrap;
@@ -1962,7 +2004,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     line-height: 35px;
     /*Main index page */
 
-    width: 600px;
+    width: 50%;
     height: auto;
     padding-top: 10px;
     padding-left: 2px;
@@ -2002,7 +2044,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*font-variant: small-caps;*/
     font-weight: 600;
 
-    width: 900px !important;
+    width: 50% !important;
     margin-left: -25%;
     padding-bottom: 4%;
 
@@ -2105,7 +2147,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-weight: 300;
     line-height: 34px;
 
-    width: 680px !important;
+    width: 50% !important;
     height: auto;
     margin-top: -7%;
     margin-left: -10%;
@@ -2172,7 +2214,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     z-index: 2;
     /*box-shadow: -8px 0px 5px -5px rgba(0,0,0,.2), 8px 0px 5px -5px rgba(0,0,0,.2) !important;*/
 
-    width: 900px;
+    width: 50%;
     height: auto;
     padding-left: 9%;
 
@@ -2480,10 +2522,8 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     font-weight: 800;
     font-variant: small-caps;
 
-    width: 140px !important;
+    width: 27% !important;
     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
-    height: 20% !important;
-
     color: rgba(178,70,20,0.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
@@ -2502,7 +2542,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
 
-    width: 120px;
+    width: 27%;
 
     color: rgba(5,60,60,.8);
     border-radius: 2px;
@@ -2513,7 +2553,8 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .btn-delete-post
 {
-    width: 108px;
+    width: 32%;
+    font-size: 2vw;
 
     color: rgba(20,20,20,1) !important;
     /* DELETE BUTTON */
@@ -2522,6 +2563,21 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     border-radius: 5px;
     background-color: rgba(255,255,255,.9) !important;
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7) !important;
+}
+
+.btn-fork-post {
+        width: 27%;
+    font-size: 2vw;
+
+    color: rgba(20,20,20,1) !important;
+    /* DELETE BUTTON */
+    /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
+    border: 1px solid rgba(2,2,2,.2) !important;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,.9) !important;
+    box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7) !important;
+}
+    
 }
 
 .you-must-be-signed {
@@ -2538,7 +2594,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .upvote-btn
 {
-    width: 120px;
+    width: 30%;
 }
 
 .fork-count
@@ -2815,7 +2871,7 @@ a[data-tooltip][data-placement="bottom"]::after {
     position: absolute;
     margin-left: -160%; /* o is more or less center */
     margin-top: -65%;
-    min-width: 800px;
+    min-width: 20%;
 }
     
     /*     

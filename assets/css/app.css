@@ -19,11 +19,11 @@ RESOURCES
 html,
 body
 {
-    margin-left:0px;
+    margin-left: 0;
     padding: 0;
     /*display:flex;*/
-    justify-content: center;
 
+    justify-content: center;
 }
 
 /*.test-flex {*/
@@ -62,9 +62,11 @@ body
 /*    font-size: 300px;*/
 /*}*/
 
-.flex-table-posts {
-    display:flex;
-    margin-top:30%;
+.flex-table-posts
+{
+    display: flex;
+
+    margin-top: 30%;
     /*width: 550%;*/
 }
 
@@ -196,10 +198,9 @@ body
     margin-left: 67%;
 
     letter-spacing: 1px;
-
     /*color: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) !important; */
-  
-    text-shadow: 1px 1px 0px rgba(8,2,12,0.8) !important; /* OVERLAY CHANGE COLOR */
+
+    text-shadow: 1px 1px 0 rgba(8,2,12,.8) !important; /* OVERLAY CHANGE COLOR */
 
     -webkit-text-fill-color: transparent;
 }
@@ -269,8 +270,8 @@ body
     height: 37%;
     margin-top: -5%;
     margin-left: -28%;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 85.2% 70% no-repeat;
 
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 85.2% 70% no-repeat;
     background-color: rgba(13,13,13,.9) !important;
     box-shadow: 2px 2px 2px rgba(100,100,100,.7);
 }
@@ -278,7 +279,7 @@ body
 .topic-header-opacity
 {
     position: absolute;
-   
+
     width: 20%;
     height: 20%;
 
@@ -288,17 +289,16 @@ body
 
 .topic-headline
 {
-    position: absolute;
-    
     font-family: 'Montserrat' !important;
     font-size: 70px;
     font-weight: 100;
     font-variant: normal;
 
+    position: absolute;
+    z-index: 2;
+
     margin-top: 1%;
     margin-left: 17%;
-   
-    z-index: 2;
 
     text-align: center;
 
@@ -315,11 +315,11 @@ body
     font-family: 'Montserrat';
     font-size: 40px;
     font-weight: 400;
+
+    max-width: 50%;
     /*display: inline;*/
     /*position: absolute;*/
-
     margin-top: -40%;
-    max-width: 50%;
 
     -webkit-transition: font-variant .8s;
 
@@ -334,12 +334,13 @@ body
     font-size: 40px;
     /*display: inline;*/
     /*font-variant: small-caps;*/
+
     text-decoration: none;
 
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
     /*color: rgba(20,60,100,0.9);*/
-    text-shadow: 0 1px 0px rgba(200,100,50,.3);
+    text-shadow: 0 1px 0 rgba(200,100,50,.3);
 
     -webkit-text-fill-color: transparent;
 }
@@ -357,8 +358,7 @@ body
 
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 30%;
     -webkit-background-clip: text;
-    text-shadow: 0px 1px 0px rgba(180,60,10,.35);
-    
+    text-shadow: 0 1px 0 rgba(180,60,10,.35);
 
     -webkit-text-fill-color: transparent;
 }
@@ -367,12 +367,12 @@ body
 {
     font-family: 'Montserrat';
     font-size: 18px;
-    
+
     position: absolute;
-    
-    color: rgba(220,100,40);
 
     margin-left: -30%;
+
+    color: rgba(220,100,40);
 }
 
 
@@ -383,11 +383,13 @@ body
 }
 
 
-.topic-body {
+.topic-body
+{
     font-family: 'Century Gothic';
     font-size: 19px;
     font-weight: 200;
-    text-shadow: 1px 0px 0px rgba(100,100,100,0.9);
+
+    text-shadow: 1px 0 0 rgba(100,100,100,.9);
 }
 
 /* END SHOW PAGE */
@@ -702,8 +704,10 @@ body
     font-size: 2vw !important;
     font-weight: 200;
     font-variant: normal !important;
-    margin-top: 20%;
+
     overflow: hidden;
+
+    margin-top: 20%;
     margin-top: -60%;
     /*margin-right: 186% !important;*/
 
@@ -715,15 +719,14 @@ body
 .comment-upvote-btn
 {
     width: 100%;
-
 }
 
 .comment-btn
 {
     font-size: 44px;
 
-    height: 25% !important;
     width: 135%;
+    height: 25% !important;
 
     color: rgba(200,100,1,1) !important;
     border: none !important;
@@ -775,7 +778,7 @@ body
 
     color: rgba(30,30,30,1);
     /*border: 1px solid rgba(1,50,1,.8);*/
-    text-shadow: 1px 1px 0px rgba(100,100,100,.5);
+    text-shadow: 1px 1px 0 rgba(100,100,100,.5);
 }
 
 .comment-multi-1
@@ -796,6 +799,7 @@ body
 .comment-edit-btn
 {
     width: 50%;
+
     color: rgba(255,255,255,1) !important;
     background-color: rgba(200,100,20,.8) !important;
 }
@@ -803,6 +807,7 @@ body
 .comment-delete-btn
 {
     width: 50%;
+
     color: rgba(230,130,20,.8) !important;
     background-color: rgba(10,10,10,.8) !important;
 }
@@ -940,8 +945,6 @@ a.logout-button
 
     border-bottom: 1px solid rgba(200,100,0,1);
     border-radius: 10px;
-    
-
 }
 
 
@@ -958,8 +961,8 @@ a.logout-button
 
 .whatsup-multi-2
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     text-shadow: 0 0 1px rgba(200,100,30,.4);
@@ -967,8 +970,8 @@ a.logout-button
 
 .whatsup-multi-3
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     color: rgba();
@@ -977,8 +980,8 @@ a.logout-button
 
 .whatsup-multi-4
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     color: rgba();
@@ -987,8 +990,8 @@ a.logout-button
 
 .whatsup-multi-5
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     color: rgba();
@@ -997,8 +1000,8 @@ a.logout-button
 
 .whatsup-multi-6
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     color: rgba();
@@ -1007,8 +1010,8 @@ a.logout-button
 
 .whatsup-multi-7
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
 
     color: rgba();
@@ -1017,8 +1020,8 @@ a.logout-button
 
 .whatsup-multi-8
 {
-    
     font-weight: 100;
+
     transition: 0s 3s;
     /*text-shadow: 1px 1px 1px rgba(10,0,250,0.5);*/
     /*color: rgba(255,255,255,0.9);*/
@@ -1031,7 +1034,6 @@ a.logout-button
 
 .whatsup-multi-9
 {
-    
     font-weight: 100;
 
     transition: 0s 3s;
@@ -1206,8 +1208,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 /* SHOW PAGE NEW WHITE BUTTONS */
 
-.display-post-show-wrapper {
-    margin-top: 20%;
+.display-post-show-wrapper
+{
+    margin-top: 30%;
 }
 
 .show-index-white-btn
@@ -1254,9 +1257,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .show-fork-white-btn
 {
-    position: absolute;
-    
     font-size: 1px;
+
+    position: absolute;
 
     width: 20%;
     height: 25%;
@@ -2034,9 +2037,8 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 110%;
     height: 20%;
-    
-    margin-left: -10%;
     margin-top: -2%;
+    margin-left: -10%;
 
     background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) no-repeat 50% 50% !important;
     background: rgba(255,255,255,0);
@@ -2055,6 +2057,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-weight: 600;
 
     width: 75% !important;
+    margin-top: 20%;
     /*margin-left: -5%;*/
     padding-bottom: 4%;
 
@@ -2248,7 +2251,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*    z-index: 1;*/
 
 /*    width: auto;*/
-    /*box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;*/
+/*box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;*/
 /*    height: 600px;*/
 /*    margin-top: -4%;*/
 /*    padding: 0;*/
@@ -2534,7 +2537,8 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
     width: 27% !important;
     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
-    color: rgba(178,70,20,0.9) !important;
+
+    color: rgba(178,70,20,.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px solid rgba(255,255,255,.5) !important;
@@ -2563,8 +2567,9 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .btn-delete-post
 {
+    font-size: 2vw;
+
     width: 32%;
-    font-size: 2vw;
 
     color: rgba(20,20,20,1) !important;
     /* DELETE BUTTON */
@@ -2575,9 +2580,11 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7) !important;
 }
 
-.btn-fork-post {
-        width: 27%;
+.btn-fork-post
+{
     font-size: 2vw;
+
+    width: 27%;
 
     color: rgba(20,20,20,1) !important;
     /* DELETE BUTTON */
@@ -2587,12 +2594,15 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     background-color: rgba(255,255,255,.9) !important;
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7) !important;
 }
-    
-}
 
-.you-must-be-signed {
+
+
+.you-must-be-signed
+{
     font-size: 20px;
     font-weight: 300;
+
+    padding-bottom: 30%;
 }
 
 .upvote-count
@@ -2775,116 +2785,150 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*  margin: 20px;*/
 /*}*/
 
-a[data-tooltip] {
-  position: relative;
+a[data-tooltip]
+{
+    position: relative;
 }
 a[data-tooltip]::before,
-a[data-tooltip]::after {
-  position: absolute;
-  display: none;
-  opacity: 0.85;
+a[data-tooltip]::after
+{
+    position: absolute;
+
+    display: none;
+
+    opacity: .85;
 }
-a[data-tooltip]::before {
-  /*
+a[data-tooltip]::before
+{
+    font-size: 20px;
+    font-weight: 600;
+
+    padding: 6px;
+    /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
    */
-  content: attr(data-tooltip);
-  background: rgba(200,100,100,0.8);
-  color: rgba(255,255,255,1);
-  font-size: 20px;
-  font-weight: 600;
-  padding: 6px;
-  border-radius: 5px;
-  text-shadow: 1px 1px 1px rgba(20,20,20,0.8);
-  /* we don't want the text to wrap */
-  white-space: nowrap;
-  text-decoration: none;
+
+    content: attr(data-tooltip);
+    /* we don't want the text to wrap */
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: rgba(255,255,255,1);
+    border-radius: 5px;
+    background: rgba(200,100,100,.8);
+    text-shadow: 1px 1px 1px rgba(20,20,20,.8);
 }
-a[data-tooltip]::after {
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  content: '';
+a[data-tooltip]::after
+{
+    width: 0;
+    height: 0;
+
+    content: '';
+
+    border: 6px solid transparent;
 }
 
 a[data-tooltip]:hover::before,
-a[data-tooltip]:hover::after {
-  display: block;
+a[data-tooltip]:hover::after
+{
+    display: block;
 }
 
 /** positioning **/
 
 /* left tooltip */
-a[data-tooltip][data-placement="left"]::before {
-  top: -25%;
-  right: 100%;
-  margin-right: 10px;
+a[data-tooltip][data-placement='left']::before
+{
+    top: -25%;
+    right: 100%;
+
+    margin-right: 10px;
 }
-a[data-tooltip][data-placement="left"]::after {
-  border-left-color: rgba(200,100,100,0.5);
-  border-right: none;
-  top: 50%;
-  right: 100%;
-  margin-top: -6px;
-  margin-right: 4px;
+a[data-tooltip][data-placement='left']::after
+{
+    top: 50%;
+    right: 100%;
+
+    margin-top: -6px;
+    margin-right: 4px;
+
+    border-right: none;
+    border-left-color: rgba(200,100,100,.5);
 }
 
 /* right tooltip */
-a[data-tooltip][data-placement="right"]::before {
-  top: -25%;
-  left: 100%;
-  margin-left: 10px;
+a[data-tooltip][data-placement='right']::before
+{
+    top: -25%;
+    left: 100%;
+
+    margin-left: 10px;
 }
-a[data-tooltip][data-placement="right"]::after {
-  border-right-color: rgba(200,100,100,0.8);
-  border-left: none;
-  top: 50%;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: 4px;
+a[data-tooltip][data-placement='right']::after
+{
+    top: 50%;
+    left: 100%;
+
+    margin-top: -6px;
+    margin-left: 4px;
+
+    border-right-color: rgba(200,100,100,.8);
+    border-left: none;
 }
 
 /* top tooltip */
-a[data-tooltip][data-placement="top"]::before {
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 10px;
+a[data-tooltip][data-placement='top']::before
+{
+    bottom: 100%;
+    left: 0;
+
+    margin-bottom: 10px;
 }
-a[data-tooltip][data-placement="top"]::after {
-  border-top-color: rgba(200,100,100,0.8) ;
-  border-bottom: none;
-  bottom: 100%;
-  left: 10px;
-  margin-bottom: 4px;
+a[data-tooltip][data-placement='top']::after
+{
+    bottom: 100%;
+    left: 10px;
+
+    margin-bottom: 4px;
+
+    border-top-color: rgba(200,100,100,.8) ;
+    border-bottom: none;
 }
 
 /* bottom tooltip */
-a[data-tooltip][data-placement="bottom"]::before {
-  top: 100%;
-  left: 0;
-  margin-top: 10px;
+a[data-tooltip][data-placement='bottom']::before
+{
+    top: 100%;
+    left: 0;
+
+    margin-top: 10px;
 }
-a[data-tooltip][data-placement="bottom"]::after {
-  border-bottom-color: rgba(200,100,100,0.8) ;
-  border-top: none;
-  top: 100%;
-  left: 10px;
-  margin-top: 4px;
+a[data-tooltip][data-placement='bottom']::after
+{
+    top: 100%;
+    left: 10px;
+
+    margin-top: 4px;
+
+    border-top: none;
+    border-bottom-color: rgba(200,100,100,.8) ;
 }
 
 
 
 /* INSTRUCTIONS */
 
-.instructions-wrapper{
+.instructions-wrapper
+{
     position: absolute;
-    margin-left: -160%; /* o is more or less center */
-    margin-top: -65%;
+
     min-width: 20%;
+    margin-top: -65%;
+    margin-left: -160%; /* o is more or less center */
 }
-    
-    /*     
+
+/*     
     NESTS IT JUST ABOVE MAIN BLOG POST BODY
     
         position: absolute;
@@ -2894,114 +2938,194 @@ a[data-tooltip][data-placement="bottom"]::after {
     -webkit-transform: rotate(-20deg)
     
     */
-  
 
 
-.sentence{
-     color: #222;
-     font-size: 20px;
-     /*text-align: left;*/
-         -webkit-transform: rotate(-20deg);
+
+.sentence
+{
+    font-size: 20px;
+    /*text-align: left;*/
+
+    -webkit-transform: rotate(-20deg);
+
+    color: #222;
 }
 
-.book-instructions{
-  color: rgba(178,30,20,0.9);
-      -webkit-transform: rotate(-20deg);
+.book-instructions
+{
+    -webkit-transform: rotate(-20deg);
+
+    color: rgba(178,30,20,.9);
 }
 
-.fork-instructions{
-  color: rgba(170,0,65,0.9) !important;
-      -webkit-transform: rotate(-20deg);
+.fork-instructions
+{
+    -webkit-transform: rotate(-20deg);
+
+    color: rgba(170,0,65,.9) !important;
 }
 
-.edit-instructions {
-  color: rgba(139,0,39,0.8);
-      -webkit-transform: rotate(-20deg);
+.edit-instructions
+{
+    -webkit-transform: rotate(-20deg);
+
+    color: rgba(139,0,39,.8);
 }
 
-.upvote-instructions {
-  color: rgba(230,14,25,0.8);
-      -webkit-transform: rotate(-18deg);
+.upvote-instructions
+{
+    -webkit-transform: rotate(-18deg);
+
+    color: rgba(230,14,25,.8);
 }
 
-.flower-instructions{
-  color: rgba(128,10,28,0.8);
-  font-size: 30px;
-      -webkit-transform: rotate(-5deg);
+.flower-instructions
+{
+    font-size: 30px;
+
+    -webkit-transform: rotate(-5deg);
+
+    color: rgba(128,10,28,.8);
 }
 
-.star-instructions{
-  color: rgba(218,165,62,0.8);
-  font-size: 30px;
-  text-shadow: 1px 1px 1px rgba(255,100,50,0.8);
-  -webkit-transform: rotate(20deg);
+.star-instructions
+{
+    font-size: 30px;
+
+    -webkit-transform: rotate(20deg);
+
+    color: rgba(218,165,62,.8);
+    text-shadow: 1px 1px 1px rgba(255,100,50,.8);
 }
 
 /*Vertical Flip*/
-.verticalFlip{
-	display: inline;
-	text-indent: 8px;
+.verticalFlip
+{
+    display: inline;
+
+    text-indent: 8px;
 }
-.verticalFlip > span{
-	animation: vertical 15s linear infinite 0s;
-	-ms-animation: vertical 15s linear infinite 0s;
-	-webkit-animation: vertical 15s linear infinite 0s;
-	color: #000;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
+.verticalFlip > span
+{
+    position: absolute;
+
+    overflow: hidden;
+
+    -webkit-animation: vertical 15s linear infinite 0s;
+        -ms-animation: vertical 15s linear infinite 0s;
+            animation: vertical 15s linear infinite 0s;
+
+    opacity: 0;
+    color: #000;
 }
-.verticalFlip > span:nth-child(2){
-	animation-delay: 2.5s;
-	-ms-animation-delay: 2.5s;
-	-webkit-animation-delay: 2.5s;
+.verticalFlip > span:nth-child(2)
+{
+    -webkit-animation-delay: 2.5s;
+        -ms-animation-delay: 2.5s;
+            animation-delay: 2.5s;
 }
-.verticalFlip > span:nth-child(3){
-	animation-delay: 5s;
-	-ms-animation-delay: 5s;
-	-webkit-animation-delay: 5s;
+.verticalFlip > span:nth-child(3)
+{
+    -webkit-animation-delay: 5s;
+        -ms-animation-delay: 5s;
+            animation-delay: 5s;
 }
-.verticalFlip > span:nth-child(4){
-	animation-delay: 7.5s;
-	-ms-animation-delay: 7.5s;
-	-webkit-animation-delay: 7.5s;
+.verticalFlip > span:nth-child(4)
+{
+    -webkit-animation-delay: 7.5s;
+        -ms-animation-delay: 7.5s;
+            animation-delay: 7.5s;
 }
-.verticalFlip > span:nth-child(5){
-	animation-delay: 10s;
-	-ms-animation-delay: 10s;
-	-webkit-animation-delay: 10s;
-	-webkit-transform: rotate(20deg);
+.verticalFlip > span:nth-child(5)
+{
+    -webkit-transform: rotate(20deg);
+    -webkit-animation-delay: 10s;
+        -ms-animation-delay: 10s;
+            animation-delay: 10s;
 }
 
-.verticalFlip > span:nth-child(6){
-	animation-delay: 12.5s;
-	-ms-animation-delay: 12.5s;
-	-webkit-animation-delay: 12.5s;
+.verticalFlip > span:nth-child(6)
+{
+    -webkit-animation-delay: 12.5s;
+        -ms-animation-delay: 12.5s;
+            animation-delay: 12.5s;
 }
 
 /*Vertical Flip Animation*/
-@-moz-keyframes vertical{
-	0% { opacity: 0; }
-	5% { opacity: 0; -moz-transform: rotateX(180deg); }
-	10% { opacity: 1; -moz-transform: translateY(0px); }
-	25% { opacity: 1; -moz-transform: translateY(0px); }
-	30% { opacity: 0; -moz-transform: translateY(0px); }
-	80% { opacity: 0; }
-	100% { opacity: 0;}
+@-moz-keyframes vertical
+{
+    0%
+    {
+        opacity: 0;
+    }
+    5%
+    {-moz-transform: rotateX(180deg); 
+
+        opacity: 0;
+    }
+    10%
+    {-moz-transform: translateY(0px); 
+
+        opacity: 1;
+    }
+    25%
+    {-moz-transform: translateY(0px); 
+
+        opacity: 1;
+    }
+    30%
+    {-moz-transform: translateY(0px); 
+
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }
-@-webkit-keyframes vertical{
-	0% { opacity: 0; }
-	5% { opacity: 0; -webkit-transform: rotateX(180deg); }
-	10% { opacity: 1; -webkit-transform: translateY(0px); }
-	25% { opacity: 1; -webkit-transform: translateY(0px); }
-	30% { opacity: 0; -webkit-transform: translateY(0px); }
-	80% { opacity: 0; }
-	100% { opacity: 0; }
+@-webkit-keyframes vertical
+{
+    0%
+    {
+        opacity: 0;
+    }
+    5%
+    {-webkit-transform: rotateX(180deg); 
+
+        opacity: 0;
+    }
+    10%
+    {-webkit-transform: translateY(0px); 
+
+        opacity: 1;
+    }
+    25%
+    {-webkit-transform: translateY(0px); 
+
+        opacity: 1;
+    }
+    30%
+    {-webkit-transform: translateY(0px); 
+
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }
 
-.topic-table{
+.topic-table
+{
     position: absolute;
+
     margin-top: 15%;
 }
-
-

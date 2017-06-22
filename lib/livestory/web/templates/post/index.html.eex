@@ -52,9 +52,13 @@
   </div>
 </section>
 
+<!--ORIG IF USER WELCOME MESSAGE --> <!--<%#= if @user do %>
+  <span class="hello-user">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>
+  <%#= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
+    <%#= split_logout("logout") %>
+
 <%= if @user do %>
   <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
-
   <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>
   <% end %>

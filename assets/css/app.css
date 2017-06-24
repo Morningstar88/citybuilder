@@ -28,16 +28,59 @@ body
 }
 */
 
-@media screen and (max-width: 430px  ) and (min-width: 0px){
-    .preview-text{
-       font-size: 5.9vw !important;
-       line-height: 4.2vh !important;
-       /*background-color: green;*/
-    
+
+/*    */
+
+@media screen and (max-width: 400px ) and (min-width: 0)
+{
+    .sub-400-btn
+    {
+        height: 31.5% !important;
     }
-    
-    .preview-title{
-       font-size: 7vw !important;
+}
+
+
+
+
+@media screen and (max-width: 430px  ) and (min-width: 0)
+{
+    .preview-text
+    {
+        font-size: 5.9vw !important;
+        line-height: 4.2vh !important;
+        /*background-color: green;*/
+    }
+
+    .preview-title
+    {
+        font-size: 7vw !important;
+    }
+}
+
+/* NEXUS */
+
+@media screen and (max-width: 430px) and (min-width: 400px)
+{
+    .nexus-btn
+    {
+        font-size: 3vh !important;
+
+        height: 28% !important;
+        margin-top: 29% !important;
+        padding-bottom: 35px !important;
+    }
+}
+
+/* Iphone 5 */
+
+@media screen and (max-width: 330px) and (min-width: 300px)
+{
+    .iphone5-btn
+    {
+        font-size: 3.2vh !important;
+
+        width: 23% !important;
+        height: 38% !important;
     }
 }
 
@@ -45,77 +88,165 @@ body
 
 /* IPAD */
 
-@media screen and (min-width: 650px) {
- 
-.preview-text {
-    font-size: 3.6vw !important;
-    line-height: 3.3vh !important;
-    /*background-color: teal;*/
+@media screen and (max-width: 799px) and (min-width: 650px)
+{
+    .preview-text
+    {
+        font-size: 3.6vw !important;
+        line-height: 3.3vh !important;
+        /*background-color: teal;*/
+    }
+
+    .preview-title
+    {
+        font-size: 4vw !important;
+    }
+
+    .ipad-pro-btn /* Be careful, this media query is for the IPAD */
+    {
+        font-size: 3vh !important;
+
+        height: 35% !important;
+        margin-top: 25% !important;
+    }
 }
 
-.preview-title {
-    font-size: 4vw !important;
+@media screen and (min-width: 800px)
+{
+    .preview-text
+    {
+        font-size: 2.9vw !important;
+        line-height: 5vh !important;
+        /*background-color: orange;*/
+    }
+
+    .preview-title
+    {
+        font-size: 3vw !important;
+    }
 }
-   }
 
-@media screen and (min-width: 800px) {
- 
-.preview-text {
-    font-size: 2.9vw !important;
-    line-height: 5vh !important;
-    /*background-color: orange;*/
+@media screen and (max-width: 1600px) and (min-width: 1000px)
+{
+    .preview-text
+    {
+        font-size: 2.9vw !important;
+        line-height: 7.3vh !important;
+        /*background-color: indigo;*/
+    }
+
+    .preview-title
+    {
+        font-size: 3vw !important;
+    }
 }
 
-.preview-title {
-    font-size: 3vw !important;
+/* TARGET IPAD PRO */
+
+@media screen and (max-width: 1030px) and (min-width: 1010px)
+{
+    .preview-text
+    {
+        font-size: 3.4vw !important;
+        line-height: 3.4vh !important;
+        /*background-color: indigo;*/
+    }
+
+    .preview-title
+    {
+        font-size: 3vw !important;
+    }
+
+    .sidebar-1
+    {
+        font-size: 2.5vw;
+        line-height: .5vh;
+
+        margin-top: 15%;
+        margin-left: 60%;
+    }
+
+    /* SHOW PAGE */
+    .ipad-pro-btn
+    {
+        font-size: 3vh !important;
+
+        height: 35% !important;
+        margin-top: 25% !important;
+    }
 }
-   }
-   
-   @media screen and (max-width: 1600px) and (min-width: 1000px) {
-       
-       .preview-text {
-              font-size: 2.9vw !important;
-    line-height: 7.3vh !important;
-    /*background-color: indigo;*/
-           
-       }
-       
-       .preview-title {
-               font-size: 3vw !important;
-       }
-       
-   }
-   
-   /* TARGET IPAD PRO */
-   
-      @media screen and (max-width: 1030px) and (min-width: 1010px) {
-       
-       .preview-text {
-              font-size: 3.4vw !important;
-              line-height: 3.4vh !important;
-              /*background-color: indigo;*/
-           
-       }
-       
-       .preview-title {
-               font-size: 3vw !important;
-       }
-       
-   }
+
+
+/* End Main Index Media Queries*/
 
 
 
 
+/**/
 
-/* End Media Queries*/
+
+
+
 
 .flex-table-posts
 {
     display: flex;
 
-    margin-top: 30%;
+    margin-top: 15%;
     /*width: 550%;*/
 }
+
+/* SIDEBAR DIV */
+
+.sidebar-div
+{
+    /*display: flex;*/
+    font-size: 20px !important;
+    font-weight: 300;
+
+    position: absolute;
+    /*display: inline;*/
+    /*font-variant: small-caps;*/
+
+    max-height: 20px;
+    margin-top: -18%; /*-15% LOWER ON PAGE. -25% HIGHER.*/
+    margin-left: 67%;
+
+    letter-spacing: 1px;
+    /*color: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) !important; */
+
+    text-shadow: 1px 1px 0 rgba(8,2,12,.8) !important; /* OVERLAY CHANGE COLOR */
+
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-div a
+{
+    color: rgba(0,1,1,.8) !important;
+}
+
+.sidebar-div a:hover
+{
+    font-size: 20px !important;
+
+    letter-spacing: 0;
+
+    color: rgba(20,80,80,.7) !important;
+}
+
+@media (max-width:800px)
+{
+    .sidebar-div
+    {
+        height: 30px;
+        margin-left: auto !important;
+        padding-bottom: 30%;
+    }
+}
+
+
+
+
 
 
 /*html, body {*/
@@ -232,49 +363,7 @@ body
 
 /* START SIDEBAR */
 
-.sidebar-div
-{
-    font-size: 20px !important;
-    font-weight: 300;
-    /*display: inline;*/
-    /*font-variant: small-caps;*/
 
-    position: absolute;
-
-    margin-top: -18%; /*-15% LOWER ON PAGE. -25% HIGHER.*/
-    margin-left: 67%;
-
-    letter-spacing: 1px;
-    /*color: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%) !important; */
-
-    text-shadow: 1px 1px 0 rgba(8,2,12,.8) !important; /* OVERLAY CHANGE COLOR */
-
-    -webkit-text-fill-color: transparent;
-}
-
-.sidebar-div a
-{
-    color: rgba(0,1,1,.8) !important;
-}
-
-.sidebar-div a:hover
-{
-    font-size: 20px !important;
-
-    letter-spacing: 0;
-
-    color: rgba(20,80,80,.7) !important;
-}
-
-@media (max-width:800px)
-{
-    .sidebar-div
-    {
-        height: 30px;
-        margin-left: auto !important;
-        padding-bottom: 30%;
-    }
-}
 
 /*
    /*FROM POSITIVE TECHNOLOGY
@@ -1269,7 +1358,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 20%;
     height: 25%; /* ORIG: height: 25%*/
-    margin-top: 35%; /* ORIG: 12% (leaves it below*/
+    margin-top: 30%; /* ORIG: 12% (leaves it below*/
     margin-left: 10%;
 
     color: rgba(0,0,0,1) !important;
@@ -1291,7 +1380,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 20%;
     height: 25%;
-    margin-top: 35%;
+    margin-top: 30%;
     margin-left: 39%;
 
     color: rgba(200,100,0,1) !important;
@@ -1310,11 +1399,13 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     width: 20%;
     height: 25%;
-    margin-top: 35%;
+    margin-top: 30%;
     margin-left: 69%;
 
     color: rgba(255,100,0,1) !important;
     border-radius: 20px;
+
+    /*padding-bottom: 37px !important;*/
     /*background: url(https://static.pexels.com/photos/256546/pexels-photo-256546.jpeg) 60% 55% !important;d*/
     /*-webkit-background-clip: text;*/
 
@@ -2083,7 +2174,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     position: absolute;
 
     width: 110%;
-    height: 20%;
+    height: 17%;
     margin-top: -2%;
     margin-left: -10%;
 
@@ -3106,22 +3197,26 @@ a[data-tooltip][data-placement='bottom']::after
         opacity: 0;
     }
     5%
-    {-moz-transform: rotateX(180deg); 
+    {
+        -moz-transform: rotateX(180deg);
 
         opacity: 0;
     }
     10%
-    {-moz-transform: translateY(0px); 
+    {
+        -moz-transform: translateY(0px);
 
         opacity: 1;
     }
     25%
-    {-moz-transform: translateY(0px); 
+    {
+        -moz-transform: translateY(0px);
 
         opacity: 1;
     }
     30%
-    {-moz-transform: translateY(0px); 
+    {
+        -moz-transform: translateY(0px);
 
         opacity: 0;
     }
@@ -3141,22 +3236,26 @@ a[data-tooltip][data-placement='bottom']::after
         opacity: 0;
     }
     5%
-    {-webkit-transform: rotateX(180deg); 
+    {
+        -webkit-transform: rotateX(180deg);
 
         opacity: 0;
     }
     10%
-    {-webkit-transform: translateY(0px); 
+    {
+        -webkit-transform: translateY(0px);
 
         opacity: 1;
     }
     25%
-    {-webkit-transform: translateY(0px); 
+    {
+        -webkit-transform: translateY(0px);
 
         opacity: 1;
     }
     30%
-    {-webkit-transform: translateY(0px); 
+    {
+        -webkit-transform: translateY(0px);
 
         opacity: 0;
     }

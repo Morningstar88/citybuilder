@@ -1,9 +1,9 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Chivo:500,600,700|Josefin Sans|Cutive+Mono:300,400|Montserrat:200,300,400,500,600,700,800|Raleway:100,200,300,400' rel='stylesheet'
   type='text/css'>
   <header class="show-page-header">
-    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-index-white-btn" %></span><!--show-main -->
-     <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit-white-btn"%></span><!--show-edit -->
-     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class:  "btn btn-default show-fork-white-btn"%></span><!--show-page-fork-button-->
+    <span><%= link "< index ", to: post_path(@conn, :index), class: "btn btn-default show-index-white-btn ipad-pro-btn nexus-btn sub-400-btn iphone5-btn" %></span><!--show-main -->
+     <span><%= link "Edit", to: post_path(@conn, :edit, @post), class: "btn btn-default show-edit-white-btn ipad-pro-btn nexus-btn sub-400-btn iphone5-btn"%></span><!--show-edit -->
+     <span><%= link " 𝜓	", to: post_path(@conn, :fork, @post), class:  "btn btn-default show-fork-white-btn ipad-pro-btn nexus-btn sub-400-btn iphone5-btn"%></span><!--show-page-fork-button-->
   </header>
  <br>
   <ul class="display-post-show-wrapper">

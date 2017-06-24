@@ -78,7 +78,7 @@
 </div>
 
 <br>
-<table id="posts" class="table posts">
+<table id="posts" class="table posts flex-table-posts">
   <tbody>
 <%= for post <- @posts do %>
     <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>

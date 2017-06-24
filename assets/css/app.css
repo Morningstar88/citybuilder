@@ -7,14 +7,6 @@
 RESOURCES
 */
 
-/* WORKING MEDIA QUERY CODE
-@media screen and (min-width: 180px) {
-    body {
-        background-color: lightgreen !important;
-    }
-}
-*/
-
 
 html,
 body
@@ -26,41 +18,96 @@ body
     justify-content: center;
 }
 
-/*.test-flex {*/
-/*    display: flex;*/
-/*    flex: 1;*/
-/*    padding-left: 20%;*/
-/*}*/
+/* Media Queries */
 
-/*.flexbox-body-wrapper {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    flex-direction: column;*/
-/*    flex: 1;*/
-/*    max-width: 100%;*/
-/*}*/
+/* WORKING MEDIA QUERY CODE
+@media screen and (min-width: 180px) {
+    body {
+        background-color: lightgreen !important;
+    }
+}
+*/
 
-/*@media (max-width: 800px)*/
-/*{*/
-/*    .flexbox-body-wrapper*/
-/*    {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    background: red;*/
-/*    font-size: 1vw !important;*/
-/*    flex: 1;*/
-/*    padding-left:300px;*/
-/*    padding-right:300px;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 430px  ) and (min-width: 0px){
+    .preview-text{
+       font-size: 5.9vw !important;
+       line-height: 4.2vh !important;
+       /*background-color: green;*/
+    
+    }
+    
+    .preview-title{
+       font-size: 7vw !important;
+    }
+}
 
 
-/*.start-writing-flex-wrapper {*/
-/*    background: red !important;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    font-size: 300px;*/
-/*}*/
+
+/* IPAD */
+
+@media screen and (min-width: 650px) {
+ 
+.preview-text {
+    font-size: 3.6vw !important;
+    line-height: 3.3vh !important;
+    /*background-color: teal;*/
+}
+
+.preview-title {
+    font-size: 4vw !important;
+}
+   }
+
+@media screen and (min-width: 800px) {
+ 
+.preview-text {
+    font-size: 2.9vw !important;
+    line-height: 5vh !important;
+    /*background-color: orange;*/
+}
+
+.preview-title {
+    font-size: 3vw !important;
+}
+   }
+   
+   @media screen and (max-width: 1600px) and (min-width: 1000px) {
+       
+       .preview-text {
+              font-size: 2.9vw !important;
+    line-height: 7.3vh !important;
+    /*background-color: indigo;*/
+           
+       }
+       
+       .preview-title {
+               font-size: 3vw !important;
+       }
+       
+   }
+   
+   /* TARGET IPAD PRO */
+   
+      @media screen and (max-width: 1030px) and (min-width: 1010px) {
+       
+       .preview-text {
+              font-size: 3.4vw !important;
+              line-height: 3.4vh !important;
+              /*background-color: indigo;*/
+           
+       }
+       
+       .preview-title {
+               font-size: 3vw !important;
+       }
+       
+   }
+
+
+
+
+
+/* End Media Queries*/
 
 .flex-table-posts
 {
@@ -452,7 +499,7 @@ body
 
 .preview-title
 {
-    font-size: 37px;
+    font-size: 6.5vw;
     font-weight: bold;
 
     margin-left: -1%;
@@ -465,9 +512,9 @@ body
 
 .preview-text
 {
-    font-size: 4.6vw;
+    font-size: 5.8vw;
     font-weight: 300;
-    line-height: 4vh;
+    line-height: 6vh;
 
     width: 90% !important;
 

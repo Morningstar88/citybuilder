@@ -37,7 +37,7 @@
 
 <section class="wrapper">
  
- <div class="instructions-wrapper">
+ <div class="">
  <h2 class="sentence">
     <div class="verticalFlip">
       <span>1. <span class="book-instructions">📖</span> Find a Blog post. </span>
@@ -53,7 +53,7 @@
 </section>
 
 <%= if @user do %>
-  <span class="hello-user">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
+  <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
 
   <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>

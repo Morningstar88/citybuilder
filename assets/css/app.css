@@ -105,14 +105,11 @@ body
     {
         /*WHAT's UP*/
         font-family: 'Raleway';
-        font-size: 100px;
+        font-size: 12vw !important;
         font-weight: 200;
 
-        min-width: 20%;
-        max-width: 20% !important;
-        height: auto !important;
-        margin-top: 25%; /*Increment this negative integer to push me up*/
-        margin-left: 10%;
+        margin-top: 18%; /*Increment this negative integer to push me up*/
+        margin-left: 9% !important;
 
         cursor: pointer;
         text-align: center;

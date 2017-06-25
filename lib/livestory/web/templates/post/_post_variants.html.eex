@@ -1,7 +1,7 @@
 <tr id="post_<%= @post.id %>">
 <%= cond do %>
   <% @post.removed_by_owner -> %>
-    <td class="post-deleted-message">deleted</td>
+    <td class="post-deleted-message">Post deleted!      (╯°□°）╯︵ ┻━┻</td>
     <%= render "_post_restore.html", conn: @conn, post: @post %>
   <% @post.removed_by_moderator -> %>
     <td class="post-deleted-message">Sorry, this post was deleted by our anti-spam squad</td>

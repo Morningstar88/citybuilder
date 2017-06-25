@@ -10,7 +10,7 @@
 
     <title>Frrk! New Blogging Tech.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link href='http://fonts.googleapis.com/css?family=Josefin Sans:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
 
   <style>

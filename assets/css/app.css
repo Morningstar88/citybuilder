@@ -1,5 +1,5 @@
-@import url('http://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('http://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Cutive Mono:200,300,400,500,600');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -29,7 +29,7 @@ body
 */
 
 
-/*    */
+/* SUB-400 Button   */
 
 @media screen and (max-width: 400px ) and (min-width: 0)
 {
@@ -82,6 +82,23 @@ body
         width: 23% !important;
         height: 38% !important;
     }
+}
+
+/* Iphone 6 */
+
+@media screen and (max-width: 399px) and (min-width: 365px)
+{
+    .iphone6-btn
+    {
+        font-size: 3.0vh !important;
+
+        height: 37% !important;
+    }
+}
+
+.raise-fork
+{
+    line-height: 3.5vh !important;
 }
 
 
@@ -162,6 +179,8 @@ body
         font-size: 2.5vw;
         line-height: .5vh;
 
+        display: block !important;
+
         margin-top: 15%;
         margin-left: 60%;
     }
@@ -174,6 +193,14 @@ body
         height: 35% !important;
         margin-top: 25% !important;
     }
+
+    .font-select-div
+    {
+        display: none !important;
+
+        margin-top: 10% !important;
+        margin-left: -65%;
+    }
 }
 
 
@@ -184,7 +211,10 @@ body
 
 /**/
 
-
+.same-as-orig-post
+{
+    color: teal;
+}
 
 
 
@@ -192,7 +222,7 @@ body
 {
     display: flex;
 
-    margin-top: 15%;
+    margin-top: 19%;
     /*width: 550%;*/
 }
 
@@ -1637,7 +1667,10 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: rgba(128,0,32,.8);
 }
 
-
+.post-restore-btn
+{
+    background-color: rgba(20,180,140.0.8) !important;
+}
 
 /* END LOGOUT */
 

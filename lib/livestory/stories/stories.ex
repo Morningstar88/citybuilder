@@ -198,7 +198,7 @@ defmodule LiveStory.Stories do
     {_, post_body} = fetch_field(changeset, :body)
     if get_change(changeset, :published) && not_changed?(post.original_post, post_body) do
       changeset
-      |> add_error(:body, "Same as original post")
+      |> add_error(:body, " (°◇°) Same as original post! You must make some changes to this post before submitting it. ", class: "same-as-orig-post")
     else
       changeset
     end

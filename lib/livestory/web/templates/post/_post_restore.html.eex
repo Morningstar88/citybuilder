@@ -1,4 +1,4 @@
 <td colspan="2" class="post-restore hidden">
-  Post deleted. Click here to undelete... In 10 seconds it'll be gone forever.
-  <%= link "Restore", to: post_path(@conn, :restore, @post), "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default post-restore-btn" %>
+  Post deleted. (°◇°) Click ~Restore Post~ to undelete... In 10 seconds your post will be be gone forever.
+  <%= link "Restore Post", to: post_path(@conn, :restore, @post), "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default post-restore-btn" %>
 </td>

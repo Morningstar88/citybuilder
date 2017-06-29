@@ -15,7 +15,7 @@ body
     padding: 0;
     /*display:flex;*/
 
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 /* Media Queries */
@@ -28,14 +28,634 @@ body
 }
 */
 
+/* NAVBAR */
 
-/* SUB-400 Button   */
+/*MODAL*/
+
+.modalDialog
+{
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    -webkit-transition: opacity 200ms ease-in;
+       -moz-transition: opacity 200ms ease-in;
+            transition: opacity 200ms ease-in;
+    pointer-events: none;
+
+    opacity: 0;
+    background: rgba(253, 255, 253, .93);
+}
+.modalDialog:target
+{
+    pointer-events: auto;
+
+    opacity: 1;
+}
+.modalDialog > div
+{
+    position: relative;
+
+    width: 90vw;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+
+    border-radius: 10px;
+    /*background: #fff;*/
+    /*background: -moz-linear-gradient(#fff, #999);*/
+    /*background: -webkit-linear-gradient(#fff, #999);*/
+    /*background: -o-linear-gradient(#fff, #999);*/
+}
+.close
+{
+    font-size: 100vw;
+    font-weight: bold;
+    line-height: 25px;
+
+    position: absolute;
+    top: -10px;
+    right: -12px;
+
+    width: 24px;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #fff;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+    background: #fff;
+    /*-moz-box-shadow: 1px 1px 3px #000;*/
+    /*-webkit-box-shadow: 1px 1px 3px #000;*/
+    /*box-shadow: 1px 1px 3px #000;*/
+}
+.close:hover
+{
+    background: rgba(100,0,100,.8);
+}
+
+
+/* # General
+================================ */
+
+body
+{
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+/* # Header, Main Menu
+================================ */
+
+.navbar
+{
+    margin-bottom: 0;
+
+    transition: all .2s ease-out;
+
+    opacity: .8;
+    background-color: #fff;
+}
+
+.navbar-container
+{
+    position: relative;
+}
+
+.navbar .navbar-nav li a
+{
+    font-size: 1.2vw;
+
+    padding-right: 3vw;
+
+    transition: all .2s ease-out;
+    text-transform: uppercase;
+
+    color: rgba(10,10,60,.8) !important;
+    text-shadow: 2px 2px 2px rgba(20,20,20,.3) ;
+}
+
+.navbar-brand
+{
+    font-size: 3vw !important;
+
+    text-indent: 1vw;
+
+    color: rgba(255,255,255,1) !important;
+    /*transition: all 0.2s ease-out;*/
+    border-radius: 10px 0 10px 0;
+    background-color: rgba(25,20,150,.7);
+    text-shadow: 1px 1px 0 rgba(255,255,255,.5) !important;
+}
+
+.navbar-scroll
+{
+    opacity: 1;
+}
+
+#top-social-menu
+{
+    display: none;
+}
+
+
+
+@media (min-width: 768px)
+{
+    /*NAVBAR HEIGHT*/
+
+    .navbar
+    {
+        height: 7vh;
+    }
+
+    .navbar-nav > li > a
+    {
+        /*margin-top: 35px;*/
+        margin-left: 50px;
+        padding: 0;
+        /*line-height: 70px;*/
+    }
+
+    .navbar-brand
+    {
+        font-size: 2.5vw !important;
+        /*padding-top: 50px !important;*/
+        /*height: 120px;*/
+        /*line-height: 120px;*/
+    }
+
+    #top-social-menu
+    {
+        display: initial;
+    }
+
+    /* Navbar when scrolled */
+
+    .navbar-scroll
+    {
+        height: 70px;
+    }
+
+    .navbar-scroll #top-social-menu
+    {
+        display: none;
+
+        transition: all .2s ease-out;
+    }
+
+    .navbar-scroll .navbar-brand
+    {
+        display: none;
+    }
+
+    .navbar-scroll .navbar-nav > li > a
+    {
+        margin-top: 0;
+        padding: 0;
+
+        opacity: 1;
+    }
+}
+
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px)
+{
+    .navbar-nav > li > a::after
+    {
+        position: absolute;
+        top: 80%;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        content: '';
+        transition: height .3s, opacity .3s, transform .3s;
+        transform: translateY(-10px);
+
+        opacity: 0;
+        background: rgba(0,90,20,.8);
+    }
+
+    .navbar-nav > li > a:hover::after,
+    .navbar-nav > li > a:focus::after
+    {
+        height: 2px;
+
+        transform: translateY(0px);
+
+        opacity: 1;
+    }
+}
+
+/* # Social menu
+================================ */
+
+#top-social-menu
+{
+    font-size: 12px;
+
+    position: absolute;
+    z-index: 101;
+    top: 7px;
+    right: 0;
+
+    padding-right: 0;
+
+    list-style: none;
+
+    transition: all .2s ease-out;
+
+    color: #2e1c05;
+}
+
+#top-social-menu li
+{
+    float: left;
+
+    padding: 10px 15px;
+}
+
+#top-social-menu li:last-child
+{
+    padding-right: 0;
+}
+
+#top-social-menu li a
+{
+    text-decoration: none;
+
+    color: #2e1c05;
+}
+
+#top-social-menu li a:hover
+{
+    text-decoration: none;
+
+    color: #543a1a;
+}
+
+#top-social-menu i
+{
+    font-size: 16px;
+
+    transition: all .2s ease-in;
+}
+
+#top-social-menu i:hover
+{
+    text-decoration: none;
+
+    color: #543a1a;
+}
+
+/* # Section Full Width Image
+================================ */
+
+.full-width-img
+{
+    /*padding-top: 200px;*/
+    height: 94vh !important ;
+    margin-top: -2%;
+
+    text-align: center;
+
+    color: #fff;
+    background: url(' https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/peacock.jpeg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 3px 3px 3px rgba(120,120,120,.8);
+
+    /* alt pics */
+
+    /* Peacock:
+ Orig street scene: http://i1159.photobucket.com/albums/p625/ivanrdvc/bg-cp-header_zps4ghnoxc7.jpg */
+}
+
+.box
+{
+    text-align: center;
+
+    color: #fff;
+    border: 3px solid #000;
+    background: rgba(0, 0, 0, .4);
+    /*margin-top: 10px;*/
+    /*padding: 10px 20px;*/
+}
+
+.subheading-text
+{
+    font-size: 35px;
+    line-height: 50px;
+
+    list-style: none;
+}
+
+@media (min-width: 768px)
+{
+    .full-width-img
+    {
+        height: 1000px;
+        padding-top: 110px;
+    }
+
+    .subheading-text
+    {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .box
+    {
+        margin-top: 100px;
+        padding: 80px 20px;
+    }
+}
+/* # Section Black, White
+================================ */
+
+.section-black,
+.section-white
+{
+    line-height: 1.7;
+
+    padding: 50px 0;
+
+    color: #fff;
+}
+
+.section-black h3,
+.section-white h3
+{
+    margin-bottom: 60px;
+}
+
+.section-black p,
+.section-white p
+{
+    margin-bottom: 60px;
+}
+
+.section-black
+{
+    background: linear-gradient(#363437, #121112);
+}
+
+.section-white
+{
+    color: #0e0d0e;
+    background: linear-gradient(#fff, #f3f3f3);
+}
+
+.index-header
+{
+    display: inline-block;
+
+    width: 130%;
+    height: 9vh;
+    margin: 0;
+    margin-left: -10%;
+    padding: 0;
+
+    list-style-type: none;
+    /*background-color: rgba(0,100,20,0.3);*/
+
+    box-shadow: 3px 2px 2px rgba(100,100,100,.8);
+}
+
+.index-list
+{
+    font-family: Raleway;
+    font-size: 1.5vw;
+    font-weight: 400;
+
+    display: inline;
+    float: left;
+
+    padding-right: 0vw;
+    padding-left: 3vw;
+}
+
+/*nav*/
+/*{*/
+/*    margin-top: 2rem;*/
+/*}*/
+
+/*nav li*/
+/*{*/
+/*    display: inline-block;*/
+
+/*    margin-right: 1rem;*/
+/*}*/
+
+/*BLOGS YOU CAN FORK SVG MASK*/
+
+html
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+
+/*html,*/
+/*body {*/
+/*  height: 100%;*/
+/*}*/
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text
+{
+    position: fixed;
+    z-index: 10;
+    top: 53vh;
+    left: 0;
+
+    width: 100%;
+    height: 250px;
+}
+
+svg
+{
+    width: inherit;
+    height: inherit;
+}
+svg text
+{
+    text-anchor: middle;
+}
+svg #alpha
+{
+    fill: #e8e8e8;
+}
+svg #title
+{
+    font-size: 7em;
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+svg #subtitle
+{
+    font-size: 2.2em;
+    font-weight: 800;
+
+    padding-top: 5vh;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+svg #base
+{
+    fill: rgba(255,255,255,.8);
+    -webkit-mask: url(#mask);
+            mask: url(#mask);
+}
+
+section.intro
+{
+    position: relative;
+
+    width: 100%;
+    min-height: 100%;
+
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+/*@keyframes alpha {
+  50%{fill: #000;}
+}*/
+
+/*SIGN UP BUTTON*/
+
+@font-face
+{
+    font-family: Biko;
+
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff');
+}
+body
+{
+    margin: 2rem;
+
+    background: white;
+}
+
+header
+{
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header video
+{
+    width: 100%;
+}
+
+svg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+svg text
+{
+    font-family: Biko, sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+}
+
+svg rect
+{
+    fill: white;
+}
+
+svg > rect
+{
+    -webkit-mask: url(#mask);
+            mask: url(#mask);
+}
+
+/*LOGIN DIV*/
+
+.login-div
+{
+    position: absolute;
+
+    margin-top: -50%;
+    margin-left: 86%;
+}
+
+
+/* GALAXY S-5 SUB-400 Button   */
 
 @media screen and (max-width: 400px ) and (min-width: 0)
 {
     .sub-400-btn
     {
         height: 31.5% !important;
+    }
+
+    .logout-multicolored
+    {
+        font-family: 'Josefin Sans' !important;
+        font-size: 54px;
+
+        position: absolute;
+        z-index: 4;
+
+        margin-top: -170% !important; /*Increment the negative integer to push me up */
+        margin-left: 185% !important;
+
+        text-decoration: none;
+        letter-spacing: -8px;
+    }
+
+    .logout-multicolored:hover
+    {
+        text-decoration: none !important;
+    }
+
+    .whatsup-multicolored
+    {
+        /*WHAT's UP*/
+        font-family: 'Raleway';
+        font-size: 12vw !important;
+        font-weight: 500 !important;
+
+        position: relative;
+
+        display: block !important;
+
+        margin-top: 0 !important; /*Increment this negative integer to push me up*/
+        margin-left: 12% !important;
+    }
+
+    /*For instructions*/
+    .galaxy-wrapper
+    {
+        position: absolute;
+
+        min-width: 400px !important;
+        margin-top: -10% !important;
+        margin-left: 10% !important;
     }
 }
 
@@ -57,7 +677,69 @@ body
     }
 }
 
-/* NEXUS */
+/* NEXUS 5X*/
+
+@media screen and (max-width: 430px) and (min-width: 400px)
+{
+    .nexus-btn
+    {
+        font-size: 3vh !important;
+
+        height: 28% !important;
+        margin-top: 29% !important;
+        padding-bottom: 35px !important;
+    }
+
+    .logout-multicolored
+    {
+        font-family: 'Josefin Sans' !important;
+        font-size: 54px;
+
+        position: absolute;
+        z-index: 4;
+
+        margin-top: -170% !important; /*Increment the negative integer to push me up */
+        margin-left: 185% !important;
+
+        text-decoration: none;
+        letter-spacing: -8px;
+    }
+
+    .logout-multicolored:hover
+    {
+        text-decoration: none !important;
+    }
+
+    .whatsup-multicolored
+    {
+        /*WHAT's UP*/
+        font-family: 'Raleway';
+        font-size: 12vw !important;
+        font-weight: 500 !important;
+
+        position: relative;
+
+        display: block !important;
+
+        margin-top: 0 !important; /*Increment this negative integer to push me up*/
+        margin-left: 12% !important;
+    }
+
+    /*For instructions*/
+    .galaxy-wrapper
+    {
+        position: absolute;
+
+        min-width: 400px !important;
+        margin-top: -10% !important;
+        margin-left: 10% !important;
+    }
+}
+
+
+
+
+/* NEXUS 6P*/
 
 @media screen and (max-width: 430px) and (min-width: 400px)
 {
@@ -81,6 +763,66 @@ body
 
         width: 23% !important;
         height: 38% !important;
+    }
+
+    .login-multicolored
+    {
+        font-size: 9vw !important;
+
+        margin-top: 9% !important;
+        margin-left: 3%;
+    }
+
+    .signup-multicolored
+    {
+        font-size: 9vw !important;
+
+        margin-top: 9% !important; /* Further away from zero = higher*/
+        margin-left: 54% !important;
+
+        transition: 0s 3s;
+    }
+
+    .whatsup-multicolored
+    {
+        /*WHAT's UP*/
+        font-family: 'Raleway';
+        font-size: 12vw !important;
+        font-weight: 200;
+
+        margin-top: 18%; /*Increment this negative integer to push me up*/
+        margin-left: 9% !important;
+
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: -9px;
+        /*border: 2px double rgba(200,100,30,.1);*/
+
+        border-radius: 1px 3px 0 10px;
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
+        -webkit-background-clip: text;
+        text-shadow: 0 0 1px rgba(10,10,10,.9);
+
+        -webkit-text-fill-color: transparent;
+    }
+
+    .verticalFlip
+    {
+        display: inline;
+
+        text-indent: -4vw !important;
+    }
+}
+
+/* Iphone 6 */
+
+@media screen and (max-width: 399px) and (min-width: 365px)
+{
+    .iphone6-btn
+    {
+        font-size: 3.0vh !important;
+
+        height: 37% !important;
     }
 
     .login-multicolored
@@ -123,17 +865,12 @@ body
 
         -webkit-text-fill-color: transparent;
     }
-}
 
-/* Iphone 6 */
-
-@media screen and (max-width: 399px) and (min-width: 365px)
-{
-    .iphone6-btn
+    .verticalFlip
     {
-        font-size: 3.0vh !important;
+        display: inline;
 
-        height: 37% !important;
+        text-indent: -4vw !important;
     }
 }
 
@@ -142,6 +879,65 @@ body
     line-height: 3.5vh !important;
 }
 
+/* Iphone 6 Plus */
+
+@media screen and (max-width: 420px) and (min-width: 405px)
+{
+    .iphone6-btn
+    {
+        font-size: 3.0vh !important;
+
+        height: 37% !important;
+    }
+
+    .login-multicolored
+    {
+        font-size: 8vw !important;
+
+        margin-top: 9% !important;
+        margin-left: 3%;
+    }
+
+    .signup-multicolored
+    {
+        font-size: 8vw !important;
+
+        margin-top: 9% !important; /* Further away from zero = higher*/
+        margin-left: 44% !important;
+
+        transition: 0s 3s;
+    }
+
+    .whatsup-multicolored
+    {
+        /*WHAT's UP*/
+        font-family: 'Raleway';
+        font-size: 12vw !important;
+        font-weight: 200;
+
+        margin-top: 18%; /*Increment this negative integer to push me up*/
+        margin-left: 9% !important;
+
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: -9px;
+        /*border: 2px double rgba(200,100,30,.1);*/
+
+        border-radius: 1px 3px 0 10px;
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
+        -webkit-background-clip: text;
+        text-shadow: 0 0 1px rgba(10,10,10,.9);
+
+        -webkit-text-fill-color: transparent;
+    }
+
+    .verticalFlip
+    {
+        display: inline;
+
+        text-indent: -4vw !important;
+    }
+}
 
 
 /* IPAD */
@@ -170,20 +966,29 @@ body
 
     .login-multicolored
     {
-        font-size: 8vw !important;
+        font-size: 6vw !important;
 
-        margin-top: 9% !important;
+        margin-top: 13% !important;
         margin-left: 3%;
     }
 
     .signup-multicolored
     {
-        font-size: 8vw !important;
+        font-size: 6vw !important;
 
-        margin-top: 9% !important; /* Further away from zero = higher*/
-        margin-left: 54% !important;
+        margin-top: 13% !important; /* Further away from zero = higher*/
+        margin-left: 55% !important;
 
         transition: 0s 3s;
+    }
+
+    .galaxy-wrapper
+    {
+        position: absolute;
+
+        min-width: 400px !important;
+        margin-top: -10% !important;
+        margin-left: 10% !important;
     }
 }
 
@@ -233,16 +1038,6 @@ body
         font-size: 3vw !important;
     }
 
-    .sidebar-1
-    {
-        font-size: 2.5vw;
-        line-height: .5vh;
-
-        display: block !important;
-
-        margin-top: 15%;
-        margin-left: 60%;
-    }
 
     /* SHOW PAGE */
     .ipad-pro-btn
@@ -263,7 +1058,7 @@ body
 
     .login-multicolored
     {
-        font-size: 6.5vw !important;
+        font-size: 5.5vw !important;
 
         margin-top: 10% !important;
         margin-left: 3%;
@@ -271,12 +1066,21 @@ body
 
     .signup-multicolored
     {
-        font-size: 6.5vw !important;
+        font-size: 5.5vw !important;
 
         margin-top: 10% !important; /* Further away from zero = higher*/
         margin-left: 54% !important;
 
         transition: 0s 3s;
+    }
+
+    .galaxy-wrapper
+    {
+        position: absolute;
+
+        min-width: 400px !important;
+        margin-top: -10% !important;
+        margin-left: 10% !important;
     }
 }
 
@@ -640,9 +1444,9 @@ body
 
 .hello-user
 {
-    font-family: helvetica ;
+    /*font-family: helvetica ;*/
     /*width: 800px;*/
-    font-size: 18px;
+    font-size: 5vw;
     font-weight: 500;
     /* Text in post view */
 
@@ -1616,7 +2420,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     transition: 0s 2s;
 
-    color: rgba(168,0,42,.8);
+    color: rgba(168,0,162,.8);
 }
 
 .login-multi-2
@@ -1665,7 +2469,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     transition: 0s;
 
-    color: rgba(12,158,255,.7);
+    color: rgba(12,8,155,.7);
 }
 
 .login-multi-2:hover
@@ -1730,7 +2534,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     z-index: 4;
 
     margin-top: -89%; /*Increment the negative integer to push me up */
-    margin-left: 200%;
+    margin-left: 180%;
 
     text-decoration: none;
     letter-spacing: -8px;
@@ -2767,7 +3571,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .btn-edit-post
 {
-    font-size: 20px;
+    font-size: 2vw;
     /*EDIT*/
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
@@ -2785,7 +3589,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 {
     font-size: 2vw;
 
-    width: 32%;
+    width: 30%;
 
     color: rgba(20,20,20,1) !important;
     /* DELETE BUTTON */
@@ -3140,8 +3944,10 @@ a[data-tooltip][data-placement='bottom']::after
     position: absolute;
 
     min-width: 20%;
-    margin-top: -65%;
-    margin-left: -160%; /* o is more or less center */
+    margin-top: 30%;
+    margin-left: -0; /* o is more or less center */
+
+    white-space: pre-wrap;
 }
 
 /*     
@@ -3159,59 +3965,56 @@ a[data-tooltip][data-placement='bottom']::after
 
 .sentence
 {
-    font-size: 20px;
+    font-size: 3vw;
+
+    min-width: 30%;
+    margin-top: -15%;
     /*text-align: left;*/
+    /*-webkit-transform: rotate(-20deg);*/
 
-    -webkit-transform: rotate(-20deg);
+    white-space: pre-wrap;
 
-    color: #222;
+    /* COLOR IS IN Vertical Flip Span */
 }
 
 .book-instructions
 {
-    -webkit-transform: rotate(-20deg);
-
+    /*-webkit-transform: rotate(-20deg);*/
     color: rgba(178,30,20,.9);
 }
 
 .fork-instructions
 {
-    -webkit-transform: rotate(-20deg);
-
+    /*-webkit-transform: rotate(-20deg);*/
     color: rgba(170,0,65,.9) !important;
 }
 
 .edit-instructions
 {
-    -webkit-transform: rotate(-20deg);
-
+    /*-webkit-transform: rotate(-20deg);*/
     color: rgba(139,0,39,.8);
 }
 
 .upvote-instructions
 {
-    -webkit-transform: rotate(-18deg);
-
+    /*-webkit-transform: rotate(-18deg);*/
     color: rgba(230,14,25,.8);
 }
 
 .flower-instructions
 {
     font-size: 30px;
-
-    -webkit-transform: rotate(-5deg);
+    /*-webkit-transform: rotate(-5deg);*/
 
     color: rgba(128,10,28,.8);
 }
 
 .star-instructions
 {
-    font-size: 30px;
-
-    -webkit-transform: rotate(20deg);
-
-    color: rgba(218,165,62,.8);
-    text-shadow: 1px 1px 1px rgba(255,100,50,.8);
+    /*font-size: 30px;*/
+    /*-webkit-transform: rotate(20deg);*/
+    color: rgba(21,80,42,.8);
+    /*text-shadow: 1px 1px 1px rgba(255,100,50,.8);*/
 }
 
 /*Vertical Flip*/
@@ -3227,12 +4030,13 @@ a[data-tooltip][data-placement='bottom']::after
 
     overflow: hidden;
 
-    -webkit-animation: vertical 15s linear infinite 0s;
-        -ms-animation: vertical 15s linear infinite 0s;
-            animation: vertical 15s linear infinite 0s;
+    -webkit-animation: vertical 22.5s linear infinite 0s;
+        -ms-animation: vertical 22.5s linear infinite 0s;
+            animation: vertical 22.5s linear infinite 0s;
 
     opacity: 0;
-    color: #000;
+    color: rgba(10,10,60,.7);
+    text-shadow: 1px 1px 0 rgba(100,100,100,.3);
 }
 .verticalFlip > span:nth-child(2)
 {
@@ -3254,7 +4058,7 @@ a[data-tooltip][data-placement='bottom']::after
 }
 .verticalFlip > span:nth-child(5)
 {
-    -webkit-transform: rotate(20deg);
+    /*-webkit-transform: rotate(20deg);*/
     -webkit-animation-delay: 10s;
         -ms-animation-delay: 10s;
             animation-delay: 10s;
@@ -3266,6 +4070,43 @@ a[data-tooltip][data-placement='bottom']::after
         -ms-animation-delay: 12.5s;
             animation-delay: 12.5s;
 }
+
+.verticalFlip > span:nth-child(7)
+{
+    -webkit-animation-delay: 15s;
+        -ms-animation-delay: 15s;
+            animation-delay: 15s;
+}
+
+.verticalFlip > span:nth-child(8)
+{
+    -webkit-animation-delay: 17.5s;
+        -ms-animation-delay: 17.5s;
+            animation-delay: 17.5s;
+}
+
+.verticalFlip > span:nth-child(9)
+{
+    -webkit-animation-delay: 20s;
+        -ms-animation-delay: 12.5s;
+            animation-delay: 12.5s;
+}
+
+.verticalFlip > span:nth-child(10)
+{
+    -webkit-animation-delay: 15s;
+        -ms-animation-delay: 15s;
+            animation-delay: 15s;
+}
+
+.verticalFlip > span:nth-child(11)
+{
+    -webkit-animation-delay: 17.5s;
+        -ms-animation-delay: 17.5s;
+            animation-delay: 17.5s;
+}
+
+
 
 /*Vertical Flip Animation*/
 @-moz-keyframes vertical

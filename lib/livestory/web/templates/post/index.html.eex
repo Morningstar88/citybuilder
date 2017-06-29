@@ -1,14 +1,157 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
-
-  <style>
+  
+    <style>
     body {
       font-family: 'Josefin Sans', 'Century Gothic' !important;
     }
     </style>
-      <br>
+  
+
+      <!-- NAVBAR -->
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+			<div class="container navbar-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#openModal" class="navbar-brand">How to 𝜓</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Random</a></li>
+						<li><a href="#about">Hacking</a></li>
+						<li><a href="#portfolio">Happiness</a></li>
+						<li><a href="#contact">News</a></li>
+						<li><a href="#blog">Technology</a></li>
+						</li>
+					</ul>
+				</div>
+				<!--<div class="top-social">-->
+				<!--	<ul id="top-social-menu">-->
+				<!--		<li><a href="#"><i class="fa fa-twitter"></i></a></li>-->
+				<!--		<li><a href="#"><i class="fa fa-facebook"></i></a></li>-->
+				<!--		<li><a href="#">About</a></li>-->
+				<!--		<li><a href="#">Investors</a></li>-->
+				<!--	</ul>-->
+				<!--</div>-->
+			</div>
+		</nav>
+	</header>
+
+	<section class="full-width-img">
+		
+		</section>
+		
+		
+<!--		<br><br><br>-->
+<!--		<header>-->
+<!--	<video autoplay playsinline muted loop preload poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">-->
+<!--		<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/ocean-small.webm" />-->
+<!--    <source src="http://thenewcode.com/assets/videos/ocean-small.mp4" />-->
+<!--	</video>-->
+<!-- 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 80" preserveAspectRatio="xMidYMid slice">-->
+<!--    <defs>-->
+<!--    <mask id="mask" x="0" y="0" width="100%" height="100%" >-->
+<!--      <rect x="0" y="0" width="100%" height="100%" />-->
+<!--    <text x="72"  y="50">SIGN-UP</text>-->
+<!--      </mask>-->
+<!--  </defs>-->
+<!-- <rect x="0" y="0" width="100%" height="100%" />-->
+<!--  </svg>-->
+<!--</header>-->
+
+		
+  
+ <!-- <header class="index-header">-->
       
-      <!-- -->
+ <!--       <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
+ <!--<span class="whatsup-multi-1">S</span><span class="whatsup-multi-2">ta</span><span class="whatsup-multi-3">r</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5"></span><span class="whatsup-multi-6 eurospinner bitspinner"></span><span class="whatsup-multi-7"> Writin</span><span class="whatsup-multi-8">g</span><span class="whatsup-multi-9"></span></a>-->
+      
+<!--      <div class="sidebar-div">-->
+<!--                <nav>-->
+<!--  <%#= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>-->
+<!--  <div class="sidebar-1">-->
+
+<!--     <li class="index-list"><%#= link split_topic_name(topic.name), to: topic_path(@conn, :show, topic.slug) %></li>-->
+<!--  <ul>-->
+<!--      </nav>-->
+<!--  </div>-->
+<!--  <%# end %>-->
+<!--</div> <!-- header> -->
+
+
+<!--
+autor: Marco Barría 
+https://twitter.com/marco_bf
+-->
+<div class="text">
+  <svg>
+   <defs>
+     <mask id="mask" x="0" y="0" width="100%" height="100%" >
+       <!-- alpha rectangle -->
+       <!-- rectángulo alfa -->
+       <rect id="alpha" x="0" y="0" width="100%" height="100%"/>
+       <!-- All text that you want -->
+       <!-- Coloca todo el texto que necesites -->
+       <text id="title" x="50%" y="0" dy="1.58em">Frrk. Blogs you can fork;</text>
+       <text id="subtitle" x="50%" y="20%" dy="5.8em">Change any article.</text>
+     </mask>
+    </defs>
+    <!-- Apply color here! -->
+    <!-- Color aquí -->
+    <rect id="base" x="0" y="0" width="100%" height="100%"/>
+  </svg>
+</div>
+
+
+
+
+
+<div id="openModal" class="modalDialog">
+    <div>	<a href="#close" title="Close" class="close">X</a>
+
+          	<section class="intro"></section>
+  <section class="wrapper galaxy-wrapper">
+ <div class="">
+ <h2 class="sentence">
+    <div class="verticalFlip">
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
+       <span>&nbsp;&nbsp;&nbsp;2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
+      <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
+      <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example, John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emma sees the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>
+                              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>
+
+    </div>
+  </h2>
+  </div>
+</section>
+
+<!-- 
+
+Example for readers....
+
+
+
+
+-->
+
+  
+    </div>
+</div>
+
+      
+      <!--OCEAN SIGN UP -->
+      
+      
     
       <div class="font-select-div mobile-hide">
           <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>
@@ -30,28 +173,11 @@
 <div class="center-wrap">
   <br><br><br><br><br><br><br>
 
- <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
- <span class="whatsup-multi-1">S</span><span class="whatsup-multi-2">ta</span><span class="whatsup-multi-3">r</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5"></span><span class="whatsup-multi-6 eurospinner bitspinner"></span><span class="whatsup-multi-7"> Writin</span><span class="whatsup-multi-8">g</span><span class="whatsup-multi-9"></span></a>
+
 
 <!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
 
-<section class="wrapper">
- 
- <div class="">
- <h2 class="sentence">
-    <div class="verticalFlip">
-      <span>1. <span class="book-instructions">📖</span> Find a Blog post. </span>
-      <!-- Fixed as per Stack Overflow -->
-      <span>2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
-      <span>3. <span class="edit-instructions">✎</span> Edit your copy > Publish...</span>
-      <span>4. <span class="upvote-instructions">❤</span> Readers upvote best writers.</span>
-      <span> <span class="star-instructions">☆ Frrk.io</span></span>
-         <span> (<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
-    </div>
-  </h2>
-  </div>
-</section>
-
+<div class="hello-user">
 <%= if @user do %>
   <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
 
@@ -59,23 +185,18 @@
     <%= split_logout("logout") %>
   <% end %>
 <% else %>
-
+</div>
+<div class="login-div">
  <a href="/users/signin" class="login-multicolored"> 
-      <span class="login-multi-1">L</span><span class="login-multi-2">O</span><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
-      
+      <span class="login-multi-1">L</span><br><span class="login-multi-2">O</span><br><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
+      </div>
        <a href="/users/new" class="signup-multicolored"> 
       <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
 <% end %>
 </div>
 
 
-<div class="sidebar-div">
-  <%= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>
-  <div class="sidebar-1">
-   <%= link split_topic_name(topic.name), to: topic_path(@conn, :show, topic.slug) %>
-  </div>
-  <% end %>
-</div>
+
 
 <br>
 <table id="posts" class="table posts flex-table-posts">
@@ -91,33 +212,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 
 <script>
-function testAlert(){
-    alert("Test Alert Was Pushed")
-};
-function changeColor() {
-    alert("change color was pushed");
-	var x = Math.floor(Math.random() * 255); // range is 0-255
-	var y = Math.floor(Math.random() * 255);
-	var z = Math.floor(Math.random() * 255);
-  var avoidgreyminus = x - 150;
-  var avoidgreyplus = x + 150;
-  var opacity = 0.05;
+
+$(window).scroll(function () {
+	var sc = $(window).scrollTop()
+	if (sc > 150) {
+		$("#main-navbar").addClass("navbar-scroll")
+	} 
+	else {
+		$("#main-navbar").removeClass("navbar-scroll")
+	}
+});
+
+
+// function testAlert(){
+//     alert("Test Alert Was Pushed")
+// };
+// function changeColor() {
+//     alert("change color was pushed");
+// 	var x = Math.floor(Math.random() * 255); // range is 0-255
+// 	var y = Math.floor(Math.random() * 255);
+// 	var z = Math.floor(Math.random() * 255);
+//   var avoidgreyminus = x - 150;
+//   var avoidgreyplus = x + 150;
+//   var opacity = 0.05;
   
    
-  if (x < 125) {
-   //alert("x is less than 125, avoidgreyplus will be used")
-   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")"; 
-  // alert("the rgba is " + thergb)
-   	console.log(thergb,document.body.style.background);
-	document.body.style.background=thergb;
-  }
+//   if (x < 125) {
+//   //alert("x is less than 125, avoidgreyplus will be used")
+//   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")"; 
+//   // alert("the rgba is " + thergb)
+//   	console.log(thergb,document.body.style.background);
+// 	document.body.style.background=thergb;
+//   }
   
-  else {
- // alert ("x is more than 125, avoidgreyminus will be used")
-  var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
- // alert("the rgba is " + thergb)
-  	console.log(thergb,document.body.style.background);
-	document.body.style.background=thergb;
-  }
+//   else {
+//  // alert ("x is more than 125, avoidgreyminus will be used")
+//   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
+//  // alert("the rgba is " + thergb)
+//   	console.log(thergb,document.body.style.background);
+// 	document.body.style.background=thergb;
+//   }
 </script>
 <br><br><br><br><br><br>

@@ -119,21 +119,52 @@ https://twitter.com/marco_bf
  <div class="">
  <h2 class="sentence">
     <div class="verticalFlip">
-      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
+      <span>&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
        <span>&nbsp;&nbsp;&nbsp;2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
       <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
       <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
-      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example, John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emma sees the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>
-                              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>
+              <span>&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
+      <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>-->
+      <!--<span>For example</span>-->
+            <!--<span>&nbsp;&nbsp;&nbsp;John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>-->
+            <!--      <span>&nbsp;&nbsp;&nbsp;Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>-->
+            <!--                  <span>&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>-->
+            <!--      <span>&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>-->
 
     </div>
   </h2>
   </div>
 </section>
+
+<!-- Aligned for Mobile
+
+ <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
+       <span>&nbsp;&nbsp;&nbsp;2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
+      <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
+      <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>
+                              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
 
 <!-- 
 

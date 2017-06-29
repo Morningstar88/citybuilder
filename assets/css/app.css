@@ -4030,9 +4030,9 @@ a[data-tooltip][data-placement='bottom']::after
 
     overflow: hidden;
 
-    -webkit-animation: vertical 22.5s linear infinite 0s;
-        -ms-animation: vertical 22.5s linear infinite 0s;
-            animation: vertical 22.5s linear infinite 0s;
+    -webkit-animation: vertical 12.5s linear infinite 0s;
+        -ms-animation: vertical 12.5s linear infinite 0s;
+            animation: vertical 12.5s linear infinite 0s;
 
     opacity: 0;
     color: rgba(10,10,60,.7);
@@ -4071,40 +4071,40 @@ a[data-tooltip][data-placement='bottom']::after
             animation-delay: 12.5s;
 }
 
-.verticalFlip > span:nth-child(7)
-{
-    -webkit-animation-delay: 15s;
-        -ms-animation-delay: 15s;
-            animation-delay: 15s;
-}
+/*.verticalFlip > span:nth-child(7)*/
+/*{*/
+/*    -webkit-animation-delay: 15s;*/
+/*        -ms-animation-delay: 15s;*/
+/*            animation-delay: 15s;*/
+/*}*/
 
-.verticalFlip > span:nth-child(8)
-{
-    -webkit-animation-delay: 17.5s;
-        -ms-animation-delay: 17.5s;
-            animation-delay: 17.5s;
-}
+/*.verticalFlip > span:nth-child(8)*/
+/*{*/
+/*    -webkit-animation-delay: 17.5s;*/
+/*        -ms-animation-delay: 17.5s;*/
+/*            animation-delay: 17.5s;*/
+/*}*/
 
-.verticalFlip > span:nth-child(9)
-{
-    -webkit-animation-delay: 20s;
-        -ms-animation-delay: 12.5s;
-            animation-delay: 12.5s;
-}
+/*.verticalFlip > span:nth-child(9)*/
+/*{*/
+/*    -webkit-animation-delay: 20s;*/
+/*        -ms-animation-delay: 20s;*/
+/*            animation-delay: 20s;*/
+/*}*/
 
-.verticalFlip > span:nth-child(10)
-{
-    -webkit-animation-delay: 15s;
-        -ms-animation-delay: 15s;
-            animation-delay: 15s;
-}
+/*.verticalFlip > span:nth-child(10)*/
+/*{*/
+/*    -webkit-animation-delay: 22.5;*/
+/*        -ms-animation-delay: 22.5;*/
+/*            animation-delay: 22.5;*/
+/*}*/
 
-.verticalFlip > span:nth-child(11)
-{
-    -webkit-animation-delay: 17.5s;
-        -ms-animation-delay: 17.5s;
-            animation-delay: 17.5s;
-}
+/*.verticalFlip > span:nth-child(11)*/
+/*{*/
+/*    -webkit-animation-delay: 25;*/
+/*        -ms-animation-delay: 25s;*/
+/*            animation-delay: 25s;*/
+/*}*/
 
 
 

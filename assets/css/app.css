@@ -4074,7 +4074,7 @@ a[data-tooltip][data-placement='bottom']::after
 /*.verticalFlip > span:nth-child(7)*/
 /*{*/
 /*    -webkit-animation-delay: 15s;*/
-/*        -ms-animation-delay: 15s;*/
+/*   s     -ms-animation-delay: 15s;*/
 /*            animation-delay: 15s;*/
 /*}*/
 

@@ -124,13 +124,34 @@ https://twitter.com/marco_bf
       <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
       <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
               <span>&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
-      <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>-->
-      <!--<span>For example</span>-->
-            <!--<span>&nbsp;&nbsp;&nbsp;John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>-->
-            <!--      <span>&nbsp;&nbsp;&nbsp;Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>-->
+        <span>For example... <span class="star-instructions"> 𝟁</span> </span>
+        <span>John writes an article: <u>3 things to do in London</u> </span></span>
+        <span class="upper-text">3 Things to Do in London
+        1. See the Queen.
+        2. Go to the Tate Modern.
+        3. Go to Trafalgur Square.
+        </span>
+        <span class="upper-text-2">Emma reads the article...</span>
+                <span class="upper-text-3">CLicks 𝟁 to make her own copy</span>
+                        <span class="upper-text-3">Writes an alternative version with 2 extra points.</span>
+                                <span class="upper-text-4">5 Things to Do in London
+        1. See the Queen.
+        2. Go to the Tate Modern.
+        3. Go to Trafalgur Square.
+        4. Visit Harry Potter in Kings Cross.
+        5. Go to St Pauls Cathedral.
+        </span>
+        <span class="upper-text-5">John + Emmas articles are now side-by-side in the voting queue. The best article will get upvoted.</span>
+        
+        
+        
+        
+                  <!--<span>Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>-->
+           
+           
             <!--                  <span>&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>-->
             <!--      <span>&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>-->
-
+      <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>-->
     </div>
   </h2>
   </div>

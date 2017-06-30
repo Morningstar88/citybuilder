@@ -4030,9 +4030,9 @@ a[data-tooltip][data-placement='bottom']::after
 
     overflow: hidden;
 
-    -webkit-animation: vertical 12.5s linear infinite 0s;
-        -ms-animation: vertical 12.5s linear infinite 0s;
-            animation: vertical 12.5s linear infinite 0s;
+    -webkit-animation: vertical 42s linear infinite 0s;
+        -ms-animation: vertical 42s linear infinite 0s;
+            animation: vertical 42s linear infinite 0s;
 
     opacity: 0;
     color: rgba(10,10,60,.7);
@@ -4071,26 +4071,90 @@ a[data-tooltip][data-placement='bottom']::after
             animation-delay: 12.5s;
 }
 
-/*.verticalFlip > span:nth-child(7)*/
-/*{*/
-/*    -webkit-animation-delay: 15s;*/
-/*   s     -ms-animation-delay: 15s;*/
-/*            animation-delay: 15s;*/
-/*}*/
+.verticalFlip > span:nth-child(7)
+{
+    -webkit-animation-delay: 15s;
+        -ms-animation-delay: 15s;
+            animation-delay: 15s;
+}
 
-/*.verticalFlip > span:nth-child(8)*/
-/*{*/
-/*    -webkit-animation-delay: 17.5s;*/
-/*        -ms-animation-delay: 17.5s;*/
-/*            animation-delay: 17.5s;*/
-/*}*/
+.verticalFlip > span:nth-child(8)
+{
+    -webkit-animation-delay: 17.5s;
+        -ms-animation-delay: 17.5s;
+            animation-delay: 17.5s;
+}
 
-/*.verticalFlip > span:nth-child(9)*/
-/*{*/
-/*    -webkit-animation-delay: 20s;*/
-/*        -ms-animation-delay: 20s;*/
-/*            animation-delay: 20s;*/
-/*}*/
+.verticalFlip > span:nth-child(9)
+{
+    -webkit-animation-delay: 23s;
+        -ms-animation-delay: 23s;
+            animation-delay: 23s;
+}
+
+.verticalFlip > span:nth-child(10)
+{
+
+    -webkit-animation-delay: 27s;
+        -ms-animation-delay: 27s;
+            animation-delay: 27s;
+}
+
+.upper-text {
+        margin-top: -20%;
+}
+
+.verticalFlip > span:nth-child(11)
+{
+
+    -webkit-animation-delay: 31s;
+        -ms-animation-delay: 31s;
+            animation-delay: 31s;
+}
+
+.upper-text-2 {
+        margin-top: -20%;
+}
+
+
+.verticalFlip > span:nth-child(12)
+{
+
+    -webkit-animation-delay: 34s;
+        -ms-animation-delay: 34s;
+            animation-delay: 34s;
+}
+
+.upper-text-3 {
+        margin-top: -20%;
+}
+
+
+
+.verticalFlip > span:nth-child(13)
+{
+
+    -webkit-animation-delay: 37s;
+        -ms-animation-delay: 37s;
+            animation-delay: 37s;
+}
+
+.upper-text-4 {
+        margin-top: -20%;
+}
+
+
+
+.verticalFlip > span:nth-child(14)
+{
+
+    -webkit-animation-delay: 40s;
+        -ms-animation-delay: 40s;
+            animation-delay: 40s;
+}
+
+
+
 
 /*.verticalFlip > span:nth-child(10)*/
 /*{*/

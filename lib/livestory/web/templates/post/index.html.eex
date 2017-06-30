@@ -229,26 +229,25 @@ Example for readers....
 
 <!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
 
-<div class="hello-user">
+
 <%= if @user do %>
+<div class="hello-user">
   <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
 
   <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>
   <% end %>
-<% else %>
 </div>
+<% else %>
 <div class="login-div">
- <a href="/users/signin" class="login-multicolored"> 
+  Hello!
+  <a href="/users/signin" class="login-multicolored">
       <span class="login-multi-1">L</span><br><span class="login-multi-2">O</span><br><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
       </div>
-       <a href="/users/new" class="signup-multicolored"> 
+       <a href="/users/new" class="signup-multicolored">
       <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
-<% end %>
 </div>
-
-
-
+<% end %>
 
 <br>
 <table id="posts" class="table posts flex-table-posts">

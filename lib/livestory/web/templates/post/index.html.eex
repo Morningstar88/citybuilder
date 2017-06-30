@@ -245,12 +245,12 @@ Example for readers....
 <script>
 
 $(window).scroll(function () {
-	var sc = $(window).scrollTop()
+	var sc = $(window).scrollTop();
 	if (sc > 150) {
-		$("#main-navbar").addClass("navbar-scroll")
-	} 
+		$("#main-navbar").addClass("navbar-scroll");
+	}
 	else {
-		$("#main-navbar").removeClass("navbar-scroll")
+		$("#main-navbar").removeClass("navbar-scroll");
 	}
 });
 

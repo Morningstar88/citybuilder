@@ -149,8 +149,8 @@ body
     color: rgba(255,255,255,1) !important;
     /*transition: all 0.2s ease-out;*/
     border-radius: 10px 0 10px 0;
-    background-color: rgba(25,20,150,.7);
-    text-shadow: 1px 1px 0 rgba(255,255,255,.5) !important;
+    background-color: rgba(60,0,0,.9);
+    text-shadow: 1px 1px 0 rgba(255,255,255,.8) !important;
 }
 
 .navbar-scroll
@@ -241,7 +241,7 @@ body
         transform: translateY(-10px);
 
         opacity: 0;
-        background: rgba(0,90,20,.8);
+        background: rgba(100,0,0,.8);
     }
 
     .navbar-nav > li > a:hover::after,
@@ -501,7 +501,8 @@ svg #title
 {
     font-size: 7em;
     font-weight: 800;
-
+    color: orange !important;
+    text-shadow: 2px 2px 2px orange;
     letter-spacing: -4px;
 }
 svg #subtitle
@@ -519,7 +520,7 @@ svg #base
     fill: rgba(255,255,255,.5);
     -webkit-mask: url(#mask);
             mask: url(#mask);
-            text-shadow: orange;
+          
 }
 
 section.intro

@@ -145,14 +145,18 @@ body
 .navbar-brand
 {
     font-size: 3vw !important;
+    font-weight: 800;
 
     /*text-indent: 2vw;*/
 
-    color: rgba(255,255,255,1) !important;
+    color: rgba(25,20,20,1) !important;
+    text-shadow: 2px 2px 0px white;
     /*transition: all 0.2s ease-out;*/
     border-radius: 10px 0 10px 0;
-    background-color: rgba(80,0,0,.9);
-    text-shadow: 1px 1px 0 rgba(255,100,55,.8) !important;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg');
+    opacity: 0.6;
+    background-color: rgba(0,100,100,.9);
+    /*text-shadow: 2px 2px 2px rgba(255,100,55,.8) !important;*/
 }
 
 .navbar-scroll
@@ -178,10 +182,11 @@ body
 
     .navbar-nav > li > a
     {
-        
+        position: absolute;
         /*Positioning of List items*/
         /*margin-top: 35px;*/
-        margin-left: 20%;
+        /*padding-right: 40px;*/
+        margin-left: -79%;
         padding: 0;
         /*line-height: 70px;*/
     }
@@ -245,7 +250,7 @@ body
         transform: translateY(-10px);
 
         opacity: 0;
-        background: rgba(100,0,0,.7);
+        background: rgba(10,170,200,.7);
     }
 
     .navbar-nav > li > a:hover::after,
@@ -340,6 +345,11 @@ body
 
     /* Peacock:
  Orig street scene: http://i1159.photobucket.com/albums/p625/ivanrdvc/bg-cp-header_zps4ghnoxc7.jpg */
+}
+
+.disappear-on-scroll {
+   
+
 }
 
 .box
@@ -505,9 +515,10 @@ svg #title
 {
     font-size: 7em;
     font-weight: 800;
-    color: orange !important;
+    background-color: orange !important;
     text-shadow: 2px 2px 2px orange;
     letter-spacing: -4px;
+  
 }
 svg #subtitle
 {
@@ -4267,4 +4278,238 @@ a[data-tooltip][data-placement='bottom']::after
     position: absolute;
 
     margin-top: 15%;
+}
+
+/* PROJECT BOXES */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono';
+
+body{
+  /*background-color: rgba(0,0,0,0.4);*/
+  /*margin-left: 2em;*/
+  /*margin-top: 2em;*/
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  display: block;
+  width: 22.92em;
+  height: 32.46em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+  background-color: #fff;
+  box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.card-top {
+  width: 100%;
+  height: 11.43em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.card-top.create {
+  background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+}
+
+.card-top.learn {
+  background-image: url("https://image.ibb.co/dVsLTF/personalized_learning_2.png");
+}
+
+.card-top.ideas {
+  background-image: url("https://image.ibb.co/mz8uoF/Learning_talking_in_a_group_with_other_people.jpg");
+}
+
+.blur {
+  background-image: linear-gradient(to bottom ,  rgba(69, 77, 91, 0.5) 0%,  rgba(43, 40, 50, 0.5) 60%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+ 
+}
+
+.card-top span.project-type {
+  width: 8.07em;
+  height: 2.53em;
+  position: absolute;
+  z-index: 1;
+  top: 3.19em;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2ca58d;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.card-top span.project-type.learn {
+  background-color: #2ca58d;
+}
+
+.card-top span.project-type.create {
+  background-color: #00a8e8;
+}
+
+.card-top span.project-type.ideas {
+  background-color: #EEFF22;
+  color: #000;
+}
+
+.progress {
+  height: 0.31em;
+  width: 60%;
+  background-color: #2ca58d;
+  position: relative;
+}
+
+.progress.learn {
+  background-color: #2ca58d;
+}
+
+.progress.create {
+  background-color: #00a8e8;
+  width: 40%;
+}
+
+.progress.ideas {
+  background-color: #EEff22;
+  width: 80%;
+}
+
+.progress span {
+  background-color: #2ca58d;
+  width: 3.58em;
+  height: 2.25em;
+  border-radius: 0.25em;
+  position: absolute;
+  left: 100%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.8em;
+}
+
+.progress.learn span {
+  background-color: #ef233C;
+}
+
+.progress.create span {
+  background-color: #00a8e8;
+}
+
+.progress.ideas span {
+  background-color: #eeff22;
+  color: #000;
+}
+
+.content {
+  display: flex column;
+  position:relative;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.26em 1.59em;
+}
+.details span:nth-child(1) {
+  font-size: 0.89em;
+  color: #95989A;
+}
+
+.details span:nth-child(2) {
+  font-size: 1.59em;
+  transform: rotate(-90deg);
+}
+
+.title {
+  color: #00a8e8;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.12em;
+}
+
+.summary {
+  color: #95989A;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 0.89em;
+  height: 3.19em;
+  overflow: hidden;
+}
+
+button, .btn {
+  border: none;
+  outline: none;
+  margin:0;
+  padding: 0;
+  
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8em;
+  padding : 0.8em 1.59em;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0.31em;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  
+  
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.12em;
+  border: 0px solid #000;
+}
+
+.info {
+  width: 33.333333%;
+  display: flex column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info span {
+  display: block;
+  margin: 0.81em 0;
+  text-align: center;
+}
+
+.info span:nth-child(1) {
+  color: #4D9BCF;
+  font-size: 1.12em;
+  font-weight: light;
+   font-family: 'Roboto Mono', monospace;
+}
+
+.info span:nth-child(2) {
+  color: #3D3D3D;
+  text-transform: uppercase;
 }

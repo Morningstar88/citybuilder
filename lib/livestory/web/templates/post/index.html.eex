@@ -42,7 +42,7 @@
 		</nav>
 	</header>
 
-	<section class="full-width-img">
+	<section class="full-width-img disappear-on-scroll">
 		
 		</section>
 		
@@ -88,7 +88,7 @@
 autor: Marco Barría 
 https://twitter.com/marco_bf
 -->
-<div class="text">
+<div class="text disappear-on-scroll">
   <svg>
    <defs>
      <mask id="mask" x="0" y="0" width="100%" height="100%" >
@@ -157,35 +157,6 @@ https://twitter.com/marco_bf
   </div>
 </section>
 
-<!-- Aligned for Mobile
-
- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
-       <span>&nbsp;&nbsp;&nbsp;2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
-      <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
-      <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
-              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
-      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;John writes an article: 5 things to do in London<span class="star-instructions"> 𝟁</span></span>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>
-                              <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>
-                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--->
 
 <!-- 
 
@@ -205,21 +176,21 @@ Example for readers....
       
       
     
-      <div class="font-select-div mobile-hide">
-          <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>
-              </h3>
+<!--      <div class="font-select-div mobile-hide">-->
+<!--          <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>-->
+<!--              </h3>-->
    
-       <div class="font-selector">
-<select>
-</select>
-</div>
-<br>
+<!--       <div class="font-selector">-->
+<!--<select>-->
+<!--</select>-->
+<!--</div>-->
+<!--<br>-->
 
-<div class="font-selector-text">
-<select>
-</select>
-</div>
-</div>
+<!--<div class="font-selector-text">-->
+<!--<select>-->
+<!--</select>-->
+<!--</div>-->
+<!--</div>-->
 
 <br><br>
 <div class="center-wrap">
@@ -249,6 +220,118 @@ Example for readers....
 </div>
 <% end %>
 
+<!-- TEST IMPORT PROJECT BOXES -->
+
+<div class="card-container">
+  <div class="card-top learn">
+    <span class="project-type">Learn</span>
+   <div class="blur"></div>
+  </div>
+  <div class="progress">
+    <span> 60 %</span>
+  </div>
+  <div class="content">
+    <div class="details">
+      <span> Active 4 days ago </span>
+      <span>...</span>
+    </div>
+    <div class="title">Learn Painting</div>
+    <div class="summary">Learn to paint from youtube channel
+and complete the assassinn creed picture.</div>
+    <button class="btn"> Open Project </button>
+    <div class="project-info">
+      <div class="info">
+        <span>06</span>
+        <span>Steps</span>
+      </div>
+      <div class="info">
+        <span>29</span>
+        <span>Tasks</span>
+      </div>
+      <div class="info">
+        <span>03</span>
+        <span>Weeks</span>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card-top create">
+   <span class="project-type create">CREATE</span>
+   <div class="blur"></div>
+  </div>
+  <div class="progress create">
+    <span> 40 %</span>
+  </div>
+  <div class="content">
+    <div class="details">
+      <span> Active 7 days ago </span>
+      <span>...</span>
+    </div>
+    <div class="title">Week Tweak</div>
+    <div class="summary">Prepare whole website, web-app, mobile app
+and launch Week Tweak. Rule the World!!</div>
+    <button class="btn"> Open Project </div>
+    <div class="project-info">
+      <div class="info">
+        <span>12</span>
+        <span>Steps</span>
+      </div>
+      <div class="info">
+        <span>64</span>
+        <span>Tasks</span>
+      </div>
+      <div class="info">
+        <span>06</span>
+        <span>Weeks</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card-top ideas">
+   <span class="project-type ideas">IDEAS</span>
+   <div class="blur"></div>
+  </div>
+  <div class="progress ideas">
+    <span> 80 %</span>
+  </div>
+  <div class="content">
+    <div class="details">
+      <span> Active 7 days ago </span>
+      <span>...</span>
+    </div>
+    <div class="title">Artificial Intelligence</div>
+    <div class="summary">Collection of Ideas for Artificial Intelligence Projects.</div>
+    <button class="btn"> Open Project </div>
+    <div class="project-info">
+      <div class="info">
+        <span>02</span>
+        <span>Steps</span>
+      </div>
+      <div class="info">
+        <span>24</span>
+        <span>Tasks</span>
+      </div>
+      <div class="info">
+        <span>02</span>
+        <span>Weeks</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END TEST IMPORT PROJECT BOXES -->
+
+
+
+
+
+
 <br>
 <table id="posts" class="table posts flex-table-posts">
   <tbody>
@@ -263,6 +346,18 @@ Example for readers....
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 
 <script>
+
+  $(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('.disappear-on-scroll').fadeOut();
+     }
+    else
+     {
+      $('.disappear-on-scroll').fadeIn();
+     }
+ });
 
 $(window).scroll(function () {
 	var sc = $(window).scrollTop();

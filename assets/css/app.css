@@ -519,6 +519,7 @@ svg #base
     fill: rgba(255,255,255,.5);
     -webkit-mask: url(#mask);
             mask: url(#mask);
+            text-shadow: orange;
 }
 
 section.intro

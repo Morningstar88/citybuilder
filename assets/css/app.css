@@ -328,7 +328,7 @@ body
     text-align: center;
 
     color: #fff;
-    background: url(' https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/peacock.jpeg') no-repeat center center;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
     background-size: cover;
     box-shadow: 3px 3px 3px rgba(120,120,120,.8);
 
@@ -502,7 +502,7 @@ svg #title
     font-size: 7em;
     font-weight: 800;
 
-    letter-spacing: -2px;
+    letter-spacing: -4px;
 }
 svg #subtitle
 {
@@ -516,7 +516,7 @@ svg #subtitle
 }
 svg #base
 {
-    fill: rgba(255,255,255,.8);
+    fill: rgba(255,255,255,.5);
     -webkit-mask: url(#mask);
             mask: url(#mask);
 }
@@ -572,7 +572,9 @@ svg
     left: 0;
 
     width: 100%;
-    height: 100%;
+    height: 85%;
+    padding-top: 3%;
+    line-height: 50px;
 }
 
 svg text

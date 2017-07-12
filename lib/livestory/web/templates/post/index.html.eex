@@ -18,15 +18,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="#openModal" class="navbar-brand">How to 𝜓</a>
+					<a href="#openModal" class="navbar-brand">What we do</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Random</a></li>
-						<li><a href="#about">Hacking</a></li>
-						<li><a href="#portfolio">Happiness</a></li>
-						<li><a href="#contact">News</a></li>
-						<li><a href="#blog">Technology</a></li>
+						<li><a href="#">Raise Money</a></li>
+						<li><a href="#about">Search Projects</a></li>
+						<li><a href="#portfolio">Start A Project</a></li>
+						<li><a href="#contact">Community</a></li>
+						<li><a href="#blog">News</a></li>
 						</li>
 					</ul>
 				</div>
@@ -97,8 +97,8 @@ https://twitter.com/marco_bf
        <rect id="alpha" x="0" y="0" width="100%" height="100%"/>
        <!-- All text that you want -->
        <!-- Coloca todo el texto que necesites -->
-       <text id="title" x="50%" y="0" dy="1.58em">Frrk. Blogs you can fork;</text>
-       <text id="subtitle" x="50%" y="20%" dy="5.8em">Change any article.</text>
+       <text id="title" x="50%" y="0" dy="1.58em">Citybuilder. Brick by Brick;</text>
+       <!--<text id="subtitle" x="50%" y="20%" dy="5.8em">Creating jobs. Regenerating cities.</text>-->
      </mask>
     </defs>
     <!-- Apply color here! -->

@@ -129,28 +129,30 @@ body
 
 .navbar .navbar-nav li a
 {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 
-    padding-right: 3vw;
+    padding-right: 1vw;
+    
+    /*text-indent: 6vw;*/
 
     transition: all .2s ease-out;
     text-transform: uppercase;
 
-    color: rgba(10,10,60,.8) !important;
-    text-shadow: 2px 2px 2px rgba(20,20,20,.3) ;
+    color: rgba(25,125,125,.9) !important;
+    text-shadow: 2px 2px 2px rgba(25,155,155,.3) ;
 }
 
 .navbar-brand
 {
     font-size: 3vw !important;
 
-    text-indent: 1vw;
+    /*text-indent: 2vw;*/
 
     color: rgba(255,255,255,1) !important;
     /*transition: all 0.2s ease-out;*/
     border-radius: 10px 0 10px 0;
-    background-color: rgba(60,0,0,.9);
-    text-shadow: 1px 1px 0 rgba(255,255,255,.8) !important;
+    background-color: rgba(80,0,0,.9);
+    text-shadow: 1px 1px 0 rgba(255,100,55,.8) !important;
 }
 
 .navbar-scroll
@@ -176,8 +178,10 @@ body
 
     .navbar-nav > li > a
     {
+        
+        /*Positioning of List items*/
         /*margin-top: 35px;*/
-        margin-left: 50px;
+        margin-left: 20%;
         padding: 0;
         /*line-height: 70px;*/
     }
@@ -241,7 +245,7 @@ body
         transform: translateY(-10px);
 
         opacity: 0;
-        background: rgba(100,0,0,.8);
+        background: rgba(100,0,0,.7);
     }
 
     .navbar-nav > li > a:hover::after,

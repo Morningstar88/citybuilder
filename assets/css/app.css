@@ -118,8 +118,9 @@ body
 
     transition: all .2s ease-out;
 
-    opacity: .8;
+    opacity: 1;
     background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
 }
 
 .navbar-container
@@ -129,34 +130,40 @@ body
 
 .navbar .navbar-nav li a
 {
-    font-size: 1.4vw;
+    font-size: 1.5vw;
 
     padding-right: 1vw;
     
     /*text-indent: 6vw;*/
 
     transition: all .2s ease-out;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 
-    color: rgba(25,125,125,.9) !important;
-    text-shadow: 2px 2px 2px rgba(25,155,155,.3) ;
+    color: rgba(25,25,25,.9) !important;
+    text-shadow: 1px 1px 1px rgba(155,155,155,.3) ;
+    /*box-shadow: 2px 2px 2px grey;*/
 }
 
 .navbar-brand
 {
     font-size: 3vw !important;
-    font-weight: 800;
+    font-weight: 300;
 
     /*text-indent: 2vw;*/
 
-    color: rgba(25,20,20,1) !important;
-    text-shadow: 2px 2px 0px white;
+    color: rgba(5,0,0,1) !important;
+    text-shadow: 1px 1px 0px rgba(200,200,200,1);
     /*transition: all 0.2s ease-out;*/
     border-radius: 10px 0 10px 0;
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg');
-    opacity: 0.6;
-    background-color: rgba(0,100,100,.9);
+    box-shadow: 2px 2px 2px grey;
+    /*background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg');*/
+    opacity: 0.8;
+    /*background-color: rgba(0,200,0,0.04);*/
     /*text-shadow: 2px 2px 2px rgba(255,100,55,.8) !important;*/
+}
+
+.navbar-brand:hover{
+ color: rgba(2,255,2,0.5);   
 }
 
 .navbar-scroll
@@ -4446,7 +4453,7 @@ body{
   text-align: center;
   margin-top: 2em;
   margin-bottom: 1em;
-  font-size: 1.12em;
+  font-size: 1.3vw;
 }
 
 .summary {
@@ -4455,8 +4462,8 @@ body{
   width: 70%;
   margin: 0 auto;
   margin-bottom: 1em;
-  font-size: 0.89em;
-  height: 3.19em;
+  font-size: 1.2vw;
+  /*height: 3.19em;*/
   overflow: hidden;
 }
 

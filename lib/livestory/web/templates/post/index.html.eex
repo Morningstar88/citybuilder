@@ -41,8 +41,10 @@
 			</div>
 		</nav>
 	</header>
+	
+	<div class="disappear-on-scroll">
 
-	<section class="full-width-img disappear-on-scroll">
+	<section class="full-width-img">
 		
 		</section>
 		
@@ -88,7 +90,7 @@
 autor: Marco Barría 
 https://twitter.com/marco_bf
 -->
-<div class="text disappear-on-scroll">
+<div class="text">
   <svg>
    <defs>
      <mask id="mask" x="0" y="0" width="100%" height="100%" >
@@ -107,7 +109,7 @@ https://twitter.com/marco_bf
   </svg>
 </div>
 
-
+</div>
 
 
 
@@ -144,14 +146,6 @@ https://twitter.com/marco_bf
         <span class="upper-text-5">John + Emmas articles are now side-by-side in the voting queue. The best article will get upvoted.</span>
         
         
-        
-        
-                  <!--<span>Emma reads the article... she wants to add 2 attractions...  <span class="star-instructions"> 𝟁</span></span>-->
-           
-           
-            <!--                  <span>&nbsp;&nbsp;&nbsp;She clicks fork and copies the article.<span class="star-instructions"> 𝟁</span></span>-->
-            <!--      <span>&nbsp;&nbsp;&nbsp;Changes the title to 7 thing to do in London  <span class="star-instructions"> 𝟁</span></span>-->
-      <!--<span>&nbsp;&nbsp;&nbsp;&nbsp;Copy an article.  <span class="star-instructions"> 𝟁</span>rite a new version</span>-->
     </div>
   </h2>
   </div>
@@ -170,27 +164,6 @@ Example for readers....
   
     </div>
 </div>
-
-      
-      <!--OCEAN SIGN UP -->
-      
-      
-    
-<!--      <div class="font-select-div mobile-hide">-->
-<!--          <h3 class="select-fonts"><span class="select-fonts-1">S</span><span class="select-fonts-2">e</span><span class="select-fonts-3">l</span><span class="select-fonts-4 eurospinner">e</span><span class="eurospinner"><span class="select-fonts-5">c</span><span class="select-fonts-6">t </span></span><span class="select-fonts-7">f</span><span class="select-fonts-8">o</span><span class="select-fonts-9">n</span><span class="select-fonts-10 eurospinner">t</span><span class="select-fonts-11">s</span><span class="eurospinner"><span class="select-fonts-12">!</span><span class="select-fonts-13 eurospinner">!</span><span class="select-fonts-14 eurospinner">!</span></span>-->
-<!--              </h3>-->
-   
-<!--       <div class="font-selector">-->
-<!--<select>-->
-<!--</select>-->
-<!--</div>-->
-<!--<br>-->
-
-<!--<div class="font-selector-text">-->
-<!--<select>-->
-<!--</select>-->
-<!--</div>-->
-<!--</div>-->
 
 <br><br>
 <div class="center-wrap">
@@ -222,43 +195,45 @@ Example for readers....
 
 <!-- TEST IMPORT PROJECT BOXES -->
 
+<!-- First Card Redesigned, please use that one -->
+
 <div class="card-container">
   <div class="card-top learn">
-    <span class="project-type">Learn</span>
+    <span class="project-type">Volunteer</span>
    <div class="blur"></div>
   </div>
-  <div class="progress">
-    <span> 60 %</span>
-  </div>
+  <!--<div class="progress">-->
+  <!--  <span> 60 %</span>-->
+  <!--</div>-->
   <div class="content">
     <div class="details">
       <span> Active 4 days ago </span>
       <span>...</span>
     </div>
-    <div class="title">Learn Painting</div>
-    <div class="summary">Learn to paint from youtube channel
-and complete the assassinn creed picture.</div>
-    <button class="btn"> Open Project </button>
-    <div class="project-info">
-      <div class="info">
-        <span>06</span>
-        <span>Steps</span>
-      </div>
-      <div class="info">
-        <span>29</span>
-        <span>Tasks</span>
-      </div>
-      <div class="info">
-        <span>03</span>
-        <span>Weeks</span>
-      </div>      
-    </div>
+    <div class="title">South Texas Hydroponics</div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
+    <div class="summary">Building a vertical hydroponic farm in South Texas</div>
+    <button class="btn"> Read More </button>
+    	<a href="#openModal" class="btn">Read More</a>
+    <!--<div class="project-info">-->
+      <!--<div class="info">-->
+      <!--  <span>06</span>-->
+      <!--  <span>Steps</span>-->
+      <!--</div>-->
+      <!--<div class="info">-->
+      <!--  <span>29</span>-->
+      <!--  <span>Tasks</span>-->
+      <!--</div>-->
+      <!--<div class="info">-->
+      <!--  <span>03</span>-->
+      <!--  <span>Weeks</span>-->
+      <!--</div>      -->
+    <!--</div>-->
   </div>
 </div>
 
 <div class="card-container">
   <div class="card-top create">
-   <span class="project-type create">CREATE</span>
+   <span class="project-type create">Fundraising</span>
    <div class="blur"></div>
   </div>
   <div class="progress create">
@@ -269,30 +244,29 @@ and complete the assassinn creed picture.</div>
       <span> Active 7 days ago </span>
       <span>...</span>
     </div>
-    <div class="title">Week Tweak</div>
-    <div class="summary">Prepare whole website, web-app, mobile app
-and launch Week Tweak. Rule the World!!</div>
-    <button class="btn"> Open Project </div>
-    <div class="project-info">
-      <div class="info">
-        <span>12</span>
-        <span>Steps</span>
-      </div>
-      <div class="info">
-        <span>64</span>
-        <span>Tasks</span>
-      </div>
-      <div class="info">
-        <span>06</span>
-        <span>Weeks</span>
-      </div>
-    </div>
+    <div class="title">Wind Turbines in Russia</div>
+    <div class="summary">We're going to put up two pico-wind turbines in Vladivostok.</div>
+    <!--<button class="btn"> Open Project </div>-->
+    <!--<div class="project-info">-->
+    <!--  <div class="info">-->
+    <!--    <span>12</span>-->
+    <!--    <span>Steps</span>-->
+    <!--  </div>-->
+    <!--  <div class="info">-->
+    <!--    <span>64</span>-->
+    <!--    <span>Tasks</span>-->
+    <!--  </div>-->
+    <!--  <div class="info">-->
+    <!--    <span>06</span>-->
+    <!--    <span>Weeks</span>-->
+    <!--  </div>-->
+    <!--</div>-->
   </div>
 </div>
 
 <div class="card-container">
   <div class="card-top ideas">
-   <span class="project-type ideas">IDEAS</span>
+   <span class="project-type ideas">Volunteer</span>
    <div class="blur"></div>
   </div>
   <div class="progress ideas">
@@ -306,20 +280,20 @@ and launch Week Tweak. Rule the World!!</div>
     <div class="title">Artificial Intelligence</div>
     <div class="summary">Collection of Ideas for Artificial Intelligence Projects.</div>
     <button class="btn"> Open Project </div>
-    <div class="project-info">
-      <div class="info">
-        <span>02</span>
-        <span>Steps</span>
-      </div>
-      <div class="info">
-        <span>24</span>
-        <span>Tasks</span>
-      </div>
-      <div class="info">
-        <span>02</span>
-        <span>Weeks</span>
-      </div>
-    </div>
+    <!--<div class="project-info">-->
+    <!--  <div class="info">-->
+    <!--    <span>02</span>-->
+    <!--    <span>Steps</span>-->
+    <!--  </div>-->
+    <!--  <div class="info">-->
+    <!--    <span>24</span>-->
+    <!--    <span>Tasks</span>-->
+    <!--  </div>-->
+    <!--  <div class="info">-->
+    <!--    <span>02</span>-->
+    <!--    <span>Weeks</span>-->
+    <!--  </div>-->
+    <!--</div>-->
   </div>
 </div>
 

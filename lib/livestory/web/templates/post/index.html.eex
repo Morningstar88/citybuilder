@@ -197,107 +197,10 @@ Example for readers....
 
 <!-- First Card Redesigned, please use that one -->
 
-<div class="card-container">
-  <div class="card-top learn">
-    <span class="project-type">Volunteer</span>
-   <div class="blur"></div>
-  </div>
-  <!--<div class="progress">-->
-  <!--  <span> 60 %</span>-->
-  <!--</div>-->
-  <div class="content">
-    <div class="details">
-      <span> Active 4 days ago </span>
-      <span>...</span>
-    </div>
-    <div class="title"> <%#= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
-    <div class="summary">Building a vertical hydroponic farm in South Texas</div>
-    <button class="btn"> Read More </button>
-    	<a href="#openModal" class="btn">Read More</a>
-    <!--<div class="project-info">-->
-      <!--<div class="info">-->
-      <!--  <span>06</span>-->
-      <!--  <span>Steps</span>-->
-      <!--</div>-->
-      <!--<div class="info">-->
-      <!--  <span>29</span>-->
-      <!--  <span>Tasks</span>-->
-      <!--</div>-->
-      <!--<div class="info">-->
-      <!--  <span>03</span>-->
-      <!--  <span>Weeks</span>-->
-      <!--</div>      -->
-    <!--</div>-->
-  </div>
-</div>
-
-<div class="card-container">
-  <div class="card-top create">
-   <span class="project-type create">Fundraising</span>
-   <div class="blur"></div>
-  </div>
-  <div class="progress create">
-    <span> 40 %</span>
-  </div>
-  <div class="content">
-    <div class="details">
-      <span> Active 7 days ago </span>
-      <span>...</span>
-    </div>
-    <div class="title">Wind Turbines in Russia</div>
-    <div class="summary">We're going to put up two pico-wind turbines in Vladivostok.</div>
-    <!--<button class="btn"> Open Project </div>-->
-    <!--<div class="project-info">-->
-    <!--  <div class="info">-->
-    <!--    <span>12</span>-->
-    <!--    <span>Steps</span>-->
-    <!--  </div>-->
-    <!--  <div class="info">-->
-    <!--    <span>64</span>-->
-    <!--    <span>Tasks</span>-->
-    <!--  </div>-->
-    <!--  <div class="info">-->
-    <!--    <span>06</span>-->
-    <!--    <span>Weeks</span>-->
-    <!--  </div>-->
-    <!--</div>-->
-  </div>
-</div>
-
-<div class="card-container">
-  <div class="card-top ideas">
-   <span class="project-type ideas">Volunteer</span>
-   <div class="blur"></div>
-  </div>
-  <div class="progress ideas">
-    <span> 80 %</span>
-  </div>
-  <div class="content">
-    <div class="details">
-      <span> Active 7 days ago </span>
-      <span>...</span>
-    </div>
-    <div class="title">Artificial Intelligence</div>
-    <div class="summary">Collection of Ideas for Artificial Intelligence Projects.</div>
-    <button class="btn"> Open Project </div>
-    <!--<div class="project-info">-->
-    <!--  <div class="info">-->
-    <!--    <span>02</span>-->
-    <!--    <span>Steps</span>-->
-    <!--  </div>-->
-    <!--  <div class="info">-->
-    <!--    <span>24</span>-->
-    <!--    <span>Tasks</span>-->
-    <!--  </div>-->
-    <!--  <div class="info">-->
-    <!--    <span>02</span>-->
-    <!--    <span>Weeks</span>-->
-    <!--  </div>-->
-    <!--</div>-->
-  </div>
-</div>
+<br><br><br><br>
 
    <%= link("Create Project", to: post_path(@conn, :create), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
+
 
 <!-- END TEST IMPORT PROJECT BOXES -->
 

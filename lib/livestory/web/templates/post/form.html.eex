@@ -13,18 +13,28 @@
   
   <div class="form-group">
     <%= label f, :title, class: "control-label" %>
-    <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Write your title here..." %>
+    <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Your project title" %>
     <%= error_tag f, :title %>
   </div>
    <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "What's on your mind?"  %>
+    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "200 word summary of your project"  %>
     <%= error_tag f, :body %>
   </div>
   <div>
     <%= label f, :plan, class: "control-label" %>
-    <%= textarea f, :plan, class: "form-control form-control-body", placeholder: "What's your plan?"  %>
+    <%= textarea f, :plan, class: "form-control form-control-body", placeholder: "What's your plan? Keep it bullet-pointed"  %>
     <%= error_tag f, :plan %>
+  </div>
+    <div>
+    <%= label f, :done_so_far, class: "control-label" %>
+    <%= textarea f, :done_so_far, class: "form-control form-control-body", placeholder: "What have you done so far?"  %>
+    <%= error_tag f, :done_so_far %>
+  </div>
+    <div>
+    <%= label f, :project_pic, class: "control-label" %>
+    <%= textarea f, :project_pic, class: "form-control form-control-body", placeholder: "Do you have a photo"  %>
+    <%= error_tag f, :project_pic %>
   </div>
   <div class="form-group">
     <%= checkbox(f, :published) %>

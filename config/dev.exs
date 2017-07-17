@@ -54,7 +54,7 @@ config :livestory, LiveStory.Repo,
   types: LiveStory.PostgrexTypes,
   username: "postgres",
   password: "postgres",
-  database: "livestory_dev",
+  database: "citybuilder_dev",
   hostname: "localhost",
   template: "template0",
   pool_size: 10

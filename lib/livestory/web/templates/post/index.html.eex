@@ -117,38 +117,9 @@ https://twitter.com/marco_bf
     <div>	<a href="#close" title="Close" class="close">X</a>
 
           	<section class="intro"></section>
-  <section class="wrapper galaxy-wrapper">
- <div class="">
- <h2 class="sentence">
-    <div class="verticalFlip">
-      <span>&nbsp;&nbsp;&nbsp;1. <span class="book-instructions">📖</span> Find an article </span>
-       <span>&nbsp;&nbsp;&nbsp;2. Click <span class="fork-instructions">𝜓</span> to make a copy/fork.</span>
-      <span>&nbsp;&nbsp;&nbsp;3. <span class="edit-instructions">✎</span> Edit your copy > Publish </span>
-      <span>&nbsp;4. <span class="upvote-instructions">❤</span> Readers upvote best writers</span>
-              <span>&nbsp;&nbsp;&nbsp;(<span class="flower-instructions">✿</span>◠‿◠) 𝟁 </span>
-        <span>For example... <span class="star-instructions"> 𝟁</span> </span>
-        <span>John writes an article: <u>3 things to do in London</u> </span></span>
-        <span class="upper-text">3 Things to Do in London
-        1. See the Queen.
-        2. Go to the Tate Modern.
-        3. Go to Trafalgur Square.
-        </span>
-        <span class="upper-text-2">Emma reads the article...</span>
-                <span class="upper-text-3">CLicks 𝟁 to make her own copy</span>
-                        <span class="upper-text-3">Writes an alternative version with 2 extra points.</span>
-                                <span class="upper-text-4">5 Things to Do in London
-        1. See the Queen.
-        2. Go to the Tate Modern.
-        3. Go to Trafalgur Square.
-        4. Visit Harry Potter in Kings Cross.
-        5. Go to St Pauls Cathedral.
-        </span>
-        <span class="upper-text-5">John + Emmas articles are now side-by-side in the voting queue. The best article will get upvoted.</span>
-        
-        
-    </div>
-  </h2>
-  </div>
+This is a modal. 
+
+It will be used to display individual projects.
 </section>
 
 

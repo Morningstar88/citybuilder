@@ -1,6 +1,9 @@
 <td>
   <h1 class="preview-title"><%= @post.title %></h1>
   <p class="preview-text"><%= truncate @post.body, length: 140, separator: " " %></p>
+   <p class="display-post-body-show">
+       <%= @post.plan %>
+    </p>
    <br><br>
   <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
 

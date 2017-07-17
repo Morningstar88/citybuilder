@@ -210,7 +210,7 @@ Example for readers....
       <span> Active 4 days ago </span>
       <span>...</span>
     </div>
-    <div class="title">South Texas Hydroponics</div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
+    <div class="title"> <%#= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
     <div class="summary">Building a vertical hydroponic farm in South Texas</div>
     <button class="btn"> Read More </button>
     	<a href="#openModal" class="btn">Read More</a>
@@ -297,7 +297,7 @@ Example for readers....
   </div>
 </div>
 
-
+   <%= link("Create Project", to: post_path(@conn, :create), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
 
 <!-- END TEST IMPORT PROJECT BOXES -->
 

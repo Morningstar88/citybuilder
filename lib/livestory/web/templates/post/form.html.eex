@@ -21,6 +21,11 @@
     <%= textarea f, :body, class: "form-control form-control-body", placeholder: "What's on your mind?"  %>
     <%= error_tag f, :body %>
   </div>
+  <div>
+    <%= label f, :plan, class: "control-label" %>
+    <%= textarea f, :plan, class: "form-control form-control-body", placeholder: "What's your plan?"  %>
+    <%= error_tag f, :plan %>
+  </div>
   <div class="form-group">
     <%= checkbox(f, :published) %>
     <b>Published</b>

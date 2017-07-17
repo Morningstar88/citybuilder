@@ -4,6 +4,7 @@ defmodule LiveStory.Stories.Post do
   schema "stories_posts" do
     field :body, :string
     field :title, :string
+    field :plan, :string
     field :published, :boolean, default: true
     field :path, :string, null: false, read_after_writes: true
     field :removed_by_owner, :boolean, default: false

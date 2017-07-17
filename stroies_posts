@@ -1,0 +1,14 @@
+\dt
+\ dt
+\q
+\conninfo
+\q
+\q
+\h
+\?
+quit
+\q
+\list
+\connect livestory_dev
+\d
+\s stroies_posts

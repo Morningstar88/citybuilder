@@ -18,6 +18,9 @@
 	   <p class="display-post-body-show">
        <%= @post.body %>
     </p>
+     <p class="display-post-body-show">
+       <%= @post.plan %>
+    </p>
     <br><hr>
     <div class="bitspinner">
       <h1><span class="eurospinner"><span class="eurospinner bitspinner">C</span><span class="burgundy">o</span>mm</span><span class="bitspinner"><span class="orange">e</span>nts</span><span class="teal-jade">!</span></h1>

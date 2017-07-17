@@ -170,7 +170,7 @@ Example for readers....
 
 <br><br><br><br>
 
-   <%= link("Create Project", to: post_path(@conn, :create), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
+   <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
 
 
 <!-- END TEST IMPORT PROJECT BOXES -->

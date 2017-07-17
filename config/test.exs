@@ -15,6 +15,6 @@ config :livestory, LiveStory.Repo,
   types: LiveStory.PostgrexTypes,
   username: "postgres",
   password: "postgres",
-  database: "livestory_test",
+  database: "citybuilder_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

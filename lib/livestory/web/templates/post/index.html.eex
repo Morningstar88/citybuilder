@@ -240,7 +240,7 @@ $(window).scroll(function () {
 //   }
   
 //   else {
-//  // alert ("x is more than 125, avoidgreyminus will be used")
+//  //// alert ("x is more than 125, avoidgreyminus will be used")
 //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
 //  // alert("the rgba is " + thergb)
 //   	console.log(thergb,document.body.style.background);

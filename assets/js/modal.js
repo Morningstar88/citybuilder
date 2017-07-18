@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('a[data-toggle=modal]').click(function() {
+  $('a#postModalShow').click(function() {
     var data_id = $(this).data('postId');
 
     $.ajax({

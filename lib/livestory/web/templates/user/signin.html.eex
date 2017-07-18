@@ -2,4 +2,4 @@
 
 <%= render LiveStory.Web.SessionView , "form.html", conn: @conn %>
 
-<h3>Or Signup for a New Account</h3>
+<h3>Or <%= link "Signup for a New Account", to: user_path(@conn, :new) %></h3>

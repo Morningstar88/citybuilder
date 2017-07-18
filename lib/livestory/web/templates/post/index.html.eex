@@ -113,27 +113,16 @@ https://twitter.com/marco_bf
 
 
 
-<div id="openModal" class="modalDialog">
-    <div>	<a href="#close" title="Close" class="close">X</a>
+<div id="postModal" class="modalDialog">
+  <div>	<a href="#close" id="closePostModal" title="Close" class="close">X</a>
+    <section class="intro"></section>
 
-          	<section class="intro"></section>
-This is a modal. 
+    <div class="modal-body">
+      This is a modal.
 
-It will be used to display individual projects.
-</section>
-
-
-<!-- 
-
-Example for readers....
-
-
-
-
--->
-
-  
+      It will be used to display individual projects.
     </div>
+  </div>
 </div>
 
 <br><br>

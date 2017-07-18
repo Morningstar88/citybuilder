@@ -43,6 +43,7 @@ defmodule LiveStory.Web.Router do
         as: :upvote, singleton: true
     end
     post "/posts/:post_id", PostController, :restore
+    get "/posts/:post_id/preview", PostController, :preview
     post "/comments/:id", CommentController, :restore
     # workaround, use PUT instead of GET, because with GET, phoenix_ujs
     # won't send Origin header and this will trigger CORS forgery protection

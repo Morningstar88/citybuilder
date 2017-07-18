@@ -5,9 +5,9 @@ defmodule LiveStory.Web.PostController do
 
   alias LiveStory.Stories
 
-  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
+  plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show, :preview]
   plug :set_user
-  plug :set_post when action in [:fork, :show, :edit, :update, :delete, :restore]
+  plug :set_post when action in [:fork, :show, :preview, :edit, :update, :delete, :restore]
   plug :set_topics when action in [:index, :new, :edit, :update, :fork]
   plug :check_can_modify, %{key: :post, message: "This post belongs to another user! You can fork someone else's post, but not edit it."}
     when action in [:edit, :update, :delete, :restore]
@@ -97,6 +97,15 @@ defmodule LiveStory.Web.PostController do
       comments: comments,
       comment_changeset: comment_changeset,
       upvotes: upvotes
+    )
+  end
+
+  def preview(conn, _params) do
+    post = conn.assigns.post
+    conn
+    |> put_layout(false)
+    |> render("preview.html",
+      post: post
     )
   end
 

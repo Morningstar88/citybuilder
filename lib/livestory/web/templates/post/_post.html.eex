@@ -31,7 +31,7 @@
     <div class="done-so-far"><%= @post.done_so_far %></div>
 
     <!--<a href="#postModal" data-post-id="<%#= @post.id %>" class="btn">Read More</a>-->
-    <!-- <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
+    <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
 
     <a href="#postModal" id="postModalShow" data-post-id="<%= @post.id %>" class="btn">Read More</a>
   </div>

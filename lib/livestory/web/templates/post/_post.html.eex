@@ -1,24 +1,16 @@
 <td>
-  <h1 class="preview-title"><%= @post.title %></h1>
-  <p class="preview-text"><%= truncate @post.body, length: 140, separator: " " %></p>
-   <p class="display-post-body-show">
-       <%= @post.plan %>
-    </p>
-   <br><br>
-  <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
-
-    <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
-      <%= if @upvote do %>
-        <%= link " #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
-      <% else %>
-        <%= link(" #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "data-tooltip": "🚀💖", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
-      <% end %>
-    </span>
-   <%= link(" #{@forks_count[root_path(@post.path)]} 𝝍 ", to: post_path(@conn, :fork, @post),"data-tooltip": "Make a copy of this post","data-placement": "left", class: "btn btn-default btn-md btn-fork-post unicode-lg") %> </span>
-   <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
-  <%= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
- <br><br><br>
-</td>
+  <!--<h1 class="preview-title"><%#= @post.title %></h1>-->
+  <!--<p class="preview-text"><%#= truncate @post.body, length: 140, separator: " " %></p>-->
+  <!-- <p class="display-post-body-show">-->
+  <!--     <%#= @post.plan %>-->
+  <!--  </p>-->
+  <!--     <p class="display-post-body-show">-->
+  <!--     <%#= @post.done_so_far %>-->
+  <!--  </p>-->
+  <!--     <p class="display-post-body-show">-->
+  <!--     <%#= @post.project_pic %>-->
+  <!--  </p>-->
+<!--</td>-->
 
 
 
@@ -36,9 +28,23 @@
     </div>
     <div class="title"> <%= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
     <div class="summary"><%= truncate @post.body, length: 40, separator: " " %></div>
-    <button class="btn"> Read More </button>
+    <div class="done-so-far"><%= @post.done_so_far %></div>
     <a href="#postModal" data-post-id="<%= @post.id %>" class="btn">Read More</a>
   </div>
 </div>
+   <br><br>
+  <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+
+    <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
+      <%= if @upvote do %>
+        <%= link " #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
+      <% else %>
+        <%= link(" #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "data-tooltip": "🚀💖", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
+      <% end %>
+    </span>
+   <%= link(" #{@forks_count[root_path(@post.path)]} 𝝍 ", to: post_path(@conn, :fork, @post),"data-tooltip": "Make a copy of this post","data-placement": "left", class: "btn btn-default btn-md btn-fork-post unicode-lg") %> </span>
+   <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
+  <%= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
+ <br><br><br>
 
 <!-- End Test Project Card -->

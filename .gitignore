@@ -34,3 +34,5 @@ npm-debug.log
 lib/livestory/stories/stories_forked_posts.ex
 livestory.iml
 .deliver/releases/
+
+/uploads

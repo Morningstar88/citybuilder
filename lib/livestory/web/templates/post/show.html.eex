@@ -7,7 +7,7 @@
   </header>
  <br>
   <ul class="display-post-show-wrapper">
- 	    <br> 
+ 	    <br>
  	    <!--<p class="display-post-title-wrapper">-->
  	    <!--<p class="show-fork-text">  𝜓  </p>-->
  	    <!--<p class="show-fork-edit"> ✎  </p>-->
@@ -21,6 +21,9 @@
      <p class="display-post-body-show">
        <%= @post.plan %>
     </p>
+    <p class="display-post-body-show">
+      <img src="<%= Livestory.ProjectPic.url({@post.project_pic, @post}, :thumb) %>">
+   </p>
     <br><hr>
     <div class="bitspinner">
       <h1><span class="eurospinner"><span class="eurospinner bitspinner">C</span><span class="burgundy">o</span>mm</span><span class="bitspinner"><span class="orange">e</span>nts</span><span class="teal-jade">!</span></h1>
@@ -42,4 +45,3 @@
     <% end %>
      <br> <br> <br> <br> <br> <br> <br> <br>
    </ul>
-

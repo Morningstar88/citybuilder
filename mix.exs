@@ -20,7 +20,8 @@ defmodule LiveStory.Mixfile do
     [mod: {LiveStory.Application,  []},
       applications: [
         :logger, :postgrex, :ecto, :timex, :phoenix, :phoenix_html, :phoenix_pubsub,
-        :phoenix_ecto, :cowboy, :gettext, :guardian, :comeonin, :recaptcha, :edeliver
+        :phoenix_ecto, :cowboy, :gettext, :guardian, :comeonin, :recaptcha, :edeliver,
+        :arc, :arc_ecto
       ]
     ]
   end
@@ -38,6 +39,8 @@ defmodule LiveStory.Mixfile do
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
+     {:arc, "~> 0.8.0"},
+     {:arc_ecto, "~> 0.7.0"},
      # from official repository, but not from hex, because latest patches are not released yet
      {:recaptcha, "~> 2.0", github: "samueljseay/recaptcha"},
      {:timex, "~> 3.0"},

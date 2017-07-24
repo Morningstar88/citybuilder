@@ -63,3 +63,6 @@ config :livestory, LiveStory.Repo,
 config :recaptcha,
   public_key: "6Lfd0yMUAAAAALrGE9Y2WVnciARoQ6ZGqnl3FZTS",
   secret: "6Lfd0yMUAAAAAPjaO9NbiUX9S-5U4zq1ZVI-HpdH"
+
+config :arc,
+  storage: Arc.Storage.Local

@@ -6,7 +6,7 @@ defmodule LiveStory.Stories.Post do
     field :title, :string
     field :plan, :string
     field :done_so_far, :string
-    field :project_pic, :string
+    field :project_pic, Livestory.ProjectPic.Type
     field :published, :boolean, default: true
     field :path, :string, null: false, read_after_writes: true
     field :removed_by_owner, :boolean, default: false

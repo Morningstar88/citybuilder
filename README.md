@@ -71,7 +71,7 @@ Ready to run in production? Please check our deployment guides.
 
 **This project used to be called Livestory. You may see that name in the code.**
 
-Citybuilder is a fork of another closed source project. If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with it, accept it's an early stage project. By the end of the summer, or early Autumn, we should have a decent web-app on our hands. A site that can launch multiple startups.
+Citybuilder is a fork of another closed source project. If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with minor hassles, + accept it's an early stage project. By the end of the summer, or early Autumn, we should have a decent web-app on our hands. A site that can launch multiple startups.
 
 Ultimately City-builder has to look like Kickstarter or StartSomeGood, but volunteer focused instead of money oriented.
 
@@ -113,19 +113,19 @@ for most of the files you need.
 
 ### If you're on the front end, you will mainly be working with the title/index page:
 
-https://github.com/Microflow/citybuilder/blob/dsn/lib/livestory/web/templates/post/index.html.eex
+https://github.com/Microflow/citybuilder/blob/master/lib/livestory/web/templates/post/index.html.eex
 
 ### and the project display page:
 
-https://github.com/Microflow/citybuilder/blob/dsn/lib/livestory/web/templates/post/show.html.eex
+https://github.com/Microflow/citybuilder/blob/master/lib/livestory/web/templates/post/show.html.eex
 
 ### Project Upload Form is Here
 
-https://github.com/Microflow/citybuilder/blob/dsn/lib/livestory/web/templates/post/form.html.eex
+https://github.com/Microflow/citybuilder/blob/master/lib/livestory/web/templates/post/form.html.eex
 
 ### Main CSS file is here:
 
-https://github.com/Microflow/citybuilder/blob/dsn/assets/css/app.css
+https://github.com/Microflow/citybuilder/blob/master/assets/css/app.css
 
 
 

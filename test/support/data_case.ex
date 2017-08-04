@@ -1,4 +1,4 @@
-defmodule LiveStory.DataCase do
+defmodule Citybuilder.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule LiveStory.DataCase do
 
   using do
     quote do
-      alias LiveStory.Repo
+      alias Citybuilder.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import LiveStory.DataCase
+      import Citybuilder.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LiveStory.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Citybuilder.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LiveStory.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Citybuilder.Repo, {:shared, self()})
     end
 
     :ok

@@ -1,3 +1,3 @@
-defmodule LiveStory.Web.LayoutViewTest do
-  use LiveStory.Web.ConnCase, async: true
+defmodule Citybuilder.Web.LayoutViewTest do
+  use Citybuilder.Web.ConnCase, async: true
 end

@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddPlanToPosts do
+defmodule Citybuilder.Repo.Migrations.AddPlanToPosts do
   use Ecto.Migration
 
   def change do

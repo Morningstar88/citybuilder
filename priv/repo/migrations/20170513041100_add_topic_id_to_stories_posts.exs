@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddTopicIdToStoriesPosts do
+defmodule Citybuilder.Repo.Migrations.AddTopicIdToStoriesPosts do
   use Ecto.Migration
 
   def change do

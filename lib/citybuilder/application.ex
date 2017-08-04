@@ -1,4 +1,4 @@
-defmodule LiveStory.Application do
+defmodule Citybuilder.Application do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -9,16 +9,16 @@ defmodule LiveStory.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(LiveStory.Repo, []),
+      supervisor(Citybuilder.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(LiveStory.Web.Endpoint, []),
-      # Start your own worker by calling: LiveStory.Worker.start_link(arg1, arg2, arg3)
-      # worker(LiveStory.Worker, [arg1, arg2, arg3]),
+      supervisor(Citybuilder.Web.Endpoint, []),
+      # Start your own worker by calling: Citybuilder.Worker.start_link(arg1, arg2, arg3)
+      # worker(Citybuilder.Worker, [arg1, arg2, arg3]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: LiveStory.Supervisor]
+    opts = [strategy: :one_for_one, name: Citybuilder.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

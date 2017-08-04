@@ -1,1 +1,1 @@
-$("#comments #comment_<%= @comment.id %>").replaceWith("<%= escape_javascript render(LiveStory.Web.PostView, "_comment.html", conn: @conn, comment: @comment, upvote: @upvote) %>");
+$("#comments #comment_<%= @comment.id %>").replaceWith("<%= escape_javascript render(Citybuilder.Web.PostView, "_comment.html", conn: @conn, comment: @comment, upvote: @upvote) %>");

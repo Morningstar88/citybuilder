@@ -1,11 +1,11 @@
-defmodule LiveStory.Web.Gettext do
+defmodule Citybuilder.Web.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import LiveStory.Web.Gettext
+      import Citybuilder.Web.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"

@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.RenameCommentsGuestNameToUserName do
+defmodule Citybuilder.Repo.Migrations.RenameCommentsGuestNameToUserName do
   use Ecto.Migration
 
   def change do

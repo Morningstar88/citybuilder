@@ -1,5 +1,5 @@
-defmodule LiveStory.Web.ErrorHandler do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.ErrorHandler do
+  use Citybuilder.Web, :controller
 
   def unauthenticated(conn, _params) do
     conn

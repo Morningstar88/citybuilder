@@ -1,3 +1,3 @@
-defmodule LiveStory.Web.CommentUpvoteView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.CommentUpvoteView do
+  use Citybuilder.Web, :view
 end

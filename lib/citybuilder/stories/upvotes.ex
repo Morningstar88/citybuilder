@@ -1,9 +1,9 @@
-defmodule LiveStory.Stories.Upvotes do
+defmodule Citybuilder.Stories.Upvotes do
   use Ecto.Schema
 
   schema "stories_upvotes" do
-    belongs_to :post, LiveStory.Stories.Post
-    belongs_to :user, LiveStory.Auths.User
+    belongs_to :post, Citybuilder.Stories.Post
+    belongs_to :user, Citybuilder.Auths.User
 
     timestamps()
   end

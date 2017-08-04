@@ -1,19 +1,19 @@
-defmodule LiveStory.Stories do
+defmodule Citybuilder.Stories do
   @moduledoc """
   The boundary for the Stories system.
   """
   use Arc.Ecto.Schema
   import Ecto.{Query, Changeset}, warn: false
-  alias LiveStory.Repo
+  alias Citybuilder.Repo
 
-  alias LiveStory.Auths.User
-  alias LiveStory.Stories.Comment
-  alias LiveStory.Stories.CommentUpvotes
-  alias LiveStory.Stories.CommentUpvotesCount
-  alias LiveStory.Stories.Post
-  alias LiveStory.Stories.Topic
-  alias LiveStory.Stories.Upvotes
-  alias LiveStory.Stories.UpvotesCounts
+  alias Citybuilder.Auths.User
+  alias Citybuilder.Stories.Comment
+  alias Citybuilder.Stories.CommentUpvotes
+  alias Citybuilder.Stories.CommentUpvotesCount
+  alias Citybuilder.Stories.Post
+  alias Citybuilder.Stories.Topic
+  alias Citybuilder.Stories.Upvotes
+  alias Citybuilder.Stories.UpvotesCounts
 
   @doc """
   Returns the list of posts.
@@ -96,7 +96,7 @@ defmodule LiveStory.Stories do
   Converts paths list to `ltree` query
 
   ## Example
-      iex> LiveStory.Stories.paths_query(~w(123 124))
+      iex> Citybuilder.Stories.paths_query(~w(123 124))
       "123|124.*"
   """
   def paths_query(paths) do

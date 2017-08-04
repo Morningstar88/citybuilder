@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo do
+defmodule Citybuilder.Repo do
   use Ecto.Repo, otp_app: :citybuilder
 
   @doc """

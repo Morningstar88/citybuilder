@@ -1,3 +1,3 @@
-defmodule LiveStory.Web.ForkView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.ForkView do
+  use Citybuilder.Web, :view
 end

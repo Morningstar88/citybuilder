@@ -1,4 +1,4 @@
-defmodule LiveStory.Mixfile do
+defmodule Citybuilder.Mixfile do
   use Mix.Project
 
   def project do
@@ -17,7 +17,7 @@ defmodule LiveStory.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {LiveStory.Application,  []},
+    [mod: {Citybuilder.Application,  []},
       applications: [
         :logger, :postgrex, :ecto, :timex, :phoenix, :phoenix_html, :phoenix_pubsub,
         :phoenix_ecto, :cowboy, :gettext, :guardian, :comeonin, :recaptcha, :edeliver,

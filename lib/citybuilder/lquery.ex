@@ -1,5 +1,5 @@
 # copy of Ltree extension
-defmodule LiveStory.Lquery do
+defmodule Citybuilder.Lquery do
   @behaviour Postgrex.Extension
 
   def init(opts) when opts in [:reference, :copy], do: opts

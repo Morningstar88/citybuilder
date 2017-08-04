@@ -1,9 +1,9 @@
-defmodule LiveStory.Web.CommentUpvoteController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.CommentUpvoteController do
+  use Citybuilder.Web, :controller
 
-  import LiveStory.Plugs
+  import Citybuilder.Plugs
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]
   plug :set_user

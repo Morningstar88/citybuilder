@@ -1,7 +1,7 @@
-defmodule LiveStory.Web.Endpoint do
+defmodule Citybuilder.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :citybuilder
 
-  socket "/socket", LiveStory.Web.UserSocket
+  socket "/socket", Citybuilder.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -41,7 +41,7 @@ defmodule LiveStory.Web.Endpoint do
     key: "_citybuilder_key",
     signing_salt: "qjBPKQr8"
 
-  plug LiveStory.Web.Router
+  plug Citybuilder.Web.Router
 
   @doc """
   Dynamically loads configuration from the system environment

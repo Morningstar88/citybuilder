@@ -1,3 +1,3 @@
-defmodule LiveStory.Web.TopicView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.TopicView do
+  use Citybuilder.Web, :view
 end

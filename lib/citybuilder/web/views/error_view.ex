@@ -1,5 +1,5 @@
-defmodule LiveStory.Web.ErrorView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.ErrorView do
+  use Citybuilder.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

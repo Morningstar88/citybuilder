@@ -1,5 +1,5 @@
-defmodule LiveStory.Web.Router do
-  use LiveStory.Web, :router
+defmodule Citybuilder.Web.Router do
+  use Citybuilder.Web, :router
 
   require Logger
 
@@ -20,7 +20,7 @@ defmodule LiveStory.Web.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", LiveStory.Web do
+  scope "/", Citybuilder.Web do
     pipe_through [:browser, :browser_auth] # Use the default browser stack
 
     get "/users/signin", UserController, :signin
@@ -58,7 +58,7 @@ defmodule LiveStory.Web.Router do
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/
 
   # Other scopes may use custom stacks.
-  # scope "/api", LiveStory.Web do
+  # scope "/api", Citybuilder.Web do
   #   pipe_through :api
   # end
 end

@@ -1,9 +1,9 @@
-defmodule LiveStory.Web.PostController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.PostController do
+  use Citybuilder.Web, :controller
 
-  import LiveStory.Plugs
+  import Citybuilder.Plugs
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show, :preview]
   plug :set_user
@@ -42,7 +42,7 @@ defmodule LiveStory.Web.PostController do
   def new(conn, _params) do
     default_topic = Stories.get_topic!(@default_topic)
     changeset = Stories.change_post(
-      %LiveStory.Stories.Post{},
+      %Citybuilder.Stories.Post{},
       %{topic_id: default_topic.id}
     )
     render(conn, "new.html", changeset: changeset)

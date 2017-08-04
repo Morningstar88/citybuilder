@@ -1,8 +1,8 @@
-defmodule LiveStory.Plugs do
+defmodule Citybuilder.Plugs do
   import Plug.Conn, only: [assign: 3, halt: 1]
-  import LiveStory.Web.Controller.Helpers, only: [can_modify?: 2]
+  import Citybuilder.Web.Controller.Helpers, only: [can_modify?: 2]
   import Phoenix.Controller, only: [render: 3]
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   def set_user(conn, _opts) do
     assign(conn, :user, Guardian.Plug.current_resource(conn))

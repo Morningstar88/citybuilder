@@ -1,4 +1,4 @@
-defmodule LiveStory.Stories.Topic do
+defmodule Citybuilder.Stories.Topic do
   use Ecto.Schema
 
   schema "stories_topics" do

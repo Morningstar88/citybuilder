@@ -1,11 +1,11 @@
-defmodule LiveStory.Web.SessionController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.SessionController do
+  use Citybuilder.Web, :controller
   # snip
   plug :scrub_params, "session" when action in ~w(create)
 
 
   def create(conn, %{"session" => %{"username" => username, "password" => password}}) do
-    case LiveStory.Session.authenticate(username, password) do
+    case Citybuilder.Session.authenticate(username, password) do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)

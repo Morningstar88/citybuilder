@@ -1,5 +1,5 @@
-defmodule LiveStory.Web.PageControllerTest do
-  use LiveStory.Web.ConnCase
+defmodule Citybuilder.Web.PageControllerTest do
+  use Citybuilder.Web.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

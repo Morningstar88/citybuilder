@@ -1,7 +1,7 @@
-defmodule LiveStory.Web.UserController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.UserController do
+  use Citybuilder.Web, :controller
 
-  alias LiveStory.Auths
+  alias Citybuilder.Auths
 
   def index(conn, _params) do
     users = Auths.list_users()
@@ -9,7 +9,7 @@ defmodule LiveStory.Web.UserController do
   end
 
   def new(conn, _params) do
-    changeset = Auths.change_user(%LiveStory.Auths.User{})
+    changeset = Auths.change_user(%Citybuilder.Auths.User{})
     render(conn, "new.html", changeset: changeset)
   end
 

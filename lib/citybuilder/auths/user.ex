@@ -1,4 +1,4 @@
-defmodule LiveStory.Auths.User do
+defmodule Citybuilder.Auths.User do
   use Ecto.Schema
 
   schema "auths_users" do

@@ -39,7 +39,7 @@
     </table>
 
     <%= if @conn.assigns.user do %>
-      <%= render LiveStory.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post), conn: @conn %>
+      <%= render Citybuilder.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post), conn: @conn %>
     <% else %>
       <i class="you-must-be-signed">You must be <%= link "signed in", to: user_path(@conn, :signin) %> to comment on this post</i>
     <% end %>

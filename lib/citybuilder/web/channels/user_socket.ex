@@ -1,8 +1,8 @@
-defmodule LiveStory.Web.UserSocket do
+defmodule Citybuilder.Web.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", LiveStory.Web.RoomChannel
+  # channel "room:*", Citybuilder.Web.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -30,7 +30,7 @@ defmodule LiveStory.Web.UserSocket do
   # Would allow you to broadcast a "disconnect" event and terminate
   # all active sockets and channels for a given user:
   #
-  #     LiveStory.Web.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
+  #     Citybuilder.Web.Endpoint.broadcast("user_socket:#{user.id}", "disconnect", %{})
   #
   # Returning `nil` makes this socket anonymous.
   def id(_socket), do: nil

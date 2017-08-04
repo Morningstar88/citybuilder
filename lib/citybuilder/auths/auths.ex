@@ -1,12 +1,12 @@
-defmodule LiveStory.Auths do
+defmodule Citybuilder.Auths do
   @moduledoc """
   The boundary for the Auths system.
   """
 
   import Ecto.{Query, Changeset}, warn: false
-  alias LiveStory.Repo
+  alias Citybuilder.Repo
 
-  alias LiveStory.Auths.User
+  alias Citybuilder.Auths.User
 
   @doc """
   Returns the list of users.

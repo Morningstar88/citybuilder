@@ -1,5 +1,5 @@
-defmodule LiveStory.Web.PageController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.PageController do
+  use Citybuilder.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

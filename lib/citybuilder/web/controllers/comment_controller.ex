@@ -1,11 +1,11 @@
-defmodule LiveStory.Web.CommentController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.CommentController do
+  use Citybuilder.Web, :controller
 
   require Logger
 
-  import LiveStory.Plugs
+  import Citybuilder.Plugs
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]
   plug :set_user

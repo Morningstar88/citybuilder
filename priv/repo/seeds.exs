@@ -5,7 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     LiveStory.Repo.insert!(%LiveStory.SomeSchema{})
+#     Citybuilder.Repo.insert!(%Citybuilder.SomeSchema{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
@@ -22,24 +22,24 @@ topics = [
   {"CITY-BUILDING", :city_building},
   {"LONG-LIFE", :long_life}]
   
-# LiveStory.Repo.all LiveStory.Stories.Topic - see all topics
-# LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: "longevity") - get specific topic
-# LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: "longevity") |> Ecto.Changeset.change(name: "Long Life") |> LiveStory.Repo.update! - update topic name.3:56 PM
+# Citybuilder.Repo.all Citybuilder.Stories.Topic - see all topics
+# Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: "longevity") - get specific topic
+# Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: "longevity") |> Ecto.Changeset.change(name: "Long Life") |> Citybuilder.Repo.update! - update topic name.3:56 PM
 # To run this console, login to jake, then run
 # cd citybuilder
 # bin/citybuilder remote_console
  
-LiveStory.Repo.transaction fn ->
+Citybuilder.Repo.transaction fn ->
   topics
   |> Enum.with_index
   |> Enum.each(fn({{name, slug}, position}) ->
     slug = Atom.to_string(slug)
-    topic = %LiveStory.Stories.Topic{
+    topic = %Citybuilder.Stories.Topic{
       name: name,
       slug: slug,
       position: position
     }
-    LiveStory.Repo.get_by(LiveStory.Stories.Topic, slug: slug) ||
-      LiveStory.Repo.insert!(topic)
+    Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: slug) ||
+      Citybuilder.Repo.insert!(topic)
   end)
 end

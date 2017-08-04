@@ -1,4 +1,4 @@
-defmodule LiveStory.Ltree do
+defmodule Citybuilder.Ltree do
   @behaviour Postgrex.Extension
 
   def init(opts) when opts in [:reference, :copy], do: opts

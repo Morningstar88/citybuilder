@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(LiveStory.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Citybuilder.Repo, :manual)
 

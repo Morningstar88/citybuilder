@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.CreateLiveStory.Stoies.Comment do
+defmodule Citybuilder.Repo.Migrations.CreateCitybuilder.Stoies.Comment do
   use Ecto.Migration
 
   def change do

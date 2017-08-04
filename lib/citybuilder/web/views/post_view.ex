@@ -1,10 +1,10 @@
-defmodule LiveStory.Web.PostView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.PostView do
+  use Citybuilder.Web, :view
 
-  alias LiveStory.Stories.Comment
+  alias Citybuilder.Stories.Comment
 
   def root_path(path) do
-    LiveStory.Stories.root_path(path)
+    Citybuilder.Stories.root_path(path)
   end
 
   # Avoid fail on less than 3 posts by doing different matches

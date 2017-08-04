@@ -1,7 +1,7 @@
-defmodule LiveStory.Session do
+defmodule Citybuilder.Session do
   
-  alias LiveStory.Repo
-  alias LiveStory.Auths.User
+  alias Citybuilder.Repo
+  alias Citybuilder.Auths.User
 
   def authenticate(username, password) do
     user =

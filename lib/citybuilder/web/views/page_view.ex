@@ -1,3 +1,3 @@
-defmodule LiveStory.Web.PageView do
-  use LiveStory.Web, :view
+defmodule Citybuilder.Web.PageView do
+  use Citybuilder.Web, :view
 end

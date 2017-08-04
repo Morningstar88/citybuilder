@@ -1,8 +1,8 @@
-defmodule LiveStory.Repo.Migrations.AssignPostsToRandomTopic do
+defmodule Citybuilder.Repo.Migrations.AssignPostsToRandomTopic do
   use Ecto.Migration
 
-  alias LiveStory.Repo
-  alias LiveStory.Stories.Topic
+  alias Citybuilder.Repo
+  alias Citybuilder.Stories.Topic
 
   def change do
     # Using Elixir schemas just to be really quick

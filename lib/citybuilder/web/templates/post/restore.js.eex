@@ -1,1 +1,1 @@
-$("#posts #post_<%= @post.id %>").replaceWith("<%= escape_javascript render(LiveStory.Web.PostView, "_post_variants.html", conn: @conn, post: @post, upvote: @upvote, forks_count: @forks_count) %>");
+$("#posts #post_<%= @post.id %>").replaceWith("<%= escape_javascript render(Citybuilder.Web.PostView, "_post_variants.html", conn: @conn, post: @post, upvote: @upvote, forks_count: @forks_count) %>");

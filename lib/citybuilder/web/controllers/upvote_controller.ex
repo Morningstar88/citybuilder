@@ -1,9 +1,9 @@
-defmodule LiveStory.Web.UpvoteController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.UpvoteController do
+  use Citybuilder.Web, :controller
 
-  import LiveStory.Plugs
+  import Citybuilder.Plugs
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   # plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show]
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler]

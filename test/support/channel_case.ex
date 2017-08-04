@@ -1,4 +1,4 @@
-defmodule LiveStory.Web.ChannelCase do
+defmodule Citybuilder.Web.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule LiveStory.Web.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint LiveStory.Web.Endpoint
+      @endpoint Citybuilder.Web.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LiveStory.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Citybuilder.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LiveStory.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Citybuilder.Repo, {:shared, self()})
     end
     :ok
   end

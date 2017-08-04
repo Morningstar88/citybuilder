@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.SwitchToOriginalPostId do
+defmodule Citybuilder.Repo.Migrations.SwitchToOriginalPostId do
   use Ecto.Migration
 
   def up do

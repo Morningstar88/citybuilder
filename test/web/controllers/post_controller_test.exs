@@ -1,7 +1,7 @@
-defmodule LiveStory.Web.PostControllerTest do
-  use LiveStory.Web.ConnCase
+defmodule Citybuilder.Web.PostControllerTest do
+  use Citybuilder.Web.ConnCase
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   @create_attrs %{body: "some body", title: "some title"}
   @update_attrs %{body: "some updated body", title: "some updated title"}

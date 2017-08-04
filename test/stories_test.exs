@@ -1,10 +1,10 @@
-defmodule LiveStory.StoriesTest do
-  use LiveStory.DataCase
-  #doctest LiveStory.Stories
+defmodule Citybuilder.StoriesTest do
+  use Citybuilder.DataCase
+  #doctest Citybuilder.Stories
 
-  alias LiveStory.Auths
-  alias LiveStory.Stories
-  alias LiveStory.Stories.Post
+  alias Citybuilder.Auths
+  alias Citybuilder.Stories
+  alias Citybuilder.Stories.Post
 
   @create_attrs %{"body" => "some body", "title" => "some title"}
   @update_attrs %{body: "some updated body", title: "some updated title"}

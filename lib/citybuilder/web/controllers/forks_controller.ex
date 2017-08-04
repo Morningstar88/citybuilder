@@ -1,9 +1,9 @@
-defmodule LiveStory.Web.ForkController do
-  use LiveStory.Web, :controller
+defmodule Citybuilder.Web.ForkController do
+  use Citybuilder.Web, :controller
 
-  import LiveStory.Plugs
+  import Citybuilder.Plugs
 
-  alias LiveStory.Stories
+  alias Citybuilder.Stories
 
   plug :set_post
 

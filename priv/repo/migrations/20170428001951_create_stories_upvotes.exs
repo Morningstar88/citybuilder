@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.CreateStoriesUpvotes do
+defmodule Citybuilder.Repo.Migrations.CreateStoriesUpvotes do
   use Ecto.Migration
 
   def change do

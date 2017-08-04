@@ -1,12 +1,12 @@
-defmodule LiveStory.Web do
+defmodule Citybuilder.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use LiveStory.Web, :controller
-      use LiveStory.Web, :view
+      use Citybuilder.Web, :controller
+      use Citybuilder.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -18,20 +18,20 @@ defmodule LiveStory.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: LiveStory.Web
+      use Phoenix.Controller, namespace: Citybuilder.Web
       import Plug.Conn
-      import LiveStory.Web.Router.Helpers
-      import LiveStory.Web.Gettext
-      import LiveStory.Web.Controller.Helpers
+      import Citybuilder.Web.Router.Helpers
+      import Citybuilder.Web.Gettext
+      import Citybuilder.Web.Controller.Helpers
 
-      alias LiveStory.Web.ErrorHandler
+      alias Citybuilder.Web.ErrorHandler
     end
   end
 
   def view do
     quote do
       use Phoenix.View, root: "lib/citybuilder/web/templates",
-                        namespace: LiveStory.Web
+                        namespace: Citybuilder.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -39,10 +39,10 @@ defmodule LiveStory.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import LiveStory.Web.Router.Helpers
-      import LiveStory.Web.ErrorHelpers
-      import LiveStory.Web.Gettext
-      import LiveStory.Web.Controller.Helpers
+      import Citybuilder.Web.Router.Helpers
+      import Citybuilder.Web.ErrorHelpers
+      import Citybuilder.Web.Gettext
+      import Citybuilder.Web.Controller.Helpers
 
       import Phoenix.HTML.SimplifiedHelpers.Truncate
     end
@@ -59,7 +59,7 @@ defmodule LiveStory.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import LiveStory.Web.Gettext
+      import Citybuilder.Web.Gettext
     end
   end
 

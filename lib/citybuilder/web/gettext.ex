@@ -20,5 +20,5 @@ defmodule LiveStory.Web.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :livestory
+  use Gettext, otp_app: :citybuilder
 end

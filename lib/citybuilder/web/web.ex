@@ -30,7 +30,7 @@ defmodule LiveStory.Web do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/livestory/web/templates",
+      use Phoenix.View, root: "lib/citybuilder/web/templates",
                         namespace: LiveStory.Web
 
       # Import convenience functions from controllers

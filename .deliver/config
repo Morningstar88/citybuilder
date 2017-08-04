@@ -1,8 +1,8 @@
-APP="livestory"
+APP="citybuilder"
 
 BUILD_HOST="46.101.77.175"
 BUILD_USER="jake"
-BUILD_AT="/tmp/edeliver/livestory/builds"
+BUILD_AT="/tmp/edeliver/citybuilder/builds"
 
 STAGING_HOSTS="46.101.77.175"
 STAGING_USER="jake"

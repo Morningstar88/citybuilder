@@ -6,12 +6,12 @@
 use Mix.Config
 
 # General application configuration
-config :livestory,
+config :citybuilder,
   namespace: LiveStory,
   ecto_repos: [LiveStory.Repo]
 
 # Configures the endpoint
-config :livestory, LiveStory.Web.Endpoint,
+config :citybuilder, LiveStory.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "24+YDGnqGmC2RuzHf7A97zLR+aGBNSF5K3Xd7plhIF3nUDTuqHdXrYGs1MHHgbL7",
   render_errors: [view: LiveStory.Web.ErrorView, accepts: ~w(html json)],
@@ -24,7 +24,7 @@ config :logger, :console,
   metadata: [:request_id]
 
 config :guardian, Guardian,
-  issuer: "Livestory",
+  issuer: "Citybuilder",
   ttl: { 3, :days },
   verify_issuer: true,
   serializer: LiveStory.Auths.GuardianSerializer,

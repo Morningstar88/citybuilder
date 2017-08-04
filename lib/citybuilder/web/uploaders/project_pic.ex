@@ -1,4 +1,4 @@
-defmodule Livestory.ProjectPic do
+defmodule Citybuilder.ProjectPic do
   use Arc.Definition
   use Arc.Ecto.Definition
 

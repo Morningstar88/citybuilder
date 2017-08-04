@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h2><%= gettext "%{name}!", name: "Livestory" %></h2>
+  <h2><%= gettext "%{name}!", name: "Citybuilder" %></h2>
   <p class="lead">Writing stories together</p>
 </div>
 

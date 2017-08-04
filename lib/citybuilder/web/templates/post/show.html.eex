@@ -22,7 +22,7 @@
        <%= @post.plan %>
     </p>
     <p class="display-post-body-show">
-      <img src="<%= Livestory.ProjectPic.url({@post.project_pic, @post}, :thumb) %>">
+      <img src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}, :thumb) %>">
    </p>
     <br><hr>
     <div class="bitspinner">

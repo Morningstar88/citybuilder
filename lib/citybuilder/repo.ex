@@ -1,5 +1,5 @@
 defmodule LiveStory.Repo do
-  use Ecto.Repo, otp_app: :livestory
+  use Ecto.Repo, otp_app: :citybuilder
 
   @doc """
   Dynamically loads the repository url from the

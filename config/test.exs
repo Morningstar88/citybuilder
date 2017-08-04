@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :livestory, LiveStory.Web.Endpoint,
+config :citybuilder, LiveStory.Web.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,7 +10,7 @@ config :livestory, LiveStory.Web.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :livestory, LiveStory.Repo,
+config :citybuilder, LiveStory.Repo,
   adapter: Ecto.Adapters.Postgres,
   types: LiveStory.PostgrexTypes,
   username: "postgres",

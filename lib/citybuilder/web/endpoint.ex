@@ -1,5 +1,5 @@
 defmodule LiveStory.Web.Endpoint do
-  use Phoenix.Endpoint, otp_app: :livestory
+  use Phoenix.Endpoint, otp_app: :citybuilder
 
   socket "/socket", LiveStory.Web.UserSocket
 
@@ -8,7 +8,7 @@ defmodule LiveStory.Web.Endpoint do
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :livestory, gzip: false,
+    at: "/", from: :citybuilder, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   plug Plug.Static,
@@ -38,7 +38,7 @@ defmodule LiveStory.Web.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_livestory_key",
+    key: "_citybuilder_key",
     signing_salt: "qjBPKQr8"
 
   plug LiveStory.Web.Router

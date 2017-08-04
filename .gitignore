@@ -31,8 +31,8 @@ npm-debug.log
 /config/*.secret.exs
 .idea/
 .mix_tasks
-lib/livestory/stories/stories_forked_posts.ex
-livestory.iml
+lib/citybuilder/stories/stories_forked_posts.ex
+citybuilder.iml
 .deliver/releases/
 
 /uploads

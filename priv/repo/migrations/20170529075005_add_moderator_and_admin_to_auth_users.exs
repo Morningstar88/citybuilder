@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddModeratorAndAdminToAuthUsers do
+defmodule Citybuilder.Repo.Migrations.AddModeratorAndAdminToAuthUsers do
   use Ecto.Migration
 
   def change do

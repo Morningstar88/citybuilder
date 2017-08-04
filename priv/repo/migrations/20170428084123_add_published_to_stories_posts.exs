@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddPublishedToStoriesPosts do
+defmodule Citybuilder.Repo.Migrations.AddPublishedToStoriesPosts do
   use Ecto.Migration
 
   def change do

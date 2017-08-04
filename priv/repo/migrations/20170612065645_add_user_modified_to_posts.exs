@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddUserModifiedToPosts do
+defmodule Citybuilder.Repo.Migrations.AddUserModifiedToPosts do
   use Ecto.Migration
 
   def change do

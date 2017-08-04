@@ -1,7 +1,7 @@
-Postgrex.Types.define(LiveStory.PostgrexTypes,
+Postgrex.Types.define(Citybuilder.PostgrexTypes,
   [
-    {LiveStory.Ltree, :copy},
-    {LiveStory.Lquery, :copy}
+    {Citybuilder.Ltree, :copy},
+    {Citybuilder.Lquery, :copy}
   ] ++ Ecto.Adapters.Postgres.extensions(),
   json: Poison
 )

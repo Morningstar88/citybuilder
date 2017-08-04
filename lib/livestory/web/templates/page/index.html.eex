@@ -1,8 +1,0 @@
-<div class="jumbotron">
-  <h2><%= gettext "%{name}!", name: "Livestory" %></h2>
-  <p class="lead">Writing stories together</p>
-</div>
-
-<div class="row marketing">
-  
-</div>

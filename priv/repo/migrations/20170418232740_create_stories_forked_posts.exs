@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.CreateLiveStory.StoriesForkedPosts do
+defmodule Citybuilder.Repo.Migrations.CreateCitybuilder.StoriesForkedPosts do
   use Ecto.Migration
 
   def change do

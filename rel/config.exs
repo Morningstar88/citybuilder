@@ -38,7 +38,7 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :livestory do
-  set version: current_version(:livestory)
+release :citybuilder do
+  set version: current_version(:citybuilder)
 end
 

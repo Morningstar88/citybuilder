@@ -1,0 +1,1 @@
+$("#comment_<%= @comment.id %> .upvote-count").replaceWith("<%= escape_javascript render(Citybuilder.Web.PostView, "_comment_upvote_count.html", conn: @conn, comment: @comment, upvote: @upvote) %>");

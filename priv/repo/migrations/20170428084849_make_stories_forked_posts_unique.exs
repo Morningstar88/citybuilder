@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.MakeStoriesForkedPostsUnique do
+defmodule Citybuilder.Repo.Migrations.MakeStoriesForkedPostsUnique do
   use Ecto.Migration
 
   def change do

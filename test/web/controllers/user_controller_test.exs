@@ -1,7 +1,7 @@
-defmodule LiveStory.Web.UserControllerTest do
-  use LiveStory.Web.ConnCase
+defmodule Citybuilder.Web.UserControllerTest do
+  use Citybuilder.Web.ConnCase
 
-  alias LiveStory.Auths
+  alias Citybuilder.Auths
 
   @create_attrs %{email: "some email", name: "some name", password: "some password"}
   @update_attrs %{email: "some updated email", name: "some updated name", password: "some updated password"}

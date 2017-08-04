@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.CreateLiveStory.Auths.User do
+defmodule Citybuilder.Repo.Migrations.CreateCitybuilder.Auths.User do
   use Ecto.Migration
 
   def change do

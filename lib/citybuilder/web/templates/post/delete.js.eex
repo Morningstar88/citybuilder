@@ -1,0 +1,9 @@
+$("#posts #post_<%= @post.id %>").replaceWith("<%= escape_javascript render(Citybuilder.Web.PostView, "_post_variants.html", conn: @conn, post: @post, upvote: nil, forks_count: nil) %>");
+
+$("#posts #post_<%= @post.id %> .post-restore.hidden").removeClass("hidden");
+$("#posts #post_<%= @post.id %> .post-deleted-message").addClass("hidden");
+
+setTimeout(function() {
+  $("#posts #post_<%= @post.id %> .post-restore").addClass("hidden");
+  $("#posts #post_<%= @post.id %> .post-deleted-message.hidden").removeClass("hidden");
+}, 10000);

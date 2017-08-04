@@ -1,4 +1,4 @@
-defmodule LiveStory.Repo.Migrations.AddLtreeToStoriesPosts do
+defmodule Citybuilder.Repo.Migrations.AddLtreeToStoriesPosts do
   use Ecto.Migration
 
   def up do

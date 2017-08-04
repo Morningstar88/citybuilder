@@ -1,8 +1,8 @@
-defmodule LiveStory.AuthsTest do
-  use LiveStory.DataCase
+defmodule Citybuilder.AuthsTest do
+  use Citybuilder.DataCase
 
-  alias LiveStory.Auths
-  alias LiveStory.Auths.User
+  alias Citybuilder.Auths
+  alias Citybuilder.Auths.User
 
   @create_attrs %{email: "some email", name: "some name", password: "some password"}
   @update_attrs %{email: "some updated email", name: "some updated name", password: "some updated password"}

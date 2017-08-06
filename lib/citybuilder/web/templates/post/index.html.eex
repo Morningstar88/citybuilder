@@ -116,7 +116,8 @@
     <section class="intro"></section>
 
     <div class="modal-body">
-      </div>
+     ...loading
+    </div>
   </div>
 </div>
 

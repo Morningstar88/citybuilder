@@ -27,10 +27,38 @@
     <%= error_tag f, :plan %>
   </div>
     <div>
-    <%= label f, :done_so_far, class: "control-label" %>
-    <%= textarea f, :done_so_far, class: "form-control form-control-body", placeholder: "What have you done so far?"  %>
-    <%= error_tag f, :done_so_far %>
+    <%= label f, :done_so_far_one_title, class: "control-label" %>
+    <%= textarea f, :done_so_far_one_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far one title"  %>
+    <%= error_tag f, :done_so_far_one_title %>
   </div>
+      <div>
+    <%= label f, :done_so_far_one, class: "control-label done-so-far-body" %>
+    <%= textarea f, :done_so_far_one, class: "form-control form-control-body", placeholder: "Done so far one body"  %>
+    <%= error_tag f, :done_so_far_one %>
+  </div>
+      <div>
+    <%= label f, :done_so_far_two_title, class: "control-label" %>
+    <%= textarea f, :done_so_far_two_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far two title"  %>
+    <%= error_tag f, :done_so_far_two_title %>
+  </div>
+      <div>
+    <%= label f, :done_so_far_two, class: "control-label" %>
+    <%= textarea f, :done_so_far_two, class: "form-control form-control-body done-so-far-body", placeholder: "Done so far two body"  %>
+    <%= error_tag f, :done_so_far_two %>
+  </div>
+      <div>
+    <%= label f, :done_so_far_three_title, class: "control-label" %>
+    <%= textarea f, :done_so_far_three_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far three title"  %>
+    <%= error_tag f, :done_so_far_three_title %>
+  </div>
+      <div>
+    <%= label f, :done_so_far_three, class: "control-label done-so-far-body" %>
+    <%= textarea f, :done_so_far_three, class: "form-control form-control-body done-so-far-body", placeholder: "Done so far three body"  %>
+    <%= error_tag f, :done_so_far_three %>
+  </div>
+   
+  
+  <h2>Upload Photo</h2>
     <div>
     <%= label f, :project_pic, class: "control-label" %>
     <%= file_input f, :project_pic, class: "form-control form-control-body", placeholder: "Do you have a photo"  %>

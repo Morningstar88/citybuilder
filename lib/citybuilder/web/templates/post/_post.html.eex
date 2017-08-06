@@ -34,7 +34,7 @@
     <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
 
     <a href="#postModal" id="postModalShow" data-post-id="<%= @post.id %>" class="btn btn-read-post unicode-lg"> 📖 </a>
-     <!--OLD PROJECT --<%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
+    <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
 
     <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
 

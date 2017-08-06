@@ -74,58 +74,41 @@
 <!--</div>-->
 <!--<% end %>-->
 	</header>
+	 <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
 	
-	<div class="disappear-on-scroll">
 
-	<section class="full-width-img">
-		
-		</section>
 		
 		
+<!-- OLD CITYBUILDER PIC-->
 
- <!-- <header class="index-header">-->
-      
- <!--       <a href="/posts/new" class="whatsup-multicolored"> <!-- data-tooltip="left-tooltip" data-placement="left" -->
- <!--<span class="whatsup-multi-1">S</span><span class="whatsup-multi-2">ta</span><span class="whatsup-multi-3">r</span><span class="whatsup-multi-4">t</span><span class="whatsup-multi-5"></span><span class="whatsup-multi-6 eurospinner bitspinner"></span><span class="whatsup-multi-7"> Writin</span><span class="whatsup-multi-8">g</span><span class="whatsup-multi-9"></span></a>-->
-      
-<!--      <div class="sidebar-div">-->
-<!--                <nav>-->
-<!--  <%#= for {topic, index} <- Enum.with_index(@conn.assigns.topics) do %>-->
-<!--  <div class="sidebar-1">-->
+	<!--<div class="disappear-on-scroll">-->
 
-<!--     <li class="index-list"><%#= link split_topic_name(topic.name), to: topic_path(@conn, :show, topic.slug) %></li>-->
-<!--  <ul>-->
-<!--      </nav>-->
-<!--  </div>-->
-<!--  <%# end %>-->
-<!--</div> <!-- header> -->
+	<!--<section class="full-width-img">-->
+		
+	<!--	</section>-->
 
-
-<!--
-autor: Marco Barría 
-https://twitter.com/marco_bf
--->
-<div class="text">
-  <svg>
-   <defs>
-     <mask id="mask" x="0" y="0" width="100%" height="100%" >
+<!--<div class="text">-->
+<!--  <svg>-->
+<!--   <defs>-->
+<!--     <mask id="mask" x="0" y="0" width="100%" height="100%" >-->
        <!-- alpha rectangle -->
        <!-- rectángulo alfa -->
-       <rect id="alpha" x="0" y="0" width="100%" height="100%"/>
+<!--       <rect id="alpha" x="0" y="0" width="100%" height="100%"/>-->
        <!-- All text that you want -->
        <!-- Coloca todo el texto que necesites -->
-       <text id="title" x="50%" y="0" dy="1.58em">Citybuilder. Brick by Brick;</text>
+<!--       <text id="title" x="50%" y="0" dy="1.58em">Citybuilder. Brick by Brick;</text>-->
        <!--<text id="subtitle" x="50%" y="20%" dy="5.8em">Creating jobs. Regenerating cities.</text>-->
-     </mask>
-    </defs>
+<!--     </mask>-->
+<!--    </defs>-->
     <!-- Apply color here! -->
     <!-- Color aquí -->
-    <rect id="base" x="0" y="0" width="100%" height="100%"/>
-  </svg>
-</div>
+<!--    <rect id="base" x="0" y="0" width="100%" height="100%"/>-->
+<!--  </svg>-->
+<!--</div>-->
 
-</div>
+<!--</div>-->
 
+<!-- END OLD CITYBUILDER PIC DISPLAY -->
 
 
 <div id="postModal" class="modalDialog">
@@ -133,41 +116,17 @@ https://twitter.com/marco_bf
     <section class="intro"></section>
 
     <div class="modal-body">
-      This is a modal.
-
-      It will be used to display individual projects.
-    </div>
+      </div>
   </div>
 </div>
 
 <br><br>
 <div class="center-wrap">
-  <br><br><br><br><br><br><br>
+  <br><br>
 
+<br><br>
 
-
-<!--<a data-tooltip="left!" data-placement="left">Fuck</a>-->
-
-
-
-
-<!-- TEST IMPORT PROJECT BOXES -->
-
-<!-- First Card Redesigned, please use that one -->
-
-<br><br><br><br>
-
-   <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
-
-
-<!-- END TEST IMPORT PROJECT BOXES -->
-
-
-
-
-
-
-<br>
+ <br>
 <table id="posts" class="table posts flex-table-posts">
   <tbody>
 <%= for post <- @posts do %>

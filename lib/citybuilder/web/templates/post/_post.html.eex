@@ -34,10 +34,7 @@
     <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
 
     <a href="#postModal" id="postModalShow" data-post-id="<%= @post.id %>" class="btn">Read More</a>
-  </div>
-</div>
-   <br><br>
-  <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+     <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
 
     <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
 
@@ -48,13 +45,18 @@
       <% end %>
     </span>
   </div>
-  
-   
 </div>
    <br><br>
-  <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
-   <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
-  <%= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>
- <br><br><br>
+   </div>
+ </div>
+<br><br><br>
+<!-- OLD PLACEMENT-- NEEDS IF USER DO -->
+ <!--  <br><br>-->
+ <!-- <%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
+ <!--  <%#= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>-->
+ <!-- <%#= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>-->
+ <!--<br><br><br>-->
+ 
+ <!-- END OLD PLACEMENT -->
 
 <!-- End Test Project Card -->

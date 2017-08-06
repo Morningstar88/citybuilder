@@ -3672,13 +3672,38 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*}*/
 /* INDEX BUTTONS READ EDIT EDLETE */
 
+.btn-create-project {
+    
+    position: absolute;
+    
+    margin-top: 5% !important;
+    
+    font-family: 'Century Gothic';
+    font-size: 4vw;
+    font-weight: 800;
+    /*font-variant: small-caps;*/
+
+    width: 27% !important;
+    height: 30% !important;
+    /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
+
+    color: rgba(255,255,255,.9) !important;
+    /* READ BUTTON*/
+    /*background: rgba(240,230,20,0.5) !important;*/
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 20px;
+    background-color: rgba(10,60,10,.9) !important;
+    box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7);
+    text-shadow: 2px 1px 2px rgba(20,20,30,.3);
+}
+
 .btn-read-post
 {
     font-family: 'Century Gothic';
     font-weight: 800;
     font-variant: small-caps;
 
-    width: 27% !important;
+    width: 55% !important;
     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
 
     color: rgba(178,70,20,.9) !important;
@@ -3757,7 +3782,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .upvote-btn
 {
-    width: 30%;
+    width: 50%;
 }
 
 .fork-count
@@ -4400,9 +4425,9 @@ body{
 }
 
 .card-container {
-  display: block;
+  display: inline-block;
   width: 22.92em;
-  height: 32.46em;
+  height: 40.46em;
   margin-right: 2em;
   margin-bottom: 2em;
   border-radius: 0.5em;

@@ -795,7 +795,7 @@ svg > rect
     {
         font-size: 9vw !important;
 
-        margin-top: 9% !important;
+        margin-top: 19% !important;
         margin-left: 3%;
     }
 
@@ -804,7 +804,7 @@ svg > rect
         font-size: 9vw !important;
 
         margin-top: 9% !important; /* Further away from zero = higher*/
-        margin-left: 54% !important;
+        margin-left: 40% !important;
 
         transition: 0s 3s;
     }
@@ -859,15 +859,7 @@ svg > rect
         margin-left: 3%;
     }
 
-    .signup-multicolored
-    {
-        font-size: 9vw !important;
 
-        margin-top: 9% !important; /* Further away from zero = higher*/
-        margin-left: 44% !important;
-
-        transition: 0s 3s;
-    }
 
     .whatsup-multicolored
     {
@@ -2429,12 +2421,12 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .login-multicolored
 {
-    font-size: 40px;
+    font-size: 2.8vw;
 
     position: absolute;
 
-    margin-top: 5%;
-    margin-left: 6%;
+    margin-top: 0%;
+    margin-left: -6%;
 }
 
 .login-multicolored:hover
@@ -2690,12 +2682,12 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .signup-multicolored
 {
-    font-size: 40px;
+    font-size: 2.8vw;
 
     position: absolute;
 
-    margin-top: 5%; /* Further away from zero = higher*/
-    margin-left: 48%;
+    margin-top: 0%; 
+    margin-left: 38%;
 
     transition: 0s 3s;
 }
@@ -2707,20 +2699,124 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: pink !important;
 }
 
+/*Imported Login Colors*/
+.bl {
+
+ color: rgba(168,0,162,.8);
+}
+
+.login-multi-2
+{
+    transition: 0s 4s;
+
+    color: rgba(210,100,10,.8);
+}
+
+.login-multi-3
+{
+    transition: 0s 2s;
+
+    color: rgba();
+}
+
+.login-multi-4
+{
+    transition: 0s 2s;
+
+    color: rgba(2,80,20,.8);
+}
+
+.login-multi-5
+{
+    transition: 0s 2s;
+
+    color: rgba(12,158,210,.7);
+}
+
+.login-multi-6
+{
+    transition: 0s 2s;
+
+    color: rgba(2,80,20,.8);
+}
+
+.login-multi-7
+{
+    transition: 0s 2s;
+
+    color: rgba(12,158,210,.7);
+}
+
+.login-multi-1:hover
+{
+    transition: 0s;
+
+    color: rgba(12,8,155,.7);
+}
+
+.login-multi-2:hover
+{
+    transition: 0s;
+
+    color: rgba(200,6,60,.7);
+}
+
+.login-multi-3:hover
+{
+    transition: 0s;
+
+    color: rgba(255,190,240,.7);
+    /*font-family: 'Montserrat';*/
+    /*letter-spacing: -1px;*/
+}
+
+.login-multi-4:hover
+{
+    transition: 0s;
+
+    color: rgba(180,80,2,.7);
+}
+
+.login-multi-5:hover
+{
+    transition: 0s;
+
+    color: rgba(128,0,32,.8);
+}
+
+.login-multi-6:hover
+{
+    transition: 0s;
+
+    color: rgba(180,80,2,.7);
+}
+
+.login-multi-7:hover
+{
+    transition: 0s;
+
+    color: rgba(128,0,32,.8);
+}
+    /**/
+
+
+
+
+
 .signup-multi-1
 {
     transition: 0s 3s;
     /* S */
 
-    color: rgba(168,0,42,.8);
+    color: rgba(255,9,40,.9);
 }
 
 .signup-multi-2
 {
     transition: 0s 3s;
     /* I */
+    color: rgba(255,190,240,.9);
 
-    color: rgba(210,100,10,.8);
 }
 
 .signup-multi-3
@@ -2728,7 +2824,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s 3s;
     /* G */
 
-    color: rgba(168,0,42,.8);
+      color: rgba(2,80,20,.8);
 }
 
 .signup-multi-4
@@ -2736,7 +2832,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s 3s;
     /* N */
 
-    color: rgba(210,100,10,.8);
+  color: rgba(12,158,210,.7);
 }
 
 .signup-multi-5
@@ -2744,7 +2840,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s 3s;
     /* U */
 
-    color: rgba(168,0,42,.8);
+    color: rgba(210,100,10,.8);
 }
 
 .signup-multi-6
@@ -2752,7 +2848,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s 3s;
     /* P */
 
-    color: rgba(210,100,10,.8);
+ color: rgba(168,0,162,.8);
 }
 
 .signup-multi-1:hover
@@ -2760,7 +2856,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,35,1,.8);
+    color: rgba(2,35,1,.1);
 }
 
 .signup-multi-2:hover
@@ -2768,7 +2864,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,65,1,.8);
+    color: rgba(2,65,1,.1);
 }
 
 .signup-multi-3:hover
@@ -2778,7 +2874,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,95,1,.8);
+    color: rgba(2,95,1,.1);
 }
 
 .signup-multi-4:hover
@@ -2786,7 +2882,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,125,1,.8);
+    color: rgba(2,125,1,.1);
 }
 
 .signup-multi-5:hover
@@ -2794,7 +2890,8 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,145,1,.5);
+    color: rgba(128,0,32,.8);
+
 }
 
 .signup-multi-6:hover
@@ -2802,7 +2899,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     transition: 0s;
     /* */
 
-    color: rgba(2,165,1,.5);
+    color: rgba(2,165,1,.1);
 }
 
 
@@ -3575,13 +3672,38 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 /*}*/
 /* INDEX BUTTONS READ EDIT EDLETE */
 
+.btn-create-project {
+    
+    position: absolute;
+    
+    margin-top: 5% !important;
+    
+    font-family: 'Century Gothic';
+    font-size: 4vw;
+    font-weight: 800;
+    /*font-variant: small-caps;*/
+
+    width: 27% !important;
+    height: 30% !important;
+    /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
+
+    color: rgba(255,255,255,.9) !important;
+    /* READ BUTTON*/
+    /*background: rgba(240,230,20,0.5) !important;*/
+    border: 1px solid rgba(255,255,255,.5) !important;
+    border-radius: 20px;
+    background-color: rgba(10,60,10,.9) !important;
+    box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7);
+    text-shadow: 2px 1px 2px rgba(20,20,30,.3);
+}
+
 .btn-read-post
 {
     font-family: 'Century Gothic';
     font-weight: 800;
     font-variant: small-caps;
 
-    width: 27% !important;
+    width: 55% !important;
     /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
 
     color: rgba(178,70,20,.9) !important;
@@ -3660,7 +3782,7 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 .upvote-btn
 {
-    width: 30%;
+    width: 50%;
 }
 
 .fork-count
@@ -4303,9 +4425,9 @@ body{
 }
 
 .card-container {
-  display: block;
+  display: inline-block;
   width: 22.92em;
-  height: 32.46em;
+  height: 40.46em;
   margin-right: 2em;
   margin-bottom: 2em;
   border-radius: 0.5em;

@@ -11,6 +11,8 @@ defmodule Citybuilder.Stories.Post do
     field :done_so_far_one_title, :string
     field :done_so_far_two_title, :string
     field :done_so_far_three_title, :string
+    field :name_of_gallery, :string
+    field :future_plans_title, :string
     field :project_pic, Citybuilder.ProjectPic.Type
     field :published, :boolean, default: true
     field :path, :string, null: false, read_after_writes: true

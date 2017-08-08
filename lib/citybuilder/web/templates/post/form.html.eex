@@ -56,7 +56,11 @@
     <%= textarea f, :done_so_far_three, class: "form-control form-control-body done-so-far-body", placeholder: "Done so far three body"  %>
     <%= error_tag f, :done_so_far_three %>
   </div>
-   
+     <div>
+    <%= label f, :name_of_gallery, class: "control-label name-of-gallery" %>
+    <%= textarea f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "What's the name of your Gallery"  %>
+    <%= error_tag f, :name_of_gallery %>
+  </div>
   
   <h2>Upload Photo</h2>
     <div>

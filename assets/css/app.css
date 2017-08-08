@@ -2422,7 +2422,6 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .login-multicolored
 {
     font-size: 2.8vw;
-    font-family: 'Josefin Sans';
 
     position: absolute;
 
@@ -2835,16 +2834,6 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
   color: rgba(12,158,210,.7);
 }
-
-.signup-multi-hyphen
-{
-    transition: 0s 3s;
-    /* U */
-
-    color: rgba(150,30,150,.7);
-}
-
-
 
 .signup-multi-5
 {
@@ -3504,18 +3493,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     color: rgba(10,10,10,.8);
     border: 1px solid rgba(255,255,255,.6) !important;
     text-shadow: 1px 1px 1px rgba(100,100,100,.4);
-}
-
-/*UPLOAD FORM*/
-
-.done-so-far-title {
-  
-    
-}
-
-.done-so-far-body {
-    
-    
 }
 
 /*.form-control-body:focus {*/
@@ -4436,7 +4413,7 @@ a[data-tooltip][data-placement='bottom']::after
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono';
 
-.old-body {
+body{
   /*background-color: rgba(0,0,0,0.4);*/
   /*margin-left: 2em;*/
   /*margin-top: 2em;*/
@@ -4457,12 +4434,6 @@ a[data-tooltip][data-placement='bottom']::after
   background-color: #fff;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
   position: relative;
-  
-    font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 .card-top {
@@ -4671,249 +4642,3 @@ button, .btn {
   color: #3D3D3D;
   text-transform: uppercase;
 }
-
-/* PROJECT DISPLAY */
-
-a, .sec-contact .btn {
-  -webkit-transition: all .25s;
-  transition: all .25s;
-}
-
-/*=Typography=*/
-/*body {*/
-/*  font-family: 'Open sans', sans-serif;*/
-/*  font-weight: 300;*/
-/*}*/
-
-
-.main-heading {
-  font-family: 'Open sans', sans-serif;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 9px;
-  text-transform: uppercase;
-}
-
-.container > h1 {
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.sec-about a {
-  text-decoration: underline;
-}
-
-.sec-services h2,
-.sec-services p {
-  font-weight: 300;
-  text-align: center;
-}
-
-.sec-testimonials p {
-  font-style: italic;
-}
-
-.sec-contact .btn {
-  text-transform: uppercase;
-}
-
-.soc-media-ul a {
-  text-align: center;
-  text-decoration: none;
-}
-
-/*=Base=*/
-section {
-  padding: 5em 0;
-}
-
-footer {
-  padding: 3em 0;
-}
-
-@media screen and (max-width: 768px) and (min-width: 485px) {
-  form {
-    max-width: 70%;
-  }
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-hr {
-  margin-bottom: 3em;
-  width: 7%;
-}
-
-/*=Layout=*/
-.sec-folio .row {
-  margin-bottom: 3em;
-}
-
-.sec-folio img {
-  max-width: 100%;
-}
-
-/*Header*/
-.navbar-default {
-  background: #fff;
-}
-
-.navbar .fa-external-link {
-  vertical-align: top;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ad0000;
-}
-
-.navbar-default .navbar-nav > li > a:active {
-  color: #940000;
-}
-
-/*Main*/
-.sec-main {
-  position: relative;
-  background-size: cover;
-}
-.sec-main:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-}
-
-.project-main-pic {
-      position: relative;
-  background-size: cover;
-}
-
-.project-main-pic:after {
-      content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10% !important;
-  height: 10% !important;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.main-heading {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  padding: 0;
-  margin: auto;
-  height: 40px;
-  color: #fff;
-}
-
-/*About*/
-.sec-about a {
-  color: #000;
-}
-.sec-about a:hover, .sec-about a:focus {
-  color: #ad0000;
-}
-
-/*Services*/
-.sec-services {
-  background: #f9f9f9;
-}
-
-.sec-services i {
-  display: block;
-  margin: auto;
-  width: 45px;
-}
-
-.sec-services .fa-paint-brush {
-  width: 64px;
-}
-
-.sec-services .fa-code {
-  width: 68px;
-}
-
-.sec-services h2 {
-  margin: 1em 0;
-}
-
-/*Testimonials*/
-.sec-testimonials {
-  background: #f9f9f9;
-}
-
-/*Contact*/
-.sec-contact .form-control:focus {
-  border-color: #ad0000;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 0, 0, 0.6);
-}
-
-.sec-contact .btn {
-  padding: .5rem 1.75rem;
-  background: #000;
-  font-size: .95rem;
-  color: #fff;
-}
-.sec-contact .btn:hover, .sec-contact .btn:focus {
-  background: #ad0000;
-  border-color: #7a0000;
-}
-
-/*Footer*/
-footer {
-  background: #000;
-}
-
-.soc-media-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.soc-media-ul li:not(:first-child) a {
-  margin-left: 1em;
-}
-
-.soc-media-ul a {
-  display: block;
-  padding: 0.5em .65rem;
-  font-size: 1rem;
-  color: #fff;
-  border-radius: 50%;
-  border: 2px solid;
-}
-.soc-media-ul a:hover, .soc-media-ul a:focus {
-  color: #ad0000;
-}
-
-/*UPLOAD FORM*/
-
-.done-so-far-title {
- height: 1% !important;   
-    
-}
-
-.done-so-far-body {
-    
-    
-}
-

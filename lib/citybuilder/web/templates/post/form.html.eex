@@ -27,6 +27,11 @@
     <%= error_tag f, :plan %>
   </div>
     <div>
+    <%= label f, :future_plans_title, class: "control-label name-of-gallery" %>
+    <%= textarea f, :future_plans_title, class: "form-control form-control-body name-of-gallery", placeholder: "What are your future plans?"  %>
+    <%= error_tag f, :future_plans_title %>
+  </div>
+    <div>
     <%= label f, :done_so_far_one_title, class: "control-label" %>
     <%= textarea f, :done_so_far_one_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far one title"  %>
     <%= error_tag f, :done_so_far_one_title %>
@@ -61,6 +66,7 @@
     <%= textarea f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "What's the name of your Gallery"  %>
     <%= error_tag f, :name_of_gallery %>
   </div>
+     
   
   <h2>Upload Photo</h2>
     <div>

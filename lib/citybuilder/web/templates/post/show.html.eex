@@ -21,7 +21,7 @@
     </div>
   </section>
   <div class="our-future-plans sec-about container">
-      <h1>Future Plans: <span class="future-plans"></span></h1>
+      <h1>Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
      <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
   

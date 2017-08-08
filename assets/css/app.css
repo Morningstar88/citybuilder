@@ -4162,7 +4162,7 @@ a[data-tooltip][data-placement='bottom']::after
     /*font-size: 30px;*/
     /*-webkit-transform: rotate(20deg);*/
     color: rgba(21,80,42,.8);
-    /*text-shadow: 1px 1px 1px rgba(255,100,50,.8);*/
+    /*text-shadow: 1px 1px 1px rgba(255,100,50,.8);**/
 }
 
 /*Vertical Flip*/

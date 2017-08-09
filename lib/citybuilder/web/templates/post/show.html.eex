@@ -21,6 +21,12 @@
       </div>
     </div>
   </section>
+     <!--<div class="row">-->
+        <div class="">
+          <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
+        </div>
+        <br><br> <br><br> <br><br>
+        
   <div class="our-future-plans sec-about container">
       <h1 class="future-plans">Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
      <div class="row">
@@ -30,6 +36,9 @@
     </div>
     </div>
   </div>
+  <div class="">
+          <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
+        </div>
   <section id="services" class="sec-services">
     <div class="container">
       <h1 class="progress-title">Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
@@ -63,6 +72,8 @@
       </div>
     </div>
   </section>
+  
+            <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
 
   <section id="folio" class="sec-folio">
     <div class="container">
@@ -70,19 +81,19 @@
 
       <hr />
 
-      <div class="row">
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
-        </div>
 
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
-        </div>
+<!-- OLD PLACEMENT OF GALLERY-->
+      <!--<div class="row">-->
+      <!--  <div class="col-md-4">-->
+      <!--    <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />-->
+      <!--  </div>-->
 
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
-        </div>
-      </div>
+        
+      <!--  <div class="col-md-4">-->
+      <!--    <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!-- END OLD PLACEMENT OF GALLERY-->
       
       <!-- 2ND AND THIRD LINES OF GALLERY -->
 

@@ -647,7 +647,7 @@ svg > rect
         position: absolute;
         z-index: 4;
 
-        margin-top: -170% !important; /*Increment the negative integer to push me up */
+        margin-top: -160% !important; /*Increment the negative integer to push me up */
         margin-left: 185% !important;
 
         text-decoration: none;

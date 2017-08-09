@@ -1,4 +1,3 @@
-
  <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
  
  <!--https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
@@ -179,11 +178,6 @@
     </div>
   </footer>
 </div>
-
-
-
-
-
     </p>
     <p class="display-post-body-show">
    </p>
@@ -208,6 +202,4 @@
     <% end %>
      <br> <br> <br> <br> <br> <br> <br> <br>
    </ul>
-
-
 

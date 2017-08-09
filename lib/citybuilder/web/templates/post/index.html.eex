@@ -57,7 +57,7 @@
 		</nav>
 <!--		<%= if @user do %>-->
 <!--<div class="hello-user">-->
-<!--  <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>-->
+<!-- TOOK OUT USER WELCOME FOR NOW <span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
 
 <!--  <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>-->
 <!--    <%= split_logout("logout") %>-->

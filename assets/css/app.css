@@ -4660,6 +4660,10 @@ body {
   font-weight: 300;
 }
 
+.project-wrapper {
+    margin-top: -11%;
+}
+
 .navbar a,
 .sec-about p {
   text-align: center;
@@ -4879,4 +4883,10 @@ footer {
 }
 .soc-media-ul a:hover, .soc-media-ul a:focus {
   color: #ad0000;
+}
+
+ img.project-main-pic {
+ height: 100%; 
+ width: 100%;   
+
 }

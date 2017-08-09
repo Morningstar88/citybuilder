@@ -5,6 +5,8 @@
   <section id="home" class="">
     <h1 class="main-heading"><%= @post.title %></h1>
   </section>
+  
+  <div class="project-wrapper">
 
   <section id="about" class="sec-about">
     <div class="container">
@@ -202,4 +204,4 @@
     <% end %>
      <br> <br> <br> <br> <br> <br> <br> <br>
    </ul>
-
+</div>

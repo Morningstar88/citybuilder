@@ -74,6 +74,24 @@
     <%= file_input f, :project_pic, class: "form-control form-control-body", placeholder: "Do you have a photo"  %>
     <%= error_tag f, :project_pic %>
   </div>
+    <h2>Upload Small Pic 1</h2>
+    <div>
+    <%= label f, :text_pic_one, class: "control-label" %>
+    <%= file_input f, :text_pic_one, class: "form-control form-control-body", placeholder: "Do you have a photo 1"  %>
+    <%= error_tag f, :text_pic_one %>
+  </div>
+    <h2>Upload Small Pic 2</h2>
+    <div>
+    <%= label f, :text_pic_two, class: "control-label" %>
+    <%= file_input f, :text_pic_two, class: "form-control form-control-body", placeholder: "Do you have a photo 2"  %>
+    <%= error_tag f, :text_pic_two %>
+  </div>
+    <h2>Upload Small Pic 3</h2>
+    <div>
+    <%= label f, :text_pic_three, class: "control-label" %>
+    <%= file_input f, :text_pic_three, class: "form-control form-control-body", placeholder: "Do you have a photo 3"  %>
+    <%= error_tag f, :text_pic_three %>
+  </div>
   <div class="form-group">
     <%= checkbox(f, :published) %>
     <b>Published</b>
@@ -101,3 +119,5 @@
     <%= submit "Publish", class: "btn btn-default block-btn publish-button" %>
   </div>
 <% end %>
+
+<!-- FOLLOWING THIS GUIDE http://wsmoak.net/2015/07/27/adding-fields-to-an-ecto-model-in-phoenix.html -->

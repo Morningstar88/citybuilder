@@ -23,7 +23,7 @@
   </section>
      <!--<div class="row">-->
         <div class="">
-          <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
+ <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>"/>
         </div>
         <br><br> <br><br> <br><br>
         
@@ -37,7 +37,7 @@
     </div>
   </div>
   <div class="">
-          <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
+        <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>"/>
         </div>
   <section id="services" class="sec-services">
     <div class="container">
@@ -73,7 +73,7 @@
     </div>
   </section>
   
-            <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
+           <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>"/>
 
   <section id="folio" class="sec-folio">
     <div class="container">

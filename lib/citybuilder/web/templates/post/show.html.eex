@@ -23,7 +23,7 @@
   </section>
      <!--<div class="row" sss-->
         <div class="">
- <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>"/>
+ <img class="text-pic-one center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>"/>
         </div>
         <br><br> <br><br> <br><br>
         
@@ -37,7 +37,7 @@
     </div>
   </div>
   <div class="">
-        <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>"/>
+        <img class="text-pic-two center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>"/>
         </div>
   <section id="services" class="sec-services">
     <div class="container">
@@ -73,7 +73,7 @@
     </div>
   </section>
   
-           <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>"/>
+           <img class="text-pic-three center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>"/>
 
   <section id="folio" class="sec-folio">
     <div class="container">
@@ -141,13 +141,13 @@
             <div class="form-group">
               <label class="sr-only" for="inputName">Full name</label>
 
-              <input id="inputName" class="form-control" type="text" placeholder="Adam Smith" required />
+              <input id="inputName" class="form-control" type="text" placeholder="Your Name" required />
             </div>
 
             <div class="form-group">
               <label for="inputMail" class="sr-only">Email Address</label>
 
-              <input id="inputMail" class="form-control" type="email" placeholder="adam.smith@mail.com" required />
+              <input id="inputMail" class="form-control" type="email" placeholder="yourmail@email.com" required />
             </div>
 
             <div class="form-group">

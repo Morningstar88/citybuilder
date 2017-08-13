@@ -9,7 +9,7 @@
  <!--https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
 
   <section id="home" class="">
-    <h1 class="main-heading"><%= @post.title %></h1>
+    <h1 class="main-heading"><span class="heading-opaque-background"><%= @post.title %></span></h1>
   </section>
   
   <div class="project-wrapper">
@@ -32,7 +32,7 @@
         <br><br> <br><br> <br><br>
         
   <div class="our-future-plans sec-about container">
-      <h1 class="future-plans-title">Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
+      <h1 class="future-plans-title">Future Plan<span class="eurospinner">s</span>: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
      <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
   
@@ -45,7 +45,7 @@
         </div>
   <section id="services" class="sec-services">
     <div class="container">
-      <h1 class="progress-title">Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
+      <h1 class="progress-title spinner">Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
 
       <div class="row">
         <div class="col-sm-4 lowest-dsf-1">
@@ -133,7 +133,7 @@
 
   <section id="contact" class="sec-contact">
     <div class="container">
-      <h1>Contact Us</h1>
+      <h1>Contact <span class="bitspinner">Us</span></h1>
 
       <hr />
 

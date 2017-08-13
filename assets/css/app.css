@@ -4870,24 +4870,42 @@ footer {
  }
  
  .progress-title {
+     position: relative;
+     width: 90%;
+     display: block;
       text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
-      color: rgba(100,9,100,0.9);
-      text-decoration: underline;
+       color: rgba(1,90,1,0.9);
+      border-bottom: 1px solid rgba(1,90,1,0.1);
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+      text-align:center;
  }
  
 .done-so-far-title-one {
        text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
        font-size: 2.5vw;
+           border-bottom: 1px solid rgba(200,200,200,0.3);
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+        color: rgba(1,90,1,0.9);
 }
 
 .done-so-far-title-two {
        text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
        font-size: 2.5vw;
+             border-bottom: 1px solid rgba(200,200,200,0.3);
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+        color: rgba(1,90,1,0.9);
 }
 
 .done-so-far-title-three {
        text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
        font-size: 2.5vw;
+             border-bottom: 1px solid rgba(200,200,200,0.3);
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+        color: rgba(1,90,1,0.9);
 }
 
 .done-so-far-text-one {
@@ -4904,24 +4922,27 @@ footer {
 
 .lowest-dsf-1 {
     margin-top: 1.6%;
-    background-color: rgba(200,100,20,0.05);
+    background-color: rgba(200,100,20,0.02);
     border: 1px solid rgba(200,100,0,0.3);
     border-radius: 5px 0px 0px 0px;
+    padding-bottom: 1.6%;
     
 }
 
 .middle-dsf-2 {
     margin-top: 0.8%;
-      background-color: rgba(0,50,200,0.05);
+      background-color: rgba(0,50,200,0.02);
       border: 1px solid rgba(20,50,250,0.3);
+      padding-bottom: 2.5%;
     
 }
 
 .highest-dsf-3 {
       margin-top: 0%;
-      background-color: rgba(255,1,50,0.05);
+      background-color: rgba(255,1,50,0.02);
       border: 1px solid rgba(255,10,10,0.3);
       border-radius: 0px 5px 0px 0px;
+        padding-bottom: 3.4%;
 }
 
 
@@ -4986,4 +5007,13 @@ footer {
     max-width: 75vw;
     border-radius: 5px 0px 5px 0px;
     box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
+}
+
+.heading-opaque-background {
+   background-color: rgba(10,19,10,0.3);
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }

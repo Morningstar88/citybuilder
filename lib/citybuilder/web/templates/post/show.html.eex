@@ -45,7 +45,7 @@
         </div>
   <section id="services" class="sec-services">
     <div class="container">
-      <h1 class="progress-title spinner">Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
+      <h1 class="progress-title spinner">Progress to date </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
 
       <div class="row">
         <div class="col-sm-4 lowest-dsf-1">
@@ -86,7 +86,7 @@
 
   <section id="contact" class="sec-contact">
     <div class="container">
-      <h1 class="progress-title">Contact <span class="bitspinner">Us</span></h1>
+      <h1 class="contact-title">Contact <span class="bitspinner">Us</span></h1>
 
       <hr />
 
@@ -112,7 +112,7 @@
             </div>
 
             <div class="form-group">
-              <button class="btn btn-default center-block" type="submit" value="Hire me">Send</button>
+              <button class="btn btn-default center-block send-button" type="submit" value="Hire me">Send</button>
             </div>
           </form>
         </div>

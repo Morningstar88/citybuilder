@@ -3903,11 +3903,11 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .spinner
 {
     font-weight: normal;
-
+    
     margin: 0;
 
-    letter-spacing: .25em;
-    text-transform: uppercase;
+  
+  
 }
 @keyframes spinner
 {
@@ -4390,7 +4390,7 @@ body{
   flex-wrap: wrap;
   display: inline-block;
   width: 22.92em;
-  height: 40.46em;
+  height: 53.46em;
   margin-right: 2em;
   margin-bottom: 2em;
   border-radius: 0.5em;
@@ -4422,7 +4422,7 @@ body{
 }
 
 .blur {
-  background-image: linear-gradient(to bottom ,  rgba(69, 77, 91, 0.5) 0%,  rgba(43, 40, 50, 0.5) 60%);
+  /*background-image: linear-gradient(to bottom ,  rgba(69, 77, 91, 0.5) 0%,  rgba(43, 40, 50, 0.5) 60%);*/
   position: absolute;
   width: 100%;
   height: 100%;
@@ -4441,13 +4441,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2ca58d;
+  background-color: rgba(0,120,120,0.6);
   color: white;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Roboto Mono', monospace;
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
+  text-shadow: 1px 1px 1px rgba(20,20,20,0.4);
 }
 
 .card-top span.project-type.learn {
@@ -4532,25 +4533,10 @@ body{
   transform: rotate(-90deg);
 }
 
-.title {
-  color: #00a8e8;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  font-size: 1.3vw;
-}
 
-.summary {
-  color: #95989A;
-  text-align: center;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 1em;
-  font-size: 1.2vw;
-  /*height: 3.19em;*/
-  overflow: hidden;
-}
+
+
+
 
 button, .btn {
   border: none;
@@ -4866,7 +4852,19 @@ footer {
      width: 90%;
      display: block;
       text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
-       color: rgba(1,90,1,0.9);
+       color: rgba(120,0,120,0.9);
+      /*border-bottom: 1px solid rgba(1,90,1,0.08);*/
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+      text-align:center;
+ }
+ 
+  .contact-title {
+     position: relative;
+     width: 100%;
+     display: block;
+      text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
+       color: rgba(128,0,32,0.9);
       /*border-bottom: 1px solid rgba(1,90,1,0.08);*/
       border-length: 0 0 15px 0;
       border-radius: 10px;
@@ -5052,4 +5050,49 @@ footer {
          padding: 10px;
          margin-bottom: 2%;
          box-shadow: 1px 1px 1px rgba(100,100,100,0.2);
+}
+
+.send-button {
+   background-color: rgba(139,0,42,1);
+   
+}
+
+.project-card-title {
+      color: rgba(10,120,70,0.9);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.6vw;
+  font-variant: small-caps;
+}
+
+.project-card-summary {
+      color: rgba(30,30,30,0.9);
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.2vw;
+  /*height: 3.19em;*/
+  overflow: hidden;
+}
+
+
+.project-card-done-so-far-one {
+    display: inline-block;
+       color: rgba(30,30,30,0.9);
+  text-align: left;
+  width: 70%;
+  margin: 0 20px;
+  margin-bottom: 0.1em;
+  font-size: 1.2vw;
+  /*height: 3.19em;*/
+  overflow: hidden;
+  margin-left: 15%;
+}
+
+.house-divider-unicode {
+         color: rgba(20,10,80,0.9);
+         text-align: center;
 }

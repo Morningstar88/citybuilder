@@ -18,7 +18,9 @@
 <!-- Start Test Project Card -->
 <div class="card-container">
   <div class="card-top learn">
-    <span class="project-type">Volunteer</span>
+ <img class="card-top.create card-top" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
+ 
+    <span class="project-type"><%= @post.project_location %></span>
    <div class="blur"></div>
   </div>
   <div class="content">
@@ -26,9 +28,14 @@
       <span> Active 4 days ago </span>
       <span>...</span>
     </div>
-    <div class="title"> <%= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
-    <div class="summary"><%= truncate @post.body, length: 40, separator: " " %></div>
-    <div class="done-so-far"><%= @post.done_so_far_one_title %></div>
+    <div class="project-card-title"> <%= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
+    <div class="project-card-summary"><%= truncate @post.body, length: 80, separator: " " %></div>
+    <h3 class="house-divider-unicode spinner">🏠 <span class="project-card-title"></span></h3>
+    <div style="text-align: center">
+    <div class="project-card-done-so-far-one">1. <%= @post.done_so_far_one_title %></div>
+      <div class="project-card-done-so-far-one">2. <%= @post.done_so_far_two_title %></div>
+        <div class="project-card-done-so-far-one">3. <%= @post.done_so_far_three_title %></div>
+        </div>
 
     <!--<a href="#postModal" data-post-id="<%#= @post.id %>" class="btn">Read More</a>-->
     <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->

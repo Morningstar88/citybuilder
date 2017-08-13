@@ -1,3 +1,9 @@
+<style>
+  body {
+    background-color: rgba(248,255,248,0.9);
+    }
+</style> 
+ 
  <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
  
  <!--https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
@@ -11,8 +17,6 @@
   <section id="about" class="sec-about">
     <div class="container">
       <h1 class="project-title"><%= @post.title %></h1> <!-- ADD TO FORM AND DATABASE -->
-
-      <hr />
 
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
@@ -28,7 +32,7 @@
         <br><br> <br><br> <br><br>
         
   <div class="our-future-plans sec-about container">
-      <h1 class="future-plans">Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
+      <h1 class="future-plans-title">Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
      <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
   
@@ -42,8 +46,6 @@
   <section id="services" class="sec-services">
     <div class="container">
       <h1 class="progress-title">Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
-
-      <hr />
 
       <div class="row">
         <div class="col-sm-4 lowest-dsf-1">
@@ -77,7 +79,7 @@
 
   <section id="folio" class="sec-folio">
     <div class="container">
-      <h1 class="name-of-gallery"><%= @post.name_of_gallery %></h1>
+      <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
 
       <hr />
 

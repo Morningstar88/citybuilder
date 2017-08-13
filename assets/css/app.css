@@ -484,11 +484,6 @@ html
     text-rendering: optimizelegibility;
 }
 
-/*html,*/
-/*body {*/
-/*  height: 100%;*/
-/*}*/
-
 body
 {
     font-family: 'Open Sans', sans-serif;
@@ -3384,21 +3379,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     color: rgba(180,90,0,.9);
 }
 
-/* http://stackoverflow.com/questions/2360386/prevent-box-shadow-from-showing-on-a-specific-side
-http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
-*/
 
-/*.display-post-body-wrapper*/
-/*{*/
-/*    position: relative;*/
-/*    z-index: 1;*/
-
-/*    width: auto;*/
-/*box-shadow: 0px 1px 1px rgba(20,0,20,0.6), 0px 2px 4px rgba(40,0,40,0.4) !important;*/
-/*    height: 600px;*/
-/*    margin-top: -4%;*/
-/*    padding: 0;*/
-/*}*/
 
 .unicode-lg
 {
@@ -3495,9 +3476,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
     text-shadow: 1px 1px 1px rgba(100,100,100,.4);
 }
 
-/*.form-control-body:focus {*/
-/*border: 1px solid rgba(20,20,20,0.2) !important;*/
-/*}*/
 
 .control-label
 {
@@ -3949,9 +3927,6 @@ http://stackoverflow.com/questions/14067358/remove-right-side-of-box-shadow
 
 /* TOOLTIPS */
 
-/*body {*/
-/*  margin: 20px;*/
-/*}*/
 
 a[data-tooltip]
 {
@@ -4097,18 +4072,6 @@ a[data-tooltip][data-placement='bottom']::after
 
     white-space: pre-wrap;
 }
-
-/*     
-    NESTS IT JUST ABOVE MAIN BLOG POST BODY
-    
-        position: absolute;
-    margin-left: -160%; /* o is more or less center 
-    margin-top: -35%;
-    min-width: 800px;
-    -webkit-transform: rotate(-20deg)
-    
-    */
-
 
 
 .sentence
@@ -4417,14 +4380,14 @@ body{
   /*background-color: rgba(0,0,0,0.4);*/
   /*margin-left: 2em;*/
   /*margin-top: 2em;*/
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+
 }
 
 .card-container {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   display: inline-block;
   width: 22.92em;
   height: 40.46em;
@@ -4651,18 +4614,14 @@ a, .sec-contact .btn {
 }
 
 /*=Typography=*/
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: 'Open sans', sans-serif;
-  font-weight: 300;
-}
 
 .project-wrapper {
     margin-top: -11%;
+      font-family: 'Open sans', sans-serif;
+  font-weight: 300;
+    font-size: 16px;
 }
+
 
 .navbar a,
 .sec-about p {
@@ -4677,14 +4636,6 @@ body {
   font-size: 10px;
 }
 
-.main-heading {
-  font-family: 'Open sans', sans-serif;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 9px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
-}
 
 .container > h1 {
   font-weight: 300;
@@ -4816,7 +4767,7 @@ hr {
 
 /*Services*/
 .sec-services {
-  background: #f9f9f9;
+  background: #fff;
 }
 
 .sec-services i {
@@ -4889,7 +4840,7 @@ footer {
   color: #ad0000;
 }
 
- img.project-main-pic {
+ .project-main-pic {
  height: 100%; 
  width: 100%; 
  border-radius: 5px 0px 5px 0px;
@@ -4899,6 +4850,8 @@ footer {
  
  .project-title{
      text-shadow: 2px 2px 3px rgba(100,100,100,0.7);
+     color: rgba(1,90,1,0.9);
+     font-size: 3.2vw;
  }
  
    .summary-text{
@@ -4906,17 +4859,20 @@ footer {
    }
   
   .plan-text {
-      background-color: rgba(0,250,0,0.2);
+      background-color: rgba(240,250,240,0.2);
       text-shadow: 2px 2px 1px rgba(80,80,80,0.6);
      
   }
   
- .future-plans{
-     text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+ .future-plans-title {
+     text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
+     color: rgba(1,90,1,0.9);
  }
  
  .progress-title {
-      text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+      text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
+      color: rgba(100,9,100,0.9);
+      text-decoration: underline;
  }
  
 .done-so-far-title-one {
@@ -4947,17 +4903,25 @@ footer {
 }
 
 .lowest-dsf-1 {
-    margin-top: 2.4%;
+    margin-top: 1.6%;
+    background-color: rgba(200,100,20,0.05);
+    border: 1px solid rgba(200,100,0,0.3);
+    border-radius: 5px 0px 0px 0px;
     
 }
 
 .middle-dsf-2 {
-    margin-top: 1.2%;
+    margin-top: 0.8%;
+      background-color: rgba(0,50,200,0.05);
+      border: 1px solid rgba(20,50,250,0.3);
     
 }
 
 .highest-dsf-3 {
       margin-top: 0%;
+      background-color: rgba(255,1,50,0.05);
+      border: 1px solid rgba(255,10,10,0.3);
+      border-radius: 0px 5px 0px 0px;
 }
 
 
@@ -4965,17 +4929,61 @@ footer {
    text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
 }
 
+/* PICS */
+
+
+.main-heading {
+    /*TEXT ON MAIN PIC*/
+  height: 20%;
+  width: auto;
+  padding: 20px;
+  font-family: 'Open sans', sans-serif;
+  font-size: 95px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+
+}
+
+.project-main-pic {
+ height: 60%; 
+ width: auto; 
+ border-radius: 5px 0px 5px 0px;
+ box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
+
+ }
+
 .text-pic-one {
-    height: 50%;
-    width: 50%;
+    height: auto;
+    width: 30%;
+    min-height: auto;
+    min-width: 45vw;
+    max-height: auto ;
+    max-width: 75vw;
+    border-radius: 5px 0px 5px 0px;
+    box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
 }
 
 .text-pic-two {
-    height: 50%;
-    width: 50%;
+    height: auto;
+    width: 30%;
+    min-height: auto;
+    min-width: 45vw;
+    max-height: auto ;
+    max-width: 75vw;
+    border-radius: 5px 0px 5px 0px;
+    box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
 }
 
 .text-pic-three {
-    height: 50%;
-    width: 50%;
+   height: auto;
+    width: 30%;
+    min-height: auto;
+    min-width: 45vw;
+    max-height: auto ;
+    max-width: 75vw;
+    border-radius: 5px 0px 5px 0px;
+    box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
 }

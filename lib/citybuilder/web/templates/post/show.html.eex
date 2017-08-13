@@ -82,58 +82,11 @@
       <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
 
       <hr />
-
-
-<!-- OLD PLACEMENT OF GALLERY-->
-      <!--<div class="row">-->
-      <!--  <div class="col-md-4">-->
-      <!--    <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />-->
-      <!--  </div>-->
-
-        
-      <!--  <div class="col-md-4">-->
-      <!--    <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />-->
-      <!--  </div>-->
-      <!--</div>-->
-      <!-- END OLD PLACEMENT OF GALLERY-->
-      
-      <!-- 2ND AND THIRD LINES OF GALLERY -->
-
-    <!--  <div class="row">-->
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/o2KD7JtqTlk/450x450" alt="By Has Bonk" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/TV2ET43jK0w/450x450" alt="By Scott Webb" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/lZ2LB1s_z7s/450x450" alt="By Daniel Lozano Valdés" />-->
-    <!--    </div>-->
-    <!--  </div>-->
-
-    <!--  <div class="row">-->
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/o4qL4FuwN6I/450x450" alt="By Anthony DELANOIX" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/ej7RYC0ED_c/450x450" alt="By Patrick Pilz" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/0G1r-Cg0zS8/450x450" alt="By Vita Vilcina" />-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</div>-->
-    
-    <!-- END 2ND 3RD LINES GALLERY -->
   </section>
 
   <section id="contact" class="sec-contact">
     <div class="container">
-      <h1>Contact <span class="bitspinner">Us</span></h1>
+      <h1 class="progress-title">Contact <span class="bitspinner">Us</span></h1>
 
       <hr />
 

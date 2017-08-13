@@ -18,7 +18,7 @@
   </div>
    <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "200 word summary of your project"  %>
+    <%= textarea f, :body, class: "form-control form-control-body", placeholder: "Your project in 20 words!"  %>
     <%= error_tag f, :body %>
   </div>
   <div>
@@ -28,37 +28,42 @@
   </div>
     <div>
     <%= label f, :future_plans_title, class: "control-label name-of-gallery" %>
-    <%= textarea f, :future_plans_title, class: "form-control form-control-body name-of-gallery", placeholder: "What are your future plans?"  %>
+    <%= textarea f, :future_plans_title, class: "form-control form-control-body name-of-gallery", placeholder: "When are you free to meet up?"  %>
     <%= error_tag f, :future_plans_title %>
   </div>
+       <div class="done-so-far-box">
+  <h3 class="done-so-far-instructions">Get people excited, tell them what you've done! </h1>
+    <h3 class="done-so-far-instructions"> Have you collected materials + researched the subject?</h1>
+      <h3 class="done-so-far-instructions">You have 3 spaces. Let people know where you are.</h3>
+      </div>
     <div>
     <%= label f, :done_so_far_one_title, class: "control-label" %>
-    <%= textarea f, :done_so_far_one_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far one title"  %>
+    <%= textarea f, :done_so_far_one_title, class: "form-control form-control-title done-so-far-title", placeholder: "What have you done so far?"  %>
     <%= error_tag f, :done_so_far_one_title %>
   </div>
       <div>
     <%= label f, :done_so_far_one, class: "control-label done-so-far-body" %>
-    <%= textarea f, :done_so_far_one, class: "form-control form-control-body", placeholder: "Done so far one body"  %>
+    <%= textarea f, :done_so_far_one, class: "form-control form-control-body", placeholder: "The first thing you did."  %>
     <%= error_tag f, :done_so_far_one %>
   </div>
       <div>
     <%= label f, :done_so_far_two_title, class: "control-label" %>
-    <%= textarea f, :done_so_far_two_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far two title"  %>
+    <%= textarea f, :done_so_far_two_title, class: "form-control form-control-title done-so-far-title", placeholder: "What's the second thing you did?"  %>
     <%= error_tag f, :done_so_far_two_title %>
   </div>
       <div>
     <%= label f, :done_so_far_two, class: "control-label" %>
-    <%= textarea f, :done_so_far_two, class: "form-control form-control-body done-so-far-body", placeholder: "Done so far two body"  %>
+    <%= textarea f, :done_so_far_two, class: "form-control form-control-body done-so-far-body", placeholder: "write here..."  %>
     <%= error_tag f, :done_so_far_two %>
   </div>
       <div>
     <%= label f, :done_so_far_three_title, class: "control-label" %>
-    <%= textarea f, :done_so_far_three_title, class: "form-control form-control-title done-so-far-title", placeholder: "Done so far three title"  %>
+    <%= textarea f, :done_so_far_three_title, class: "form-control form-control-title done-so-far-title", placeholder: "What's the third step you took?"  %>
     <%= error_tag f, :done_so_far_three_title %>
   </div>
       <div>
     <%= label f, :done_so_far_three, class: "control-label done-so-far-body" %>
-    <%= textarea f, :done_so_far_three, class: "form-control form-control-body done-so-far-body", placeholder: "Done so far three body"  %>
+    <%= textarea f, :done_so_far_three, class: "form-control form-control-body done-so-far-body", placeholder: "write here..."  %>
     <%= error_tag f, :done_so_far_three %>
   </div>
      <div>
@@ -67,30 +72,51 @@
     <%= error_tag f, :name_of_gallery %>
   </div>
      
-  
-  <h2>Upload Photo</h2>
+  <h3 class="pic-upload-instructions">Citybuilder projects have space for 4 pics:  </h1>
+    <h3 class="pic-upload-instructions">One main header photo and three smaller pics. </h1>
+      <h3 class="pic-upload-instructions">Write titles and make them pretty!</h3>
+    
+  <h2>Upload Main Project Pic</h3>
     <div>
     <%= label f, :project_pic, class: "control-label" %>
-    <%= file_input f, :project_pic, class: "form-control form-control-body", placeholder: "Do you have a photo"  %>
+    <%= file_input f, :project_pic, class: "form-control form-control-title", placeholder: "Do you have a photo"  %>
     <%= error_tag f, :project_pic %>
   </div>
+<br><br>
+     
     <h2>Upload Small Pic 1</h2>
     <div>
     <%= label f, :text_pic_one, class: "control-label" %>
-    <%= file_input f, :text_pic_one, class: "form-control form-control-body", placeholder: "Do you have a photo 1"  %>
+    <%= file_input f, :text_pic_one, class: "form-control form-control-title", placeholder: "Please upload your first small photo"  %>
     <%= error_tag f, :text_pic_one %>
   </div>
+       <div>
+    <%= label f, :small_pic_1_caption, class: "control-label small-pic-1-caption pic-caption" %>
+    <%= textarea f, :small_pic_1_caption, class: "form-control form-control-title small-pic-1-caption pic-caption ", placeholder: "Pic 1 Caption"  %>
+    <%= error_tag f, :small_pic_1_caption %>
+  </div>
+
     <h2>Upload Small Pic 2</h2>
     <div>
     <%= label f, :text_pic_two, class: "control-label" %>
-    <%= file_input f, :text_pic_two, class: "form-control form-control-body", placeholder: "Do you have a photo 2"  %>
+    <%= file_input f, :text_pic_two, class: "form-control form-control-title", placeholder: "Please upload your second small photo"  %>
     <%= error_tag f, :text_pic_two %>
+  </div>
+       <div>
+    <%= label f, :small_pic_2_caption, class: "control-label small-pic-2-caption pic-caption" %>
+    <%= textarea f, :small_pic_2_caption, class: "form-control form-control-title small-pic-2-caption pic-caption", placeholder: "Pic 2 Caption"  %>
+    <%= error_tag f, :small_pic_2_caption %>
   </div>
     <h2>Upload Small Pic 3</h2>
     <div>
     <%= label f, :text_pic_three, class: "control-label" %>
-    <%= file_input f, :text_pic_three, class: "form-control form-control-body", placeholder: "Do you have a photo 3"  %>
+    <%= file_input f, :text_pic_three, class: "form-control form-control-title", placeholder: "Please upload your third small photo"  %>
     <%= error_tag f, :text_pic_three %>
+  </div>
+      <div>
+    <%= label f, :small_pic_3_caption, class: "control-label small-pic-3-caption pic-caption" %>
+    <%= textarea f, :small_pic_3_caption, class: "form-control form-control-title small-pic-3-caption pic-caption", placeholder: "Pic 3 Caption"  %>
+    <%= error_tag f, :small_pic_3_caption %>
   </div>
   <div class="form-group">
     <%= checkbox(f, :published) %>

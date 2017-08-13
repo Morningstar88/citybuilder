@@ -3883,8 +3883,8 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 {
     animation-name: spinner;
     animation-duration: 0s;
-    animation-play-state: paused;
-    animation-timing-function: cubic-bezier(.9,.9,.9,.9)
+    /*animation-play-state: paused;*/
+    animation-timing-function: cubic-bezier(.9,.9,.9,.9);
     transform-style: preserve-3d;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
@@ -4841,8 +4841,8 @@ footer {
 }
 
  .project-main-pic {
- height: 100%; 
- width: 100%; 
+ height: auto; 
+ width: 80%; 
  border-radius: 5px 0px 5px 0px;
  box-shadow: 3px 3px 3px rgba(100,100,100,0.8);
 
@@ -4875,7 +4875,7 @@ footer {
      display: block;
       text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
        color: rgba(1,90,1,0.9);
-      border-bottom: 1px solid rgba(1,90,1,0.1);
+      /*border-bottom: 1px solid rgba(1,90,1,0.08);*/
       border-length: 0 0 15px 0;
       border-radius: 10px;
       text-align:center;
@@ -5016,4 +5016,39 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     
+}
+
+.pic-caption {
+       text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+       font-size: 2.5vw;
+             border-bottom: 1px solid rgba(200,200,200,0.3);
+      border-length: 0 0 15px 0;
+      border-radius: 10px;
+        color: rgba(1,90,1,0.9);
+}
+
+.pic-upload-instructions {
+    font-family: 'Montserrat';
+    color: rgba(70,0,70,0.9);
+           text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+           max-width: 60%;
+           text-align: left;
+           line-height: 0.4;
+}
+
+.done-so-far-instructions {
+    font-family: 'Montserrat';
+    color: rgba(70,0,70,0.9);
+           text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+           max-width: 80%;
+           text-align: left;
+           line-height: 0.4;
+}
+
+.done-so-far-box {
+    position: relative;
+         border: 1px solid rgba(100,100,100,0.5);
+         padding: 10px;
+         margin-bottom: 2%;
+         box-shadow: 1px 1px 1px rgba(100,100,100,0.2);
 }

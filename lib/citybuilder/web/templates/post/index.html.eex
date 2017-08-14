@@ -23,7 +23,7 @@
 				<div id="navbar" class="navbar-collapse collapse">
 				    	<%= if @user do %>
 <div class="hello-user">
-  <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
+  <!--<span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
 
   <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>

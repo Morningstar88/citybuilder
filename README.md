@@ -15,13 +15,11 @@ City-builder helps people **build useful projects** in their neighbourhoods.
 - Longevity research. 
 - ... and anything else we can dream up.
 
-We help people learn fund-raising skills, + build prototypes for low money (10-300USD). We provide guidace with legal red-tape.
+We help people learn fund-raising skills, + build prototypes for low money (10-300USD).
 
-This is being run by one experienced coder and one new product manager, so please be patient. We're open to new ways of working, but please keep suggestions simple.
+This is being run by one experienced coder and one new product manager, so please be patient. 
 
 Right now we have upload forms and project display set up on the Elixir side. We've also successfully deployed to production.
-
-As this is a fork/re-design of a closed source project, currently the CSS, HTML and JS is way behind the Elixir code. If we clean up the front end, we should have the beginnings of a working app.
 
 ----
 
@@ -69,9 +67,7 @@ Ready to run in production? Please check our deployment guides.
 
 ## Early Stages: Messy CSS + Confused Media Queries
 
-**This project used to be called Citybuilder. You may see that name in the code.**
-
-Citybuilder is a fork of another closed source project. If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with minor hassles, + accept it's an early stage project. By the end of the summer, or early Autumn, we should have a decent web-app on our hands. A site that can launch multiple startups.
+If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with minor hassles, + accept it's an early stage project. By the end of the summer, or early Autumn, we should have a decent web-app on our hands. A site that can launch multiple startups.
 
 Ultimately City-builder has to look like Kickstarter or StartSomeGood, but volunteer focused instead of money oriented.
 

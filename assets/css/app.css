@@ -3469,7 +3469,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-size: 23px !important;
     line-height: 2px;
 
-    height: 300px !important;
+    height: 150px !important;
 
     color: rgba(10,10,10,.8);
     border: 1px solid rgba(255,255,255,.6) !important;
@@ -4852,11 +4852,14 @@ footer {
      width: 90%;
      display: block;
       text-shadow: 2px 2px 2px rgba(100,100,100,0.3);
-       color: rgba(120,0,120,0.9);
+       color: rgba(120,0,120,0.9) !important;
       /*border-bottom: 1px solid rgba(1,90,1,0.08);*/
       border-length: 0 0 15px 0;
       border-radius: 10px;
       text-align:center;
+        font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
  }
  
   .contact-title {
@@ -5028,7 +5031,7 @@ footer {
 
 .pic-upload-instructions {
     font-family: 'Montserrat';
-    color: rgba(70,0,70,0.9);
+    color: rgba(100,0,150,0.9);
            text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
            max-width: 60%;
            text-align: left;
@@ -5037,7 +5040,7 @@ footer {
 
 .done-so-far-instructions {
     font-family: 'Montserrat';
-    color: rgba(70,0,70,0.9);
+    color: rgba(100,0,150,0.8);
            text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
            max-width: 80%;
            text-align: left;
@@ -5096,3 +5099,32 @@ footer {
          color: rgba(20,10,80,0.9);
          text-align: center;
 }
+
+/*Knockout Text*/
+
+.knockout {
+  background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+  color: red;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+   font-size: 100px;
+
+  width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.knockout-text {
+  background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+   font-size: 3vw;
+  font-weight: 700;
+  width: 1200px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+/*New Form*/
+

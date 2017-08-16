@@ -15,6 +15,13 @@ defmodule Citybuilder.Stories.Post do
     field :future_plans_title, :string
 
     field :project_pic, Citybuilder.ProjectPic.Type
+    field :text_pic_one, Citybuilder.ProjectPic.Type
+    field :text_pic_two, Citybuilder.ProjectPic.Type
+    field :text_pic_three, Citybuilder.ProjectPic.Type
+    field :small_pic_1_caption, :string
+    field :small_pic_2_caption, :string
+    field :small_pic_3_caption, :string
+    field :project_location, :string
     field :published, :boolean, default: true
     field :path, :string, null: false, read_after_writes: true
     field :removed_by_owner, :boolean, default: false

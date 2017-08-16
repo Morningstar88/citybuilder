@@ -1,124 +1,92 @@
+<style>
+  body {
+    background-color: rgba(248,255,248,0.9);
+    }
+</style> 
+ 
  <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
  
  <!--https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
 
   <section id="home" class="">
-    <h1 class="main-heading"><%= @post.title %></h1>
+    <h1 class="main-heading"><span class="heading-opaque-background"><%= @post.title %></span></h1>
   </section>
+  
+  <div class="project-wrapper">
 
   <section id="about" class="sec-about">
     <div class="container">
-      <h1><%= @post.title %></h1> <!-- ADD TO FORM AND DATABASE -->
-
-      <hr />
+      <h1 class="project-title"><%= @post.title %></h1> <!-- ADD TO FORM AND DATABASE -->
 
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
-          <p><%= @post.body %></p>
+          <p class="summary-text"><%= @post.body %></p>
         </div>
       </div>
     </div>
   </section>
+     <!--<div class="row" sss-->
+        <div class="">
+ <img class="text-pic-one center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>"/>
+        </div>
+        <br><br> <br><br> <br><br>
+        
   <div class="our-future-plans sec-about container">
-      <h1>Future Plans: <span class="future-plans"><%= @post.future_plans_title %></span></h1>
+      <h1 class="future-plans-title">We're free<span class="eurospinner">:</span> <span class="future-plans"><%= @post.future_plans_title %></span></h1>
      <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
   
-    <p><%= @post.plan %></p>
+    <p class="plan-text"><%= @post.plan %></p>
     </div>
     </div>
   </div>
+  <div class="">
+        <img class="text-pic-two center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>"/>
+        </div>
   <section id="services" class="sec-services">
     <div class="container">
-      <h1>Progress: </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
-
-      <hr />
+      <h1 class="progress-title spinner">Progress to date </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 lowest-dsf-1">
           <i class="fa fa-4x fa-paint-brush"></i>
 
-          <h2 class="h3"><%= @post.done_so_far_one_title %></h2>
+          <h2 class="done-so-far-title-one"><%= @post.done_so_far_one_title %></h2>
 
-          <p><%= @post.done_so_far_one %></p>
+          <p class="done-so-far-text-one"><%= @post.done_so_far_one %></p>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 middle-dsf-2">
           <i class="fa fa-4x fa-code"></i>
 
-          <h2 class="h3"><%= @post.done_so_far_two_title %></h2>
+          <h2 class="done-so-far-title-two"><%= @post.done_so_far_two_title %></h2>
 
-          <p><%= @post.done_so_far_two %></p>
+          <p class="done-so-far-text-two"><%= @post.done_so_far_two %></p>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-4 highest-dsf-3">
           <i class="fa fa-4x fa-tablet"></i>
 
-          <h2 class="h3"><%= @post.done_so_far_two_title %></h2>
+          <h2 class="done-so-far-title-three"><%= @post.done_so_far_three_title %></h2>
 
-          <p><%= @post.done_so_far_two %></p>
+          <p class="done-so-far-text-three"><%= @post.done_so_far_three %></p>
         </div>
       </div>
     </div>
   </section>
+  
+           <img class="text-pic-three center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>"/>
 
   <section id="folio" class="sec-folio">
     <div class="container">
-      <h1><%= @post.name_of_gallery %></h1>
+      <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
 
       <hr />
-
-      <div class="row">
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/Oog0wehKxYs/450x450" alt="By Håkon Sataøen" />
-        </div>
-
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/EfpOiZvPbT4/450x450" alt="By Samuel Zeller" />
-        </div>
-
-        <div class="col-md-4">
-          <img class="center-block" src="https://source.unsplash.com/2aoVQXwLf3g/450x450" alt="By Scott Webb" />
-        </div>
-      </div>
-      
-      <!-- 2ND AND THIRD LINES OF GALLERY -->
-
-    <!--  <div class="row">-->
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/o2KD7JtqTlk/450x450" alt="By Has Bonk" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/TV2ET43jK0w/450x450" alt="By Scott Webb" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/lZ2LB1s_z7s/450x450" alt="By Daniel Lozano Valdés" />-->
-    <!--    </div>-->
-    <!--  </div>-->
-
-    <!--  <div class="row">-->
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/o4qL4FuwN6I/450x450" alt="By Anthony DELANOIX" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/ej7RYC0ED_c/450x450" alt="By Patrick Pilz" />-->
-    <!--    </div>-->
-
-    <!--    <div class="col-md-4">-->
-    <!--      <img class="center-block" src="https://source.unsplash.com/0G1r-Cg0zS8/450x450" alt="By Vita Vilcina" />-->
-    <!--    </div>-->
-    <!--  </div>-->
-    <!--</div>-->
-    
-    <!-- END 2ND 3RD LINES GALLERY -->
   </section>
 
   <section id="contact" class="sec-contact">
     <div class="container">
-      <h1>Contact Us</h1>
+      <h1 class="contact-title">Contact <span class="bitspinner">Us</span></h1>
 
       <hr />
 
@@ -128,13 +96,13 @@
             <div class="form-group">
               <label class="sr-only" for="inputName">Full name</label>
 
-              <input id="inputName" class="form-control" type="text" placeholder="Adam Smith" required />
+              <input id="inputName" class="form-control" type="text" placeholder="Your Name" required />
             </div>
 
             <div class="form-group">
               <label for="inputMail" class="sr-only">Email Address</label>
 
-              <input id="inputMail" class="form-control" type="email" placeholder="adam.smith@mail.com" required />
+              <input id="inputMail" class="form-control" type="email" placeholder="yourmail@email.com" required />
             </div>
 
             <div class="form-group">
@@ -144,7 +112,7 @@
             </div>
 
             <div class="form-group">
-              <button class="btn btn-default center-block" type="submit" value="Hire me">Send</button>
+              <button class="btn btn-default center-block send-button" type="submit" value="Hire me">Send</button>
             </div>
           </form>
         </div>
@@ -202,4 +170,4 @@
     <% end %>
      <br> <br> <br> <br> <br> <br> <br> <br>
    </ul>
-
+</div>

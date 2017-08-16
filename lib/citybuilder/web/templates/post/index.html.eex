@@ -21,13 +21,9 @@
 					<!--<a href="#openModal" class="navbar-brand">What we do!!!!!</a>-->
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-				 <!--   <ul class="nav navbar-nav navbar-left">-->
-				 <!-- 	<li><a href=#signin>SignUp</a></li>-->
-					<!--<li><a href=#login>Login</a></li>-->
-				 <!--   </ul>-->
 				    	<%= if @user do %>
 <div class="hello-user">
-  <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>
+  <!--<span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
 
   <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>
@@ -37,10 +33,10 @@
 <!--<div class="login-div">-->
 <!--  Hello!-->
   <a href="/users/signin" class="login-multicolored">
-      <span class="login-multi-1">L</span><span class="login-multi-2">O</span><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>
+      <span class="login-multi-1">L</span><span class="login-multi-2">o</span><span class="login-multi-3">g</span><span class="login-multi-4">i</span><span class="login-multi-5">n</span></a>
       </div>
        <a href="/users/new" class="signup-multicolored">
-      <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>
+      <span class="signup-multi-1">S</span><span class="signup-multi-2">i</span><span class="signup-multi-3">g</span><span class="signup-multi-4">n</span><span class="signup-multi-5">u</span><span class="signup-multi-6">p</span></a>
 <!--</div>-->
 <% end %>
 					<ul class="nav navbar-nav navbar-right">
@@ -57,7 +53,7 @@
 		</nav>
 <!--		<%= if @user do %>-->
 <!--<div class="hello-user">-->
-<!--  <span class="">Hello <%= @user.username %>! <%= raw welcome(@conn, @posts) %></span>-->
+<!-- TOOK OUT USER WELCOME FOR NOW <span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
 
 <!--  <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>-->
 <!--    <%= split_logout("logout") %>-->

@@ -408,9 +408,9 @@ defmodule Citybuilder.Stories do
 
   defp post_changeset(%Post{} = post, attrs \\ %{}) do
     post
-    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id, :plan, :done_so_far_one, :done_so_far_two, :done_so_far_three, :done_so_far_one_title, :done_so_far_two_title, :done_so_far_three_title, :name_of_gallery, :future_plans_title]) #Need to change this to Para1, Para2 at some point.
-    |> cast_attachments(attrs, [:project_pic])
-    |> validate_required([:title, :body, :user_id, :topic_id, :plan, :done_so_far_one, :done_so_far_two, :done_so_far_three,  :done_so_far_one_title, :done_so_far_two_title, :done_so_far_three_title, :project_pic, :name_of_gallery, :future_plans_title]) #Need to change this to Para1, Para2 at some point.
+    |> cast(attrs, [:title, :body, :user_id, :published, :original_post_id, :topic_id, :plan, :done_so_far_one, :done_so_far_two, :done_so_far_three, :done_so_far_one_title, :done_so_far_two_title, :done_so_far_three_title, :name_of_gallery, :future_plans_title, :small_pic_1_caption, :small_pic_2_caption, :small_pic_3_caption, :project_location]) #Need to change this to Para1, Para2 at some point.
+    |> cast_attachments(attrs, [:project_pic, :text_pic_one, :text_pic_two, :text_pic_three])
+    |> validate_required([:title, :body, :user_id, :topic_id, :plan, :done_so_far_one, :done_so_far_two, :done_so_far_three,  :done_so_far_one_title, :done_so_far_two_title, :done_so_far_three_title, :project_pic, :name_of_gallery, :future_plans_title, :small_pic_1_caption, :small_pic_2_caption, :small_pic_3_caption, :project_location]) #Need to change this to Para1, Para2 at some point.
   end
 
   def comment_changeset(%Comment{} = comment, attrs \\ %{}) do

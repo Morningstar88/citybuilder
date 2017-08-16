@@ -1,4 +1,4 @@
-<h1 class="edit-title display-post-title-edit"><span class="first-letter-new">                    .</span><span class="second-letter-new">.</span><span class="third-letter-new">.</span><span class="fourth-letter-new">?</span></h1>
+<!--<h1 class="edit-title display-post-title-edit"><span class="first-letter-new">                    .</span><span class="second-letter-new">.</span><span class="third-letter-new">.</span><span class="fourth-letter-new">?</span></h1>-->
 
 <%= render "form.html", conn: @conn, changeset: @changeset,
                         action: post_path(@conn, :create) %>

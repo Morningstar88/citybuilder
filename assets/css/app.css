@@ -3324,14 +3324,15 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
 .form-control-body
 {
-    font-family: 'Raleway' !important;
-    font-size: 23px !important;
+    font-family: 'Montserrat' !important;
+    font-size: 28px !important;
     line-height: 2px;
+    
+    font-weight: 200;
 
     height: 150px !important;
 
-    color: rgba(10,10,10,.8);
-    border: 1px solid rgba(255,255,255,.6) !important;
+    color: rgba(10,10,10,.87);
     text-shadow: 1px 1px 1px rgba(100,100,100,.4);
 }
 
@@ -4904,8 +4905,8 @@ footer {
 .done-so-far-box {
     position: relative;
          border: 1px solid rgba(100,100,100,0.5);
-         padding: 10px;
-         margin-bottom: 2%;
+         padding: 20px;
+         margin-bottom: 7%;
          box-shadow: 1px 1px 1px rgba(100,100,100,0.2);
 }
 
@@ -4962,6 +4963,21 @@ footer {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
    font-size: 100px;
+   
+
+  width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.knockout-medium {
+  background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+  color: red;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+   font-size: 4vw;
+
+   font-family: 'Raleway';
 
   width: 600px;
   margin: 50px auto;

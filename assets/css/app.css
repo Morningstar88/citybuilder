@@ -3314,9 +3314,10 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-size: 34px !important;
     line-height: 2px;
 
-    height: 60px !important;
+    font-weight: 200;
+    height: auto !important;
 
-    color: rgba(10,10,10,.8);
+    color: rgba(10,10,10,.87);
     border-radius: 20px;
     text-shadow: 1px 1px 1px rgba(100,100,100,.4);
 }
@@ -4981,3 +4982,10 @@ footer {
 
 /*New Form*/
 
+.form-title-text {
+    font-family: Raleway;
+    font-weight: 300;
+    text-align: center;
+    line-height: 0.8;
+    font-size: 3vw;
+}

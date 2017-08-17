@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat|Raleway:400,500,600,700' rel='stylesheet'
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:200,300|Raleway:400,500,600,700' rel='stylesheet'
   type='text/css'>
   
   <style>
@@ -7,12 +7,12 @@
   
     <p class="knockout-text"></p>
 
-     <h3 class="knockout-text">Welcome to Citybuilder! To fill out this form correctly you will need:  </h1>
-    <h3 class="knockout-text">~4 pics~ (one big, three small) and some info about your project. </h1>
-      <h3 class="knockout-text"> Good pics and videos draw investors and collaborators.</h3>
+     <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
+    <h3 class="form-title-text">~4 pics~ (one big, three small) + some project info. </h1>
+      <h3 class="form-title-text"> Good artwork energizes collaborators.</h3>
   <br><br>
-<section class="full-width-img">
-		</section>
+<!--<section class="full-width-img">-->
+<!--		</section>-->
   <!-- https://codepen.io/rexkirby/pen/Fdnlz -->
 
 <%= form_for @changeset, @action, [multipart: true], fn f -> %>

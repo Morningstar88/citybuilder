@@ -1,15 +1,30 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet'
   type='text/css'>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
   
     <style>
-    body {
-      font-family: 'Josefin Sans', 'Century Gothic' !important;
-    }
+    
     </style>
+
+<!-- my navbar -->
+
+    
+
+
+<div class="btn btn-primary">Ayy lol</div>
+
+<!-- my nav bar -->
+
+
+
+
   
 
       <!-- NAVBAR -->
-		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+	<!--	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
 			<div class="container navbar-container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -19,38 +34,41 @@
 						<span class="icon-bar"></span>
 					</button>
 					<!--<a href="#openModal" class="navbar-brand">What we do!!!!!</a>-->
-				</div>
+	<!--			</div>
 				<div id="navbar" class="navbar-collapse collapse">
 				    	<%= if @user do %>
 <div class="hello-user">
   <!--<span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
 
-  <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
+ <!-- <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
     <%= split_logout("logout") %>
   <% end %>
 </div>
 <% else %>
 <!--<div class="login-div">-->
 <!--  Hello!-->
-  <a href="/users/signin" class="login-multicolored">
+ <!-- <a href="/users/signin" class="login-multicolored">
       <span class="login-multi-1">L</span><span class="login-multi-2">o</span><span class="login-multi-3">g</span><span class="login-multi-4">i</span><span class="login-multi-5">n</span></a>
       </div>
        <a href="/users/new" class="signup-multicolored">
       <span class="signup-multi-1">S</span><span class="signup-multi-2">i</span><span class="signup-multi-3">g</span><span class="signup-multi-4">n</span><span class="signup-multi-5">u</span><span class="signup-multi-6">p</span></a>
 <!--</div>-->
-<% end %>
+ <!--<% end %>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"> Money</a></li>
 						<li><a href="#about">Search</a></li>
 						<li><a href="#portfolio">Build</a></li>
 			
 					<!--<li><a href="#blog">News</a></li>-->
-						</li>
+	<!--				</li>
 					</ul>
 				</div>
 		
 			</div>
 		</nav>
+   
+
+
 <!--		<%= if @user do %>-->
 <!--<div class="hello-user">-->
 <!-- TOOK OUT USER WELCOME FOR NOW <span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->

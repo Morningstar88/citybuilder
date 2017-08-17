@@ -4,18 +4,40 @@
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
 /*
-RESOURCES
+RESOURCE
+
 */
 
 
 html,
 body
 {
-    margin-left: 0;
+   
     padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    margin: 2rem;
+    background: white;
+    margin:0px;
+    padding:0px;
     /*display:flex;*/
-
     /*justify-content: center;*/
+}
+
+  strong{
+  letter-spacing: 2px;
+  }
+ 
+html
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+nav{
+    border-radius:0px !important;
+
+
+
 }
 
 /* Media Queries */
@@ -104,15 +126,12 @@ body
 /* # General
 ================================ */
 
-body
-{
-    font-family: 'Open Sans', Helvetica, sans-serif;
-}
+
 
 /* # Header, Main Menu
 ================================ */
 
-.navbar
+/* .navbar
 {
     margin-bottom: 0;
 
@@ -134,14 +153,14 @@ body
 
     padding-right: 1vw;
     
-    /*text-indent: 6vw;*/
+    
 
     transition: all .2s ease-out;
-    /*text-transform: uppercase;*/
+  
 
     color: rgba(25,25,25,.9) !important;
     text-shadow: 1px 1px 1px rgba(155,155,155,.3) ;
-    /*box-shadow: 2px 2px 2px grey;*/
+   
 }
 
 .navbar-brand
@@ -149,17 +168,14 @@ body
     font-size: 3vw !important;
     font-weight: 300;
 
-    /*text-indent: 2vw;*/
+  
 
     color: rgba(5,0,0,1) !important;
     text-shadow: 1px 1px 0px rgba(200,200,200,1);
-    /*transition: all 0.2s ease-out;*/
+   
     border-radius: 10px 0 10px 0;
     box-shadow: 2px 2px 2px grey;
-    /*background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg');*/
-    opacity: 0.8;
-    /*background-color: rgba(0,200,0,0.04);*/
-    /*text-shadow: 2px 2px 2px rgba(255,100,55,.8) !important;*/
+    
 }
 
 .navbar-brand:hover{
@@ -170,6 +186,7 @@ body
 {
     opacity: 1;
 }
+*/
 
 #top-social-menu
 {
@@ -178,33 +195,7 @@ body
 
 
 
-@media (min-width: 768px)
-{
-    /*NAVBAR HEIGHT*/
 
-    .navbar
-    {
-        height: 7vh;
-    }
-
-    .navbar-nav > li > a
-    {
-        position: absolute;
-        /*Positioning of List items*/
-        /*margin-top: 35px;*/
-        /*padding-right: 40px;*/
-        margin-left: -79%;
-        padding: 0;
-        /*line-height: 70px;*/
-    }
-
-    .navbar-brand
-    {
-        font-size: 2.5vw !important;
-        /*padding-top: 50px !important;*/
-        /*height: 120px;*/
-        /*line-height: 120px;*/
-    }
 
     #top-social-menu
     {
@@ -213,127 +204,7 @@ body
 
     /* Navbar when scrolled */
 
-    .navbar-scroll
-    {
-        height: 70px;
-    }
-
-    .navbar-scroll #top-social-menu
-    {
-        display: none;
-
-        transition: all .2s ease-out;
-    }
-
-    .navbar-scroll .navbar-brand
-    {
-        display: none;
-    }
-
-    .navbar-scroll .navbar-nav > li > a
-    {
-        margin-top: 0;
-        padding: 0;
-
-        opacity: 1;
-    }
-}
-
-/* # Hover Link Effect
-================================ */
-@media (min-width: 768px)
-{
-    .navbar-nav > li > a::after
-    {
-        position: absolute;
-        top: 80%;
-        left: 0;
-
-        width: 100%;
-        height: 1px;
-
-        content: '';
-        transition: height .3s, opacity .3s, transform .3s;
-        transform: translateY(-10px);
-
-        opacity: 0;
-        background: rgba(10,170,200,.7);
-    }
-
-    .navbar-nav > li > a:hover::after,
-    .navbar-nav > li > a:focus::after
-    {
-        height: 2px;
-
-        transform: translateY(0px);
-
-        opacity: 1;
-    }
-}
-
-/* # Social menu
-================================ */
-
-#top-social-menu
-{
-    font-size: 12px;
-
-    position: absolute;
-    z-index: 101;
-    top: 7px;
-    right: 0;
-
-    padding-right: 0;
-
-    list-style: none;
-
-    transition: all .2s ease-out;
-
-    color: #2e1c05;
-}
-
-#top-social-menu li
-{
-    float: left;
-
-    padding: 10px 15px;
-}
-
-#top-social-menu li:last-child
-{
-    padding-right: 0;
-}
-
-#top-social-menu li a
-{
-    text-decoration: none;
-
-    color: #2e1c05;
-}
-
-#top-social-menu li a:hover
-{
-    text-decoration: none;
-
-    color: #543a1a;
-}
-
-#top-social-menu i
-{
-    font-size: 16px;
-
-    transition: all .2s ease-in;
-}
-
-#top-social-menu i:hover
-{
-    text-decoration: none;
-
-    color: #543a1a;
-}
-
-/* # Section Full Width Image
-================================ */
+    ========================= */
 
 .full-width-img
 {
@@ -477,17 +348,9 @@ body
 
 /*BLOGS YOU CAN FORK SVG MASK*/
 
-html
-{
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizelegibility;
-}
 
-body
-{
-    font-family: 'Open Sans', sans-serif;
-}
+
+
 
 .text
 {
@@ -563,12 +426,7 @@ section.intro
 
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/biko-black.woff');
 }
-body
-{
-    margin: 2rem;
 
-    background: white;
-}
 
 header
 {
@@ -4376,12 +4234,7 @@ a[data-tooltip][data-placement='bottom']::after
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono';
 
-body{
-  /*background-color: rgba(0,0,0,0.4);*/
-  /*margin-left: 2em;*/
-  /*margin-top: 2em;*/
 
-}
 
 .card-container {
   font-family: "Open Sans", sans-serif;

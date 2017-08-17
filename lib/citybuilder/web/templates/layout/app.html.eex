@@ -11,16 +11,55 @@
     <title>¡Build!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
 
   <style>
-    body {
-      font-family: 'Josefin Sans';
-    }
+   
+    
+    
   </style>
 
   <body>
+  <nav class="navbar navbar-default navbar-inverse bg-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><strong>CityBuilder</strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav  navbar-center">
+        <li class="active"><a href="#">Money <span class="sr-only">(current)</span></a></li>
+        <li ><a href="#">Search</a></li>
+        <li><a href="#">Build</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/users/signin">Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/users/new">Signup</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
     <div class="container">
+    
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>

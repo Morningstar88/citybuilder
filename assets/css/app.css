@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Open+Sans:200,300,400|Cutive Mono:200,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Open+Sans:200,300,400|Cutive Mono:200,300,400,500,600|Poiret+One:200,300,400');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -123,70 +123,7 @@ nav{
 }
 
 
-/* # General
-================================ */
 
-
-
-/* # Header, Main Menu
-================================ */
-
-/* .navbar
-{
-    margin-bottom: 0;
-
-    transition: all .2s ease-out;
-
-    opacity: 1;
-    background-color: #fff;
-    box-shadow: 2px 2px 2px rgba(100,100,100,0.7);
-}
-
-.navbar-container
-{
-    position: relative;
-}
-
-.navbar .navbar-nav li a
-{
-    font-size: 1.5vw;
-
-    padding-right: 1vw;
-    
-    
-
-    transition: all .2s ease-out;
-  
-
-    color: rgba(25,25,25,.9) !important;
-    text-shadow: 1px 1px 1px rgba(155,155,155,.3) ;
-   
-}
-
-.navbar-brand
-{
-    font-size: 3vw !important;
-    font-weight: 300;
-
-  
-
-    color: rgba(5,0,0,1) !important;
-    text-shadow: 1px 1px 0px rgba(200,200,200,1);
-   
-    border-radius: 10px 0 10px 0;
-    box-shadow: 2px 2px 2px grey;
-    
-}
-
-.navbar-brand:hover{
- color: rgba(2,255,2,0.5);   
-}
-
-.navbar-scroll
-{
-    opacity: 1;
-}
-*/
 
 #top-social-menu
 {
@@ -203,8 +140,6 @@ nav{
     }
 
     /* Navbar when scrolled */
-
-    ========================= */
 
 .full-width-img
 {
@@ -3513,22 +3448,24 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 .btn-create-project {
     
     position: absolute;
+    display: inline-block;
     
     margin-top: 5% !important;
     
-    font-family: 'Century Gothic';
-    font-size: 4vw;
+    font-family: 'Raleway' !important;
+    font-size: 3vw !important;
     font-weight: 800;
-    /*font-variant: small-caps;*/
+    
+    line-height: 80px !important;
 
     width: 27% !important;
-    height: 30% !important;
-    /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
+    height: 100px !important;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 51.5% 44% no-repeat !important;
 
     color: rgba(255,255,255,.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
-    border: 1px solid rgba(255,255,255,.5) !important;
+    border: none;
     border-radius: 20px;
     background-color: rgba(10,60,10,.9) !important;
     box-shadow: 1px 1px 1px 1px rgba(130,130,130,.7);
@@ -3803,10 +3740,11 @@ a[data-tooltip]::after
 }
 a[data-tooltip]::before
 {
-    font-size: 20px;
+    font-size: 3vw;
     font-weight: 600;
 
-    padding: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
     /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
@@ -3819,7 +3757,7 @@ a[data-tooltip]::before
 
     color: rgba(255,255,255,1);
     border-radius: 5px;
-    background: rgba(200,100,100,.8);
+    background: rgba(20,10,10,1);
     text-shadow: 1px 1px 1px rgba(20,20,20,.8);
 }
 a[data-tooltip]::after
@@ -3857,7 +3795,7 @@ a[data-tooltip][data-placement='left']::after
     margin-right: 4px;
 
     border-right: none;
-    border-left-color: rgba(200,100,100,.5);
+    border-left-color: rgba(2,1,1,.9);
 }
 
 /* right tooltip */
@@ -3915,7 +3853,7 @@ a[data-tooltip][data-placement='bottom']::after
     margin-top: 4px;
 
     border-top: none;
-    border-bottom-color: rgba(200,100,100,.8) ;
+    border-bottom-color: rgba(2,1,1,.9) ;
 }
 
 
@@ -4245,13 +4183,14 @@ a[data-tooltip][data-placement='bottom']::after
   flex-wrap: wrap;
   display: inline-block;
   width: 22.92em;
-  height: 53.46em;
+  height: auto;
   margin-right: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
   border-radius: 0.5em;
   background-color: #fff;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
   position: relative;
+  padding-bottom: 5vh;
 }
 
 .card-top {
@@ -4319,6 +4258,11 @@ a[data-tooltip][data-placement='bottom']::after
   color: #000;
 }
 
+.project-card-number {
+    font-weight: bold;
+    color: black;
+}
+
 .progress {
   height: 0.31em;
   width: 60%;
@@ -4371,6 +4315,7 @@ a[data-tooltip][data-placement='bottom']::after
 .content {
   display: flex column;
   position:relative;
+  margin-top: -15%;
 }
 
 .details {
@@ -4470,11 +4415,14 @@ a, .sec-contact .btn {
 }
 
 .navbar a {
-  font-size: 16px;
+  font-size: 2vw;
+  font-family: 'Poiret One';
+  color: #fff;
 }
 
 .navbar .fa-external-link {
   font-size: 10px;
+    color: #fff;
 }
 
 
@@ -4550,6 +4498,7 @@ hr {
 /*Header*/
 .navbar-default {
   background: #fff;
+  
 }
 
 .navbar .fa-external-link {
@@ -4600,7 +4549,7 @@ hr {
 
 /*About*/
 .sec-about a {
-  color: #000;
+  color: #f00;
 }
 .sec-about a:hover, .sec-about a:focus {
   color: #ad0000;
@@ -4926,9 +4875,11 @@ footer {
 }
 
 .project-card-summary {
-      color: rgba(30,30,30,0.9);
+      color: rgba(20,20,20,0.9);
   text-align: center;
+  text-shadow: 0 0 1px rgba(50,50,50,0.8);
   width: 70%;
+    /*background-color: rgba(10,255,100,0.03);*/
   margin: 0 auto;
   margin-bottom: 1em;
   font-size: 1.2vw;
@@ -4938,21 +4889,29 @@ footer {
 
 
 .project-card-done-so-far-one {
-    display: inline-block;
-       color: rgba(30,30,30,0.9);
+  display: inline-block;
+  color: rgba(30,30,30,0.9);
   text-align: left;
+   text-shadow: 0 0 1px rgba(50,50,50,0.4);
   width: 70%;
   margin: 0 20px;
   margin-bottom: 0.1em;
   font-size: 1.2vw;
+  /*line-height: 0.9;*/
   /*height: 3.19em;*/
   overflow: hidden;
   margin-left: 15%;
+  box-shadow: 2px 2px 2px rgba(100,100,100,0.2);
+  padding: 5px;
+  border-radius: 10px 3px 10px 3px;
+
+  /*font-style: italic;*/
 }
 
 .house-divider-unicode {
          color: rgba(20,10,80,0.9);
          text-align: center;
+         padding-bottom: 3vh;
 }
 
 /*Knockout Text*/

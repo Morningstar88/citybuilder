@@ -10,33 +10,6 @@
     </style>
 
 
-
-
-    
-
-
-
-
-
-
-
-
-
-  
-
-      <!-- NAVBAR -->
-	<!--	<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
-			<div class="container navbar-container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!--<a href="#openModal" class="navbar-brand">What we do!!!!!</a>-->
-	<!--			</div>
-				<div id="navbar" class="navbar-collapse collapse">
 				    	<%= if @user do %>
 <div class="hello-user">
   <!--<span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
@@ -46,28 +19,9 @@
   <% end %>
 </div>
 <% else %>
-<!--<div class="login-div">-->
-<!--  Hello!-->
- <!-- <a href="/users/signin" class="login-multicolored">
-      <span class="login-multi-1">L</span><span class="login-multi-2">o</span><span class="login-multi-3">g</span><span class="login-multi-4">i</span><span class="login-multi-5">n</span></a>
-      </div>
-       <a href="/users/new" class="signup-multicolored">
-      <span class="signup-multi-1">S</span><span class="signup-multi-2">i</span><span class="signup-multi-3">g</span><span class="signup-multi-4">n</span><span class="signup-multi-5">u</span><span class="signup-multi-6">p</span></a>
-<!--</div>-->
+
  <!--<% end %>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"> Money</a></li>
-						<li><a href="#about">Search</a></li>
-						<li><a href="#portfolio">Build</a></li>
-			
-					<!--<li><a href="#blog">News</a></li>-->
-	<!--				</li>
-					</ul>
-				</div>
-		
-			</div>
-		</nav>
-   
+				
 
 
 <!--		<%= if @user do %>-->
@@ -79,53 +33,11 @@
 <!--  <% end %>-->
 <!--</div>-->
 <!--<% else %>-->
-<!--<div class="login-div">-->
-<!--  Hello!-->
-<!--  <a href="/users/signin" class="login-multicolored">-->
-<!--      <span class="login-multi-1">L</span><br><span class="login-multi-2">O</span><br><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>-->
-<!--      </div>-->
-<!--       <a href="/users/new" class="signup-multicolored">-->
-<!--      <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>-->
-<!--</div>-->
+<
 <!--<% end %>-->
 	</header>
-	 <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
+	 <%= link("New Project", to: post_path(@conn, :new), "data-tooltip": " Build!!!!!!!!!!!        ", "data-placement": "bottom", class: "btn btn-create-project")%>
 	
-
-		
-		
-<!-- OLD CITYBUILDER PIC-->
-
-	<!--<div class="disappear-on-scroll">-->
-
-	<!--<section class="full-width-img">-->
-		
-	<!--	</section>-->
-
-<!--<div class="text">-->
-<!--  <svg>-->
-<!--   <defs>-->
-<!--     <mask id="mask" x="0" y="0" width="100%" height="100%" >-->
-       <!-- alpha rectangle -->
-       <!-- rectángulo alfa -->
-<!--       <rect id="alpha" x="0" y="0" width="100%" height="100%"/>-->
-       <!-- All text that you want -->
-       <!-- Coloca todo el texto que necesites -->
-<!--       <text id="title" x="50%" y="0" dy="1.58em">Citybuilder. Brick by Brick;</text>-->
-       <!--<text id="subtitle" x="50%" y="20%" dy="5.8em">Creating jobs. Regenerating cities.</text>-->
-<!--     </mask>-->
-<!--    </defs>-->
-    <!-- Apply color here! -->
-    <!-- Color aquí -->
-<!--    <rect id="base" x="0" y="0" width="100%" height="100%"/>-->
-<!--  </svg>-->
-<!--</div>-->
-
-<!--</div>-->
-
-<!-- END OLD CITYBUILDER PIC DISPLAY -->
-
-
 <div id="postModal" class="modalDialog">
   <div>	<a href="#close" id="closePostModal" title="Close" class="close">X</a>
     <section class="intro"></section>
@@ -138,9 +50,6 @@
 
 <br><br>
 <div class="center-wrap">
-  <br><br>
-
-<br><br>
 
  <br>
 <table id="posts" class="table posts flex-table-posts">

@@ -53,8 +53,7 @@
     <%= textarea f, :small_pic_1_caption, class: "form-control form-control-title small-pic-1-caption pic-caption", placeholder: "Title for first pic"%>
     <%= error_tag f, :small_pic_1_caption %>
   </div>
-  
-    <br><br>  <br><br>
+    <br><br><br><br>
   
     <div class="form-group">
     <%= label f, :project_location, class: "control-label" %>

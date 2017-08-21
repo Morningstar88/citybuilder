@@ -3452,16 +3452,22 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     
     margin-top: 5% !important;
     
+
+    display: inline;
+    
     font-family: 'Raleway' !important;
-    font-size: 3vw !important;
+    font-size: 2vw !important;
+
     font-weight: 800;
     
     line-height: 80px !important;
 
     width: 27% !important;
-    height: 100px !important;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 51.5% 44% no-repeat !important;
 
+    height:100px !important;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 52.5% 44% no-repeat !important;
+
+    line-height: 2px;
     color: rgba(255,255,255,.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
@@ -4190,7 +4196,8 @@ a[data-tooltip][data-placement='bottom']::after
   background-color: #fff;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
   position: relative;
-  padding-bottom: 5vh;
+  padding-bottom: 3em;
+
 }
 
 .card-top {
@@ -4415,9 +4422,8 @@ a, .sec-contact .btn {
 }
 
 .navbar a {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: 'Poiret One';
-  color: #fff;
 }
 
 .navbar .fa-external-link {

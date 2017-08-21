@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin Sans:200,300,400,500,600,700,800');
-@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Open+Sans:200,300,400|Cutive Mono:200,300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,700|Montserrat:100,200,300,400,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400,500|Open+Sans:200,300,400|Cutive Mono:200,300,400,500,600|Poiret+One:200,300,400');
 
 /* https://en.wikipedia.org/wiki/Psi_(letter) */
 
@@ -3516,15 +3516,18 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     
     margin-top: 5% !important;
     
-    font-family: 'Century Gothic';
-    font-size: 4vw;
+    display: inline;
+    
+    font-family: 'Raleway' !important;
+    font-size: 2vw !important;
     font-weight: 800;
     /*font-variant: small-caps;*/
 
     width: 27% !important;
-    height: 30% !important;
-    /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
+    height:100px !important;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 52.5% 44% no-repeat !important;
 
+    line-height: 2px;
     color: rgba(255,255,255,.9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
@@ -4245,13 +4248,14 @@ a[data-tooltip][data-placement='bottom']::after
   flex-wrap: wrap;
   display: inline-block;
   width: 22.92em;
-  height: 53.46em;
+  height: auto;
   margin-right: 2em;
   margin-bottom: 2em;
   border-radius: 0.5em;
   background-color: #fff;
   box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
   position: relative;
+  padding-bottom: 3em;
 }
 
 .card-top {
@@ -4470,7 +4474,8 @@ a, .sec-contact .btn {
 }
 
 .navbar a {
-  font-size: 16px;
+  font-size: 1.5vw;
+  font-family: 'Poiret One';
 }
 
 .navbar .fa-external-link {

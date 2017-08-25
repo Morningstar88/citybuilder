@@ -2,7 +2,10 @@
   type='text/css'>
   
   <style>
-    body {background-color: rgba(255,255,255,0.9);}
+    body {background-color: rgba(255,255,255,0.9);
+          
+         }
+    
   </style>
   
  <h2 class="form-main-title">Build a Project</h3>
@@ -89,61 +92,68 @@
       <h3 class="form-title-text">You have 3 spaces. Let people know where you're at.</h3>
       </div>
          <h1 class="form-fields-title">Progress to date </h1>
+
+
+          <!-- FIRST DONE SO FAR BOX-->
+
+
+          <div class="container" style="border:1px solid black;">
+<div class="row" style="margin:10px">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-block">
+        <div class="text-center">
+        <%= textarea f, :done_so_far_one_title, rows: "1",cols: "40", className: "form-control", placeholder: "Title1" %>
+        <%= error_tag f, :done_so_far_one_title %></h2>  
+        
+        <%= textarea f, :done_so_far_one, rows: "10",cols: "40", className: "form-control", placeholder: "What have you done so far?" %> 
+        <%= error_tag f, :done_so_far_one %> 
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-block">
+        <div class="text-center">
+        <%= textarea f, :done_so_far_two_title, rows: "1",cols: "40", className: "form-control", placeholder: "Title2" %> 
+        <%= error_tag f, :done_so_far_two_title %>
+        <%= textarea f, :done_so_far_two, rows: "10",cols: "40", className: "form-control", placeholder: "What's the second thing you did?" %>
+        <%= error_tag f, :done_so_far_two %>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-4">
+    <div class="card">
+      <div class="card-block">
+        <div class="text-center">
+        <%= textarea f, :done_so_far_three_title, rows: "1",cols: "40", className: "form-control", placeholder: "Title3" %> 
+        <%= error_tag f, :done_so_far_three_title %>
+        <%= textarea f, :done_so_far_three, rows: "10",cols: "40", className: "form-control", placeholder: "What's the third step you took?" %>
+        <%= error_tag f, :done_so_far_three %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
          
          
-         <!-- FIRST DONE SO FAR BOX-->
-             <div class="row">
-        <div class="col-sm-4 lowest-dsf-1">
-                  <i class="fa fa-4x fa-paint-brush"></i>
-                    <h2 class="done-so-far-title-one">
-                      <!-- FIRST TITLE -->
-    <div>
-    <%= label f, :done_so_far_one_title, class: "control-label done-so-far-title-one" %>
-    <%= textarea f, :done_so_far_one_title, class: "form-control done-so-far-title-one", placeholder: "What have you done so far?"  %>
-    <%= error_tag f, :done_so_far_one_title %></h2>
-  </div>
-   <div class="col-sm-4 middle-dsf-2">
-          <i class="fa fa-4x fa-code"></i>
-       <h2 class="done-so-far-title-two">
-         <!-- SECOND TITLE -->
-      <div>
-    <%= label f, :done_so_far_two_title, class: "control-label done-so-far-title-two" %>
-    <%= textarea f, :done_so_far_two_title, class: "form-control done-so-far-title-two", placeholder: "What's the second thing you did?"  %>
-    <%= error_tag f, :done_so_far_two_title %></h2>
-  </div>
-  <!-- THIRD TITLE -->
-         <div class="col-sm-4 highest-dsf-3">
-          <i class="fa fa-4x fa-tablet"></i>
-          <h2 class="done-so-far-title-three">
-     <div>
-    <%= label f, :done_so_far_three_title, class: "control-label done-so-far-title-three" %>
-    <%= textarea f, :done_so_far_three_title, class: "form-control done-so-far-title-three", placeholder: "What's the third step you took?"  %>
-    <%= error_tag f, :done_so_far_three_title %></h2>
-  </div>
-  </div>
-  
-  
-         <!-- FIRST TEXT -->
-      <div>
-    <%= label f, :done_so_far_one, class: "control-label done-so-far-text-one" %>
-    <%= textarea f, :done_so_far_one, class: "form-control done-so-far-text-one", placeholder: "The first thing you did."  %>
-    <%= error_tag f, :done_so_far_one %>
-  </div>
-  
-  <!-- SECOND DONE SO FAR BOX g -->
-  
- 
-      <div>
-    <%= label f, :done_so_far_two, class: "control-label" %>
-    <%= textarea f, :done_so_far_two, class: "form-control form-control-body done-so-far-body", placeholder: "write here..."  %>
-    <%= error_tag f, :done_so_far_two %>
-  </div>
-   
-      <div>
-    <%= label f, :done_so_far_three, class: "control-label done-so-far-body" %>
-    <%= textarea f, :done_so_far_three, class: "form-control form-control-body done-so-far-body", placeholder: "write here..."  %>
-    <%= error_tag f, :done_so_far_three %>
-  </div>
+         
+       
   <br><br>
      <div>
     <%= label f, :name_of_gallery, class: "control-label name-of-gallery" %>

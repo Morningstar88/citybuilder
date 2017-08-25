@@ -22,10 +22,10 @@
     </div>
   <% end %>
   
-    <h2 class="form-fields-title">Upload Main Project Pic</h3>
+    <h2 class="form-fields-title"><a class="invis-link" data-tooltip="This is the title pic. It's the first photo users will see.">Upload Main Project Pic</a></h2>
     <div>
     <%= label f, :project_pic, class: "control-label" %>
-    <%= file_input f, :project_pic, class: "form-control form-control-title", placeholder: "Do you have a photo"  %>
+    <%= file_input f, :project_pic, class: "form-control form-control-title"  %>
     <%= error_tag f, :project_pic %>
   </div>
   

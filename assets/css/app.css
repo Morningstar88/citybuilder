@@ -4994,7 +4994,7 @@ footer {
    -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
    font-size: 3vw;
-  font-weight: 700;
+  font-weight: 400;
   width: 1200px;
   margin: 10px auto;
   text-align: center;
@@ -5004,9 +5004,31 @@ footer {
 /*New Form*/
 
 .form-title-text {
-    font-family: Raleway;
+    font-family: 'Raleway';
     font-weight: 300;
     text-align: center;
     line-height: 0.8;
-    font-size: 3vw;
+    font-size: 2.2vw;
 }
+
+ .form-fields-title {
+     font-family: 'Raleway';
+     text-shadow: 2px 2px 3px rgba(100,100,100,0.7);
+     color: rgba(1,90,1,0.9);
+     font-size: 3.2vw;
+      text-align:center;
+        font-weight: 300;
+  text-align: center;
+
+ }
+ 
+  .form-main-title {
+     font-family: 'Raleway';
+     text-shadow: 2px 2px 3px rgba(100,100,100,0.7);
+     color: rgba(1,90,1,0.9);
+     font-size: 4.2vw;
+      text-align:center;
+        font-weight: 300;
+  text-align: center;
+
+ }

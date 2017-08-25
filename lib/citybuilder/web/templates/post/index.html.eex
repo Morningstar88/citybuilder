@@ -91,9 +91,6 @@
 	</header>
 	 <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
 	
-
-		
-		
 <!-- OLD CITYBUILDER PIC-->
 
 	<!--<div class="disappear-on-scroll">-->

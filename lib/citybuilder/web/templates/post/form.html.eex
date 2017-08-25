@@ -5,11 +5,11 @@
     body {background-color: rgba(255,255,255,0.9);}
   </style>
   
-    <p class="knockout-text"></p>
+ <h2 class="form-main-title">Build a Project</h3>
 
      <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
-    <h3 class="form-title-text">~4 pics~ (one big, three small) + some project info. </h1>
-      <h3 class="form-title-text"> Good artwork energizes collaborators.</h3>
+    <h3 class="form-title-text">~4 pics~ (one big, three small) + your project information. </h1>
+      <h3 class="form-title-text"> Check out our example.</h3>
   <br><br>
 <!--<section class="full-width-img">-->
 <!--		</section>-->
@@ -22,7 +22,7 @@
     </div>
   <% end %>
   
-    <h2 class="knockout-medium">Upload Main Project Pic</h3>
+    <h2 class="form-fields-title">Upload Main Project Pic</h3>
     <div>
     <%= label f, :project_pic, class: "control-label" %>
     <%= file_input f, :project_pic, class: "form-control form-control-title", placeholder: "Do you have a photo"  %>
@@ -42,7 +42,7 @@
     <%= error_tag f, :body %>
   </div>
   <br><br>
-    <h2 class="knockout-medium">Upload Small Pic 1</h2>
+    <h2 class="form-fields-title">Upload Text Pic 1</h2>
     <div>
     <%= label f, :text_pic_one, class: "control-label" %>
     <%= file_input f, :text_pic_one, class: "form-control form-control-title", placeholder: "Please upload your first small photo"  %>
@@ -53,7 +53,8 @@
     <%= textarea f, :small_pic_1_caption, class: "form-control form-control-title small-pic-1-caption pic-caption", placeholder: "Title for first pic"%>
     <%= error_tag f, :small_pic_1_caption %>
   </div>
-    <br><br><br><br>
+  
+    <br><br>  <br><br>
   
     <div class="form-group">
     <%= label f, :project_location, class: "control-label" %>
@@ -87,7 +88,7 @@
     <h3 class="form-title-text"> Have you collected materials + researched the subject?</h1>
       <h3 class="form-title-text">You have 3 spaces. Let people know where you're at.</h3>
       </div>
-         <h1 class="progress-title spinner">Progress to date </h1>
+         <h1 class="form-fields-title">Progress to date </h1>
          
          
          <!-- FIRST DONE SO FAR BOX-->
@@ -152,7 +153,7 @@
 <br><br>
   
 
-    <h2 class="knockout-medium">Upload Small Pic 2</h2>
+    <h2 class="form-fields-title">Upload Small Pic 2</h2>
     <div>
     <%= label f, :text_pic_two, class: "control-label" %>
     <%= file_input f, :text_pic_two, class: "form-control form-control-title", placeholder: "Please upload your second small photo"  %>
@@ -163,7 +164,7 @@
     <%= textarea f, :small_pic_2_caption, class: "form-control form-control-title small-pic-2-caption pic-caption", placeholder: "Pic 2 Caption"  %>
     <%= error_tag f, :small_pic_2_caption %>
   </div>
-    <h2 class="knockout-medium">Upload Small Pic 3</h2>
+    <h2 class="form-fields-title">Upload Small Pic 3</h2>
     <div>
     <%= label f, :text_pic_three, class: "control-label" %>
     <%= file_input f, :text_pic_three, class: "form-control form-control-title", placeholder: "Please upload your third small photo"  %>

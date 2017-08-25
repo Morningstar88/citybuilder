@@ -3463,7 +3463,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-family: Montserrat;
 
     color: rgba(200,100,20,.9) !important;
-    background-color: rgba(10,10,10,.9) !important;
+   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
 }
 
 
@@ -3806,10 +3806,11 @@ a[data-tooltip]::after
 }
 a[data-tooltip]::before
 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 2.2vw;
+    font-weight: 200;
+    font-family: 'Raleway';
 
-    padding: 6px;
+    padding: 16px;
     /*
    * using data-tooltip instead of title so we 
    * don't have the real tooltip overlapping
@@ -3822,7 +3823,7 @@ a[data-tooltip]::before
 
     color: rgba(255,255,255,1);
     border-radius: 5px;
-    background: rgba(200,100,100,.8);
+    background: rgba(2,80,10,1);
     text-shadow: 1px 1px 1px rgba(20,20,20,.8);
 }
 a[data-tooltip]::after
@@ -3918,7 +3919,7 @@ a[data-tooltip][data-placement='bottom']::after
     margin-top: 4px;
 
     border-top: none;
-    border-bottom-color: rgba(200,100,100,.8) ;
+    border-bottom-color: rgba(2,100,10,.8) ;
 }
 
 

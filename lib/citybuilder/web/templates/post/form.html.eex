@@ -73,11 +73,11 @@
     <%= error_tag f, :future_plans_title %>
   </div>
   <br><br><br><br>
-  <div class="done-so-far-box">
-   <h3 class="form-title-text">Citybuilder projects have space for 4 pics:  </h1>
-    <h3 class="form-title-text">One main header photo and three smaller pics. </h1>
-      <h3 class="form-title-text">Write titles and make them pretty!</h3>
-      </div>
+  <!--<div class="done-so-far-box">-->
+  <!-- <h3 class="form-title-text">Citybuilder projects have space for 4 pics:  </h1>-->
+  <!--  <h3 class="form-title-text">One main header photo and three smaller pics. </h1>-->
+  <!--    <h3 class="form-title-text">Write titles and make them pretty!</h3>-->
+  <!--    </div>-->
     
 
   

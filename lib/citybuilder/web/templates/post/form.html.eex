@@ -130,7 +130,7 @@
     <%= error_tag f, :done_so_far_one %>
   </div>
   
-  <!-- SECOND DONE SO FAR BOX -->
+  <!-- SECOND DONE SO FAR BOX g -->
   
  
       <div>

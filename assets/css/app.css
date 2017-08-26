@@ -5044,4 +5044,34 @@ footer {
      text-decoration: none;
  }
  
+ .progress-container {
+     border: 1px solid rgba(100,100,100,0.4);
+     padding: 2vw;
+     background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
+ }
+ 
+ .form-progress-title {
+    
+     /*color: rgba(02,100,10,0.8) !important;*/
+     font-family: 'Open Sans';
+         text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+       font-size: 2.2vw !important;
+      /*     border-bottom: 1px solid rgba(200,200,200,0.3);*/
+      /*border-length: 0 0 15px 0;*/
+      /*border-radius: 10px;*/
+      line-height: 10px;
+        color: rgba(1,90,1,0.9) !important;
+        font-weight: 300;
+ }
  /*s*/
+ .form-progress-text {
+          font-family: 'Open Sans';
+         text-shadow: 2px 2px 2px rgba(100,100,100,0.6);
+       font-size: 2.2vw !important;
+      /*     border-bottom: 1px solid rgba(200,200,200,0.3);*/
+      /*border-length: 0 0 15px 0;*/
+      /*border-radius: 10px;*/
+      line-height: 10px;
+        color: rgba(20,20,20,0.9) !important;
+        font-weight: 300;
+ }

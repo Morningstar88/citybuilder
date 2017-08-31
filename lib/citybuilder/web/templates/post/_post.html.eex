@@ -41,16 +41,20 @@
     <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
 
     <!--<a href="#postModal" id="postModalShow" data-post-id="<%#= @post.id %>" class="btn btn-read-post unicode-lg"> 📖 </a>-->
-    <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+    <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " ☺read ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
 
     <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
+      
+
 
       <%= if @upvote do %>
         <%= link " #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md unicode-lg upvote-btn upvote-delete-btn upvote-font" %>
       <% else %>
-        <%= link(" #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "data-tooltip": "🚀💖", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
+        <%= link(" #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "data-tooltip": "🚀upvote", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
       <% end %>
     </span>
+      <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " edit ", "data-placement": "right", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
+  <%= link " 🌀 ", to: post_path(@conn, :delete, @post),"data-tooltip": "delete  ",  "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md unicode-lg" %></span>
   </div>
 </div>
    <br><br>
@@ -60,8 +64,6 @@
 <!-- OLD PLACEMENT-- NEEDS IF USER DO -->
  <!--  <br><br>-->
  <!-- <%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
- <!--  <%#= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " Edit My Post ⚔ ", "data-placement": "bottom", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>-->
- <!-- <%#= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %></span>-->
  <!--<br><br><br>-->
  
  <!-- END OLD PLACEMENT -->

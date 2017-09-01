@@ -75,8 +75,7 @@
 <!--<% end %>-->
 	</header>
 	 <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
-
-<h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
+<br><br><br>
 <div class="center-wrap">
 <table id="posts" class="table posts flex-table-posts">
  
@@ -88,6 +87,8 @@
   
 </table>
 </div>
+
+<h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
 <div class="grid" id="positive-technology"></div>
 <!-- END OLD CITYBUILDER PIC DISPLAY -->
 
@@ -115,9 +116,9 @@
 <script>
 
 var Settings = {
-  subreddit : 'btc',
+  subreddit : 'PositiveTechnology',
   after: 'o',
-  limit: 25
+  limit: 12
 };
 
 // let d = new Date; document.getElementById("date").innerHTML = d.toUTCString();;

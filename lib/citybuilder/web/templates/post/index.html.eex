@@ -77,6 +77,17 @@
 	 <%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
 
 <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
+<div class="center-wrap">
+<table id="posts" class="table posts flex-table-posts">
+ 
+    <tbody>
+<%= for post <- @posts do %>
+    <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
+<% end %>
+    </tbody>
+  
+</table>
+</div>
 <div class="grid" id="positive-technology"></div>
 <!-- END OLD CITYBUILDER PIC DISPLAY -->
 
@@ -92,22 +103,7 @@
 </div>
 
 <br><br>
-<div class="center-wrap">
-  <br><br>
 
-<br><br>
-
- <br>
-
-<table id="posts" class="table posts flex-table-posts">
- 
-    <tbody>
-<%= for post <- @posts do %>
-    <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
-<% end %>
-    </tbody>
-  
-</table>
 
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

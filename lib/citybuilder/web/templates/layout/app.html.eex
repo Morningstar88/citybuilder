@@ -28,7 +28,7 @@
   </style>
 
   <body>
-  <nav class="navbar navbar-default navbar-inverse bg-inverse">
+  <nav class="navbar navbar-default navbar bg-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     

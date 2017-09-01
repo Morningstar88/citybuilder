@@ -99,11 +99,13 @@
 
  <br>
 <table id="posts" class="table posts flex-table-posts">
-  <tbody>
+ 
+    <tbody>
 <%= for post <- @posts do %>
     <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
 <% end %>
-  </tbody>
+    </tbody>
+  
 </table>
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

@@ -41,6 +41,9 @@ nav{
 
 
 }
+tbody{
+    display:flex;
+}
 
 /* Media Queries */
 
@@ -975,6 +978,7 @@ svg > rect
 .flex-table-posts
 {
     display: flex;
+    flex-direction:row;
 
     margin-top: 19%;
     /*width: 550%;*/

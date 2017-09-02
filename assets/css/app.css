@@ -43,7 +43,30 @@ tbody {
     display: flex;
 }
 
+.header-image{
+    height: 40%;
+    box-shadow: 2px 2px 2px rgba(100,100,100,0.5);
+}
+.citybuilder-title {
+    position: absolute;
+    background: rgba(20,20,20,0.4);
+    font-size: 5vw;
+    font-family: 'Raleway';
+    font-weight: 400;
+    width: 600px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 30%;
+    margin-left: 5%;
+    border-radius: 2px 10px 2px 10px;
+        -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    text-shadow: 2px 2px 2px rgba(20,20,20,0.4);
+}
 
+.citybuilder-c {
+    font-weight: 400;
+}
 
 /* Media Queries */
 
@@ -3458,17 +3481,20 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 
     position: absolute;
 
-    margin-top: 5% !important;
+    margin-top: -50% !important;
+    margin-left: 25% !important;
 
     display: inline;
+    
+    font-variant: small-caps;
 
     font-family: 'Raleway' !important;
-    font-size: 2vw !important;
+    font-size: 3.5vw !important;
     font-weight: 800;
     /*font-variant: small-caps; d*/
-    width: 27% !important;
+    width: auto !important;
     height: 100px !important;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 52.5% 44% no-repeat !important;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg) 52.5% 44% no-repeat !important;*/
 
     line-height: 2px;
     color: rgba(255, 255, 255, .9) !important;
@@ -3476,9 +3502,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px solid rgba(255, 255, 255, .5) !important;
     border-radius: 20px;
-    background-color: rgba(10, 60, 10, .9) !important;
+    background-color: rgba(200, 255, 255, .09) !important;
     box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7);
-    text-shadow: 2px 1px 2px rgba(20, 20, 30, .3);
+    text-shadow: 2px 1px 2px rgba(20, 20, 30, .8);
 }
 
 .btn-read-post {
@@ -3736,7 +3762,7 @@ a[data-tooltip]::before {
 
     color: rgba(255, 255, 255, 1);
     border-radius: 5px;
-    background: rgba(2, 80, 10, 1);
+    background: rgba(2, 80, 80, 1);
     text-shadow: 1px 1px 1px rgba(20, 20, 20, .8);
 }
 

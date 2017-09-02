@@ -64,7 +64,11 @@
 <!--      <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>-->
 <!--</div>-->
 <!--<% end %>-->
-<%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Create a new Project ", "data-placement": "bottom", class: "btn btn-create-project")%>
+<div class="header-wrap">
+    <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder</h1>
+<img class="header-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg">
+</div>
+<%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
     <br>
     <br>
     <br>

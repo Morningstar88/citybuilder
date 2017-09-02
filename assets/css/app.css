@@ -3582,7 +3582,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 .upvote-btn {
-    width: 50%;
+    width: 44%;
 }
 
 .fork-count {
@@ -4878,24 +4878,29 @@ footer {
 }
 
 .project-card-title {
-    color: rgba(10, 120, 70, 0.9);
+    color: rgba(10, 100, 70, 0.9);
     font-weight: bold;
     text-align: center;
     margin-top: 2em;
     margin-bottom: 1em;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
     font-variant: small-caps;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 1px rgba(10,80,80,0.79);
+    
 }
 
 .project-card-summary {
-    color: rgba(30, 30, 30, 0.9);
+    color: rgba(10, 10, 10, 0.9);
     text-align: center;
+   font-weight: bold;
     width: 70%;
     margin: 0 auto;
     margin-bottom: 1em;
     font-size: 1.2vw;
     /*height: 3.19em;*/
     overflow: hidden;
+    letter-spacing: 1px;
 }
 
 
@@ -4910,6 +4915,7 @@ footer {
     /*height: 3.19em;*/
     overflow: hidden;
     margin-left: 15%;
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.9);
 }
 
 .house-divider-unicode {

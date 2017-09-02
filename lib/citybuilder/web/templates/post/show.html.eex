@@ -1,173 +1,168 @@
 <style>
-  body {
-    background-color: rgba(248,255,248,0.9);
-    }
-</style> 
- 
- <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
- 
- <!--f https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
-
-  <section id="home" class="">
+body {
+    background-color: rgba(248, 255, 248, 0.9);
+}
+</style>
+<img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>" />
+<!--f https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
+<section id="home" class="">
     <h1 class="main-heading"><span class="heading-opaque-background"><%= @post.title %></span></h1>
-  </section>
-  
-  <div class="project-wrapper">
-
-  <section id="about" class="sec-about">
-    <div class="container">
-      <h1 class="project-title"><%= @post.title %></h1> <!-- ADD TO FORM AND DATABASE -->
-
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <p class="summary-text"><%= @post.body %></p>
-        </div>
-      </div>
-    </div>
-  </section>
-     <!--<div class="row" sss-->
-        <div class="">
- <img class="text-pic-one center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>"/>
-        </div>
-        <br><br> <br><br> <br><br>
-        
-  <div class="our-future-plans sec-about container">
-      <h1 class="future-plans-title">We're free<span class="eurospinner">:</span> <span class="future-plans"><%= @post.future_plans_title %></span></h1>
-     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-  
-    <p class="plan-text"><%= @post.plan %></p>
-    </div>
-    </div>
-  </div>
-  <div class="">
-        <img class="text-pic-two center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>"/>
-        </div>
-  <section id="services" class="sec-services">
-    <div class="container">
-      <h1 class="progress-title spinner">Progress to date </h1>  <!-- OPTIONAL ADD TO FORM AND DATABASE -->
-
-      <div class="row">
-        <div class="col-sm-4 lowest-dsf-1">
-          <i class="fa fa-4x fa-paint-brush"></i>
-
-          <h2 class="done-so-far-title-one"><%= @post.done_so_far_one_title %></h2>
-
-          <p class="done-so-far-text-one"><%= @post.done_so_far_one %></p>
-        </div>
-
-        <div class="col-sm-4 middle-dsf-2">
-          <i class="fa fa-4x fa-code"></i>
-
-          <h2 class="done-so-far-title-two"><%= @post.done_so_far_two_title %></h2>
-
-          <p class="done-so-far-text-two"><%= @post.done_so_far_two %></p>
-        </div>
-
-        <div class="col-sm-4 highest-dsf-3">
-          <i class="fa fa-4x fa-tablet"></i>
-
-          <h2 class="done-so-far-title-three"><%= @post.done_so_far_three_title %></h2>
-
-          <p class="done-so-far-text-three"><%= @post.done_so_far_three %></p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-           <img class="text-pic-three center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>"/>
-
-  <section id="folio" class="sec-folio">
-    <div class="container">
-      <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
-
-      <hr />
-  </section>
-
-  <section id="contact" class="sec-contact">
-    <div class="container">
-      <h1 class="contact-title">Contact <span class="bitspinner">Us</span></h1>
-
-      <hr />
-
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
-          <form class="center-block" action="#" method="post">
-            <div class="form-group">
-              <label class="sr-only" for="inputName">Full name</label>
-
-              <input id="inputName" class="form-control" type="text" placeholder="Your Name" required />
+</section>
+<div class="project-wrapper">
+    <section id="about" class="sec-about">
+        <div class="container">
+            <h1 class="project-title"><%= @post.title %></h1>
+            <!-- ADD TO FORM AND DATABASE -->
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p class="summary-text">
+                        <%= @post.body %>
+                    </p>
+                </div>
             </div>
-
-            <div class="form-group">
-              <label for="inputMail" class="sr-only">Email Address</label>
-
-              <input id="inputMail" class="form-control" type="email" placeholder="yourmail@email.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="inputMessage" class="sr-only">Your Message</label>
-
-              <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-default center-block send-button" type="submit" value="Hire me">Send</button>
-            </div>
-          </form>
         </div>
-      </div>
+    </section>
+    <!--<div class="row" sss-->
+    <div class="">
+        <img class="text-pic-one center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_one, @post}) %>" />
     </div>
-  </section>
-
-  <footer id="footer">
-    <div class="container">
-      <ul class="soc-media-ul">
-        <li>
-          <a href="https://twitter.com/AlexDevero" class="fa fa-twitter" target="_blank"></a>
-        </li>
-
-        <li>
-          <a href="https://plus.google.com/u/0/+AlexDevero" class="fa fa-google-plus" target="_blank"></a>
-        </li>
-
-        <li>
-          <a href="https://cz.linkedin.com/pub/alex-devero/38/262/70/" class="fa fa-linkedin" target="_blank"></a>
-        </li>
-
-        <li>
-          <a href="https://www.behance.net/d3v3r0" class="fa fa-behance" target="_blank"></a>
-        </li>
-
-        <li>
-          <a href="mailto:example@mail.com" class="fa fa-envelope"></a>
-        </li>
-      </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="our-future-plans sec-about container">
+        <h1 class="future-plans-title">We're free<span class="eurospinner">:</span> <span class="future-plans"><%= @post.future_plans_title %></span></h1>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <p class="plan-text">
+                    <%= @post.plan %>
+                </p>
+            </div>
+        </div>
     </div>
-  </footer>
-</div>
+    <div class="">
+        <img class="text-pic-two center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_two, @post}) %>" />
+    </div>
+    <section id="services" class="sec-services">
+        <div class="container">
+            <h1 class="progress-title spinner">Progress to date </h1>
+            <!-- OPTIONAL ADD TO FORM AND DATABASE -->
+            <div class="row">
+                <div class="col-sm-4 lowest-dsf-1">
+                    <i class="fa fa-4x fa-paint-brush"></i>
+                    <h2 class="done-so-far-title-one"><%= @post.done_so_far_one_title %></h2>
+                    <p class="done-so-far-text-one">
+                        <%= @post.done_so_far_one %>
+                    </p>
+                </div>
+                <div class="col-sm-4 middle-dsf-2">
+                    <i class="fa fa-4x fa-code"></i>
+                    <h2 class="done-so-far-title-two"><%= @post.done_so_far_two_title %></h2>
+                    <p class="done-so-far-text-two">
+                        <%= @post.done_so_far_two %>
+                    </p>
+                </div>
+                <div class="col-sm-4 highest-dsf-3">
+                    <i class="fa fa-4x fa-tablet"></i>
+                    <h2 class="done-so-far-title-three"><%= @post.done_so_far_three_title %></h2>
+                    <p class="done-so-far-text-three">
+                        <%= @post.done_so_far_three %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <img class="text-pic-three center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>" />
+    <section id="folio" class="sec-folio">
+        <div class="container">
+            <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
+            <hr />
+    </section>
+    <section id="contact" class="sec-contact">
+        <div class="container">
+            <h1 class="contact-title">Contact <span class="bitspinner">Us</span></h1>
+            <hr />
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <form class="center-block" action="#" method="post">
+                        <div class="form-group">
+                            <label class="sr-only" for="inputName">Full name</label>
+                            <input id="inputName" class="form-control" type="text" placeholder="Your Name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMail" class="sr-only">Email Address</label>
+                            <input id="inputMail" class="form-control" type="email" placeholder="yourmail@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="sr-only">Your Message</label>
+                            <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default center-block send-button" type="submit" value="Hire me">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <ul class="soc-media-ul">
+                <li>
+                    <a href="https://twitter.com/AlexDevero" class="fa fa-twitter" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/u/0/+AlexDevero" class="fa fa-google-plus" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://cz.linkedin.com/pub/alex-devero/38/262/70/" class="fa fa-linkedin" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/d3v3r0" class="fa fa-behance" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="mailto:example@mail.com" class="fa fa-envelope"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    </div>
     </p>
     <p class="display-post-body-show">
-   </p>
-    <br><hr>
+    </p>
+    <br>
+    <hr>
     <div class="bitspinner">
-      <h1><span class="eurospinner"><span class="eurospinner bitspinner">C</span><span class="burgundy">o</span>mm</span><span class="bitspinner"><span class="orange">e</span>nts</span><span class="teal-jade">!</span></h1>
+        <h1><span class="eurospinner"><span class="eurospinner bitspinner">C</span><span class="burgundy">o</span>mm</span><span class="bitspinner"><span class="orange">e</span>nts</span><span class="teal-jade">!</span></h1>
     </div>
     <table id="comments">
-      <tbody>
-        <%= for comment <- @comments do %>
-        <%= render "_comment.html", conn: @conn, post: @post, comment: comment, upvote: @upvotes[comment.id], class: "comment-class" %>
-        <% end %>
-        <hr>
-        <br><br> <br><br> <br><br>
-      </tbody>
+        <tbody>
+            <%= for comment <- @comments do %>
+                <%= render "_comment.html", conn: @conn, post: @post, comment: comment, upvote: @upvotes[comment.id], class: "comment-class" %>
+                    <% end %>
+                        <hr>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+        </tbody>
     </table>
-
     <%= if @conn.assigns.user do %>
-      <%= render Citybuilder.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post), conn: @conn %>
-    <% else %>
-      <i class="you-must-be-signed">You must be <%= link "signed in", to: user_path(@conn, :signin) %> to comment on this post</i>
-    <% end %>
-     <br> <br> <br> <br> <br> <br> <br> <br>
-   </ul>
+        <%= render Citybuilder.Web.CommentView, "form.html", changeset: @comment_changeset, action: post_comment_path(@conn, :create, @post), conn: @conn %>
+            <% else %>
+                <i class="you-must-be-signed">You must be <%= link "signed in", to: user_path(@conn, :signin) %> to comment on this post</i>
+                <% end %>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    </ul>
 </div>

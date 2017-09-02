@@ -1,49 +1,52 @@
 <td>
-  <!--<h1 class="preview-title"><%#= @post.title %></h1>-->
-  <!--<p class="preview-text"><%#= truncate @post.body, length: 140, separator: " " %></p>-->
-  <!-- <p class="display-post-body-show">-->
-  <!--     <%#= @post.plan %>-->
-  <!--  </p>-->
-  <!--     <p class="display-post-body-show">-->
-  <!--     <%#= @post.done_so_far %>-->
-  <!--  </p>-->
-  <!--     <p class="display-post-body-show">-->
-  <!--     <%#= @post.project_pic %>-->
-  <!--  </p>-->
-<!--</td>-->
-
-
-
-
-<!-- Start Test Project Card -->
-<div class="card-container">
-  <div class="card-top learn">
- <img class="card-top.create card-top" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>"/>
- 
-    <span class="project-type"><%= @post.project_location %></span>
-   <div class="blur"></div>
-  </div>
-  <div class="content">
-    <div class="details">
-      <span> Active 4 days ago </span>
-      <span>...</span>
-    </div>
-    <div class="project-card-title"> <%= @post.title %></div> <!-- tried to add this and got assigns error: <%#= @post.title %> -->
-    <div class="project-card-summary"><%= truncate @post.body, length: 80, separator: " " %></div>
-    <h3 class="house-divider-unicode">~</h3>
-    <div style="text-align: center">
-    <div class="project-card-done-so-far-one">1. <%= @post.done_so_far_one_title %></div>
-      <div class="project-card-done-so-far-one">2. <%= @post.done_so_far_two_title %></div>
-        <div class="project-card-done-so-far-one">3. <%= @post.done_so_far_three_title %></div>
+    <!--<h1 class="preview-title"><%#= @post.title %></h1>-->
+    <!--<p class="preview-text"><%#= truncate @post.body, length: 140, separator: " " %></p>-->
+    <!-- <p class="display-post-body-show">-->
+    <!--     <%#= @post.plan %>-->
+    <!--  </p>-->
+    <!--     <p class="display-post-body-show">-->
+    <!--     <%#= @post.done_so_far %>-->
+    <!--  </p>-->
+    <!--     <p class="display-post-body-show">-->
+    <!--     <%#= @post.project_pic %>-->
+    <!--  </p>-->
+    <!--</td>-->
+    <!-- Start Test Project Card -->
+    <div class="card-container">
+        <div class="card-top learn">
+            <img class="card-top.create card-top" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>" />
+            <span class="project-type"><%= @post.project_location %></span>
+            <div class="blur"></div>
         </div>
-
-    <!--<a href="#postModal" data-post-id="<%#= @post.id %>" class="btn">Read More</a>-->
-    <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
-
-    <!--<a href="#postModal" id="postModalShow" data-post-id="<%#= @post.id %>" class="btn btn-read-post unicode-lg"> 📖 </a>-->
-    <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " ☺read ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
-
-    <span class="upvote-count", data-current-count="<%= @post.upvotes_count.count %>">
+        <div class="content">
+            <div class="details">
+                <span> Active 4 days ago </span>
+                <span>...</span>
+            </div>
+            <div class="project-card-title">
+                <%= @post.title %>
+            </div>
+            <!-- tried to add this and got assigns error: <%#= @post.title %> -->
+            <div class="project-card-summary">
+                <%= truncate @post.body, length: 80, separator: " " %>
+            </div>
+            <h3 class="house-divider-unicode">~</h3>
+            <div style="text-align: center">
+                <div class="project-card-done-so-far-one">1.
+                    <%= @post.done_so_far_one_title %>
+                </div>
+                <div class="project-card-done-so-far-one">2.
+                    <%= @post.done_so_far_two_title %>
+                </div>
+                <div class="project-card-done-so-far-one">3.
+                    <%= @post.done_so_far_three_title %>
+                </div>
+            </div>
+            <!--<a href="#postModal" data-post-id="<%#= @post.id %>" class="btn">Read More</a>-->
+            <!--s <span class="upvote-count", data-current-count="<%#= @post.upvotes_count.count %>">-->
+            <!--<a href="#postModal" id="postModalShow" data-post-id="<%#= @post.id %>" class="btn btn-read-post unicode-lg"> 📖 </a>-->
+            <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " ☺read ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+                <span class="upvote-count" , data-current-count="<%= @post.upvotes_count.count %>">
       
 
 
@@ -53,19 +56,21 @@
         <%= link(" #{@post.upvotes_count.count} ❤ ", to: post_upvote_path(@conn, :create, @post), "data-tooltip": "🚀upvote", "data-placement": "top", "ujs-method": "post", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md btn-edit-post unicode-lg upvote-btn upvote-add-btn upvote-font") %>
       <% end %>
     </span>
-      <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " edit ", "data-placement": "right", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
-  <%= link " 🌀 ", to: post_path(@conn, :delete, @post),"data-tooltip": "delete  ",  "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md unicode-lg" %></span>
-  </div>
-</div>
-   <br><br>
-   </div>
- </div>
-<br><br><br>
-<!-- OLD PLACEMENT-- NEEDS IF USER DO -->
- <!--  <br><br>-->
- <!-- <%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
- <!--<br><br><br>-->
- 
- <!-- END OLD PLACEMENT -->
-
-<!-- End Test Project Card -->
+                <%= link("✎", to: post_path(@conn, :edit, @post), "data-tooltip": " edit ", "data-placement": "right", class: "btn btn-default btn-md btn-edit-post unicode-lg ")%>
+                    <%= link " 🌀 ", to: post_path(@conn, :delete, @post),"data-tooltip": "delete  ",  "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-default btn-md unicode-lg" %>
+                        </span>
+        </div>
+    </div>
+    <br>
+    <br>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- OLD PLACEMENT-- NEEDS IF USER DO -->
+    <!--  <br><br>-->
+    <!-- <%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
+    <!--<br><br><br>-->
+    <!-- END OLD PLACEMENT -->
+    <!-- End Test Project Card -->

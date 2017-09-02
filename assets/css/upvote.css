@@ -1,11 +1,9 @@
 .upvote-delete-btn {
-  color: rgba(255,0,100,0.8) !important;
-  font-family: 'Century Gothic' !important;
-  font-size: 10vw;
+    color: rgba(255, 0, 100, 0.8) !important;
+    font-family: 'Century Gothic' !important;
+    font-size: 10vw;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 76% 36%;
     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     text-shadow: 1px 1px 1px rgba(230,20,20,0.3);
-  
-     
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 1px rgba(230, 20, 20, 0.3);
 }

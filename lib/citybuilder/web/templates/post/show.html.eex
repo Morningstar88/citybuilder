@@ -5,7 +5,7 @@ body {
 </style>
 <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>" />
 <!--f https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
-<section id="home" class="">
+<section>
     <h1 class="main-heading"><span class="heading-opaque-background"><%= @post.title %></span></h1>
 </section>
 <div class="project-wrapper">

@@ -1,4 +1,6 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:200,300|Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
 <style>
 body {
     background-color: rgba(255, 255, 255, 0.9);
@@ -8,7 +10,7 @@ body {
 
      <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
     <h3 class="form-title-text">~4 pics~ (one big, three small) + your project information. </h1>
-      <h3 class="form-title-text"> Check out our example.</h3>
+      <h3 class="form-title-text"> Check out our example *here*.</h3>
   <br><br>
 <!--<section class="full-width-img">-->
 <!--    </section>-->
@@ -23,9 +25,22 @@ body {
   
     <h2 class="form-fields-title"><a class="invis-link" data-tooltip="This is the title pic. It's the first photo users will see.">Upload Main Project Pic</a></h2>
 <div>
+    
+    <!-- TEST FORM UPLOAD -->
+    
+
+    <form id="form1" runat="server">
+        <input type='file' id="imgInp" />
+        <br>
+        <img id="blah" src="http://i.imgur.com/zAyt4lX.jpg" alt="your image" height="100" />
+    </form>
+    
+    <!-- END TEST FORM UPLOAD -->
+    
     <%= label f, :project_pic, class: "control-label" %>
-        <%= file_input f, :project_pic, class: "form-control form-control-title"  %>
+          <%= file_input f, :project_pic, class: "form-control form-control-title", id: "mainPicInput"  %>
             <%= error_tag f, :project_pic %>
+              
 </div>
 <br>
 <br>
@@ -193,3 +208,24 @@ body {
 <% end %>
     <div class="knockout">brick by brick</div>
     <!-- FOLLOWING THIS GUIDE http://wsmoak.net/2015/07/27/adding-fields-to-an-ecto-model-in-phoenix.html -->
+    
+    <script>
+    
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#blah').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    
+    $("#imgInp").change(function(){
+        readURL(this);
+    });
+   
+    </script>
+    

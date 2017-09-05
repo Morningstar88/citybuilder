@@ -32,14 +32,14 @@ body {
     <form id="form1" runat="server">
         <input type='file' id="imgInp" />
         <br>
-        <img id="blah" src="http://i.imgur.com/zAyt4lX.jpg" alt="your image" height="100" />
-    </form>
+     </form>
     
     <!-- END TEST FORM UPLOAD -->
     
     <%= label f, :project_pic, class: "control-label" %>
-          <%= file_input f, :project_pic, class: "form-control form-control-title", id: "mainPicInput"  %>
+          <%= file_input f, :project_pic, class: "form-control form-control-title", id: "imgInp"  %>
             <%= error_tag f, :project_pic %>
+                 <img id="blah" src="http://i.imgur.com/zAyt4lX.jpg" alt="your image" height="100" />
               
 </div>
 <br>

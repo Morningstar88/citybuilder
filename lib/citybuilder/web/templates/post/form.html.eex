@@ -29,10 +29,10 @@ body {
     <!-- TEST FORM UPLOAD -->
     
 
-    <form id="form1" runat="server">
-        <input type='file' id="imgInp" />
-        <br>
-     </form>
+    <!--<form id="form1" runat="server">-->
+    <!--    <input type='file' id="imgInp" />-->
+    <!--    <br>-->
+    <!-- </form>-->
     
     <!-- END TEST FORM UPLOAD -->
     

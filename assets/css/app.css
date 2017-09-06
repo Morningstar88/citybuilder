@@ -4229,7 +4229,7 @@ a[data-tooltip][data-placement='bottom']::after {
 }
 
 .card-top span.project-type {
-    width: 8.07em;
+    width: auto;
     height: 2.53em;
     position: absolute;
     z-index: 1;

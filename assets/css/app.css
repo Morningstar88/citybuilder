@@ -4246,6 +4246,8 @@ a[data-tooltip][data-placement='bottom']::after {
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
     text-shadow: 1px 1px 1px rgba(20, 20, 20, 0.4);
+    padding-left:4px;
+    padding-right:4px;
 }
 
 .card-top span.project-type.learn {

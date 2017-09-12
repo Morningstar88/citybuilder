@@ -1,6 +1,6 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:200,300|Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
 body {
     background-color: rgba(255, 255, 255, 0.9);
@@ -15,7 +15,7 @@ body {
 <!--<section class="full-width-img">-->
 <!--    </section>-->
   <!-- https://codepen.io/rexkirby/pen/Fdnlz -->
-
+  
 <%= form_for @changeset, @action, [multipart: true], fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
@@ -25,33 +25,11 @@ body {
   
     <h2 class="form-fields-title"><a class="invis-link" data-tooltip="This is the title pic. It's the first photo users will see.">Upload Main Project Pic</a></h2>
 <div>
-    
-    <!-- TEST FORM UPLOAD -->
-    
-
-    <!-- f <form id="form1" runat="server">-->
-    <!--    <input type='file' id="imgInp" />-->
-    <!--    <br>-->
-    <!-- </form>-->
-    
-    <!-- END TEST FORM UPLOAD -->
-    
-    <!-- 3 Smaller Pics
-
-https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-187023.jpeg
-        
-        
-        -->
-    
-    
-    
-        <!-- -->
-    
     <%= label f, :project_pic, class: "control-label" %>
-          <%= file_input f, :project_pic, class: "form-control form-control-title", id: "imgInp"  %>
+          <%= file_input f, :project_pic, class: "form-control form-control-title imgInp" %>
             <%= error_tag f, :project_pic %>
-                 <img id="blah" class="main-upload-pic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-122383.jpeg" alt="your image" height="100" />
-              
+              <img class="project-main-pic" src="http://i.imgur.com/zAyt4lX.jpg" alt="your image" height="100" />
+               
 </div>
 <br>
 <br>
@@ -87,9 +65,9 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-187023.jpeg
 <h2 class="form-fields-title">Upload Text Pic 1</h2>
 <div>
     <%= label f, :text_pic_one, class: "control-label" %>
-        <%= file_input f, :text_pic_one, class: "form-control form-control-title", id: "imgInp2", placeholder: "Please upload your first small photo"  %>
+        <%= file_input f, :text_pic_one, class: "form-control form-control-title imgInp", placeholder: "Please upload your first small photo"  %>
             <%= error_tag f, :text_pic_one %>
-              <img id="blah2" class="main-upload-pic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-187023.jpeg" alt="your image" height="100" />
+            <img class="text-pic-two center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Spider-Firework-Omiya-Japan.jpg/220px-Spider-Firework-Omiya-Japan.jpg" alt="your image" height="100" />
 </div>
 <br>
 <br>
@@ -202,27 +180,30 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-187023.jpeg
 </div>
 <br>
 <br>
-<h2 class="form-fields-title">Upload Small Pic 2</h2>
+<h2 class="form-fields-title">Upload Text Pic 2</h2>
 <div>
     <%= label f, :text_pic_two, class: "control-label" %>
-        <%= file_input f, :text_pic_two, class: "form-control form-control-title", placeholder: "Please upload your second small photo"  %>
+        <%= file_input f, :text_pic_two, class: "form-control form-control-title imgInp", placeholder: "Please upload your second small photo"  %>
             <%= error_tag f, :text_pic_two %>
+                <img class="text-pic-two center-block" src="http://images.dailyhive.com/20160630114533/Sasamat-Lake-PeteFlickr.jpg" alt="your image" height="100" />
 </div>
 <div>
     <%= label f, :small_pic_2_caption, class: "control-label small-pic-2-caption pic-caption" %>
         <%= textarea f, :small_pic_2_caption, class: "form-control form-control-title small-pic-2-caption pic-caption", placeholder: "Pic 2 Caption"  %>
             <%= error_tag f, :small_pic_2_caption %>
-</div>
+            </div>
 <h2 class="form-fields-title">Upload Small Pic 3</h2>
 <div>
     <%= label f, :text_pic_three, class: "control-label" %>
         <%= file_input f, :text_pic_three, class: "form-control form-control-title", placeholder: "Please upload your third small photo"  %>
             <%= error_tag f, :text_pic_three %>
+             <img class="text-pic-two center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hs-2009-25-e-full_jpg.jpg/277px-Hs-2009-25-e-full_jpg.jpg" alt="your image" height="100" />
 </div>
 <div>
     <%= label f, :small_pic_3_caption, class: "control-label small-pic-3-caption pic-caption" %>
         <%= textarea f, :small_pic_3_caption, class: "form-control form-control-title small-pic-3-caption pic-caption", placeholder: "Pic 3 Caption"  %>
             <%= error_tag f, :small_pic_3_caption %>
+              
 </div>
 <div class="form-group">
     <%= checkbox(f, :published) %>
@@ -251,49 +232,22 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-187023.jpeg
     <div class="knockout">brick by brick</div>
     <!-- FOLLOWING THIS GUIDE http://wsmoak.net/2015/07/27/adding-fields-to-an-ecto-model-in-phoenix.html -->
     
+ 
     <script>
     
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#blah').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#imgInp").change(function(){
-        readURL(this);
-    });
-    
-    </script>
-    
+ $(".imgInp").change(function() {
+  readURL(this);
+});
 
-    
-    <script>
-    
-    
-    
-       function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#blah2').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#imgInp2").change(function(){
-        readURL(this);
-    });
-    
-    
-   
+function readURL(input) {
+  var $formPic = $(input).siblings('img');
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $formPic.attr('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
     </script>
     <!-- -->

@@ -1,0 +1,78 @@
+BASIC DATABASE COMMANDS
+
+TO ACCESS RECORDS
+
+- For help:
+
+./bin/citybuilder --help   
+
+- To fire up remote console:
+
+./bin/citybuilder remote_console  
+
+- To list all records:
+
+Citybuilder.Repo.all Citybuilder.Stories.Post
+
+- To list all paths:
+
+ Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))    
+ 
+ - To list id, path and body:
+
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.id, &1.path, &1.body, &1.inserted_at, &1.updated_at})  
+
+- Basic query demo:
+
+https://asciinema.org/a/20n5wJZamyrgoTex8L1UnTVLv
+
+
+
+TO DELETE RECORDS (Not sure if this works yet)
+
+- Normal deletion
+
+- How to return posts as single paths. 
+
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))     
+returns: [1,2,3]
+
+post = Citybuilder.Repo.get 
+
+- Load Upvote_count
+
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.id, &1.path, &1.upvotes_count})  
+
+- Delete screencast
+
+https://asciinema.org/a/20n5wJZamyrgoTex8L1UnTVLv
+
+Citybuilder.Stories.Post, 1
+
+- If post has upvotes
+
+Citybuilder.Repo.delete post
+
+require Ecto.Query
+upvotes = Citybuilder.Repo.all(Ecto.Query.from(u in Citybuilder.Stories.Upvotes, where: u.post_id == 1))
+Citybuilder.Repo.delete_all upvotes
+
+-
+
+  def get_post!(id) do
+    from(p in Post,
+      where: p.id == ^id,
+      preload: [:topic, :original_post, :upvotes_count]
+    )
+    |> Repo.one!
+  end
+  
+  -
+  
+    def delete_post(%Post{} = post, %User{} = user) do
+    post
+    |> post_changeset()
+    |> put_change(:modified_by_id, user.id)
+    |> put_change(removal_key(user), true)
+    |> Repo.update
+  end

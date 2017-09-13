@@ -56,7 +56,7 @@ defmodule Citybuilder.Web.Router do
   end
 
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/
-
+  # COMMENTED OUT API
   # Other scopes may use custom stacks.
   # scope "/api", Citybuilder.Web do
   #   pipe_through :api

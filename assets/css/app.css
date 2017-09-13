@@ -237,7 +237,7 @@ tbody {
 
 /* Navbar when scrolled */
 
-=========================*/ .full-width-img {
+ .full-width-img {
     /*padding-top: 200px;*/
     height: 94vh !important;
     margin-top: -2%;
@@ -245,12 +245,12 @@ tbody {
     text-align: center;
 
     color: #fff;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpprogr') no-repeat center center;
     background-size: cover;
     box-shadow: 3px 3px 3px rgba(120, 120, 120, .8);
 
-    /* alt pics */
-    /* Peacock:
+    /* alt pics 
+    https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg 
  Orig street scene: http://i1159.photobucket.com/albums/p625/ivanrdvc/bg-cp-header_zps4ghnoxc7.jpg */
 }
 
@@ -3383,10 +3383,11 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 .publish-button {
-    font-family: Montserrat;
+    font-family: 'Raleway';
 
-    color: rgba(200, 100, 20, .9) !important;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
+    color: rgba(2, 100, 50, .9) !important;
+    background-color: white !important;
+    border: 1px 1px 1px rgba(20,20,20,0.8);
 }
 
 
@@ -3515,7 +3516,6 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-weight: 800;
 
     width: 55% !important;
-    /*background: url(https://dl.airtable.com/eocKeUdRxenq1HDGthYu_jack_and_bill_large.jpg) 30% 30% no-repeat !important;*/
     color: rgba(178, 70, 20, .9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
@@ -5025,7 +5025,7 @@ footer {
 .progress-container {
     border: 1px solid rgba(100, 100, 100, 0.4);
     padding: 2vw;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg') no-repeat center center;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg') no-repeat center center;
 }
 
 .form-progress-title {
@@ -5281,4 +5281,64 @@ h4 {
     position: absolute;
     height: 50%;
     width: 50%;
+}
+
+.move-form-title-down {
+    position: relative;
+    margin-top: 100%;
+    
+}
+
+/* Typing Animation */
+
+@keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+    
+}
+
+.typing-container {
+  position: relative;
+  
+}
+
+.typing {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+  font-family: 'Century Gothic';
+  color: rgba(2,1,10,0.8) !important;
+  text-shadow: 1px 0px 1px rgba(50,50,50,0.87);
+}
+
+.hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hiders p {
+  position: relative; 
+  clear: both; 
+  margin: 0;
+  float: right; /* makes animation go left-to-right */
+  width:0; /* graceful degradation: if animation doesn't work, these are invisible by default */
+  background: white; /* same as page background */
+  animation: typing 2s steps(30, end);
+  animation-fill-mode: both;  /* load first keyframe on page load, leave on last frame at end */
+}
+  
+.hiders p:nth-child(2) {
+  animation-delay: 2s;
+}
+.hiders p:nth-child(3) {
+  animation-delay: 4s;
+}
+.hiders p:nth-child(4) {
+  animation-delay: 6s;
+}
+.hiders p:nth-child(5) {
+  animation-delay: 8s;
 }

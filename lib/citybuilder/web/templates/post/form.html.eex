@@ -2,16 +2,59 @@
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
-body {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-</style>
-<h2 class="form-main-title">Build a Project</h3>
 
-     <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
+</style>
+
+<!--TEST PREVIEW-->
+
+<!--<form id="preview-form" class="pform">-->
+<!--  <input type="text" name="pform-text-in" size="40" maxlength="100" id="pform-text-in" class="pf_text_in2" />-->
+<!--<legend accesskey="1" align="top">Preview of Text</legend>-->
+<!--<textarea class="text_preview2"></textarea>-->
+<!--</form>-->
+
+<!--pf_text_in-->
+<!--text_preview-->
+
+<!--<h1 class="text_preview2"></h1>-->
+
+<!--END TEST PREVIEW-->
+
+<!--<h2 class="form-main-title">Build a Project</h3>-->
+
+  <br><br><br>
+
+<div class="typing-container">
+<!-- container div is required to set absolute positions within it, so that .typing and .hiders exactly overlap -->
+
+  <p class="typing">
+  
+   Welcome! To fill out this form you will need:  
+  ~4 pics~ (one big, three small) + your project information. 
+    Check out our example *here*. 
+  </p>
+
+  <div class="hiders">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+
+</div>
+
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <!-- 
+  
+    <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
     <h3 class="form-title-text">~4 pics~ (one big, three small) + your project information. </h1>
       <h3 class="form-title-text"> Check out our example *here*.</h3>
   <br><br>
+  
+  -->
 <!--<section class="full-width-img">-->
 <!--    </section>-->
   <!-- https://codepen.io/rexkirby/pen/Fdnlz -->
@@ -22,42 +65,41 @@ body {
       <p>Oops, something went wrong! Did you make any changes? If you didn't change anything, the post won't save.</p>
     </div>
   <% end %>
+  <br><br><br><br>  <br><br><br><br>
+  <div class="form-group">
+    <%= label f, :title, class: "control-label" %>
+        <%= text_input f, :title, class: "form-control form-control-title pf_text_in", placeholder: "Your project title" %>
+            <%= error_tag f, :title %>
+</div>
   
-    <h2 class="form-fields-title"><a class="invis-link" data-tooltip="This is the title pic. It's the first photo users will see.">Upload Main Project Pic</a></h2>
+ 
+  
+    <!--<h2 class="form-fields-title">Upload Main Project Pic</a></h2>-->
 <div>
+        <h1 class="main-heading"><span class="heading-opaque-background move-form-title-down text_preview">Your Awesome Title Here</span></h1>
     <%= label f, :project_pic, class: "control-label" %>
           <%= file_input f, :project_pic, class: "form-control form-control-title imgInp" %>
             <%= error_tag f, :project_pic %>
-              <img class="project-main-pic" src="http://i.imgur.com/zAyt4lX.jpg" alt="your image" height="100" />
+              <img class="project-main-pic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg" alt="your image" height="100" />
                
+
 </div>
+
+<!-- data-tooltip:
+
+<a class="invis-link" data-tooltip="This is the title pic. It's the first photo users will see.">
+    
+    -->
 <br>
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="form-group">
-    <%= label f, :title, class: "control-label" %>
-        <%= text_input f, :title, class: "form-control form-control-title", placeholder: "Your project title" %>
-            <%= error_tag f, :title %>
-</div>
+
+<h1 class="form-fields-title">Your Project in 20 Words</h1>
 <div class="form-group">
     <%= label f, :body, class: "control-label" %>
-        <%= textarea f, :body, class: "form-control form-control-body", placeholder: "Your project in 20 words!"  %>
+        <%= textarea f, :body, class: "form-control form-control-body", placeholder: "Make it snappy!"  %>
             <%= error_tag f, :body %>
 </div>
 <br>
@@ -67,43 +109,36 @@ body {
     <%= label f, :text_pic_one, class: "control-label" %>
         <%= file_input f, :text_pic_one, class: "form-control form-control-title imgInp", placeholder: "Please upload your first small photo"  %>
             <%= error_tag f, :text_pic_one %>
-            <img class="text-pic-two center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Spider-Firework-Omiya-Japan.jpg/220px-Spider-Firework-Omiya-Japan.jpg" alt="your image" height="100" />
+            <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo%20(3).jpg" alt="your image" height="100" />
 </div>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+
+
 <div>
     <%= label f, :small_pic_1_caption, class: "control-label small-pic-1-caption pic-caption" %>
         <%= textarea f, :small_pic_1_caption, class: "form-control form-control-title small-pic-1-caption pic-caption", placeholder: "Title for first pic"%>
             <%= error_tag f, :small_pic_1_caption %>
 </div>
+<br>
+<br>
+<br>
+<br>
+
+<h1 class="form-fields-title">Where, What, When?</h1>
 
 <div class="form-group">
     <%= label f, :project_location, class: "control-label",  data: [tooltip: " Create a new Project"] %>
         <%= text_input f, :project_location, class: "form-control form-control-body",  data: [tooltip: " Create a new Project"], placeholder: "Where are you? What City/State?",  data: [tooltip: " Create a new Project"] %>
             <%= error_tag f, :project_location %>
 </div>
+<br>
 <div>
     <%= label f, :plan, class: "control-label" %>
         <%= textarea f, :plan, class: "form-control form-control-body", placeholder: "What's your plan? Keep it bullet-pointed"  %>
             <%= error_tag f, :plan %>
 </div>
-<br>
 <br>
 <div>
     <%= label f, :future_plans_title, class: "control-label" %>
@@ -124,13 +159,14 @@ body {
 <br>
 <br>
 <br>
+<h1 class="form-fields-title">What Have You Done So Far? </h1>
 <div class="done-so-far-box">
     <h3 class="form-title-text">Get people excited, tell them what you've done! </h1>
-    <h3 class="form-title-text"> Have you collected materials + researched the subject?</h1>
+    <h3 class="form-title-text"> Clear some space, collected materials + researched the subject?</h1>
       <h3 class="form-title-text">You have 3 spaces. Let people know where you're at.</h3>
 </div>
-<h1 class="form-fields-title">Progress to date </h1>
-<!-- FIRST DONE SO FAR BOX-->
+
+<!-- FIRST DONE SO FAR BOX. BACKGROUND PIC IS IN THE PROGRESS CONTAINER CLASS-->
 <div class="progress-container">
     <div class="row" style="margin:20px">
         <div class="col-sm-4">
@@ -175,17 +211,17 @@ body {
 <br>
 <div>
     <%= label f, :name_of_gallery, class: "control-label name-of-gallery" %>
-        <%= textarea f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "What's the name of your Gallery"  %>
+        <%= textarea f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "Any last words? Keep it short."  %>
             <%= error_tag f, :name_of_gallery %>
 </div>
 <br>
 <br>
-<h2 class="form-fields-title">Upload Text Pic 2</h2>
+<h2 class="form-fields-title">Upload Small Pic 2</h2>
 <div>
     <%= label f, :text_pic_two, class: "control-label" %>
         <%= file_input f, :text_pic_two, class: "form-control form-control-title imgInp", placeholder: "Please upload your second small photo"  %>
             <%= error_tag f, :text_pic_two %>
-                <img class="text-pic-two center-block" src="http://images.dailyhive.com/20160630114533/Sasamat-Lake-PeteFlickr.jpg" alt="your image" height="100" />
+                <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-25996.jpg" alt="your image" height="100" />
 </div>
 <div>
     <%= label f, :small_pic_2_caption, class: "control-label small-pic-2-caption pic-caption" %>
@@ -197,24 +233,28 @@ body {
     <%= label f, :text_pic_three, class: "control-label" %>
         <%= file_input f, :text_pic_three, class: "form-control form-control-title", placeholder: "Please upload your third small photo"  %>
             <%= error_tag f, :text_pic_three %>
-             <img class="text-pic-two center-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hs-2009-25-e-full_jpg.jpg/277px-Hs-2009-25-e-full_jpg.jpg" alt="your image" height="100" />
+             <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo%20(4).jpg" alt="your image" height="100" />
 </div>
+<!--
+
+OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-141866.jpeg-->
+<!--https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/road_ahead_bloack_white_pexels.jpg-->
 <div>
     <%= label f, :small_pic_3_caption, class: "control-label small-pic-3-caption pic-caption" %>
         <%= textarea f, :small_pic_3_caption, class: "form-control form-control-title small-pic-3-caption pic-caption", placeholder: "Pic 3 Caption"  %>
             <%= error_tag f, :small_pic_3_caption %>
               
 </div>
-<div class="form-group">
-    <%= checkbox(f, :published) %>
-        <b>Published</b>
-        <%= error_tag f, :published %>
-</div>
-<div class="form-group">
-    <%= label f, :topic_id, class: "control-label" %>
-        <%= select f, :topic_id, topic_select(@conn.assigns.topics), class: "form-control form-control-topic", placeholder: "Select topic." %>
-            <%= error_tag f, :topic_id %>
-</div>
+<!--<div class="form-group">-->
+<!--    <%#= checkbox(f, :published) %>-->
+<!--        <b>Published</b>-->
+<!--        <%#= error_tag f, :published %>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--    <%#= label f, :topic_id, class: "control-label" %>-->
+<!--        <%#= select f, :topic_id, topic_select(@conn.assigns.topics), class: "form-control form-control-topic", placeholder: "Select topic." %>-->
+<!--            <%#= error_tag f, :topic_id %>-->
+<!--</div>-->
 <!--<div class="form-group">d-->
 <!--  <%#= label f, :para1, class: "control-label" %>-->
 <!--  <%#= textarea f, :para1, class: "form-control" %>-->
@@ -225,8 +265,9 @@ body {
 <!--  <%#= textarea f, :para2, class: "form-control" %>-->
 <!--  <%#= error_tag f, :para2 %>-->
 <!--</div>-->
+<br><br><br><br>
 <div class="form-group">
-    <%= submit "Publish", class: "btn btn-default block-btn publish-button" %>
+    <%= submit "GO!!!!!!", class: "btn btn-default block-btn publish-button" %>
 </div>
 <% end %>
     <div class="knockout">brick by brick</div>
@@ -250,4 +291,31 @@ function readURL(input) {
   }
 }
     </script>
-    <!-- -->
+    
+    <script>
+        $(function() {
+    $(".pf_text_in").keyup(function() {
+        var pf_text_in = $(this).val();
+        $(".text_preview").html(pf_text_in);
+        return false;
+    });
+});
+
+        $(function() {
+    $(".pf_text_in2").keyup(function() {
+        var pf_text_in = $(this).val();
+        $(".text_preview2").html(pf_text_in);
+        return false;
+    });
+});
+
+
+    </script>
+    <!--
+    NOTES AND LINKS
+    
+    Text Preview Fiddle:
+    
+    http://jsfiddle.net/pked12/pbg3b/
+    
+    -->

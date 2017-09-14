@@ -3,6 +3,15 @@ body {
     background-color: rgba(248, 255, 248, 0.9);
 }
 </style>
+<!-- Cool text animation https://codepen.io/abhishek/pen/VKmGKY?limit=all&page=2&q=text+animation
+-->
+
+
+<link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+
+
+
+
 <img class="project-main-pic" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>" />
 <!--f https://image.slidesharecdn.com/otpphoenixecto-170327125511/95/yurii-bodarev-otp-phoenix-ecto-three-pillars-of-elixir-58-638.jpg?cb=1490619720-->
 <section>
@@ -77,7 +86,7 @@ body {
     <img class="text-pic-three center-block" src="<%= Citybuilder.ProjectPic.url({@post.text_pic_three, @post}) %>" />
     <section id="folio" class="sec-folio">
         <div class="container">
-            <!--<h1 class="name-of-gallery"><%#= @post.name_of_gallery %></h1>-->
+            <h1 class="name-of-gallery"><%= @post.name_of_gallery %></h1>
             <hr />
     </section>
     <section id="contact" class="sec-contact">

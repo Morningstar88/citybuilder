@@ -3383,11 +3383,26 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 .publish-button {
-    font-family: 'Raleway';
+    font-family: 'Raleway' !important;
+    font-weight: 200 !important;
+    font-size: 3vw !important;
+    color: rgba(255, 255, 255, .9) !important;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg')  !important;
+    border: 1px solid rgba(200,120,20,0.7) !important;
+    height: 100px !important;
+    width: 400px !important;
+}
 
-    color: rgba(2, 100, 50, .9) !important;
-    background-color: white !important;
-    border: 1px 1px 1px rgba(20,20,20,0.8);
+.back-button {
+    font-family: 'Raleway' !important;
+    font-weight: 200 !important;
+    font-size: 3vw !important;
+    color: rgba(255, 255, 255, .9) !important;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg') 90% 10%  !important;
+    border: 1px solid rgba(20,20,20,0.8) !important;
+    height: 80px !important;
+    width: 370px !important;
+    line-height: 10px;
 }
 
 
@@ -4944,13 +4959,12 @@ footer {
 
 .knockout {
     background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
-    color: red;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 100px;
-
-
-    width: 600px;
+    font-size: 130px;
+    font-weight: 100;
+    font-family: 'Raleway' !important;
+    /*width: 600px;*/
     margin: 50px auto;
     text-align: center;
 }
@@ -5341,4 +5355,21 @@ h4 {
 }
 .hiders p:nth-child(5) {
   animation-delay: 8s;
+}
+
+/*Placeholder
+
+https://css-tricks.com/almanac/selectors/p/placeholder/
+
+*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(10,130,40,0.6) !important;
+  text-shadow: 0px 0px 1px rgba(10,60,30,0.8) !important;
+  font-family: 'Raleway';
+  letter-spacing: 1px;
+}
+
+.example-title {
+    color: red;
 }

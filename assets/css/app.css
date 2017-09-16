@@ -5373,3 +5373,30 @@ https://css-tricks.com/almanac/selectors/p/placeholder/
 .example-title {
     color: red;
 }
+
+/**/
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-custom-upload {
+  border: 2px solid rgba(10,100,70,1);
+  color: rgba(0,70,10,1);
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  /*left: 0;*/
+  /*top: 0;*/
+  opacity: 0;
+}

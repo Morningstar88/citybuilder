@@ -101,7 +101,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
     <script>
     var Settings = {
-        subreddit: 'PositiveTechnology',
+        subreddit: 'CitybuilderNews',
         after: 'o',
         limit: 12
     };

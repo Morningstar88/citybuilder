@@ -1,7 +1,7 @@
 <!--<h1 class="edit-title display-post-title-edit"><span class="first-letter-new">                    .</span><span class="second-letter-new">.</span><span class="third-letter-new">.</span><span class="fourth-letter-new">?</span></h1>-->
 <%= render "form.html", conn: @conn, changeset: @changeset,
                         action: post_path(@conn, :create) %>
-    <span><%= link "Back", to: post_path(@conn, :index), class: "btn back-button" %></span>
+    <span><%= link "Main Page", to: post_path(@conn, :index), class: "btn back-button" %></span>
     <br>
     <br>
       <div class="knockout">citybuilder</div>

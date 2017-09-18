@@ -28,7 +28,60 @@ https://asciinema.org/a/20n5wJZamyrgoTex8L1UnTVLv
 
 
 
-TO DELETE RECORDS (Not sure if this works yet)
+- TO DELETE RECORDS (This works, but I accidentally deleted all posts)
+
+cd citybuilder
+
+./bin/citybuilder remote_console 
+
+alias Citybuilder.Repo
+
+post = Repo.get!(Citybuilder.Stories.Post, 1)   {{{May need to substitute 2 if post 1 doesn't exist}}}
+
+- To list all records:
+
+Citybuilder.Repo.all Citybuilder.Stories.Post
+
+- To list all paths (This can get the name of the ID):
+
+ Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))    
+
+alias Citybuilder.Stories.Post  
+
+alias Citybuilder.Stories.Upvotes  
+
+require Ecto.Query
+
+upvotes = Repo.all(Ecto.Query.from(u in Upvotes, where: u.post_id == 1))  {{{May need to substitute 2 if post 1 doesn't exist}}}
+ 
+alias Citybuilder.Stories.UpvotesCounts   
+
+Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == 2)   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OLD TEXT... DOESN'T WORK
 
 - Normal deletion
 

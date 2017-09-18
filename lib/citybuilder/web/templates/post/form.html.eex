@@ -85,15 +85,14 @@
 <!--</div>-->
   
   
-     <div class="upload-btn-wrapper">
-           <button class="btn-custom-upload">Click to Upload</button>
+   
            <br>
     <%= label f, :project_pic, class: "control-label" %>
           <%= file_input f, :project_pic, class: "form-control form-control-title imgInp" %>
             <%= error_tag f, :project_pic %>
             <br>
               <img class="project-main-pic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg" alt="your image" height="100" />
-               </div>
+              
 
 </div>
 
@@ -123,15 +122,14 @@
 <h2 class="knockout-medium-title">Upload Text Pic 1</h2>
 <br>
 <div>
-     <div class="upload-btn-wrapper">
-           <button class="btn-custom-upload">Click to Upload</button>
+    
            <br>
     <%= label f, :text_pic_one, class: "control-label" %>
         <%= file_input f, :text_pic_one, class: "form-control form-control-title imgInp", placeholder: "Please upload your first small photo"  %>
             <%= error_tag f, :text_pic_one %>
             <br><br>
             <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo%20(3).jpg" alt="your image" height="100" />
-</div>
+
 <br>
 <br>
 
@@ -259,15 +257,14 @@
 <h2 class="knockout-medium-title">Upload Text Pic 2</h2>
 <br>
 <div>
-     <div class="upload-btn-wrapper">
-           <button class="btn-custom-upload">Click to Upload</button>
+   
            <br>
     <%= label f, :text_pic_two, class: "control-label" %>
         <%= file_input f, :text_pic_two, class: "form-control form-control-title imgInp", placeholder: "Please upload your second small photo"  %>
             <%= error_tag f, :text_pic_two %>
             <br>
                 <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-25996.jpg" alt="your image" height="100" />
-</div>
+
 <br>
 <div>
     <%= label f, :small_pic_2_caption, class: "control-label small-pic-2-caption pic-caption" %>
@@ -281,15 +278,14 @@
 <h2 class="knockout-medium-title">Upload Text Pic 3</h2>
 <br>
 <div>
-     <div class="upload-btn-wrapper">
-           <button class="btn-custom-upload">Click to Upload</button>
+    
            <br>
     <%= label f, :text_pic_three, class: "control-label" %>
-        <%= file_input f, :text_pic_three, class: "form-control form-control-title", placeholder: "Please upload your third small photo"  %>
+        <%= file_input f, :text_pic_three, class: "form-control form-control-title imgInp", placeholder: "Please upload your third small photo"  %>
             <%= error_tag f, :text_pic_three %>
             <br>
              <img class="text-pic-two center-block" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo%20(4).jpg" alt="your image" height="100" />
-</div>
+
 <!--
 
 OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-141866.jpeg-->
@@ -302,7 +298,7 @@ OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577
               
 </div>
 <br><br><br><br><br><br>
-<h2 class="knockout-medium-title">Last Words for Readers</h2>
+<h2 class="knockout-medium-title">Last Words</h2>
 <div>
     <%= label f, :name_of_gallery, class: "control-label name-of-gallery" %>
         <%= text_input f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "A slogan or quote that sums up your project... Keep it short and memorable."  %>

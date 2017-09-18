@@ -4957,6 +4957,7 @@ footer {
 
 /*Knockout Text*/
 
+
 .knockout {
     background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
     -webkit-text-fill-color: transparent;
@@ -4969,30 +4970,32 @@ footer {
     text-align: center;
 }
 
-.knockout-medium {
-    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
-    color: red;
+.knockout-medium-title {
+     background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 4vw;
-
-    font-family: 'Raleway';
-
-    width: 600px;
+    font-size: 80px;
+    font-weight: 100;
+    font-family: 'Raleway' !important;
+    /*width: 600px;*/
     margin: 50px auto;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(20,20,20,.5);
 }
 
 .knockout-text {
-    background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg) -80px -80px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-size: 3vw;
-    font-weight: 400;
-    width: 1200px;
-    margin: 10px auto;
+    font-weight: 100;
+    font-family: 'Raleway' !important;
+    /*width: 600px;*/
+    margin: 50px auto;
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(0,100,20,.5);
 }
+
 
 
 

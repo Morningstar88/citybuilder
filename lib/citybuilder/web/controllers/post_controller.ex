@@ -1,6 +1,8 @@
 defmodule Citybuilder.Web.PostController do
   use Citybuilder.Web, :controller
 
+  require Logger
+
   import Citybuilder.Plugs
 
   alias Citybuilder.Stories
@@ -55,6 +57,7 @@ defmodule Citybuilder.Web.PostController do
         # |> put_flash(:info, "Post created! ヽ(´▽`)/")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
+        Logger.debug("PostController#create validation erros: #{changeset.errors |> inspect}")
         render(conn, "new.html", changeset: changeset)
     end
   end
@@ -121,6 +124,7 @@ defmodule Citybuilder.Web.PostController do
      #  |> put_flash(:info, "Post created/updated. Ψ ")
         |> redirect(to: post_path(conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
+        Logger.debug("PostController#update validation erros: #{changeset.errors |> inspect}")
         render(conn, "edit.html", post: conn.assigns.post, changeset: changeset)
     end
   end

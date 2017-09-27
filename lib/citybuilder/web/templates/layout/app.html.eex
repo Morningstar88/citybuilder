@@ -39,15 +39,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><strong>CityBuilder</strong></a>
+      <a class="navbar-brand" href="http://citybuilder.microflow.io/"><strong>CityBuilder</strong></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav  navbar-center">
-        <li class="active"><a href="#">Money <span class="sr-only">(current)</span></a></li>
-        <li ><a href="#">Search</a></li>
-        <li><a href="#">Build</a></li>
+        <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li>
+        <li ><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <li><a href="/users/signin">Login</a></li>

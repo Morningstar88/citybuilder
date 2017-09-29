@@ -21,14 +21,18 @@ topics = [
   {"CLASSIC", :classic},
   {"CITY-BUILDING", :city_building},
   {"LONG-LIFE", :long_life}]
-  
+
+countries = [
+  {"India", :india}
+]
+
 # Citybuilder.Repo.all Citybuilder.Stories.Topic - see all topics
 # Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: "longevity") - get specific topic
 # Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: "longevity") |> Ecto.Changeset.change(name: "Long Life") |> Citybuilder.Repo.update! - update topic name.3:56 PM
 # To run this console, login to jake, then run
 # cd citybuilder
 # bin/citybuilder remote_console
- 
+
 Citybuilder.Repo.transaction fn ->
   topics
   |> Enum.with_index
@@ -41,5 +45,16 @@ Citybuilder.Repo.transaction fn ->
     }
     Citybuilder.Repo.get_by(Citybuilder.Stories.Topic, slug: slug) ||
       Citybuilder.Repo.insert!(topic)
+  end)
+
+  countries
+  |> Enum.each(fn({name, slug}) ->
+    slug = Atom.to_string(slug)
+    country = %Citybuilder.Addresses.Country{
+      name: name,
+      slug: slug
+    }
+    Citybuilder.Repo.get_by(Citybuilder.Addresses.Country, slug: slug) ||
+      Citybuilder.Repo.insert!(country)
   end)
 end

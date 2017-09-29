@@ -38,6 +38,10 @@ defmodule Citybuilder.Web.Router do
       resources "/forks", ForkController, only: [:index]
       resources "/comments", CommentController, only: [:create]
     end
+    resources "/", CountryController, only: [], param: :slug do
+      resources "/", PostController, param: "post_id"
+    end
+
     resources "/comments", CommentController, only: [:delete, :update] do
       resources "/upvotes", CommentUpvoteController, only: [:create, :delete],
         as: :upvote, singleton: true

@@ -7,6 +7,7 @@ defmodule Citybuilder.Stories do
   alias Citybuilder.Repo
 
   alias Citybuilder.Auths.User
+  alias Citybuilder.Addresses.Country
   alias Citybuilder.Stories.Comment
   alias Citybuilder.Stories.CommentUpvotes
   alias Citybuilder.Stories.CommentUpvotesCount
@@ -26,6 +27,11 @@ defmodule Citybuilder.Stories do
   """
   def list_posts do
     posts_query() |> Repo.all
+  end
+  def list_posts(%Country{id: country_id}) do
+    from(p in posts_query(),
+      where: p.country_id == ^country_id,
+    ) |> Repo.all
   end
   def list_posts(topic_id) do
     from(p in posts_query(),

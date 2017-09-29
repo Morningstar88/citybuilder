@@ -38,9 +38,6 @@ defmodule Citybuilder.Web.Router do
       resources "/forks", ForkController, only: [:index]
       resources "/comments", CommentController, only: [:create]
     end
-    resources "/", CountryController, only: [], param: :slug do
-      resources "/", PostController, param: "post_id"
-    end
 
     resources "/comments", CommentController, only: [:delete, :update] do
       resources "/upvotes", CommentUpvoteController, only: [:create, :delete],
@@ -57,6 +54,9 @@ defmodule Citybuilder.Web.Router do
     resources "/topics", TopicController, only: [:show], param: "slug"
 
     get "/posts/fork/:post_id", PostController , :fork
+    resources "/", CountryController, only: [], param: :slug do
+      resources "/", PostController, param: "post_id"
+    end
   end
 
   # Redirects https://www.amberbit.com/elixir-cocktails/phoenix/handling-url-redirects-in-phoenix-with-plug/

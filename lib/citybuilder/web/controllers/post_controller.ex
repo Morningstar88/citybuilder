@@ -150,11 +150,11 @@ defmodule Citybuilder.Web.PostController do
     end
   end
 
-  def set_country(%{params: %{"country_slug" => nil}} = conn, _opts) do
-    assign(conn, :country, nil)
-  end
   def set_country(%{params: %{"country_slug" => slug}} = conn, _opts) do
     assign(conn, :country, Addresses.get_country_by!(%{slug: slug}))
+  end
+  def set_country(conn, _opts) do
+    assign(conn, :country, nil)
   end
 
   def set_topics(conn, _opts) do

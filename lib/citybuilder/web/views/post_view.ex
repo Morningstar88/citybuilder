@@ -7,20 +7,6 @@ defmodule Citybuilder.Web.PostView do
     Citybuilder.Stories.root_path(path)
   end
 
-  # TODO: re-create this as a macro
-  def path_to(:post, %{assigns: %{country: nil}} = conn, :new) do
-    post_path(conn, :new)
-  end
-  def path_to(:post, %{assigns: %{country: country}} = conn, :new) do
-    country_post_path(conn, :new, country.slug)
-  end
-  def path_to(:post, %{assigns: %{country: nil}} = conn, :create) do
-    post_path(conn, :create)
-  end
-  def path_to(:post, %{assigns: %{country: country}} = conn, :create) do
-    country_post_path(conn, :create, country.slug)
-  end
-
   # Avoid fail on less than 3 posts by doing different matches
   # Text duplication here is unavoidable.
   def welcome(conn, [post1, post2, post3 | _tail]) do

@@ -53,11 +53,11 @@ defmodule Citybuilder.Web.PostController do
   end
 
   def create(conn, %{"post" => post_params}) do
-    case Stories.create_post(post_params, conn.assigns.user) do
+    case Stories.create_post(post_params, conn.assigns.user, conn.assigns.country) do
       {:ok, post} ->
         conn
         # |> put_flash(:info, "Post created! ヽ(´▽`)/")
-        |> redirect(to: post_path(conn, :show, post))
+        |> redirect(to: path_to(:post, conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         Logger.debug("PostController#create validation erros: #{changeset.errors |> inspect}")
         render(conn, "new.html", changeset: changeset)

@@ -166,11 +166,12 @@ defmodule Citybuilder.Stories do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_post(attrs \\ %{}, user) do
+  def create_post(attrs \\ %{}, user, country) do
     try do
       Repo.transaction fn ->
         post = %Post{}
         |> post_changeset(Map.merge(attrs, %{"user_id" => user.id}))
+        |> put_assoc(:country, country)
         |> Repo.insert!
         %UpvotesCounts{}
         |> upvotes_counts_changeset(%{post_id: post.id})

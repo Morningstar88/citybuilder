@@ -5,10 +5,12 @@ defmodule Citybuilder.Web.PostController do
 
   import Citybuilder.Plugs
 
+  alias Citybuilder.Addresses
   alias Citybuilder.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show, :preview]
   plug :set_user
+  plug :set_country
   plug :set_post when action in [:fork, :show, :preview, :edit, :update, :delete, :restore]
   plug :set_topics when action in [:index, :new, :edit, :create, :update, :fork]
   plug :check_can_modify, %{key: :post, message: "This post belongs to another user! You can fork someone else's post, but not edit it."}
@@ -17,7 +19,7 @@ defmodule Citybuilder.Web.PostController do
   @default_topic "random"
 
   def index(conn, _params) do
-    posts = Stories.list_posts
+    posts = Stories.list_posts(conn.assigns.country)
     post_ids = Enum.map(posts, &(&1.id))
     post_paths = Enum.map(posts, &(&1.path))
     upvotes = Stories.list_user_post_upvotes(conn.assigns.user, post_ids)
@@ -51,11 +53,11 @@ defmodule Citybuilder.Web.PostController do
   end
 
   def create(conn, %{"post" => post_params}) do
-    case Stories.create_post(post_params, conn.assigns.user) do
+    case Stories.create_post(post_params, conn.assigns.user, conn.assigns.country) do
       {:ok, post} ->
         conn
         # |> put_flash(:info, "Post created! ヽ(´▽`)/")
-        |> redirect(to: post_path(conn, :show, post))
+        |> redirect(to: path_to(:post, conn, :show, post))
       {:error, %Ecto.Changeset{} = changeset} ->
         Logger.debug("PostController#create validation erros: #{changeset.errors |> inspect}")
         render(conn, "new.html", changeset: changeset)
@@ -146,6 +148,13 @@ defmodule Citybuilder.Web.PostController do
         conn
         |> render("restore_error.js", message: message)
     end
+  end
+
+  def set_country(%{params: %{"country_slug" => slug}} = conn, _opts) do
+    assign(conn, :country, Addresses.get_country_by!(%{slug: slug}))
+  end
+  def set_country(conn, _opts) do
+    assign(conn, :country, nil)
   end
 
   def set_topics(conn, _opts) do

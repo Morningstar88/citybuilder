@@ -26,6 +26,7 @@ defmodule Citybuilder.Stories.Post do
     field :path, :string, null: false, read_after_writes: true
     field :removed_by_owner, :boolean, default: false
     field :removed_by_moderator, :boolean, default: false
+    belongs_to :country, Citybuilder.Addresses.Country
     belongs_to :user, Citybuilder.Auths.User
     belongs_to :modified_by, Citybuilder.Auths.User
     belongs_to :original_post, Citybuilder.Stories.Post

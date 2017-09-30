@@ -57,8 +57,8 @@
 <!--<section class="full-width-img">-->
 <!--    </section>-->
   <!-- https://codepen.io/rexkirby/pen/Fdnlz -->
-  
-<%= form_for @changeset, @action, [multipart: true], fn f -> %>
+
+<%= form_for @changeset, path_to(:post, @conn, :create), [multipart: true], fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
       <p>Oops, something went wrong! You have to fill in every field for the form to submit. Please check and try again.</p>

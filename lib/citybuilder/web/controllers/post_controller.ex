@@ -6,6 +6,7 @@ defmodule Citybuilder.Web.PostController do
   import Citybuilder.Plugs
 
   alias Citybuilder.Addresses
+  alias Citybuilder.Addresses.Country
   alias Citybuilder.Stories
 
   plug Guardian.Plug.EnsureAuthenticated, [handler: ErrorHandler] when not action in [:index, :show, :preview]
@@ -24,7 +25,7 @@ defmodule Citybuilder.Web.PostController do
     post_paths = Enum.map(posts, &(&1.path))
     upvotes = Stories.list_user_post_upvotes(conn.assigns.user, post_ids)
     forks_count = Stories.count_forks(post_paths)
-    render(conn, "index.html",
+    render(conn, template("index.html", conn.assigns.country),
       posts: posts,
       upvotes: upvotes,
       forks_count: forks_count,
@@ -148,6 +149,11 @@ defmodule Citybuilder.Web.PostController do
         conn
         |> render("restore_error.js", message: message)
     end
+  end
+
+  defp template(file, nil), do: file
+  defp template(file, %Country{slug: slug}) do
+    Enum.join([slug, file], "_")
   end
 
   def set_country(%{params: %{"country_slug" => slug}} = conn, _opts) do

@@ -1,0 +1,320 @@
+<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<style>
+</style>
+<!-- NAVBAR -->
+<!--  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a href="#openModal" class="navbar-brand">What we do!!!!!</a>-->
+<!--      </div>
+        <div id="navbar" class="navbar-collapse collapse">
+              <%= if @user do %>
+<div class="hello-user">
+  <!--<span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
+<!-- <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>
+    <%= split_logout("logout") %>
+  <% end %>
+</div>
+<% else %>
+<!--<div class="login-div">-->
+<!--  Hello!-->
+<!-- <a href="/users/signin" class="login-multicolored">
+      <span class="login-multi-1">L</span><span class="login-multi-2">o</span><span class="login-multi-3">g</span><span class="login-multi-4">i</span><span class="login-multi-5">n</span></a>
+      </div>
+       <a href="/users/new" class="signup-multicolored">
+      <span class="signup-multi-1">S</span><span class="signup-multi-2">i</span><span class="signup-multi-3">g</span><span class="signup-multi-4">n</span><span class="signup-multi-5">u</span><span class="signup-multi-6">p</span></a>
+<!--</div>-->
+<!--<% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"> Money</a></li>
+            <li><a href="#about">Search</a></li>
+            <li><a href="#portfolio">Build</a></li>
+
+          <!--<li><a href="#blog">News</a></li>-->
+<!--        </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+
+<!--    <%= if @user do %>-->
+<!--<div class="hello-user">-->
+<!-- TOOK OUT USER WELCOME FOR NOW <span class="">Hello <%#= @user.username %>! <%#= raw welcome(@conn, @posts) %></span>-->
+<!--  <%= link to: session_path(@conn, :logout), method: :delete, class: "logout-multicolored" do %>-->
+<!--    <%= split_logout("logout") %>-->
+<!--  <% end %>-->
+<!--</div>-->
+<!--<% else %>-->
+<!--<div class="login-div">-->
+<!--  Hello!-->
+<!--  <a href="/users/signin" class="login-multicolored">-->
+<!--      <span class="login-multi-1">L</span><br><span class="login-multi-2">O</span><br><span class="login-multi-3">G</span><span class="login-multi-4">I</span><span class="login-multi-5">N</span></a>-->
+<!--      </div>-->
+<!--       <a href="/users/new" class="signup-multicolored">-->
+<!--      <span class="signup-multi-1">S</span><span class="signup-multi-2">I</span><span class="signup-multi-3">G</span><span class="signup-multi-4">N/</span><span class="signup-multi-5">U</span><span class="signup-multi-6">P</span></a>-->
+<!--</div>-->
+<!--<% end %>-->
+<div class="header-wrap">
+    <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder</h1>
+<img class="header-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg">
+</div>
+<%= link("Create Project", to: path_to(:post, @conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
+    <br>
+    <br>
+    <br>
+    <div class="center-wrap">
+        <table id="posts" class="table posts flex-table-posts">
+            <tbody>
+                <%= for post <- @posts do %>
+                    <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
+                        <% end %>
+            </tbody>
+        </table>
+    </div>
+    <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
+    <div class="grid" id="positive-technology"></div>
+    <!-- END OLD CITYBUILDER PIC DISPLAY -->
+    <div id="postModal" class="modalDialog">
+        <div> <a href="#close" id="closePostModal" title="Close" class="close">X</a>
+            <section class="intro"></section>
+            <div class="modal-body">
+                ...loading
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script src="http://unpkg.com/packery@2/dist/packery.pkgd.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script>
+    var Settings = {
+        subreddit: 'CitybuilderNews',
+        after: 'o',
+        limit: 12
+    };
+
+    // let d = new Date; document.getElementById("date").innerHTML = d.toUTCString();;
+
+    let $grid = $('#positive-technology')
+        .attr('data-loading-text', '')
+        .packery({ itemSelector: '.item' })
+        .on('click', '.overlay', function() {
+            $(this).parent().toggleClass('active').parent().packery('layout');
+        });
+
+    function RedditJSON() {
+        this.loadLink = function() {
+            Settings.isLoading = true;
+            return 'https://www.reddit.com/r/' + Settings.subreddit + '/.json?after=' + Settings.after + '&limit=' + Settings.limit;
+        };
+
+        this.next = function(feed) {
+            if (Settings.theLast) return;
+            if (feed.data.after == null) Settings.theLast = true;
+            let posts = feed.data.children;
+            for (let i = 0; i < posts.length; i++) {
+                if (true) { // posts[i].data.post_hint == 'image' || posts[i].data.url.search('imgur')
+                    if (!posts[i].data.hasOwnProperty('preview')) continue;
+
+                    let image = posts[i].data.preview.images[0];
+                    let permalink = posts[i].data.url;
+                    //added by kind redditor
+
+                    let elem = $('<div>').addClass('item').css('background-image', 'url(' + image.source.url + ')');
+                    let overlay = $('<a>').addClass('overlay').appendTo(elem);
+                    let bar = $('<div>').addClass('bar').appendTo(elem);
+                    let link = $('<a>').addClass('post').attr({ target: '_blank', href: permalink }).appendTo(bar).text(posts[i].data.title);
+                    let zoom = $('<a>').addClass('zoom').attr({ target: '_blank', href: image.source.url }).appendTo(bar).html('<i class="fa fa-camera-retro"></i>');
+
+                    if (posts[i].data.stickied) {
+                        elem.addClass('stickied');
+                    }
+
+                    // if (image.source.width > image.source.height){
+                    //   elem.addClass('wide');
+                    // }
+
+                    // if(posts[i].data.created % 6 == 0){
+                    //   elem.addClass('active');
+                    // }
+
+                    $grid.append(elem).packery('appended', elem).packery('layout');
+                }
+            }
+
+            Settings.after = feed.data.after;
+            Settings.isLoading = false;
+        }
+    }
+
+    var bob = new RedditJSON();
+
+    function loadNext() {
+        if (Settings.isLoading) {
+            setTimeout(loadNext, 100);
+            return;
+        } else {
+            $.getJSON(bob.loadLink(), bob.next);
+        }
+    }
+
+    $(function() {
+        // return;
+        loadNext();
+        $(window).scroll(function() {
+            console.log($(window).scrollTop() + ' ' + ($('body').height() - $(window).height() - 10));
+            if ($(window).scrollTop() >= $('body').height() - $(window).height() - 10 && !Settings.isLoading) {
+                loadNext();
+            }
+        });
+    });
+
+    /*Animation Start*/
+
+    var mTitle = null;
+
+    $("h3").each(function(index) {
+        mTitle = $(this).html();
+        $(this).html("");
+
+        //   $("h4").each(function(index) {
+        //   mTitle = $(this).html();
+        //   $(this).html("");
+
+
+
+        // $("h3").each(function(index) {
+        // mTitle = $(this).html();
+        // $(this).html("");
+
+        for (var i = 0; i < mTitle.length; i++) {
+            if (mTitle.charAt(i) == " ") {
+                $(this).append("<span class='jump'> &nbsp; </span>");
+            } else {
+                $(this).append("<span class='jump'>" + mTitle.charAt(i) + "</span>");
+            }
+        }
+    });
+
+
+    var timing = 0;
+
+    $('span.jump').each(function(index, element) {
+        timing = (index * 50) + 800; //original 500
+        $(this).velocity({
+            opacity: 1,
+            color: "#eee", //flash color
+            translateY: 0 //original -5
+        }, { duration: 600, delay: (timing), loop: true });
+        $(this).velocity({
+            opacity: 1, //text opacity
+            color: "#bb8840", //text color
+            translateY: 0
+        }, { duration: 200, delay: (400 - timing), loop: true });
+
+        // button fade in fadeout effect. Took the id as a selector
+        $("null").velocity({
+            opacity: 0,
+            translateY: 0 //original -580
+        }, { duration: 3000, delay: (timing), loop: true }); //original value 800
+        $("#back").velocity({
+            opacity: 1,
+            translateY: 0
+        }, { duration: 200, delay: (400 - timing), loop: true });
+    });
+
+    //Start copy to clip function
+    $(".copied").hide();
+    $(function() {
+
+        $('.address_content').on('click', function() {
+
+            //$(".copied").show();
+            //$( ".copied" ).hasClass('on');
+            if ($(".copied").hasClass('on')) {
+                $(".copied").text("Already Copied :)");
+                $(".copied").fadeIn("slow", function() {
+                    $(".copied").fadeOut("slow", function() {
+                        $(".copied").addClass('on');
+                    });
+                });
+            } else {
+                $(".copied").fadeIn("slow", function() {
+                    $(".copied").fadeOut("slow", function() {
+                        $(".copied").addClass('on');
+                    });
+                });
+                SelectText($(this)[0]);
+                document.execCommand('copy');
+            }
+
+        });
+
+        function SelectText(element) {
+            var doc = document,
+                range, selection;
+            if (doc.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(element);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+    });
+
+    // copied animation
+    // t.classList.add('copied');
+    // setTimeout(function() { t.classList.remove('copied'); }, 1500);
+    // function testAlert(){
+    //     alert("Test Alert Was Pushed")
+    // };
+    // function changeColor() {
+    //     alert("change color was pushed");
+    //  var x = Math.floor(Math.random() * 255); // range is 0-255
+    //  var y = Math.floor(Math.random() * 255);
+    //  var z = Math.floor(Math.random() * 255);
+    //   var avoidgreyminus = x - 150;
+    //   var avoidgreyplus = x + 150;
+    //   var opacity = 0.05;
+
+
+    //   if (x < 125) {
+    //   //alert("x is less than 125, avoidgreyplus will be used")
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")";
+    //   // alert("the rgba is " + thergb)
+    //    console.log(thergb,document.body.style.background);
+    //  document.body.style.background=thergb;
+    //   }
+
+    //   else {
+    //  //// alert ("x is more than 125, avoidgreyminus will be used")
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")";
+    //  // alert("the rgba is " + thergb)
+    //    console.log(thergb,document.body.style.background);
+    //  document.body.style.background=thergb;
+    //   }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>

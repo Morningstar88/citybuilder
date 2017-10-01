@@ -58,6 +58,25 @@ alias Citybuilder.Stories.UpvotesCounts
 
 Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == 2)   
 
+*
+
+delete_terminal.exs
+
+echo "Welcome to post deletion"
+echo "Listing 20 most recent posts and titles now."
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.id, &1.path, &1.body, &1.title, &1.inserted_at, &1.updated_at})  
+alias Citybuilder.Repo
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))  
+echo "What is the id number of the post you want to delete?"
+user_input_post_id = post id number
+post = Repo.get!(Citybuilder.Stories.Post, user_input_post_id)  
+alias Citybuilder.Stories.Post  
+alias Citybuilder.Stories.Upvotes  
+require Ecto.Query
+upvotes = Repo.all(Ecto.Query.from(u in Upvotes, where: u.post_id == user_input_post_id)) 
+alias Citybuilder.Stories.UpvotesCounts   
+Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == user_input_post_id) 
+
 
 
 

@@ -53,7 +53,7 @@
       <li ><a class="login" href="/users/signin">Login</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li class="signup"><a href="/users/new">Signup</a></li>
+      <li><a class="signup" href="/users/new">Signup</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

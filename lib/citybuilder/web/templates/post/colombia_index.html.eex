@@ -36,15 +36,15 @@
             <li><a href="#"> Money</a></li>
             <li><a href="#about">Search</a></li>
             <li><a href="#portfolio">Build</a></li>
-      
+
           <!--<li><a href="#blog">News</a></li>-->
 <!--        </li>
           </ul>
         </div>
-    
+
       </div>
     </nav>
-   
+
 
 
 <!--    <%= if @user do %>-->
@@ -65,16 +65,14 @@
 <!--</div>-->
 <!--<% end %>-->
 <div class="header-wrap">
-    <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder</h1>
-<img class="header-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg">
+    <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder COLOMBIA</h1>
+<img class="header-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/flower-wildflower-bird-of-paradise-floral-66243.jpeg">
 </div>
-<%= link("Create Project", to: post_path(@conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
+<%= link("Create Project", to: path_to(:post, @conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
     <br>
     <br>
     <br>
     <div class="center-wrap">
-        <div class="flex-parent-container">
-            <!-- Flexbox fiddle: http://jsfiddle.net/vivmaha/oq6prk1p/9/ -->
         <table id="posts" class="table posts flex-table-posts">
             <tbody>
                 <%= for post <- @posts do %>
@@ -82,7 +80,6 @@
                         <% end %>
             </tbody>
         </table>
-        </div>
     </div>
     <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
     <div class="grid" id="positive-technology"></div>
@@ -104,7 +101,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
     <script>
     var Settings = {
-        subreddit: 'CitybuilderIndiaNews',
+        subreddit: 'CitybuilderColombia',
         after: 'o',
         limit: 12
     };
@@ -301,7 +298,7 @@
 
     //   if (x < 125) {
     //   //alert("x is less than 125, avoidgreyplus will be used")
-    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")"; 
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")";
     //   // alert("the rgba is " + thergb)
     //    console.log(thergb,document.body.style.background);
     //  document.body.style.background=thergb;
@@ -309,7 +306,7 @@
 
     //   else {
     //  //// alert ("x is more than 125, avoidgreyminus will be used")
-    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")";
     //  // alert("the rgba is " + thergb)
     //    console.log(thergb,document.body.style.background);
     //  document.body.style.background=thergb;

@@ -23,7 +23,8 @@ topics = [
   {"LONG-LIFE", :long_life}]
 
 countries = [
-  {"India", :india}
+  {"India", :india},
+  {"Columbia", :columbia}
 ]
 
 # Citybuilder.Repo.all Citybuilder.Stories.Topic - see all topics

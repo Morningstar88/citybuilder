@@ -58,24 +58,23 @@ alias Citybuilder.Stories.UpvotesCounts
 
 Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == 2)   
 
-*
 
-delete_terminal.exs
 
-echo "Welcome to post deletion"
-echo "Listing 20 most recent posts and titles now."
-Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.id, &1.path, &1.body, &1.title, &1.inserted_at, &1.updated_at})  
+
+DELETE AND QUERY INSTRUCTIONS LOCAL/DEV/IEX
+
 alias Citybuilder.Repo
-Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))  
-echo "What is the id number of the post you want to delete?"
-user_input_post_id = post id number
-post = Repo.get!(Citybuilder.Stories.Post, user_input_post_id)  
-alias Citybuilder.Stories.Post  
-alias Citybuilder.Stories.Upvotes  
-require Ecto.Query
-upvotes = Repo.all(Ecto.Query.from(u in Upvotes, where: u.post_id == user_input_post_id)) 
-alias Citybuilder.Stories.UpvotesCounts   
-Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == user_input_post_id) 
+alias Citybuilder.Stories.Post
+alias Citybuilder.Stories.UpvotesCounts
+
+- To list all posts: 
+
+Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))   
+
+import Ecto.Query
+from(u in UpvotesCounts, where: u.post_id == 2) |> Repo.delete_all
+post = Repo.get(Post, 2)
+Repo.delete(post)
 
 
 
@@ -97,54 +96,3 @@ Repo.delete_all Ecto.Query.from(u in UpvotesCounts, where: u.post_id == user_inp
 
 
 
-
-
-
-OLD TEXT... DOESN'T WORK
-
-- Normal deletion
-
-- How to return posts as single paths. 
-
-Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))     
-returns: [1,2,3]
-
-post = Citybuilder.Repo.get 
-
-- Load Upvote_count
-
-Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.id, &1.path, &1.upvotes_count})  
-
-- Delete screencast
-
-https://asciinema.org/a/20n5wJZamyrgoTex8L1UnTVLv
-
-Citybuilder.Stories.Post, 1
-
-- If post has upvotes
-
-Citybuilder.Repo.delete post
-
-require Ecto.Query
-upvotes = Citybuilder.Repo.all(Ecto.Query.from(u in Citybuilder.Stories.Upvotes, where: u.post_id == 1))
-Citybuilder.Repo.delete_all upvotes
-
--
-
-  def get_post!(id) do
-    from(p in Post,
-      where: p.id == ^id,
-      preload: [:topic, :original_post, :upvotes_count]
-    )
-    |> Repo.one!
-  end
-  
-  -
-  
-    def delete_post(%Post{} = post, %User{} = user) do
-    post
-    |> post_changeset()
-    |> put_change(:modified_by_id, user.id)
-    |> put_change(removal_key(user), true)
-    |> Repo.update
-  end

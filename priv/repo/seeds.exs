@@ -24,7 +24,7 @@ topics = [
 
 countries = [
   {"India", :india},
-  {"Colombia", :colombia}
+  {"Columbia", :columbia}
 ]
 
 # Citybuilder.Repo.all Citybuilder.Stories.Topic - see all topics

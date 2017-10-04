@@ -1,3 +1,4 @@
+/*
 console.clear(); // Is this line causing font storage to wipe on page refresh?
 var fontsArr = ['Raleway', 'Josefin Sans', 'Montserrat', 'Quicksand', 'Marck Script'];
 var $fontSelector = $('.font-selector select');
@@ -32,6 +33,7 @@ _.forEach(fontsArr, function(fontName, index){
 $fontSelector.trigger('change');
 WebFont.load({
   google: {
-    families: fontsArr 
+    families: fontsArr
   }
 });
+*/

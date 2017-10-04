@@ -40,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://citybuilder.microflow.io/"><strong>CityBuilder</strong></a>
+      <a class="navbar-brand" href="<%= root_path(@conn, :index) %>"><strong>CityBuilder</strong></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

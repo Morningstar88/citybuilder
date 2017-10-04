@@ -29,7 +29,7 @@ defmodule Citybuilder.Web.Router do
     post "/signin", SessionController, :create
     delete "/signout", SessionController, :logout
 
-    get "/", PostController, :index
+    get "/", PostController, :index, as: :root
 
     resources "/posts", PostController, param: "post_id"
     resources "/posts", PostController, only: [] do

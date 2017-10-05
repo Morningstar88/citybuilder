@@ -24,6 +24,4 @@ import "phoenix_ujs";
 
 import "./ajax.js"
 
-import "./cool_fonts.js"
-
 import "./modal.js"

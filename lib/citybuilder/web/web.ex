@@ -42,6 +42,7 @@ defmodule Citybuilder.Web do
       import Citybuilder.Web.Router.Helpers
       import Citybuilder.Web.ErrorHelpers
       import Citybuilder.Web.Gettext
+      import Citybuilder.Web.ViewHelpers
       import Citybuilder.Web.Controller.Helpers
 
       import Phoenix.HTML.SimplifiedHelpers.Truncate

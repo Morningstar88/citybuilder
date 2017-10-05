@@ -74,13 +74,13 @@
     <br>
     <br>
     <div class="center-wrap">
-        <div class="flexy">
+        <div id="posts" class="flexy">
             <!-- Flexbox fiddle: http://jsfiddle.net/vivmaha/oq6prk1p/9/ -->
-        
+
                 <%= for post <- @posts do %>
                     <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
                         <% end %>
-            
+
         </div>
     </div>
     <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>

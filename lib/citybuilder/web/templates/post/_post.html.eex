@@ -12,7 +12,8 @@
     <!--  </p>-->
     <!--</td>-->
     <!-- Start Test Project Card -->
-    <div class="card-container">
+        <%= link " delete ", to: post_path(@conn, :delete, @post), "ujs-method": "delete", "ujs-remote": true, "ujs-eval": true, class: "btn btn-danger btn-md btn-delete-post unicode-lg" %>
+
         <div class="card-top learn">
             <img class="card-top.create card-top" src="<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>" />
             <span class="project-type"><%= @post.project_location %></span>
@@ -43,7 +44,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <br>
     <br>
     <br>

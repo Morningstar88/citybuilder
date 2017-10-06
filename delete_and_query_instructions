@@ -28,7 +28,7 @@ https://asciinema.org/a/20n5wJZamyrgoTex8L1UnTVLv
 
 
 
-- TO DELETE RECORDS (This works, but I accidentally deleted all posts)
+- TO DELETE RECORDS ON STAGING 
 
 cd citybuilder
 
@@ -36,21 +36,23 @@ cd citybuilder
 
 alias Citybuilder.Repo
 
-post = Repo.get!(Citybuilder.Stories.Post, 1)   {{{May need to substitute 2 if post 1 doesn't exist}}}
-
 - To list all records:
 
 Citybuilder.Repo.all Citybuilder.Stories.Post
 
-- To list all paths (This can get the name of the ID):
+post = Repo.get!(Citybuilder.Stories.Post, 1)   {{{May need to substitute 2 if post 1 doesn't exist}}}
 
- Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&(&1.path))    
+- KEY COMMAND. To list all paths, titles + bodies(This can get the name of the ID):
+
+ Citybuilder.Repo.all(Citybuilder.Stories.Post) |> Enum.map(&{&1.path, &1.title, &1.body})    
 
 alias Citybuilder.Stories.Post  
 
 alias Citybuilder.Stories.Upvotes  
 
 require Ecto.Query
+
+- AFTER COMMAND IS RUN ONCE< ONLY NEED THESE 3 COMMANDS TO DELETE SECOND PROJECT
 
 upvotes = Repo.all(Ecto.Query.from(u in Upvotes, where: u.post_id == 1))  {{{May need to substitute 2 if post 1 doesn't exist}}}
  

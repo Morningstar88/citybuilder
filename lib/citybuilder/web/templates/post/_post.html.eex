@@ -30,7 +30,7 @@
             <div class="project-card-summary">
                 <%= truncate @post.body, length: 80, separator: " " %>
             </div>
-            <h3 class="house-divider-unicode">~</h3>
+            <h3 class="house-divider-unicode-no-class">~</h3>
             <div style="text-align: center">
                 <div class="project-card-done-so-far-one">1.
                     <%= @post.done_so_far_one_title %>

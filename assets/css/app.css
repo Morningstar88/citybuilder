@@ -3537,12 +3537,12 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-weight: 800;
 
     width: 55% !important;
-    color: rgba(178, 70, 20, .9) !important;
+    color: rgba(255, 255, 255, .9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px solid rgba(255, 255, 255, .5) !important;
     border-radius: 20px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620.jpeg) 70% 70% no-repeat !important;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg) 70% 70% no-repeat !important;
     background-color: rgba(10, 10, 10, .9);
     box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7);
     text-shadow: 2px 1px 2px rgba(20, 20, 30, .3);

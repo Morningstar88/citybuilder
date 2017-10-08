@@ -30,7 +30,7 @@
             <div class="project-card-summary">
                 <%= truncate @post.body, length: 80, separator: " " %>
             </div>
-            <h3 style="text-align: center">~</h3>
+    <hr>
             <div style="text-align: center">
                 <div class="project-card-done-so-far-one">1.
                     <%= @post.done_so_far_one_title %>

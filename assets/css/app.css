@@ -3549,12 +3549,13 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 .btn-edit-post {
-    font-size: 2vw;
+    font-size: 5vw !important;
     /*EDIT*/
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
-    width: 27%;
+    width: auto;
 
+    font-family: 'Raleway' !important;
     color: rgba(5, 60, 60, .8);
     border-radius: 2px;
     background-color: rgba(255, 255, 255, .9) !important;

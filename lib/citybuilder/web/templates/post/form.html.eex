@@ -1,9 +1,7 @@
 <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin Sans|Cardo|Radley|Cantarell|Montserrat:200,300|Raleway:400,500,600,700' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<style>
 
-</style>
 
 <!--TEST PREVIEW-->
 
@@ -22,9 +20,13 @@
 
 <!--<h2 class="form-main-title">Build a Project</h3>-->
 
-  <br><br><br>
+  <h1 class="knockout-small-title">Note: All fields must be filled in for your form to pass!</h1>
 
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br> 
+
+  <br><br><br><br><br><br><br><br><br><br><br>
+  
+
   
 <!--  <div class="intro-text">-->
 <!--    <div class="name">-->

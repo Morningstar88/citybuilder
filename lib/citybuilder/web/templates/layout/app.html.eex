@@ -46,17 +46,26 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav  navbar-center">
+      <!--<ul class="nav navbar-nav  navbar-center">-->
         <!--<li class="active"><a href="#"><span class="sr-only"></span></a></li>-->
-        <li ><a href="#"></a></li>
-        <li><a href="#"></a></li>
+      <!--  <li ><a href="#"></a></li>-->
+      <!--  <li><a href="#"></a></li>-->
+        <%= if user = assigns[:user] do %>
+        <ul class="nav navbar-nav navbar-right">
+          <li>Hello <%= @user.username %>!</li>
+          </ul>
+           <ul class="nav navbar-nav navbar-right">
+   <li> <%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      </ul>
+        <% else %>
+              <ul class="nav navbar-nav navbar-right">
       <li ><a class="login" href="/users/signin">Login</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <li><a class="signup" href="/users/new">Signup</a></li>
       </ul>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

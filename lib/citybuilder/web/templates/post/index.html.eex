@@ -17,13 +17,13 @@
         <div id="navbar" class="navbar-collapse collapse">
         
         <!-- OLD logout code. working -->
-        <%= if @user do %>
-<span class="hello-user">Hello <%= @user.username %>!</span>
-<span><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>
-<% else %>
-  <span><%= link "Login", to: user_path(@conn, :signin) %></span>
-  <span><%= link "Sign Up", to: user_path(@conn, :new) %></span>
-<% end %>
+<!--        <%#= if @user do %>-->
+<!--<span class="hello-user">Hello <%#= @user.username %>!</span>-->
+<!--<span><%#= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></span>-->
+<!--<%# else %>-->
+<!--  <span><%#= link "Login", to: user_path(@conn, :signin) %></span>-->
+<!--  <span><%#= link "Sign Up", to: user_path(@conn, :new) %></span>-->
+<!--<%# end %>-->
   <!-- END OLD logout code. working -->
 
 <div class="header-wrap">

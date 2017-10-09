@@ -1,4 +1,4 @@
-<%# <td> %>
+<td>
     <!--<h1 class="preview-title"><%#= @post.title %></h1>-->
     <!--<p class="preview-text"><%#= truncate @post.body, length: 140, separator: " " %></p>-->
     <!-- <p class="display-post-body-show">-->
@@ -30,7 +30,7 @@
             <div class="project-card-summary">
                 <%= truncate @post.body, length: 80, separator: " " %>
             </div>
-    <hr>
+            <h3 class="house-divider-unicode">~</h3>
             <div style="text-align: center">
                 <div class="project-card-done-so-far-one">1.
                     <%= @post.done_so_far_one_title %>
@@ -43,14 +43,19 @@
                 </div>
             </div>
                <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Open Project ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+
         </div>
+    </div>
+    <br>
+    <br>
+    </div>
     </div>
     <br>
     <br>
     <br>
     <!-- OLD PLACEMENT-- NEEDS IF USER DO -->
     <!--  <br><br>-->
-  
+    <!-- <%#= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>-->
     <!--<br><br><br>-->
     <!-- END OLD PLACEMENT -->
-    <!--d End Test Project Card -->
+    <!-- End Test Project Card -->

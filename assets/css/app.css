@@ -4234,21 +4234,21 @@ a[data-tooltip][data-placement='bottom']::after {
     height: 11.43em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
-    background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+    background-image: url("");
     background-size: cover;
     position: relative;
 }
 
 .card-top.create {
-    background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+    background-image: url("");
 }
 
 .card-top.learn {
-    background-image: url("https://image.ibb.co/dVsLTF/personalized_learning_2.png");
+    background-image: url("");
 }
 
 .card-top.ideas {
-    background-image: url("https://image.ibb.co/mz8uoF/Learning_talking_in_a_group_with_other_people.jpg");
+    background-image: url("");
 }
 
 .blur {

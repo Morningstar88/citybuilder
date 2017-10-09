@@ -66,9 +66,14 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
+      <a class="index-link" href="http://citybuilder.microflow.io/india">India</a>
+      <a class="index-link" href="http://citybuilder.microflow.io/colombia">Colombia</a>
+
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
+      
+    
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

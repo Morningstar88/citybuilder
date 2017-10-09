@@ -5677,4 +5677,22 @@ https://css-tricks.com/almanac/selectors/p/placeholder/
         font-weight: 400 !important;
 }
 
+.index-link {
+    font-family: 'Raleway';
+    font-size: 3vw;
+    font-weight: 200;
+    color: rgba(10,10,10,0.8);
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
 
+.index-link:hover {
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 3vw;
+    font-weight: 200;
+    color: rgba(10,60,60,0.8);
+    border-bottom: 1px solid rgba(20,70,80,0.8);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 8px;
+}

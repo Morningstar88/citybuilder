@@ -42,7 +42,7 @@
                     <%= @post.done_so_far_three_title %>
                 </div>
             </div>
-               <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Read ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
+               <%= link(" 📖  ", to: post_path(@conn, :show, @post), "data-tooltip": " Open Project ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
         </div>
     </div>
     <br>

@@ -3826,7 +3826,7 @@ a[data-tooltip][data-placement='left']::after {
     margin-right: 4px;
 
     border-right: none;
-    border-left-color: rgba(2, 100, 10, .5);
+    border-left-color: inherit;
 }
 
 
@@ -3846,7 +3846,7 @@ a[data-tooltip][data-placement='right']::after {
     margin-top: -6px;
     margin-left: 4px;
 
-    border-right-color: rgba(2, 100, 1, .8);
+    border-right-color: inherit;
     border-left: none;
 }
 
@@ -3866,7 +3866,7 @@ a[data-tooltip][data-placement='top']::after {
 
     margin-bottom: 4px;
 
-    border-top-color: rgba(2, 100, 10, .8);
+    border-top-color: inherit;
     border-bottom: none;
 }
 
@@ -3887,7 +3887,7 @@ a[data-tooltip][data-placement='bottom']::after {
     margin-top: 4px;
 
     border-top: none;
-    border-bottom-color: rgba(2, 100, 10, .8);
+    border-bottom-color: inherit;
 }
 
 

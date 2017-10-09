@@ -25,7 +25,7 @@
   <span><%= link "Sign Up", to: user_path(@conn, :new) %></span>
 <% end %>
   <!-- END OLD logout code. working -->
->
+
 <div class="header-wrap">
     <!--Removed cos of browser alignments conflicts. <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder</h1>-->
 <img class="header-image" style="width:100%" src="https://i.imgur.com/X7JNrkV.jpg">

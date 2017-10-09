@@ -138,6 +138,7 @@ body {
         </div>
     </footer>
     </div>
+        <%= link("Edit Project", to: post_path(@conn, :edit, @post), "data-tooltip": " edit ", "data-placement": "right", class: "btn btn-default btn-md btn-edit-post")%>
     </p>
     <p class="display-post-body-show">
     </p>
@@ -174,4 +175,4 @@ body {
                     <br>
                     <br>
                     </ul>
-</div>
+<!--</div>-->

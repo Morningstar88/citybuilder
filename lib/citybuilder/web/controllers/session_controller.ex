@@ -9,7 +9,7 @@ defmodule Citybuilder.Web.SessionController do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)
-        |> put_flash(:info, "Welcome to Citybuilder! Plz go ahead and build something awesome") 
+        |> put_flash(:info, "Welcome to Citybuilder! You can click on Create Project now. Plz go ahead and build something awesome.  ") 
         |> redirect(to: "/")
 
       {:error, _err} ->

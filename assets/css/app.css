@@ -4627,6 +4627,7 @@ a,
 }
 
 .navbar a {
+    /*Styles Citybuilder icon on left */
     font-size: 1.7vw;
     font-family: 'Poiret One';
     color: rgba(5,70,20,0.9) !important;
@@ -5638,30 +5639,44 @@ https://css-tricks.com/almanac/selectors/p/placeholder/
 
 /* Import new logout from old branch */
 
-.hello-user {
-    font-family: 'Raleway';
-    /*position: relative;*/
-    /*margin-left: -4%;*/
-    /*font-size: 4vw;*/
-    font-weight: 200;
-    color: rgba(22,60,30,0.9);
-    /*text-shadow: 2px 2px 2px rgba(200,20,0.7);*/
-    padding-bottom: 5px;
-    border-radius: 0px 0px 15px 0px;
-}
 
 a.logout-button {
     /*position: absolute;*/
     /*margin-top: -100%;*/
     /*margin-left: 190%;*/
     /*font-size: 50px;*/
-    text-decoration: none;
-    color: rgba(25,153,51,0.7) !important;
-    text-shadow: 2px 2px 2px rgba(220,220,220,0.2), 1px 1px 1px rgba(230,230,230,0.2);
+  font-size: 1.7vw;
+    font-family: 'Poiret One';
+    color: rgba(5,100,120,0.9) !important;
 }
 
 .logout-button:hover {
     text-decoration: none;
-    color: rgba(255,123,0,0.9);
+    color: rgba(255,123,0,0.9) !important;
 }
 
+.user-welcome {
+      font-size: 1.7vw;
+    font-family: 'Poiret One';
+    color: rgba(5,70,80,0.9) !important;
+}
+
+.hello-h {
+    color: rgba(2,40,100,0.8);
+}
+
+.hello-e {
+      color: rgba(200,130,10,0.8);
+}
+
+.hello-l {
+       color: rgba(150,20,150,0.8);
+}
+
+.hello-second-l {
+     color: rgba();
+}
+
+.hello-o {
+       color: rgba(20,80,20,0.8);
+}

@@ -70,6 +70,10 @@
 </div>
 <!--https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/flower-wildflower-bird-of-paradise-floral-66243.jpeg-->
 <%= link("Colombia: Create Project", to: path_to(:post, @conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
+    <div class="index-links">
+         <a class="index-link" href="http://citybuilder.microflow.io">Home</a>
+         <a class="index-link" href="http://citybuilder.microflow.io/india">India</a>
+     </div>
     <br>
     <br>
     <br>

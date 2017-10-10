@@ -51,12 +51,13 @@
       <!--  <li ><a href="#"></a></li>-->
       <!--  <li><a href="#"></a></li>-->
         <%= if user = assigns[:user] do %>
-        <ul class="nav navbar-nav navbar-right">
-          <li>Hello <%= @user.username %>!</li>
-          </ul>
+        
            <ul class="nav navbar-nav navbar-right">
-   <li> <%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "logout-button" %></li>
+   <li> <strong><%= link "logout", to: session_path(@conn, :logout), method: :delete, class: "navbar-brand logout-button" %></strong></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-brand user-welcome"><strong><span class="hello-h">h</span><span class="hello-e">e</span><span class="hello-l">l</span><span class="hello-second-l">l</span><span class="hello-o">o</span> <%= @user.username %>!</strong></li>
+          </ul>
       </ul>
         <% else %>
               <ul class="nav navbar-nav navbar-right">
@@ -75,10 +76,7 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-      <a class="index-link" href="http://citybuilder.microflow.io/india">India</a>
-      <a class="index-link" href="http://citybuilder.microflow.io/colombia">Colombia</a>
-
-      <main role="main">
+        <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
       

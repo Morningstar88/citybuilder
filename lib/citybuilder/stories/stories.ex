@@ -51,6 +51,8 @@ defmodule Citybuilder.Stories do
     from(p in Post,
       join: uc in assoc(p, :upvotes_count),
       where: p.published == true,
+      where: not p.removed_by_owner,
+      where: not p.removed_by_moderator,
       order_by: [desc: uc.count],
       preload: [:user, :upvotes_count]
     )

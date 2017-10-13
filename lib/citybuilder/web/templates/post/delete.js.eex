@@ -5,5 +5,5 @@ $("#posts #post_<%= @post.id %> .post-deleted-message").addClass("hidden");
 
 setTimeout(function() {
   $("#posts #post_<%= @post.id %> .post-restore").addClass("hidden");
-  $("#posts #post_<%= @post.id %> .post-deleted-message.hidden").removeClass("hidden");
+  // $("#posts #post_<%= @post.id %> .post-deleted-message.hidden").removeClass("hidden");
 }, 10000);

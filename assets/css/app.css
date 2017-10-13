@@ -3488,32 +3488,38 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
 }
 
 .btn-edit-post {
-    font-size: 5vw !important;
-    /*EDIT*/
-    /*background: rgba(20,40,150,0.7) !important;*/
-    /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
-    width: auto;
-
-    font-family: 'Raleway' !important;
-    color: rgba(5, 60, 60, .8);
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, .9) !important;
-    box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7) !important;
+     font-family: 'Century Gothic';
+    font-weight: 500;
+    font-size: 4vw !important;
+    width: 55% !important;
+    color: rgba(245, 245, 245, .9) !important;
+    /* READ BUTTON*/
+    /*background: rgba(240,230,20,0.5) !important;*/
+    border: 1px solid rgba(255, 255, 255, .5) !important;
+    border-radius: 20px;
+    background: url(https://i.imgur.com/X7JNrkV.jpg) 30% 70% no-repeat !important;
+    background-color: rgba(10, 10, 10, .9);
+    box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7);
+    text-shadow: 2px 1px 2px rgba(20, 20, 30, .7);
 }
 
 
 .btn-delete-post {
-    font-size: 2vw;
+  font-family: 'Century Gothic';
+    font-weight: 800;
+    
+    font-size: 26px;
 
-    width: 30%;
-
-    color: rgba(20, 20, 20, 1) !important;
-    /* DELETE BUTTON */
-    /*background: url(http://www.artic.edu/aic/collections/citi/images/standard/WebLarge/WebImg_000352/141054_4173391.jpg) 30% 30% !important;*/
-    border: 1px solid rgba(2, 2, 2, .2) !important;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, .9) !important;
-    box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7) !important;
+    width: 52% !important;
+    color: rgba(25, 25, 25, .9) !important;
+    /* READ BUTTON*/
+    /*background: rgba(240,230,20,0.5) !important;*/
+    border: 1px solid rgba(255, 255, 255, .5) !important;
+    border-radius: 20px;
+    /*background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg) 70% 70% no-repeat !important;*/
+    background: white;
+    box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7);
+    text-shadow: 2px 1px 2px rgba(20, 20, 30, .7);
 }
 
 .btn-fork-post {

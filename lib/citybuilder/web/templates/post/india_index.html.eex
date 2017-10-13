@@ -1,4 +1,5 @@
-<link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Sans:400,500,600,700,800|Montserrat:400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800|Arima+Madurai:200,300,400' rel='stylesheet' type='text/css'>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 <style>
 </style>
@@ -36,15 +37,15 @@
             <li><a href="#"> Money</a></li>
             <li><a href="#about">Search</a></li>
             <li><a href="#portfolio">Build</a></li>
-
+      
           <!--<li><a href="#blog">News</a></li>-->
 <!--        </li>
           </ul>
         </div>
-
+    
       </div>
     </nav>
-
+   
 
 
 <!--    <%= if @user do %>-->
@@ -65,23 +66,29 @@
 <!--</div>-->
 <!--<% end %>-->
 <div class="header-wrap">
-    <h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder INDIA</h1>
-<img class="header-image" style="width:100%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-pumpkins-market.jpeg">
+    <!--Take this out cos of browser alignment conflicts<h1 class="citybuilder-title"><span class="citybuilder-c">C</span>itybuilder INDIA</h1>-->
+<img class="header-image" style="width:100%" src="https://i.imgur.com/L4wbuXL.jpg">
 </div>
-<%= link("Create Project", to: path_to(:post, @conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
+<!--https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-pumpkins-market.jpeg-->
+<%= link("India: Create Project", to: path_to(:post, @conn, :new), "data-tooltip": " Build something new ", "data-placement": "right", class: "btn btn-create-project")%>
+      <div class="index-links">
+         <a class="index-link" href="http://citybuilder.microflow.io">Home</a>
+         <a class="index-link" href="http://citybuilder.microflow.io/colombia">Colombia</a>
+     </div>
     <br>
     <br>
     <br>
     <div class="center-wrap">
-        <table id="posts" class="table posts flex-table-posts">
-            <tbody>
+        <div class="flexy">
+            <!-- Flexbox fiddle: http://jsfiddle.net/vivmaha/oq6prk1p/9/ -->
+        
                 <%= for post <- @posts do %>
                     <%= render "_post_variants.html", conn: @conn, post: post, upvote: @upvotes[post.id], forks_count: @forks_count %>
                         <% end %>
-            </tbody>
-        </table>
+            
+        </div>
     </div>
-    <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder <span class="bluer-letter">N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
+    <h1 class="base-title letter-spaced"><span class="lowered-letter orange-letter">C</span><span class="lowered-letter">it<span class="reddish-letter">y</span></span>bu<span class="lowered-letter"></span><span class="green-letter">i</span>lder India<span class="bluer-letter"> N</span><span class="orange-letter">e</span><span class="">w</span><span class="green-letter">s</span></h1>
     <div class="grid" id="positive-technology"></div>
     <!-- END OLD CITYBUILDER PIC DISPLAY -->
     <div id="postModal" class="modalDialog">
@@ -298,7 +305,7 @@
 
     //   if (x < 125) {
     //   //alert("x is less than 125, avoidgreyplus will be used")
-    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")";
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyplus + "," + opacity + ")"; 
     //   // alert("the rgba is " + thergb)
     //    console.log(thergb,document.body.style.background);
     //  document.body.style.background=thergb;
@@ -306,7 +313,7 @@
 
     //   else {
     //  //// alert ("x is more than 125, avoidgreyminus will be used")
-    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")";
+    //   var thergb = "rgba(" + x + "," + y + "," + avoidgreyminus + "," + opacity + ")"; 
     //  // alert("the rgba is " + thergb)
     //    console.log(thergb,document.body.style.background);
     //  document.body.style.background=thergb;

@@ -64,7 +64,7 @@ tbody {
     font-weight: 400;
     width: auto;
     color: rgba(255,255,255,0.8);
-    margin-top: 36%;
+    margin-top: 15%;
     margin-left: 5%;
     border-radius: 2px 10px 2px 10px;
         -webkit-font-smoothing: antialiased;
@@ -1305,41 +1305,8 @@ svg>rect {
 
 /* END SHOW PAGE */
 
-.hello-user {
-    /*font-family: helvetica ;*/
-    /*width: 800px;*/
-    font-size: 5vw;
-    font-weight: 500;
-    /* Text in post view */
-    position: absolute;
-    z-index: 5;
 
-    width: 50%;
-    margin-top: -10%;
-    /* increase this negative integer to move up */
-    margin-left: -70%;
-    /* 70% Looks good.*/
-    padding-bottom: 1%;
 
-    text-align: center;
-
-    border-radius: 0 0 15px 0;
-    text-shadow: 2px 2px 2px rgba(100, 100, 100, .3);
-}
-
-.hello-user a {
-    /* Text in post view */
-    color: rgba(180, 90, 10, .9);
-}
-
-.hello-user a:hover {
-    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/rsz_1fire-swirling-acrobat-800-600.jpg) 70% 70%; */
-    /* ORIG no-repeat
-   /* -webkit-background-clip: text;*/
-    /* -webkit-text-fill-color: transparent;*/
-    color: rgba(0, 45, 0, .9);
-    /*text-shadow: 0px 0px 0px rgba(0,45,0,0.7);*/
-}
 
 
 /*FONT SELECTOR */
@@ -1747,34 +1714,6 @@ svg>rect {
 
 
 /*}*/
-
-a.logout-button {
-    /* Old Logout Button*/
-    font-family: Helvetica !important;
-    font-size: 56px;
-
-    position: absolute;
-    z-index: 4;
-
-    display: none;
-
-    margin-top: -89%;
-    /*Increment the negative integer to push me up */
-    margin-left: 215%;
-
-    text-decoration: none;
-    letter-spacing: -8px;
-
-    color: rgba(220, 100, 0, .7) !important;
-    /*text-shadow: 2px 2px 2px rgba(220,220,220,0.2), 1px 1px 1px rgba(230,230,230,0.2);*/
-}
-
-.logout-button:hover {
-    /* Old Logout Button*/
-    text-decoration: none;
-
-    color: rgba(255, 123, 0, .9);
-}
 
 
 .whatsup-multicolored {
@@ -3507,7 +3446,7 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     position: absolute;
 
     margin-top: -50% !important;
-    margin-left: 25% !important;
+    margin-left: 28% !important;
 
     display: inline;
     
@@ -3537,24 +3476,25 @@ https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-111174.jpeg
     font-weight: 800;
 
     width: 55% !important;
-    color: rgba(178, 70, 20, .9) !important;
+    color: rgba(255, 255, 255, .9) !important;
     /* READ BUTTON*/
     /*background: rgba(240,230,20,0.5) !important;*/
     border: 1px solid rgba(255, 255, 255, .5) !important;
     border-radius: 20px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-134620.jpeg) 70% 70% no-repeat !important;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-photo-235648.jpeg) 70% 70% no-repeat !important;
     background-color: rgba(10, 10, 10, .9);
     box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, .7);
-    text-shadow: 2px 1px 2px rgba(20, 20, 30, .3);
+    text-shadow: 2px 1px 2px rgba(20, 20, 30, .7);
 }
 
 .btn-edit-post {
-    font-size: 2vw;
+    font-size: 5vw !important;
     /*EDIT*/
     /*background: rgba(20,40,150,0.7) !important;*/
     /*background: url(http://www.dailyartfixx.com/wp-content/uploads/2011/04/Abstraction-Willem-de-Kooning-1949-50.jpg) 30% 30% no-repeat !important;*/
-    width: 27%;
+    width: auto;
 
+    font-family: 'Raleway' !important;
     color: rgba(5, 60, 60, .8);
     border-radius: 2px;
     background-color: rgba(255, 255, 255, .9) !important;
@@ -3826,7 +3766,7 @@ a[data-tooltip][data-placement='left']::after {
     margin-right: 4px;
 
     border-right: none;
-    border-left-color: rgba(2, 100, 10, .5);
+    border-left-color: inherit;
 }
 
 
@@ -3846,7 +3786,7 @@ a[data-tooltip][data-placement='right']::after {
     margin-top: -6px;
     margin-left: 4px;
 
-    border-right-color: rgba(2, 100, 1, .8);
+    border-right-color: inherit;
     border-left: none;
 }
 
@@ -3866,7 +3806,7 @@ a[data-tooltip][data-placement='top']::after {
 
     margin-bottom: 4px;
 
-    border-top-color: rgba(2, 100, 10, .8);
+    border-top-color: inherit;
     border-bottom: none;
 }
 
@@ -3887,7 +3827,7 @@ a[data-tooltip][data-placement='bottom']::after {
     margin-top: 4px;
 
     border-top: none;
-    border-bottom-color: rgba(2, 100, 10, .8);
+    border-bottom-color: inherit;
 }
 
 
@@ -4233,21 +4173,21 @@ a[data-tooltip][data-placement='bottom']::after {
     height: 11.43em;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
-    background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+    background-image: url("");
     background-size: cover;
     position: relative;
 }
 
 .card-top.create {
-    background-image: url("https://image.ibb.co/dHwQvv/creating.jpg");
+    background-image: url("");
 }
 
 .card-top.learn {
-    background-image: url("https://image.ibb.co/dVsLTF/personalized_learning_2.png");
+    background-image: url("");
 }
 
 .card-top.ideas {
-    background-image: url("https://image.ibb.co/mz8uoF/Learning_talking_in_a_group_with_other_people.jpg");
+    background-image: url("");
 }
 
 .blur {
@@ -4687,6 +4627,7 @@ a,
 }
 
 .navbar a {
+    /*Styles Citybuilder icon on left */
     font-size: 1.7vw;
     font-family: 'Poiret One';
     color: rgba(5,70,20,0.9) !important;
@@ -5241,18 +5182,31 @@ footer {
     text-shadow: 1px 1px 1px rgba(20,20,20,.5);
 }
 
-.knockout-text {
-     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg) -80px -80px;
+.knockout-small-title {
+     background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    font-size: 3vw;
+    font-size: 45px;
     font-weight: 100;
     font-family: 'Raleway' !important;
     /*width: 600px;*/
     margin: 50px auto;
     text-align: center;
-    text-shadow: 1px 1px 1px rgba(0,100,20,.5);
+    text-shadow: 1px 1px 1px rgba(20,20,20,.5);
 }
+
+/*.knockout-text {*/
+/*     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/wood-nature-sunny-forest.jpg) -80px -80px;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    -webkit-background-clip: text;*/
+/*    font-size: 3vw;*/
+/*    font-weight: 100;*/
+/*    font-family: 'Raleway' !important;*/
+    /*width: 600px;*/
+/*    margin: 50px auto;*/
+/*    text-align: center;*/
+/*    text-shadow: 1px 1px 1px rgba(0,100,20,.5);*/
+/*}*/
 
 
 
@@ -5663,4 +5617,66 @@ https://css-tricks.com/almanac/selectors/p/placeholder/
         font-weight: 400 !important;
 }
 
+.index-link {
+    font-family: 'Raleway';
+    font-size: 3vw;
+    font-weight: 200;
+    color: rgba(10,10,10,0.8);
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
 
+.index-link:hover {
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 3vw;
+    font-weight: 200;
+    color: rgba(10,60,60,0.8);
+    border-bottom: 1px solid rgba(20,70,80,0.8);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Import new logout from old branch */
+
+
+a.logout-button {
+    /*position: absolute;*/
+    /*margin-top: -100%;*/
+    /*margin-left: 190%;*/
+    /*font-size: 50px;*/
+  font-size: 1.7vw;
+    font-family: 'Poiret One';
+    color: rgba(5,100,120,0.9) !important;
+}
+
+.logout-button:hover {
+    text-decoration: none;
+    color: rgba(255,123,0,0.9) !important;
+}
+
+.user-welcome {
+      font-size: 1.7vw;
+    font-family: 'Poiret One';
+    color: rgba(5,70,80,0.9) !important;
+}
+
+.hello-h {
+    color: rgba(2,40,100,0.8);
+}
+
+.hello-e {
+      color: rgba(200,130,10,0.8);
+}
+
+.hello-l {
+       color: rgba(150,20,150,0.8);
+}
+
+.hello-second-l {
+     color: rgba();
+}
+
+.hello-o {
+       color: rgba(20,80,20,0.8);
+}

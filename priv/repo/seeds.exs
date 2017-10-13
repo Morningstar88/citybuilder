@@ -24,7 +24,7 @@ topics = [
 
 countries = [
   {"India", :india},
-  {"Columbia", :columbia}
+  {"Colombia", :colombia} #colombia is the Spanish spelling!
 ]
 
 # Citybuilder.Repo.all Citybuilder.Stories.Topic - see all topics

@@ -40,7 +40,7 @@
     <br>
     <br>
     <div class="center-wrap">
-        <div id="posts" class="flexy">
+        <div class="flexy">
             <!-- Flexbox fiddle: http://jsfiddle.net/vivmaha/oq6prk1p/9/ -->
 
                 <%= for post <- @posts do %>

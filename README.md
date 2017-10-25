@@ -13,13 +13,23 @@ City-builder helps people **build useful projects** in their neighbourhoods.
 - Organic cafes
 - Food-forests
 - Longevity research. 
-- ... and anything else we can dream up.
+- ... and anything else we can imagine.
 
-We help people learn fund-raising skills, + build prototypes for low money (10-300USD).
+We help people build prototypes of their dreams.
 
-This is being run by one experienced coder and one new product manager, so please be patient. 
+## Project Display
 
-Right now we have upload forms and project display set up on the Elixir side. We've also successfully deployed to production.
+The main page displays projects and a news feed.
+
+http://citybuilder.microflow.io/
+
+## Country Specific Project Display
+
+http://citybuilder.microflow.io/india
+
+
+
+
 
 ----
 
@@ -68,7 +78,7 @@ Ready to run in production? Please check our deployment guides.
 
 ## Early Stages: Messy CSS + Confused Media Queries
 
-If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with minor hassles, + accept it's an early stage project. By the end of the summer, or early Autumn, we should have a decent web-app on our hands. A site that can launch multiple startups.
+If you're coming in the early stages, expect messy CSS, screwed up grid systems, hacky media queries, redundant code, and other problems. Plz enjoy the ride, deal with minor hassles, + accept it's an early stage project. 
 
 Ultimately City-builder has to look like Kickstarter or StartSomeGood, but volunteer focused instead of money oriented.
 
@@ -130,13 +140,13 @@ https://github.com/Microflow/citybuilder/blob/master/assets/css/app.css
 
 ## Collaboration Strategy
 
-As issues come up, we'll post them in CityBuilderDev subreddit. If you see an interesting issue, go ahead and try to fix it.
+As issues come up, we'll post them in CityBuilderDev subreddit or other forums. If you see an interesting issue, go ahead and try to fix it.
 
 ## Design + Coding Strategy.
 
 We want to keep the coding as simple as possible. Please use the oldest libraries that you can.
 
-No need for React, Angular, or any front end framework right now. We're happy with vanilla JS. Check out this essay on react + Phoenix, we agree with their conclusions:
+No need for React, Angular, or any front end framework right now. We're happy with vanilla JS. Check out this essay on React + Phoenix, we agree with their conclusions:
 
 https://robots.thoughtbot.com/how-we-replaced-react-with-phoenix
 

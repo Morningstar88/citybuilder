@@ -40,7 +40,8 @@
     <br>
     <br>
     <div class="center-wrap">
-        <div class="flexy">
+        <!-- id="posts" is for post removal JS -->
+        <div id="posts" class="flexy">
             <!-- Flexbox fiddle: http://jsfiddle.net/vivmaha/oq6prk1p/9/ -->
 
                 <%= for post <- @posts do %>

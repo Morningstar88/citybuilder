@@ -1,5 +1,4 @@
-<div id="<%= dom_id @post %>">
-  <div class="card-container">
+<div id="<%= dom_id @post %>" class="card-container">
   <%= cond do %>
     <% @post.removed_by_owner -> %>
       <p class="post-deleted-message">Post deleted! (╯°□°）╯︵ ┻━┻</p>
@@ -10,5 +9,4 @@
     <% true -> %>
       <%= render "_post.html", conn: @conn, post: @post, upvote: @upvote, forks_count: @forks_count %>
   <% end %>
-  </div>
 </div>

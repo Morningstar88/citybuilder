@@ -9,11 +9,11 @@ defmodule Citybuilder.Web.Controller.Helpers do
     |> Timex.format!("{Mfull} {D}, {h12}:{m}{am}, {YYYY}")
   end
 
-  def can_modify?(nil, _comment), do: false
-  def can_modify?(user, comment) do
+  def can_modify?(nil, _record), do: false
+  def can_modify?(user, %{user_id: record_user_id}) do
     user.admin ||
     user.moderator ||
-    (user.id == comment.user_id)
+    (user.id == record_user_id)
   end
 
   # TODO: re-create this as a macro

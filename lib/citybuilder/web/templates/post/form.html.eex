@@ -301,11 +301,21 @@ OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577
 </div>
 <br><br><br><br><br><br>
 <h2 class="knockout-medium-title">Last Words</h2>
+<!-- Last Words field is "Name of Gallery" in the database  -->
 <div>
     <%= label f, :name_of_gallery, class: "control-label name-of-gallery" %>
         <%= text_input f, :name_of_gallery, class: "form-control form-control-body name-of-gallery", placeholder: "A slogan or quote that sums up your project... Keep it short and memorable."  %>
             <%= error_tag f, :name_of_gallery %>
 </div>
+
+<br><br><br><br><br><br>
+<h2 class="knockout-medium-title">Bitcoin Address</h2>
+<div>
+    <%= label f, :bitcoin_address, class: "control-label" %>
+        <%= text_input f, :bitcoin_address, class: "form-control form-control-body", placeholder: "What's your BTC address?"  %>
+            <%= error_tag f, :bitcoin_address %>
+</div>
+<h4 class="knockout-sub-title">(This field is optional, you don't need a BTC address)</h4>
 <!--<div class="form-group">-->
 <!--    <%#= checkbox(f, :published) %>-->
 <!--        <b>Published</b>-->

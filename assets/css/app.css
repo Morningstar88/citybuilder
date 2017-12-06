@@ -5183,6 +5183,19 @@ footer {
     text-shadow: 1px 1px 1px rgba(20,20,20,.5);
 }
 
+.knockout-sub-title {
+     background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 45px;
+    font-weight: 100;
+    font-family: 'Raleway' !important;
+    /*width: 600px;*/
+    margin: 30px auto;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(20,20,20,.5);
+}
+
 .knockout-small-title {
      background: url(http://apod.nasa.gov/apod/image/0603/coma_misti.jpg) -80px -80px;
     -webkit-text-fill-color: transparent;

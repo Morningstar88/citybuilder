@@ -88,7 +88,14 @@ body {
         <div class="container">
             <h1 class="name-of-gallery"><%= @post.name_of_gallery %></h1>
             <hr />
+            <!-- Add BTC address -->
     </section>
+    <section id="folio" class="sec-folio">
+     <div class="container">
+         <h1 class="project-title">Our BTC Address</h1>
+            <h1 class="name-of-gallery"><%= @post.bitcoin_address %></h1>
+            </section>
+            <!-- End add BTC address -->
     <section id="contact" class="sec-contact">
         <div class="container">
             <h1 class="contact-title">Contact <span class="bitspinner">Us</span></h1>

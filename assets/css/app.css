@@ -5722,15 +5722,15 @@ a.logout-button {
 /*  The original color of the BTC address line. */
 /*}*/
 .copied{
-  /*position: absolute;*/
+  position: absolute;
   /*top: -6px;*/
-  left: 25%;
+  left: 30%;
   height: 20px;
   width: 150px;
   z-index: 999;
   color: #fff;
-  background: rgba(0, 80, 80, 0.7);
-  font-size: 11px;
+  background: rgba(0, 80, 80, 1);
+  font-size: 13px;
   border-radius: 4px;
   text-align:center;
   opacity: 1;
@@ -5751,4 +5751,10 @@ a.logout-button {
   100% {
     opacity: 0;
   }
+}
+
+.small-bitcoin-text {
+    position: relative;
+    font-style: : italics;
+    font-size: 3px;
 }

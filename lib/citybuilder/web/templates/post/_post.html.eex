@@ -41,6 +41,10 @@
                 <div class="project-card-done-so-far-one">3.
                     <%= @post.done_so_far_three_title %>
                 </div>
+                     <div class="bitcoin-address address_content">
+        <%= @post.bitcoin_address %>
+    </div>
+     <div class="copied">Copied</div>
             </div>
                <%= link(" 📖 ", to: post_path(@conn, :show, @post), "data-tooltip": " View Project Now ☺ ", "data-placement": "top", class: "btn btn-default btn-md btn-read-post unicode-lg") %>
                <%= if can_modify?(@conn.assigns.user, @post) do %>
@@ -56,3 +60,54 @@
     <!--<br><br><br>-->
     <!-- END OLD PLACEMENT -->
 
+<script>
+    
+    //copy to clip
+    
+    $(".copied").hide();
+ $(function() {
+       
+        $('.address_content').on('click', function () {
+              
+              //$(".copied").show();
+              //$( ".copied" ).hasClass('on');
+              if($( ".copied" ).hasClass('on')){
+                 $( ".copied" ).text("Already Copied :)");
+                 $( ".copied" ).fadeIn( "slow", function() {
+                   $( ".copied" ).fadeOut( "slow", function() {
+                       $( ".copied" ).addClass('on');
+                   });
+                 });
+              }else{
+                $( ".copied" ).fadeIn( "slow", function() {
+                   $( ".copied" ).fadeOut( "slow", function() {
+                       $( ".copied" ).addClass('on');
+                   });
+                });
+              SelectText($(this)[0]);
+              document.execCommand('copy');
+              }
+              
+        });
+
+        function SelectText(element) {
+            var doc = document, range, selection;
+            if (doc.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(element);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(element);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        }
+    });
+
+  // copied animation
+        // t.classList.add('copied');
+        // setTimeout(function() { t.classList.remove('copied'); }, 1500);
+                              
+</script>

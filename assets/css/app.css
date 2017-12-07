@@ -5694,3 +5694,61 @@ a.logout-button {
 .hello-o {
        color: rgba(20,80,20,0.8);
 }
+
+.bitcoin-address {
+      display: inline-block;
+    color: rgba(0, 80, 80, 0.9);
+    text-align: center;
+    width: 70%;
+    margin: 0 20px;
+    padding-top: 8px;
+    margin-bottom: 0.1em;
+    font-size: 1.4vw;
+    /*height: 3.19em;*/
+    overflow: hidden;
+    margin-left: 2%;
+    text-shadow: 1px 1px 1px rgba(100,100,100,0.9);
+}
+
+/*Copy to Clip */
+
+/*Copy notification begins here*/
+/*.pos_rel{*/
+/*  position:relative;*/
+/*  display:block;*/
+/*}*/
+/*.address_content{*/
+/*  color:#008080;*/
+/*  The original color of the BTC address line. */
+/*}*/
+.copied{
+  /*position: absolute;*/
+  /*top: -6px;*/
+  left: 25%;
+  height: 20px;
+  width: 150px;
+  z-index: 999;
+  color: #fff;
+  background: rgba(0, 80, 80, 0.7);
+  font-size: 11px;
+  border-radius: 4px;
+  text-align:center;
+  opacity: 1;
+  will-change: opacity, transform;
+  animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -4758,14 +4758,15 @@ hr {
 }
 
 .main-heading {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: static;
+    margin-top: 65% !important;
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
     z-index: 2;
     padding: 0;
-    margin: auto;
+    /*margin: auto;*/
     height: 40px;
     color: rgba(255, 255, 255, 0.80);
     font-family: 'Open Sans';

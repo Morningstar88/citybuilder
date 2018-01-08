@@ -3,63 +3,74 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
-<!--TEST PREVIEW-->
 
-<!--<form id="preview-form" class="pform">-->
-<!--  <input type="text" name="pform-text-in" size="40" maxlength="100" id="pform-text-in" class="pf_text_in2" />-->
-<!--<legend accesskey="1" align="top">Preview of Text</legend>-->
-<!--<textarea class="text_preview2"></textarea>-->
-<!--</form>-->
+<style>
 
-<!--pf_text_in-->
-<!--text_preview-->
 
-<!--<h1 class="text_preview2"></h1>-->
+/*ipad media query*/
 
-<!--END TEST PREVIEW-->
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1025px)  {
+        .center-text{
+            margin-left:30%;
+           
+        }
+    
+   /*iphone media query     */
+        
+    }
+    @media only screen and (min-device-width : 375px) and (max-device-width : 667px) { 
+        .center-text{
+            
+        }
+        .main-heading{
+            margin-top:90%;
+        }
+        
+    }
+    
+    
+/*    Imported from */
 
-<!--<h2 class="form-main-title">Build a Project</h3>-->
+/*http://stephen.io/mediaqueries/#iPad*/
+
+/**/
+
+/*@media only screen */
+/*and (min-device-width : 768px) */
+/*and (max-device-width : 1025px)  {*/
+    
+    
+    /* STYLES GO HERE */}
+/*iPad in landscape*/
+/*@media only screen */
+/*and (min-device-width : 768px) */
+/*and (max-device-width : 1024px) */
+/*and (orientation : landscape) { */
+    
+/*  html  {background: teal;}*/
+    
+    /* STYLES GO HERE */}
+/*iPad in portrait*/
+/*@media only screen */
+/*and (min-device-width : 768px) */
+/*and (max-device-width : 1024px) */
+/*and (orientation : portrait) {   html  {background: teal !important;} }*/
+
+    
+    
+</style>
+
+
+<div class="form-responsive-container container-fluid">
 
   <h1 class="knockout-small-title">Note: All fields must be filled in for your form to pass!</h1>
+
+
 
   <br><br><br> 
 
   <br><br><br><br><br><br><br><br><br><br><br>
-  
-
-  
-<!--  <div class="intro-text">-->
-<!--    <div class="name">-->
-<!--  <div class="letter">A</div>-->
-<!--  <div class="letter">B</div>-->
-<!--  <div class="letter">H</div>-->
-<!--  <div class="letter">I</div>-->
-<!--  <div class="letter">S</div>-->
-<!--  <div class="letter">H</div>-->
-<!--  <div class="letter">E</div>-->
-<!--  <div class="letter">K</div>-->
-<!--  <div class="letter">.</div>-->
-<!--  <div class="letter">K</div>-->
-<!--  <div class="letter">U</div>-->
-<!--  <div class="letter">M</div>-->
-<!--  <div class="letter">A</div>-->
-<!--  <div class="letter">R</div>-->
-<!--</div>-->
-<!--</div>-->
-
-  
-  <!-- 
-  
-    <h3 class="form-title-text">Welcome! To fill out this form you will need:  </h1>
-    <h3 class="form-title-text">~4 pics~ (one big, three small) + your project information. </h1>
-      <h3 class="form-title-text"> Check out our example *here*.</h3>
-  <br><br>
-  
-  -->
-<!--<section class="full-width-img">-->
-<!--    </section>-->
-  <!-- https://codepen.io/rexkirby/pen/Fdnlz -->
-
+ 
 <%= form_for @changeset, path_to(:post, @conn, :create), [multipart: true], fn f -> %>
   <%= if @changeset.action do %>
     <div class="alert alert-danger">
@@ -67,7 +78,7 @@
     </div>
   <% end %>
   <br><br><br><br>  <br><br><br><br>
-  <div class="form-group">
+  <div class="form-group center-text">
     <%= label f, :title, class: "control-label" %>
         <%= text_input f, :title, class: "form-control form-control-title pf_text_in", placeholder: "Your project title" %>
             <%= error_tag f, :title %>
@@ -76,7 +87,8 @@
  
   
     <!--<h2 class="knockout-medium-title">Upload Main Project Pic</a></h2>-->
-<div>
+
+    <div class="center-text">
         <h1 class="main-heading"><span class="heading-opaque-background move-form-title-down text_preview">Your Project Title Here</span></h1>
    <br><br><br>  <br><br><br>
    <h2 class="knockout-medium-title">Upload Main Project Pic</h2>
@@ -93,10 +105,11 @@
           <%= file_input f, :project_pic, class: "form-control form-control-title imgInp" %>
             <%= error_tag f, :project_pic %>
             <br>
-              <img class="project-main-pic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/pexels-citybuilder-couple-dusk.jpeg" alt="your image" height="100" />
+              <img class="project-main-pic" src='<%= Citybuilder.ProjectPic.url({@post.project_pic, @post}) %>' alt="your image" height="100" />
               
 
-</div>
+
+
 
 <!-- data-tooltip:
 
@@ -339,7 +352,9 @@ OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577
 <br><br><br><br>
 <div class="form-group">
     <%= submit "Save project", class: "btn publish-button" %>
+    </div>
 </div>
+
 <% end %>
 <br><br><br>
   
@@ -364,14 +379,12 @@ OTHER POSSIBLE PICTURE CHOICES. https://s3-us-west-2.amazonaws.com/s.cdpn.io/577
 <!--  </div>-->
 
 <!--</div>-->
-    
-    
+    </div>
+    </div>
  
     <script>
-    
- $(".imgInp").change(function() {
-  readURL(this);
-});
+        $(function() {
+
 
 function readURL(input) {
   var $formPic = $(input).siblings('img');
@@ -383,23 +396,61 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
+ $(".imgInp").change(function() {
+  readURL(this);
+  console.log('image load check')
+});
+  $(".imgInp").change();
+  readURL($(".imgInp").val())
+ });
     </script>
     
     <script>
-        $(function() {
-    $(".pf_text_in").keyup(function() {
+    
+    
+    // wrap code in blocks as suggested by stack overflow
+    
+    //stack overflow code block
+    
+//     $(function() {
+//     // Trigger events on load
+//     $(".pf_text_in").keyup();
+//     $(".pf_text_in2").keyup();
+//     $(".imgInp").change();
+// });
+
+ 
+ $(function() {
+        $(".pf_text_in").keyup(function() {
         var pf_text_in = $(this).val();
+        console.log('load keyup')
         $(".text_preview").html(pf_text_in);
         return false;
-    });
+   
 });
-
-        $(function() {
-    $(".pf_text_in2").keyup(function() {
+ $(".pf_text_in2").keyup(function() {
         var pf_text_in = $(this).val();
+         console.log('load keyup2')
         $(".text_preview2").html(pf_text_in);
         return false;
     });
+         $(".pf_text_in").keyup();
+    $(".pf_text_in2").keyup();
+  
+      
+    
+});
+
+
+// end practice stack overflow
+
+
+        $(function() {
+   
+});
+$(function() {
+    // Trigger events on load
+   
 });
 
 
@@ -419,23 +470,7 @@ function readURL(input) {
 });
     </script>
     
-    <script>
-        // Hide all the elements in the DOM that have a class of "box"
-$('.examples').hide();
-
-// Make sure all the elements with a class of "clickme" are visible and bound
-// with a click event to toggle the "box" state
-$('.showText').each(function() {
-    $(this).show(0).on('click', function(e) {
-        // This is only needed if your using an anchor to target the "box" elements
-        e.preventDefault();
-        
-        // Find the next "box" element in the DOM
-        $(this).next('.examples').slideToggle('fast');
-    });
-});
-        
-    </script>
+    
     <!--
     NOTES AND LINKS
     

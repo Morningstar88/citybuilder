@@ -2,6 +2,18 @@
 body {
     background-color: rgba(248, 255, 248, 0.9);
 }
+
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1025px)  {
+     
+   .main-heading {
+       
+       
+   }
+        
+        
+    }
+
+
 </style>
 <!-- Cool text animation https://codepen.io/abhishek/pen/VKmGKY?limit=all&page=2&q=text+animation
 -->

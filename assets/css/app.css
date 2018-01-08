@@ -811,64 +811,67 @@ svg>rect {
 
 
 
-/* IPAD */
+/* IPAD 
 
-@media screen and (max-width: 799px) and (min-width: 650px) {
-    .preview-text {
-        font-size: 3.6vw !important;
-        line-height: 3.3vh !important;
+
+/*Old Ipad code, not sure if still worked*/
+
+/*@media screen and (max-width: 799px) and (min-width: 650px) {*/
+/*    .preview-text {*/
+/*        font-size: 3.6vw !important;*/
+/*        line-height: 3.3vh !important;*/
         /*background-color: teal;*/
-    }
+/*    }*/
 
-    .preview-title {
-        font-size: 4vw !important;
-    }
+/*    .preview-title {*/
+/*        font-size: 4vw !important;*/
+/*    }*/
 
-    .ipad-pro-btn/* Be careful, this media query is for the IPAD */
-    {
-        font-size: 3vh !important;
+   /* .ipad-pro-btn  *//* Be careful, this media query is for the IPAD 
+/*    {*/
+/*        font-size: 3vh !important;*/
 
-        height: 35% !important;
-        margin-top: 25% !important;
-    }
+/*        height: 35% !important;*/
+/*        margin-top: 25% !important;*/
+/*    }*/
 
-    .login-multicolored {
-        font-size: 6vw !important;
+/*    .login-multicolored {*/
+/*        font-size: 6vw !important;*/
 
-        margin-top: 13% !important;
-        margin-left: 3%;
-    }
+/*        margin-top: 13% !important;*/
+/*        margin-left: 3%;*/
+/*    }*/
 
-    .signup-multicolored {
-        font-size: 6vw !important;
+/*    .signup-multicolored {*/
+/*        font-size: 6vw !important;*/
 
-        margin-top: 13% !important;
+/*        margin-top: 13% !important;*/
         /* Further away from zero = higher*/
-        margin-left: 55% !important;
+/*        margin-left: 55% !important;*/
 
-        transition: 0s 3s;
-    }
+/*        transition: 0s 3s;*/
+/*    }*/
 
-    .galaxy-wrapper {
-        position: absolute;
+/*    .galaxy-wrapper {*/
+/*        position: absolute;*/
 
-        min-width: 400px !important;
-        margin-top: -10% !important;
-        margin-left: 10% !important;
-    }
-}
+/*        min-width: 400px !important;*/
+/*        margin-top: -10% !important;*/
+/*        margin-left: 10% !important;*/
+/*    }*/
+/*}*/
 
-@media screen and (min-width: 800px) {
-    .preview-text {
-        font-size: 2.9vw !important;
-        line-height: 5vh !important;
+/*@media screen and (min-width: 800px) {*/
+/*    .preview-text {*/
+/*        font-size: 2.9vw !important;*/
+/*        line-height: 5vh !important;*/
         /*background-color: orange;*/
-    }
+/*    }*/
 
-    .preview-title {
-        font-size: 3vw !important;
-    }
-}
+/*    .preview-title {*/
+/*        font-size: 3vw !important;*/
+/*    }*/
+/*}*/
 
 @media screen and (max-width: 3600px) and (min-width: 1000px) {
     .preview-text {
